@@ -16,6 +16,14 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-userappoinment_pageComponent
+import { userappoinment_pageComponent } from '../components/AIMS/user appoinment/userappoinment_page.component';
+//CORE_REFERENCE_IMPORT-patient_pageComponent
+import { patient_pageComponent } from '../components/AIMS/patient list/patient_page.component';
+//CORE_REFERENCE_IMPORT-doctor_pageComponent
+import { doctor_pageComponent } from '../components/AIMS/doctor/doctor_page.component';
+//CORE_REFERENCE_IMPORT-department_pageComponent
+import { department_pageComponent } from '../components/AIMS/department/department_page.component';
 //CORE_REFERENCE_IMPORT-homeComponent
 import { homeComponent } from '../components/AIMS/home page/home.component';
 
@@ -50,6 +58,14 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userappoinment_pageComponent
+  userappoinment_pageComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patient_pageComponent
+  patient_pageComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-doctor_pageComponent
+  doctor_pageComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-department_pageComponent
+  department_pageComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homeComponent
   homeComponent,
 ];
