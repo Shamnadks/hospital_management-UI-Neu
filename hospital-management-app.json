@@ -1,0 +1,13 @@
+{
+    "displayName": "Hospital-Management-App",
+    "appName": "hospital-management-app",
+    "description": "Our hospital management app optimizes healthcare administration with streamlined patient registration, appointment scheduling.",
+    "lastModified": "2024-02-12T10:58:26.660Z",
+    "imgSourcePath": "appIcon-1707735501982.png",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2024-02-12T10:58:21.979Z",
+    "analyticsId": "ce35ea82-6900-3f80-400f-f8d8d76a60b3",
+    "createdStudioVersion": "9.2.1"
+}
