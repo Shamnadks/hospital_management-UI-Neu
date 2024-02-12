@@ -1,1 +1,51 @@
-<div id="angularRoot"></div>
+<div style="width:100%">
+  <div fxLayoutAlign="center center" fxLayout="row" class="doctor-heading">
+    <h1>
+      {{page.locales.keys.ADD_DOCTOR}}
+    </h1>
+  </div>
+  <form fxLayout="row" fxLayoutAlign="center center" [formGroup]="page.addForm" class="add-doctor-form" method="POST" (ngSubmit)="submitForm()">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+
+        <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput name="name" type="text" placeholder="Name" [required]="true" formControlName="name">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;name&apos;)?.errors?.required">Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput name="phone" placeholder="Phone" [required]="false" formControlName="phone">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;phone&apos;)?.errors?.required">Phone is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+
+        <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput name="email" placeholder="Email" [required]="false" formControlName="email">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;email&apos;)?.errors?.required">Email is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput name="maxTokens" placeholder="Max Tokens" [required]="false" formControlName="maxTokens">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;maxTokens&apos;)?.errors?.required">Max Tokens is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+        <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+          <mat-label>Department</mat-label>
+          <mat-select formControlName="departmentId" placeholder="Department" [required]="false">
+            <ng-template ngFor let-option [ngForOf]="page.departments" let-i="index">
+              <mat-option [value]="option.id">{{option.department}}</mat-option>
+            </ng-template>
+          </mat-select>
+
+        </mat-form-field>
+        <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput name="salary" placeholder="Salary" [required]="false" formControlName="salary">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;salary&apos;)?.errors?.required">salary is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-button class="add-doctor-button" type="submit">submit</button>
+      </div>
+    </div>
+  </form>
+</div>

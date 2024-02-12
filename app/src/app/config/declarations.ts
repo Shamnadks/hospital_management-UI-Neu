@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-addDoctorComponent
+import { addDoctorComponent } from '../sd-services/addDoctorComponent';
 //CORE_REFERENCE_IMPORT-userappoinment_pageComponent
 import { userappoinment_pageComponent } from '../components/AIMS/user appoinment/userappoinment_page.component';
 //CORE_REFERENCE_IMPORT-patient_pageComponent
@@ -85,6 +87,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-addDoctorComponent
+addDoctorComponent,
 ];
 
 /**
@@ -94,6 +98,7 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
   { path: 'home', component: homeComponent },
+  { path: 'doctor', component: doctor_pageComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

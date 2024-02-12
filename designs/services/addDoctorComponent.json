@@ -1,0 +1,219 @@
+[
+    {
+        "id": "sd_3kUC36V9urSLMt09",
+        "type": "tab",
+        "createdDate": "2024-02-12T16:46:29.971Z",
+        "label": "addDoctorComponent",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "addDoctorComponent",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_gFsQjrGcMIXzyOQD",
+        "type": "Start",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "fetch departments",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "departments",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "fetchDepartments",
+        "category": "General",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "sd_LONRNX02yFlQ4QvE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "addDoctorComponent"
+    },
+    {
+        "id": "sd_uRRFasdaGQzF0UEm",
+        "type": "HttpRequest",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.departments",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "departments"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_uRRFasdaGQzF0UEm",
+        "category": "HTTP",
+        "x": 445,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_LONRNX02yFlQ4QvE",
+        "type": "Script",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL",
+        "functionName": "sd_LONRNX02yFlQ4QvE",
+        "category": "Function",
+        "x": 265,
+        "y": 120,
+        "wires": [
+            [
+                "sd_uRRFasdaGQzF0UEm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hdd633XWNoRo2DjT",
+        "type": "Start",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "add doctor",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "response",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "addDoctor",
+        "category": "General",
+        "x": 125,
+        "y": 260,
+        "wires": [
+            [
+                "sd_sVWmXquySe8c6EQB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "addDoctorComponent"
+    },
+    {
+        "id": "sd_fu7yAYxUwuAEbo32",
+        "type": "HttpRequest",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.response",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "response"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_fu7yAYxUwuAEbo32",
+        "category": "HTTP",
+        "x": 450,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_sVWmXquySe8c6EQB",
+        "type": "Script",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL",
+        "functionName": "sd_sVWmXquySe8c6EQB",
+        "category": "Function",
+        "x": 270,
+        "y": 260,
+        "wires": [
+            [
+                "sd_fu7yAYxUwuAEbo32"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
+    }
+]

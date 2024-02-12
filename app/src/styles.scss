@@ -2,3 +2,26 @@
 
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
+
+.doctor-heading{
+    background-color:rgb(21, 92, 151) ;
+    height: 250px;
+}
+
+.add-doctor-form{
+    min-height: 100%;
+    min-width: 100%;
+    padding-top: 10px;
+}
+
+.add-doctor-input{
+    border-color:rgb(21, 92, 151) ;
+    width: 300px;
+}
+
+.add-doctor-button{
+    width:100%;
+    background-color:rgb(21, 92, 151);
+    font-size: larger;
+    font-weight: 800;
+}

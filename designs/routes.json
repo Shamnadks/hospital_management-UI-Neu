@@ -5,6 +5,10 @@
             "component": "homeComponent"
         },
         {
+            "path": "doctor",
+            "component": "doctor_pageComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "home",
             "pathMatch": "full",
