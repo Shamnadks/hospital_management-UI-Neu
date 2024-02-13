@@ -1,9 +1,19 @@
 {
     "classes": [
+        "doctor-heading",
+        "add-doctor-form",
+        "add-doctor-input",
+        "add-doctor-button",
         "dep_header",
         "department_container",
+        "departments-list-button",
+        "departments-list-edit-button",
+        "department-list-table",
         "form_container",
         "dep_form_input",
-        "dep_form_button"
+        "dep_form_button",
+        "modal",
+        "modal-content",
+        "close"
     ]
 }
