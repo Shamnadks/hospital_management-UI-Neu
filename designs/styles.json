@@ -1,5 +1,16 @@
 {
     "classes": [
+        "homenav",
+        "firstrow",
+        "secondrow",
+        "homediv",
+        "homeoptions",
+        "homeoptionsbtn",
+        "homefoot",
+        "foottext",
+        "navname",
+        "sign-outbtn",
+        "welcome-text",
         "doctor-heading",
         "add-doctor-form",
         "add-doctor-input",
