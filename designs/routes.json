@@ -6,7 +6,9 @@
         },
         {
             "path": "doctor",
-            "component": "doctor_pageComponent",
+            "component": "doctor_pageComponent"
+        },
+        {
             "path": "department",
             "component": "department_pageComponent"
         },
