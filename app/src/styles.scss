@@ -2,3 +2,118 @@
 
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
+
+body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+.homenav{
+    background-color: white;
+    backdrop-filter: blur(10px);
+    height: 10vh;
+    width:100%;
+    margin: 1%;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center;
+}
+
+.firstrow{
+    background-image: url('https://moodle.swu.ac.th/pluginfile.php/378741/course/overviewfiles/00ac239275a3aad3b526d2a55a1907e92e545b7e.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height:46%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+}
+.secondrow{
+    height:auto; 
+    width:100%;
+}
+.homediv{
+margin: 0;
+  padding: 0;
+   height: 100vh;
+   width: 100%;
+}
+.homeoptions{
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+    margin:25px;
+    height:253px;
+    width:400px;
+    border-radius: 0.8rem;
+    border: none; /* Remove default border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+
+}
+.homeoptions::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Transparent white */
+    transition: background-color 0.3s ease; /* Add transition effect */
+    pointer-events: none; /* Ensure the pseudo-element doesn't capture mouse events */
+}
+
+.homeoptions:hover::before {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+}
+.homeoptionsbtn{
+    width:100%;
+    position: absolute; /* Position the button absolutely */
+    top: 86%; /* Center horizontally */
+    transform: translateX(-50%); 
+    
+}
+.homefoot{
+    background-color: #a4c5de;
+    width:100%;
+    height:auto;
+}
+.foottext{
+    margin:0;
+    padding:3px;
+}
+
+.navname{
+    color:#a4c5de;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left:2vh;
+    font-size: 1em;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center;
+}
+.sign-outbtn{
+  display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center;
+    margin-right:2vh;
+}
+.welcome-text{
+ margin:0;
+ width:100%;
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
+ font-size: 3vw;
+ font-weight: 1000;
+ color: white;
+ -webkit-text-stroke: 1px #a4c5de;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
