@@ -70,7 +70,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.departments = [{id:1,department:'Cardiologist'},{id:2,department:'Neurologist'},{id:3,department:'Orthopedist'},{id:4,department:'Pediatrician'},{id:5,department:'Nephrologist'},{id:6,department:'Endocrinologist'},{id:6,department:'Radiologist'},{id:7,department:'Surgeon'}]\n\npage.addForm = new page.formGroup({\n    name: new page.formControl('',[page.validator.required]),\n    phone: new page.formControl('',[page.validator.required]),\n    age: new page.formControl('',[page.validator.required]),\n    education: new page.formControl('',[page.validator.required]),\n    address: new page.formControl('',[page.validator.required]),\n    email: new page.formControl('',[page.validator.required]),\n    salary: new page.formControl('',[page.validator.required]),\n    departmentId: new page.formControl('',[page.validator.required]),\n    maxTokens: new page.formControl('',[page.validator.required])\n})",
+        "script": "page.departments = bh.local?.departments || [{id:1,department:'Cardiologist'},{id:2,department:'Neurologist'},{id:3,department:'Orthopedist'},{id:4,department:'Pediatrician'},{id:5,department:'Nephrologist'},{id:6,department:'Endocrinologist'},{id:6,department:'Radiologist'},{id:7,department:'Surgeon'}]",
         "functionName": "sd_Mxr5sZx6tNxkYwIg",
         "category": "Function",
         "x": 685,
@@ -131,7 +131,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_Mxr5sZx6tNxkYwIg"
+                "sd_a6Jw6chX9htMKQPM"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -156,34 +156,12 @@
         "y": 200,
         "wires": [
             [
-                "sd_mg7xNwEufnGKOmxP"
+                "sd_ZirguN2Qzbd0DRXA"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "doctor_pageComponent"
-    },
-    {
-        "id": "sd_mg7xNwEufnGKOmxP",
-        "type": "Script",
-        "z": "sd_nDcQgbliDSOpOqSN",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(page.addForm?.value,'================')",
-        "functionName": "sd_mg7xNwEufnGKOmxP",
-        "category": "Function",
-        "x": 300,
-        "y": 200,
-        "wires": [
-            [
-                "sd_OvIEu4FggpAHkvYq"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "doctor_pageComponent",
-        "generated": true
     },
     {
         "id": "sd_ZirguN2Qzbd0DRXA",
@@ -215,6 +193,12 @@
                 "map": true,
                 "valueType": "bh",
                 "value": ""
+            },
+            {
+                "key": "data",
+                "map": true,
+                "valueType": "this.page",
+                "value": "addForm.value"
             }
         ],
         "outputMapping": [
@@ -230,22 +214,22 @@
         "serviceImportPath": "app/sd-services/addDoctorComponent",
         "startName": "addDoctor",
         "inputParams": [
-            null
+            null,
+            "this.page.addForm.value"
         ],
         "accept_bh": false,
         "accept_csd": true,
         "functionName": "sd_ZirguN2Qzbd0DRXA",
         "category": "General",
-        "x": 465,
+        "x": 245,
         "y": 200,
         "wires": [
-            [
-                "sd_SXMYox7cEaP3lLlJ"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "doctor_pageComponent"
+        "generateNext": false,
+        "serviceName": "doctor_pageComponent",
+        "generated": true
     },
     {
         "id": "sd_SXMYox7cEaP3lLlJ",
@@ -277,7 +261,7 @@
         "direction": "ltr",
         "functionName": "sd_SXMYox7cEaP3lLlJ",
         "category": "General",
-        "x": 620,
+        "x": 385,
         "y": 200,
         "wires": [
             []
@@ -337,47 +321,34 @@
         "accept_csd": true,
         "functionName": "sd_3okmuZaQKtfjcwg7",
         "category": "General",
-        "x": 485,
-        "y": 60,
+        "x": 545,
+        "y": 40,
         "wires": [
-            []
+            [
+                "sd_Mxr5sZx6tNxkYwIg"
+            ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "doctor_pageComponent"
+        "generateNext": false,
+        "serviceName": "doctor_pageComponent",
+        "generated": true
     },
     {
-        "id": "sd_OvIEu4FggpAHkvYq",
-        "type": "SnackBar",
+        "id": "sd_a6Jw6chX9htMKQPM",
+        "type": "Script",
         "z": "sd_nDcQgbliDSOpOqSN",
-        "viewType": "client-pages",
+        "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "message": {
-            "type": "str",
-            "value": "Form Submitted"
-        },
-        "action": {
-            "type": "str",
-            "value": "Ok"
-        },
-        "duration": {
-            "type": "num",
-            "value": "2000"
-        },
-        "horizontalPosition": "center",
-        "verticalPosition": "top",
-        "panelClass": {
-            "type": "str",
-            "value": ""
-        },
-        "direction": "ltr",
-        "functionName": "sd_OvIEu4FggpAHkvYq",
-        "category": "General",
-        "x": 420,
-        "y": 300,
+        "script": "page.addForm = new page.formGroup({\n    name: new page.formControl('',[page.validator.required]),\n    phone_no: new page.formControl('',[page.validator.required]),\n    age: new page.formControl('',[page.validator.required]),\n    education: new page.formControl('',[page.validator.required]),\n    address: new page.formControl('',[page.validator.required]),\n    email: new page.formControl('',[page.validator.required]),\n    salary: new page.formControl('',[page.validator.required]),\n    department_id: new page.formControl('',[page.validator.required]),\n    token_limit: new page.formControl('',[page.validator.required])\n})",
+        "functionName": "sd_a6Jw6chX9htMKQPM",
+        "category": "Function",
+        "x": 440,
+        "y": 40,
         "wires": [
-            []
+            [
+                "sd_3okmuZaQKtfjcwg7"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

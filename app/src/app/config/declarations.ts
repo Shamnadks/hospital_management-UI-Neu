@@ -16,6 +16,12 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-edit_modalComponent
+import { edit_modalComponent } from '../components/AIMS/department/edit_modal.component';
+//CORE_REFERENCE_IMPORT-department_tableComponent
+import { department_tableComponent } from '../components/AIMS/department/department_table.component';
+//CORE_REFERENCE_IMPORT-add_formComponent
+import { add_formComponent } from '../components/AIMS/department/add_form.component';
 //CORE_REFERENCE_IMPORT-addDoctorComponent
 import { addDoctorComponent } from '../sd-services/addDoctorComponent';
 //CORE_REFERENCE_IMPORT-userappoinment_pageComponent
@@ -60,6 +66,12 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_modalComponent
+  edit_modalComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-department_tableComponent
+  department_tableComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-add_formComponent
+  add_formComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userappoinment_pageComponent
   userappoinment_pageComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patient_pageComponent
@@ -87,8 +99,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
-//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-addDoctorComponent
-addDoctorComponent,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-addDoctorComponent
+  addDoctorComponent,
 ];
 
 /**

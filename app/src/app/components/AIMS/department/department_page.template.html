@@ -1,17 +1,10 @@
 <header class="dep_header" fxLayout="row" fxLayoutAlign="center center">
-  <div>
-    ADD DEPARTMENTS</div>
+  <h1>
+    {{page?.pageOfDepartment==&apos;addDepartment&apos;?&apos;ADD DEPARTMENTS&apos;:page?.pageOfDepartment==&apos;listDepartments&apos;?&apos;DEPARTMENTS&apos;:&apos;&apos;}}
+  </h1>
 </header>
-<div fxLayout="column wrap" style="width:100%; height:70vh;" fxLayoutAlign="space-around center" [fxShow]="true">
-  <form [formGroup]="page.form" fxLayoutAlign="space-around center" class="form_container" (ngSubmit)="formSubmission()">
-    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <mat-form-field class="dep_form_input" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-        <input matInput name="department" placeholder="Department" [required]="false" formControlName="department">
-        <mat-label>Department</mat-label>
-      </mat-form-field><mat-form-field class="dep_form_input" [floatLabel]="&apos;auto&apos;">
-        <mat-label>Description</mat-label>
-        <textarea matInput formControlName="description" name="department" placeholder="Description ...." [required]="false"></textarea>
-      </mat-form-field><button mat-button class="dep_form_button">Submit</button>
-    </div>
-  </form>
+<div>
+  <div fxLayout="row" fxLayoutAlign="end center" style="padding-top:4px;padding-right:4px">
+    <button mat-button class="departments-list-button" *ngIf="page?.pageOfDepartment==&apos;listDepartments&apos;" (click)="setPage(&apos;addDepartment&apos;)">Add Department</button><button mat-button class="departments-list-button" *ngIf="page?.pageOfDepartment==&apos;addDepartment&apos;" (click)="setPage(&apos;listDepartments&apos;)">Departments</button>
+  </div><bh-add_form *ngIf="page?.pageOfDepartment==&apos;addDepartment&apos;"></bh-add_form><bh-department_table *ngIf="page?.pageOfDepartment==&apos;listDepartments&apos;"></bh-department_table>
 </div>

@@ -1,0 +1,21 @@
+<div class="modal">
+  <div class="modal-content">
+    <span (click)="closeModalFunction()" class="close">
+                &#xD7;</span>
+    <h2 style="text-align:center;margin-bottom:8px;">
+      Edit Department</h2>
+    <div style="padding-top:5px;">
+      <form [formGroup]="page.editForm" fxLayoutAlign="space-around center" class="form_container" (ngSubmit)="formSubmission()">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput name="department" placeholder="Department" [required]="false" formControlName="department">
+            <mat-error align="start" *ngIf="page.editForm.get(&apos;department&apos;)?.errors?.required">Department is required</mat-error> <mat-label>Department</mat-label>
+          </mat-form-field><mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="info" name="info" placeholder="Description ...." [required]="true"></textarea>
+          </mat-form-field><button mat-button class="add-doctor-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

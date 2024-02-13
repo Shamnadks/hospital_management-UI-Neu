@@ -1,0 +1,229 @@
+[
+    {
+        "id": "sd_nAEwFgUKHSJ395KV",
+        "type": "tab",
+        "createdDate": "2024-02-13T11:57:48.883Z",
+        "label": "department_table",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "department_tableComponent"
+    },
+    {
+        "id": "sd_Uj3gYCLW7LdZaflm",
+        "type": "OnInit",
+        "z": "sd_nAEwFgUKHSJ395KV",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [
+            {
+                "key": "closeModal",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            }
+        ],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_Uj3gYCLW7LdZaflm",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_sUxBk2wkB5zu2bdz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_tableComponent"
+    },
+    {
+        "id": "sd_sUxBk2wkB5zu2bdz",
+        "type": "PageVariables",
+        "z": "sd_nAEwFgUKHSJ395KV",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "departments",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "showEditComponent",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_sUxBk2wkB5zu2bdz",
+        "category": "Function",
+        "x": 145,
+        "y": 40,
+        "wires": [
+            [
+                "sd_4yeTrOOkbQTrbZI3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tableComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_dxCcDm8JHsGSo39p",
+        "type": "Script",
+        "z": "sd_nAEwFgUKHSJ395KV",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.departments = bh.local?.departments || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]",
+        "functionName": "sd_dxCcDm8JHsGSo39p",
+        "category": "Function",
+        "x": 540,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tableComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4yeTrOOkbQTrbZI3",
+        "type": "PageCallService",
+        "z": "sd_nAEwFgUKHSJ395KV",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_3kUC36V9urSLMt09",
+            "type": "tab",
+            "createdDate": "2024-02-12T16:46:29.971Z",
+            "label": "addDoctorComponent",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_gFsQjrGcMIXzyOQD",
+            "flowName": "fetchDepartments"
+        },
+        "inputVariables": [
+            {
+                "key": "departments",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "departments",
+                "valueType": "bh.local",
+                "value": "departments",
+                "mapVarName": "departments",
+                "localVar": "bh.local.departments"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/addDoctorComponent",
+        "startName": "fetchDepartments",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_4yeTrOOkbQTrbZI3",
+        "category": "General",
+        "x": 365,
+        "y": 40,
+        "wires": [
+            [
+                "sd_dxCcDm8JHsGSo39p"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tableComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_okbJpuigxqh0mg9K",
+        "type": "PageStart",
+        "z": "sd_nAEwFgUKHSJ395KV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "set show modal",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "action",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "editData",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "setShowModal",
+        "category": "General",
+        "x": 85,
+        "y": 180,
+        "wires": [
+            [
+                "sd_ODKpeMgTwLjk3PQe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_tableComponent"
+    },
+    {
+        "id": "sd_ODKpeMgTwLjk3PQe",
+        "type": "Script",
+        "z": "sd_nAEwFgUKHSJ395KV",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.editData = bh.input?.editData\npage.showEditComponent = bh.input?.action=='open'?true: false",
+        "functionName": "sd_ODKpeMgTwLjk3PQe",
+        "category": "Function",
+        "x": 325,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tableComponent",
+        "generated": true
+    }
+]

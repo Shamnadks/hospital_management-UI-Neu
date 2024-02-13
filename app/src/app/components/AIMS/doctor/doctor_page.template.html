@@ -13,8 +13,8 @@
           <mat-error align="start" *ngIf="page.addForm.get(&apos;name&apos;)?.errors?.required">Name is required</mat-error>
         </mat-form-field>
         <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput name="phone" placeholder="Phone" [required]="false" formControlName="phone">
-          <mat-error align="start" *ngIf="page.addForm.get(&apos;phone&apos;)?.errors?.required">Phone is required</mat-error>
+          <input matInput name="phone" placeholder="Phone" [required]="false" formControlName="phone_no">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;phone_no&apos;)?.errors?.required">Phone is required</mat-error>
         </mat-form-field>
       </div>
       <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
@@ -42,19 +42,19 @@
           <mat-error align="start" *ngIf="page.addForm.get(&apos;email&apos;)?.errors?.required">Email is required</mat-error>
         </mat-form-field>
         <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput name="maxTokens" placeholder="Max Tokens" [required]="false" formControlName="maxTokens">
-          <mat-error align="start" *ngIf="page.addForm.get(&apos;maxTokens&apos;)?.errors?.required">Max Tokens is required</mat-error>
+          <input matInput name="maxTokens" placeholder="Max Tokens" [required]="false" formControlName="token_limit">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;token_limit&apos;)?.errors?.required">Max Tokens is required</mat-error>
         </mat-form-field>
       </div>
       <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
         <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
           <mat-label>Department</mat-label>
-          <mat-select formControlName="departmentId" placeholder="Department" [required]="false">
+          <mat-select formControlName="department_id" placeholder="Department" [required]="false">
             <ng-template ngFor let-option [ngForOf]="page.departments" let-i="index">
               <mat-option [value]="option.id">{{option.department}}</mat-option>
             </ng-template>
           </mat-select>
-
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;department_id&apos;)?.errors?.required">Department is required</mat-error>
         </mat-form-field>
         <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
           <input matInput name="salary" placeholder="Salary" [required]="false" formControlName="salary">

@@ -58,10 +58,11 @@ export class addDoctorComponent {
     }
   }
 
-  async addDoctor(response: any = undefined, ...others) {
+  async addDoctor(response: any = undefined, data: any = undefined, ...others) {
     let bh: any = {
       input: {
         response,
+        data,
       },
       local: {},
     };
@@ -83,12 +84,75 @@ export class addDoctorComponent {
       return await this.errorHandler(bh, e, 'sd_hdd633XWNoRo2DjT');
     }
   }
+
+  async addDepartment(
+    response: any = undefined,
+    data: any = undefined,
+    ...others
+  ) {
+    let bh: any = {
+      input: {
+        response,
+        data,
+      },
+      local: {},
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_rXoA1eXtfl9NnSRj(bh);
+      //appendnew_next_addDepartment
+      return (
+        // formatting output variables
+        {
+          input: {
+            response: bh.input.response,
+          },
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_jJAbzQgqql3UVlNY');
+    }
+  }
+
+  async editDepartment(
+    response: any = undefined,
+    data: any = undefined,
+    ...others
+  ) {
+    let bh: any = {
+      input: {
+        response,
+        data,
+      },
+      local: {},
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_LVZrOZ0BYT8nOz85(bh);
+      //appendnew_next_editDepartment
+      return (
+        // formatting output variables
+        {
+          input: {
+            response: bh.input.response,
+          },
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_UB1I5yieE0ATvfFj');
+    }
+  }
   //appendnew_flow_addDoctorComponent_start
 
   async sd_LONRNX02yFlQ4QvE(bh) {
     try {
-      bh.local.url = bh.system.environment.properties.ssdURL;
-      bh = await this.sd_uRRFasdaGQzF0UEm(bh);
+      bh.local.url =
+        bh.system.environment.properties.ssdURL + 'department/getAll';
+      console.log('calling fetch department');
       //appendnew_next_sd_LONRNX02yFlQ4QvE
       return bh;
     } catch (e) {
@@ -96,28 +160,10 @@ export class addDoctorComponent {
     }
   }
 
-  async sd_uRRFasdaGQzF0UEm(bh) {
-    try {
-      let requestOptions = {
-        url: bh.local.url,
-        method: 'get',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: undefined,
-      };
-      bh.local.departments = await this.sdService.nHttpRequest(requestOptions);
-      //appendnew_next_sd_uRRFasdaGQzF0UEm
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_uRRFasdaGQzF0UEm');
-    }
-  }
-
   async sd_sVWmXquySe8c6EQB(bh) {
     try {
-      bh.local.url = bh.system.environment.properties.ssdURL;
-      bh = await this.sd_fu7yAYxUwuAEbo32(bh);
+      bh.local.url = bh.system.environment.properties.ssdURL + '/doctor';
+      console.log(bh.input.data, 'doctor data');
       //appendnew_next_sd_sVWmXquySe8c6EQB
       return bh;
     } catch (e) {
@@ -125,21 +171,25 @@ export class addDoctorComponent {
     }
   }
 
-  async sd_fu7yAYxUwuAEbo32(bh) {
+  async sd_rXoA1eXtfl9NnSRj(bh) {
     try {
-      let requestOptions = {
-        url: bh.local.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: undefined,
-      };
-      bh.local.response = await this.sdService.nHttpRequest(requestOptions);
-      //appendnew_next_sd_fu7yAYxUwuAEbo32
+      bh.local.url = bh.system.environment.properties.ssdURL + '/department';
+      console.log(bh.input.data, 'department data');
+      //appendnew_next_sd_rXoA1eXtfl9NnSRj
       return bh;
     } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_fu7yAYxUwuAEbo32');
+      return await this.errorHandler(bh, e, 'sd_rXoA1eXtfl9NnSRj');
+    }
+  }
+
+  async sd_LVZrOZ0BYT8nOz85(bh) {
+    try {
+      bh.local.url = bh.system.environment.properties.ssdURL + '/department';
+      console.log(bh.input.data, 'department edit data');
+      //appendnew_next_sd_LVZrOZ0BYT8nOz85
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_LVZrOZ0BYT8nOz85');
     }
   }
 
