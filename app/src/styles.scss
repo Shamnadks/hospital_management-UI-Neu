@@ -117,3 +117,121 @@ margin: 0;
  -webkit-text-stroke: 1px #a4c5de;
  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+.doctor-heading{
+    background-color:rgb(21, 92, 151) ;
+    height: 250px;
+}
+
+.add-doctor-form{
+    min-height: 100%;
+    min-width: 100%;
+    padding-top: 10px;
+}
+
+.add-doctor-input{
+    border-color:rgb(21, 92, 151) ;
+    width: 300px;
+}
+
+.add-doctor-button{
+    width:100%;
+    background-color:rgb(21, 92, 151);
+    font-size: larger;
+    font-weight: 800;
+}
+
+.dep_header{
+    background-color:rgba(21, 92,151);
+    height: 250px;
+}
+.department_container{
+    width: 100vw;
+    height: 100%;
+    background-color: blue($color: #000000);
+}
+
+.departments-list-button{
+    background-color: black;
+    color: white;
+}
+
+.departments-list-edit-button{
+    background-color: rgb(21, 92, 151);
+    color: white;
+    cursor: pointer;
+}
+
+.department-list-table{
+   padding: 10px; 
+   border-radius: 5px;
+   border-width: 5px;
+   border-color: rgb(21, 92, 151);
+//    display: flex;
+//    justify-content: center;
+}
+
+.form_container{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    // box-shadow: 2px 2px 5px;
+    border-radius: 30px;
+}
+.dep_form_input{
+    width:20rem;
+    border-color: rgb(21, 92, 151);
+    
+}
+.dep_form_button{
+    background-color:rgba(21, 92,151);
+    // background-color: green($color: #4fcec3);
+    // outline: none;
+    border: 3px solid rgb(226, 69, 69);
+    border-radius: 30px;
+}
+
+.dep_form_button:hover{
+    background-color:rgb(85, 85, 156);
+    color: white;
+    font-family: sans-serif;
+    
+}
+
+
+
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

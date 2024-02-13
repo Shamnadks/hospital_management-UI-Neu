@@ -55,14 +55,40 @@ export class department_pageComponent {
     }
   }
 
+  setPage(page: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { page };
+      bh.local = {};
+      bh = this.sd_K2m4Vx3e9wAJm6KK(bh);
+      //appendnew_next_setPage
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_NflCiD8SMqqxCtuu');
+    }
+  }
   //appendnew_flow_department_pageComponent_start
 
   sd_TpEvDtLZS471UYdG(bh) {
     try {
+      this.page.pageOfDepartment = 'addDepartment';
       //appendnew_next_sd_TpEvDtLZS471UYdG
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_TpEvDtLZS471UYdG');
+    }
+  }
+
+  sd_K2m4Vx3e9wAJm6KK(bh) {
+    try {
+      const page = this.page;
+      page.pageOfDepartment = bh.input?.page;
+      //appendnew_next_sd_K2m4Vx3e9wAJm6KK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_K2m4Vx3e9wAJm6KK');
     }
   }
 

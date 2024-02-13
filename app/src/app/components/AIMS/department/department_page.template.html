@@ -1,1 +1,10 @@
-<div id="angularRoot"></div>
+<header class="dep_header" fxLayout="row" fxLayoutAlign="center center">
+  <h1>
+    {{page?.pageOfDepartment==&apos;addDepartment&apos;?&apos;ADD DEPARTMENTS&apos;:page?.pageOfDepartment==&apos;listDepartments&apos;?&apos;DEPARTMENTS&apos;:&apos;&apos;}}
+  </h1>
+</header>
+<div>
+  <div fxLayout="row" fxLayoutAlign="end center" style="padding-top:4px;padding-right:4px">
+    <button mat-button class="departments-list-button" *ngIf="page?.pageOfDepartment==&apos;listDepartments&apos;" (click)="setPage(&apos;addDepartment&apos;)">Add Department</button><button mat-button class="departments-list-button" *ngIf="page?.pageOfDepartment==&apos;addDepartment&apos;" (click)="setPage(&apos;listDepartments&apos;)">Departments</button>
+  </div><bh-add_form *ngIf="page?.pageOfDepartment==&apos;addDepartment&apos;"></bh-add_form><bh-department_table *ngIf="page?.pageOfDepartment==&apos;listDepartments&apos;"></bh-department_table>
+</div>

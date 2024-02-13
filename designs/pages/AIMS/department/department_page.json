@@ -17,10 +17,14 @@
         "viewType": "common",
         "nodeType": "start",
         "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
         "functionName": "sd_wSprzm9Sm1P3u1db",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 100,
         "wires": [
             [
                 "sd_TpEvDtLZS471UYdG"
@@ -40,11 +44,72 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "pageOfDepartment",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "addDepartment"
+                }
+            }
+        ],
         "functionName": "sd_TpEvDtLZS471UYdG",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 185,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_pageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_NflCiD8SMqqxCtuu",
+        "type": "PageStart",
+        "z": "sd_FEdZI9so8BLCLHQh",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "set page",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "page",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "setPage",
+        "category": "General",
+        "x": 80,
+        "y": 360,
+        "wires": [
+            [
+                "sd_K2m4Vx3e9wAJm6KK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_pageComponent"
+    },
+    {
+        "id": "sd_K2m4Vx3e9wAJm6KK",
+        "type": "Script",
+        "z": "sd_FEdZI9so8BLCLHQh",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.pageOfDepartment = bh.input?.page",
+        "functionName": "sd_K2m4Vx3e9wAJm6KK",
+        "category": "Function",
+        "x": 345,
+        "y": 360,
         "wires": [
             []
         ],

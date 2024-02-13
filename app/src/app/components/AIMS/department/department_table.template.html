@@ -1,0 +1,24 @@
+<div>
+  <bh-edit_modal *ngIf="page?.showEditComponent==true" [editData]="page?.editData" (closeModal)="setShowModal(&apos;close&apos;)"></bh-edit_modal>
+  <div fxLayout="column wrap" class="department-list-table" fxLayoutAlign="space-between stretch" [fxShow]="true">
+    <div fxLayout="row wrap" style="width:100%; border-radius: 5px;    border-width: 5px;    border-color: rgb(21, 92, 151);" fxLayoutAlign="space-around center" [fxShow]="true">
+      <h3>
+        No</h3>
+      <h3>
+        Department</h3>
+      <h3>
+        Action</h3>
+    </div>
+    <div fxLayout="row wrap" style="width:100%;text-align:center" fxLayoutAlign="space-around center" [fxShow]="true" *ngFor="let data of page?.departments">
+      <p style="text-align:center">
+        {{data?.id}}
+      </p>
+      <p style="text-align:center">
+        {{data?.department}}
+      </p>
+      <div style="display:flex;justify-content:center;">
+        <button mat-button class="departments-list-edit-button" (click)="setShowModal(&apos;open&apos;,data)">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>
