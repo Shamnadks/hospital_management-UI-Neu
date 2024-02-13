@@ -10,6 +10,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -119,6 +120,9 @@ export class doctor_pageComponent {
       page.addForm = new page.formGroup({
         name: new page.formControl('', [page.validator.required]),
         phone: new page.formControl('', [page.validator.required]),
+        age: new page.formControl('', [page.validator.required]),
+        education: new page.formControl('', [page.validator.required]),
+        address: new page.formControl('', [page.validator.required]),
         email: new page.formControl('', [page.validator.required]),
         salary: new page.formControl('', [page.validator.required]),
         departmentId: new page.formControl('', [page.validator.required]),
@@ -135,10 +139,26 @@ export class doctor_pageComponent {
     try {
       const page = this.page;
       console.log(page.addForm?.value, '================');
+      bh = this.sd_OvIEu4FggpAHkvYq(bh);
       //appendnew_next_sd_mg7xNwEufnGKOmxP
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_mg7xNwEufnGKOmxP');
+    }
+  }
+
+  sd_OvIEu4FggpAHkvYq(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Form Submitted', 'Ok', {
+        duration: 2000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'top',
+      });
+      //appendnew_next_sd_OvIEu4FggpAHkvYq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OvIEu4FggpAHkvYq');
     }
   }
 

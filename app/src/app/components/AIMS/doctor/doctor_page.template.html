@@ -19,6 +19,24 @@
       </div>
       <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
 
+        <mat-form-field style="width:100%;" class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput name="address" type="text" placeholder="Address" [required]="true" formControlName="address">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;address&apos;)?.errors?.required">Address is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+
+        <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput name="education" type="text" placeholder="Education" [required]="true" formControlName="education">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;education&apos;)?.errors?.required">Education is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput name="age" type="number" placeholder="Age" [required]="false" formControlName="age">
+          <mat-error align="start" *ngIf="page.addForm.get(&apos;age&apos;)?.errors?.required">Age is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+
         <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
           <input matInput name="email" placeholder="Email" [required]="false" formControlName="email">
           <mat-error align="start" *ngIf="page.addForm.get(&apos;email&apos;)?.errors?.required">Email is required</mat-error>
