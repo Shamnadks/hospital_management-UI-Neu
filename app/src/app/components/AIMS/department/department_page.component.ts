@@ -4,6 +4,12 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -25,6 +31,7 @@ export class department_pageComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -55,14 +62,67 @@ export class department_pageComponent {
     }
   }
 
+  formSubmission(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_crJey7rxRgbGGzxu(bh);
+      //appendnew_next_formSubmission
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7iSJTjBH4QBvSYHI');
+    }
+  }
   //appendnew_flow_department_pageComponent_start
 
   sd_TpEvDtLZS471UYdG(bh) {
     try {
+      bh = this.libaries(bh);
       //appendnew_next_sd_TpEvDtLZS471UYdG
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_TpEvDtLZS471UYdG');
+    }
+  }
+
+  libaries(bh) {
+    try {
+      this.page.formGroup = FormGroup;
+      this.page.validators = Validators;
+      this.page.formControl = FormControl;
+      bh = this.sd_Snh5juX97vQtLG9h(bh);
+      //appendnew_next_libaries
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1jzZJf65PWsHoNQ4');
+    }
+  }
+
+  sd_Snh5juX97vQtLG9h(bh) {
+    try {
+      const page = this.page;
+      page.form = new page.formGroup({
+        department: new page.formControl('', [page.validators.required]),
+        description: new page.formControl(),
+      });
+      //appendnew_next_sd_Snh5juX97vQtLG9h
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Snh5juX97vQtLG9h');
+    }
+  }
+
+  sd_crJey7rxRgbGGzxu(bh) {
+    try {
+      const page = this.page;
+      console.log(page.form.value);
+      //appendnew_next_sd_crJey7rxRgbGGzxu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_crJey7rxRgbGGzxu');
     }
   }
 

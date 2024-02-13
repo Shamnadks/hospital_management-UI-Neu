@@ -5,6 +5,10 @@
             "component": "homeComponent"
         },
         {
+            "path": "department",
+            "component": "department_pageComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "home",
             "pathMatch": "full",
