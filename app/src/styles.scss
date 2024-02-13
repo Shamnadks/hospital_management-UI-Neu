@@ -25,3 +25,43 @@
     font-size: larger;
     font-weight: 800;
 }
+
+.dep_header{
+    background-color:rgba(21, 92,151);
+    // height:25vh;
+    height: 250px;
+    font-weight: bold;
+    font-size: 3rem;
+}
+.department_container{
+    width: 100vw;
+    height: 100%;
+    background-color: blue($color: #000000);
+}
+
+.form_container{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    // box-shadow: 2px 2px 5px;
+    border-radius: 30px;
+}
+.dep_form_input{
+    width:20rem;
+    border-color: rgb(21, 92, 151);
+    
+}
+.dep_form_button{
+    background-color:rgba(21, 92,151);
+    // background-color: green($color: #4fcec3);
+    // outline: none;
+    border: 3px solid rgb(226, 69, 69);
+    border-radius: 30px;
+}
+
+.dep_form_button:hover{
+    background-color:rgb(85, 85, 156);
+    color: white;
+    font-family: sans-serif;
+    
+}

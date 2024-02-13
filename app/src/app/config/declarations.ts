@@ -99,6 +99,7 @@ addDoctorComponent,
 export const appRoutes = [
   { path: 'home', component: homeComponent },
   { path: 'doctor', component: doctor_pageComponent },
+  { path: 'department', component: department_pageComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

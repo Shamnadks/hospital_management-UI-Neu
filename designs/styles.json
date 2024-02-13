@@ -3,6 +3,11 @@
         "doctor-heading",
         "add-doctor-form",
         "add-doctor-input",
-        "add-doctor-button"
+        "add-doctor-button",
+        "dep_header",
+        "department_container",
+        "form_container",
+        "dep_form_input",
+        "dep_form_button"
     ]
 }
