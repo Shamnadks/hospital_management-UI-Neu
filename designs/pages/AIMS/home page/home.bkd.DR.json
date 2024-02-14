@@ -1131,7 +1131,7 @@
                             },
                             {
                                 "_key": "buttonname",
-                                "_value": "Logout",
+                                "_value": "LogIn",
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -1144,9 +1144,16 @@
                             },
                             {
                                 "_key": "(click)",
-                                "_value": "",
+                                "_value": "logIn()",
                                 "_type": "kv",
-                                "_attrDef": "p"
+                                "_attrDef": "p",
+                                "objValue": {
+                                    "nodeID": "sd_bI27x61IkJAFzAy3",
+                                    "functionName": "logIn",
+                                    "activeTree": "pages",
+                                    "z": "sd_fHxZ97C707KlcUsD",
+                                    "input": []
+                                }
                             },
                             {
                                 "_key": "[disabled]",
