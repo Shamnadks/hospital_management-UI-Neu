@@ -203,9 +203,22 @@ export class appoinment {
 
   async sd_52t4891oznMukad5(bh) {
     try {
-      bh.input.appoinment = { ...bh.input.appoinment, payment_method: 'cash' };
+      bh.input.appoinment = {
+        name: bh.input.appoinment.name,
+        phone_no: bh.input.appoinment.phone_no,
+        dob: bh.input.appoinment.dob,
+        place: bh.input.appoinment.place,
+        address: bh.input.appoinment.address,
+        pin_code: bh.input.appoinment.pin_code,
+        email: bh.input.appoinment.email,
+        blood_group: bh.input.appoinment.blood_group,
+        doctor_id: bh.input.appoinment.doctor_id,
+        cash: bh.input.appoinment.cash,
+        payment_method: 'cash',
+      };
       bh.local.url =
-        bh.system.environment.properties.ssdURL + 'appoinment/post';
+        bh.system.environment.properties.ssdURL + 'appointment/post';
+
       bh = await this.sd_CikVONei91JxTgcR(bh);
       //appendnew_next_sd_52t4891oznMukad5
       return bh;
@@ -225,10 +238,21 @@ export class appoinment {
         body: bh.input.appoinment,
       };
       bh.local.response = await this.sdService.nHttpRequest(requestOptions);
+      bh = await this.sd_1ckFabNUfGjA8yfw(bh);
       //appendnew_next_sd_CikVONei91JxTgcR
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_CikVONei91JxTgcR');
+    }
+  }
+
+  async sd_1ckFabNUfGjA8yfw(bh) {
+    try {
+      console.log(bh.local.response);
+      //appendnew_next_sd_1ckFabNUfGjA8yfw
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_1ckFabNUfGjA8yfw');
     }
   }
 
@@ -242,7 +266,7 @@ export class appoinment {
         cancel_url: 'http://localhost:4200/appoinment',
       };
       bh.local.url =
-        bh.system.environment.properties.ssdURL + 'appoinment/post';
+        bh.system.environment.properties.ssdURL + 'appointment/post';
       bh = await this.sd_YNaLt3snM41I6gmI(bh);
       //appendnew_next_sd_FqqQW8T2Dk2nvXiJ
       return bh;
@@ -262,10 +286,25 @@ export class appoinment {
         body: bh.input.appoinment,
       };
       bh.local.response = await this.sdService.nHttpRequest(requestOptions);
+      bh = await this.sd_COLvx5LLfqvM8ePS(bh);
       //appendnew_next_sd_YNaLt3snM41I6gmI
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_YNaLt3snM41I6gmI');
+    }
+  }
+
+  async sd_COLvx5LLfqvM8ePS(bh) {
+    try {
+      console.log(JSON.stringify(bh.local.response)); // Log the value of bh.local.response
+
+      // Redirect the browser to a new URL
+      window.location.href = bh.local.response?.response?.url;
+
+      //appendnew_next_sd_COLvx5LLfqvM8ePS
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_COLvx5LLfqvM8ePS');
     }
   }
 
