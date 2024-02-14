@@ -1,1 +1,100 @@
-<div id="angularRoot"></div>
+<div class="homediv">
+  <div fxLayout="row wrap" class="appoinmentfirstrow" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="homenav" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <div fxFlex.xs="60" style="height:100%;">
+        <div fxLayout="row wrap" style="height:100%;" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Icons/imh_logo.jpg" style="height:100%;width:80px;padding-left:10px;" class="navfont">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" fxFlex.xs="50">
+            <h3 class="navname">
+              International Medical Hospital</h3>
+          </div>
+        </div>
+      </div>
+      <div style="width:auto;" class="sign-outbtn">
+        <button mat-raised-button color="accent">Logout</button>
+      </div>
+    </div>
+    <h1 class="welcome-text">
+      Patients Appoinment</h1>
+  </div>
+  <div fxLayout="row wrap" class="secondrow" fxLayoutAlign="center center" [fxShow]="true">
+    <div class="formdiv">
+      <form [formGroup]="page.form" method="POST">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxFlex="25" fxFlex.sm="20" fxFlex.xs="100" class="patientpic">
+          </div>
+          <div fxLayout="column wrap" fxFlex="70" fxLayoutAlign="start stretch" [fxShow]="true" fxFlex.xs="100">
+            <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="name" type="text" placeholder="Patient Name" [required]="true" formControlName="name">
+              <mat-label>Name</mat-label>
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="phone_no" type="number" placeholder="Enter Phone number ..." [required]="true" formControlName="phone_no">
+              <mat-label>Phone</mat-label>
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="blood_group" type="text" placeholder="Enter your Blood Group.." [required]="true" formControlName="blood_group">
+              <mat-label>Blood Group</mat-label>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="place" type="text" placeholder="Enter your Place.." [required]="true" formControlName="place">
+              <mat-label>Place</mat-label>
+            </mat-form-field>
+            <mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="cash" type="number" placeholder="Fees Amount" [required]="true" formControlName="cash">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-label>Departments</mat-label>
+              <mat-select placeholder="Choose Department" [required]="true">
+                <ng-template ngFor let-option [ngForOf] let-i="index">
+                  <mat-option [value]></mat-option>
+                </ng-template>
+              </mat-select>
+
+            </mat-form-field><mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-label>Doctors</mat-label>
+              <mat-select placeholder="Choose Doctors" [required]="true">
+                <ng-template ngFor let-option [ngForOf] let-i="index">
+                  <mat-option [value]></mat-option>
+                </ng-template>
+              </mat-select>
+
+            </mat-form-field></div>
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput name="email" type="text" placeholder="Email" [required]="true" formControlName="email">
+            <mat-label>Email</mat-label>
+          </mat-form-field>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="pin_code" type="number" placeholder="Pincode" [required]="true" formControlName="pin_code">
+              <mat-label>Pincode</mat-label>
+            </mat-form-field>
+            <mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;">
+              <mat-label>DOB</mat-label>
+              <input matInput placeholder="Date of Birth" [matDatepicker]="picker" formControlName="dob" name="dob" [required]="false" [disabled]="false">
+              <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+              <mat-datepicker #picker [disabled]="false"></mat-datepicker>
+
+            </mat-form-field>
+          </div>
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput name="address" type="text" placeholder="Address" [required]="true" formControlName="address">
+
+          </mat-form-field>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="warn">Cancel</button><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="accent">Cash Payment</button><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="primary">Online Payment</button></div>
+      </form>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="homefoot" fxLayoutAlign="space-between stretch" [fxShow]="true">
+    <h5 class="foottext">
+      Have an Emergency?</h5>
+    <h5 class="foottext">
+      EMERGENCY LINE : &#x260E; 1-800-900</h5>
+  </div>
+</div>

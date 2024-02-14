@@ -13,6 +13,10 @@
             "component": "department_pageComponent"
         },
         {
+            "path": "appoinment",
+            "component": "userappoinment_pageComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "home",
             "pathMatch": "full",
