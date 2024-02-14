@@ -1661,6 +1661,13 @@
                         "_value": "80",
                         "_type": "kv",
                         "_attrDef": "c"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "appointmentNavigation()",
+                        "_type": "kv",
+                        "_attrDef": "c",
+                        "_customAttributeFlag": "customInput"
                     }
                 ],
                 "f05f4b64-7868-b284-8a76-766979c10010": {
@@ -1933,6 +1940,13 @@
                         "_value": "80",
                         "_type": "kv",
                         "_attrDef": "c"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "departmentNavigation()",
+                        "_type": "kv",
+                        "_attrDef": "c",
+                        "_customAttributeFlag": "customInput"
                     }
                 ],
                 "6d851753-bb3f-f986-2ca4-c6305b260c36": {
@@ -2205,6 +2219,13 @@
                         "_value": "80",
                         "_type": "kv",
                         "_attrDef": "c"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "doctorNavigation()",
+                        "_type": "kv",
+                        "_attrDef": "c",
+                        "_customAttributeFlag": "customInput"
                     }
                 ],
                 "4ac73eb6-fae5-f7da-be64-d12b8aa8d5e5": {
@@ -2477,6 +2498,13 @@
                         "_value": "80",
                         "_type": "kv",
                         "_attrDef": "c"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "patientListNavigation()",
+                        "_type": "kv",
+                        "_attrDef": "c",
+                        "_customAttributeFlag": "customInput"
                     }
                 ],
                 "7e63c4d2-21a4-4a0b-7fbb-c43ac480d599": {
