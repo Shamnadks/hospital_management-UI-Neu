@@ -50,17 +50,17 @@
           </div>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Departments</mat-label>
-              <mat-select placeholder="Choose Department" [required]="true">
-                <ng-template ngFor let-option [ngForOf] let-i="index">
-                  <mat-option [value]></mat-option>
+              <mat-select placeholder="Choose Department" [required]="true" (selectionChange)="doctorsFilter($event)">
+                <ng-template ngFor let-option [ngForOf]="page.departments" let-i="index">
+                  <mat-option [value]="option.id">{{option.name}}</mat-option>
                 </ng-template>
               </mat-select>
 
             </mat-form-field><mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Doctors</mat-label>
-              <mat-select placeholder="Choose Doctors" [required]="true">
-                <ng-template ngFor let-option [ngForOf] let-i="index">
-                  <mat-option [value]></mat-option>
+              <mat-select formControlName="doctor_id" placeholder="Choose Doctors" [required]="true">
+                <ng-template ngFor let-option [ngForOf]="page.doctors" let-i="index">
+                  <mat-option [value]="option.id">{{option.name}}</mat-option>
                 </ng-template>
               </mat-select>
 
@@ -87,7 +87,7 @@
 
           </mat-form-field>
         </div>
-        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="warn">Cancel</button><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="accent">Cash Payment</button><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="primary">Online Payment</button></div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="warn">Cancel</button><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="accent" (click)="cashPayment()">Cash Payment</button><button mat-raised-button style="margin:10px;" fxFlex="30" fxFlex.sm="95" fxFlex.xs="95" color="primary" (click)="onlinePayment()">Online Payment</button></div>
       </form>
     </div>
   </div>

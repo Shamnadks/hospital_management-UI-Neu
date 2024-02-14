@@ -63,11 +63,56 @@ export class userappoinment_pageComponent {
     }
   }
 
+  doctorsFilter(selecteddepartment: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { selecteddepartment };
+      bh.local = {};
+      bh = this.sd_XvmBlikO3COuaHGT(bh);
+      //appendnew_next_doctorsFilter
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_dEMOzuH96QKUKIII');
+    }
+  }
+
+  cashPayment(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_DiRe4WUsee9wg5bs(bh);
+      //appendnew_next_cashPayment
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tCe9bQXNy8SnMbxy');
+    }
+  }
+
+  onlinePayment(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_RxEYd1bFoxbJgn69(bh);
+      //appendnew_next_onlinePayment
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1c4n4bRHi3DFTq9v');
+    }
+  }
   //appendnew_flow_userappoinment_pageComponent_start
 
   sd_v0sadkbRIvbzyQkR(bh) {
     try {
       this.page.departments = undefined;
+      this.page.doctors = undefined;
       bh = this.sd_xEFyZYGZx0yk03xK(bh);
       //appendnew_next_sd_v0sadkbRIvbzyQkR
       return bh;
@@ -120,7 +165,7 @@ export class userappoinment_pageComponent {
       let outputVariables = await appoinmentInstance.gettingDepartmentsList(
         undefined
       );
-      this.page.departments = outputVariables.input.departments;
+      bh.input.departments = outputVariables.input.departments;
 
       bh = this.sd_La4l51InVqKtwNQd(bh);
       //appendnew_next_sd_xxIomz2SQouKvEap
@@ -133,11 +178,85 @@ export class userappoinment_pageComponent {
   sd_La4l51InVqKtwNQd(bh) {
     try {
       const page = this.page;
-      console.log(page.departments);
+      page.departments = bh.input.departments.response;
       //appendnew_next_sd_La4l51InVqKtwNQd
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_La4l51InVqKtwNQd');
+    }
+  }
+
+  sd_XvmBlikO3COuaHGT(bh) {
+    try {
+      const page = this.page;
+      console.log(bh.input.selecteddepartment.value);
+      bh = this.sd_HTKaXzVYBinPWz7J(bh);
+      //appendnew_next_sd_XvmBlikO3COuaHGT
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_XvmBlikO3COuaHGT');
+    }
+  }
+
+  async sd_HTKaXzVYBinPWz7J(bh) {
+    try {
+      const appoinmentInstance: appoinment =
+        this.__page_injector__.get(appoinment);
+
+      let outputVariables = await appoinmentInstance.gettingDoctorsList(
+        bh.input.selecteddepartment.value
+      );
+      bh.input.doctors = outputVariables.input.doctors;
+
+      bh = this.sd_B6UADYFsCQDt7RTV(bh);
+      //appendnew_next_sd_HTKaXzVYBinPWz7J
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HTKaXzVYBinPWz7J');
+    }
+  }
+
+  sd_B6UADYFsCQDt7RTV(bh) {
+    try {
+      const page = this.page;
+      page.doctors = bh.input.doctors.response;
+      //appendnew_next_sd_B6UADYFsCQDt7RTV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_B6UADYFsCQDt7RTV');
+    }
+  }
+
+  async sd_DiRe4WUsee9wg5bs(bh) {
+    try {
+      const appoinmentInstance: appoinment =
+        this.__page_injector__.get(appoinment);
+
+      let outputVariables = await appoinmentInstance.cashAppoinment(
+        this.page.form.value
+      );
+
+      //appendnew_next_sd_DiRe4WUsee9wg5bs
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_DiRe4WUsee9wg5bs');
+    }
+  }
+
+  async sd_RxEYd1bFoxbJgn69(bh) {
+    try {
+      const appoinmentInstance: appoinment =
+        this.__page_injector__.get(appoinment);
+
+      let outputVariables = await appoinmentInstance.onlineAppoinment(
+        this.page.form.value
+      );
+      bh.input.appoinment = outputVariables.input.appoinment;
+
+      //appendnew_next_sd_RxEYd1bFoxbJgn69
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RxEYd1bFoxbJgn69');
     }
   }
 
