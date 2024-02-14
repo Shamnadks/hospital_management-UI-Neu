@@ -32,8 +32,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "doctor_pageComponent",
-        "generated": false
+        "serviceName": "doctor_pageComponent"
     },
     {
         "id": "sd_EzNxpwd1uiqrKi1H",
@@ -166,8 +165,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "doctor_pageComponent",
-        "generated": false
+        "serviceName": "doctor_pageComponent"
     },
     {
         "id": "sd_ZirguN2Qzbd0DRXA",
@@ -233,9 +231,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generated": true,
         "generateNext": false,
-        "serviceName": "doctor_pageComponent"
+        "serviceName": "doctor_pageComponent",
+        "generated": true
     },
     {
         "id": "sd_SXMYox7cEaP3lLlJ",
@@ -272,8 +270,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "doctor_pageComponent",
-        "generated": false
+        "serviceName": "doctor_pageComponent"
     },
     {
         "id": "sd_3okmuZaQKtfjcwg7",
@@ -334,9 +331,9 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generated": true,
         "generateNext": false,
-        "serviceName": "doctor_pageComponent"
+        "serviceName": "doctor_pageComponent",
+        "generated": true
     },
     {
         "id": "sd_a6Jw6chX9htMKQPM",

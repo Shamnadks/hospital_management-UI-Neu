@@ -3148,7 +3148,7 @@
                                     },
                                     {
                                         "_key": "datasource",
-                                        "_value": "",
+                                        "_value": "page.departments",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -3181,13 +3181,13 @@
                                     },
                                     {
                                         "_key": "optionValue",
-                                        "_value": "",
+                                        "_value": "option.id",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "optionView",
-                                        "_value": "",
+                                        "_value": "{{option.name}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -3254,9 +3254,19 @@
                                     },
                                     {
                                         "_key": "(selectionChange)",
-                                        "_value": "",
+                                        "_value": "doctorsFilter($event)",
                                         "_type": "kv",
-                                        "_attrDef": "p"
+                                        "_attrDef": "p",
+                                        "_customAttributeFlag": "flowpicker",
+                                        "objValue": {
+                                            "nodeID": "sd_dEMOzuH96QKUKIII",
+                                            "functionName": "doctorsFilter",
+                                            "activeTree": "pages",
+                                            "z": "sd_NPlyxC5dmObNxMy0",
+                                            "input": [
+                                                "$event"
+                                            ]
+                                        }
                                     },
                                     {
                                         "_key": "selectCustomOption",
@@ -3349,7 +3359,7 @@
                                     },
                                     {
                                         "_key": "datasource",
-                                        "_value": "",
+                                        "_value": "page.doctors",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -3382,19 +3392,19 @@
                                     },
                                     {
                                         "_key": "optionValue",
-                                        "_value": "",
+                                        "_value": "option.id",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "optionView",
-                                        "_value": "",
+                                        "_value": "{{option.name}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "formControlName",
-                                        "_value": "",
+                                        "_value": "doctor_id",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4489,6 +4499,7 @@
                         "1bdbc9cb-fa41-84e5-c752-796cc05dcf67": {
                             "paletteKey": "NG-RaisedButton",
                             "parentEditorKey": "253f9ec0-29bc-5fe1-8c1a-a85e0fe26812",
+                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -4518,9 +4529,16 @@
                                 },
                                 {
                                     "_key": "(click)",
-                                    "_value": "",
+                                    "_value": "cashPayment()",
                                     "_type": "kv",
-                                    "_attrDef": "p"
+                                    "_attrDef": "p",
+                                    "objValue": {
+                                        "nodeID": "sd_tCe9bQXNy8SnMbxy",
+                                        "functionName": "cashPayment",
+                                        "activeTree": "pages",
+                                        "z": "sd_NPlyxC5dmObNxMy0",
+                                        "input": []
+                                    }
                                 },
                                 {
                                     "_key": "[disabled]",
@@ -4598,9 +4616,16 @@
                                 },
                                 {
                                     "_key": "(click)",
-                                    "_value": "",
+                                    "_value": "onlinePayment()",
                                     "_type": "kv",
-                                    "_attrDef": "p"
+                                    "_attrDef": "p",
+                                    "objValue": {
+                                        "nodeID": "sd_1c4n4bRHi3DFTq9v",
+                                        "functionName": "onlinePayment",
+                                        "activeTree": "pages",
+                                        "z": "sd_NPlyxC5dmObNxMy0",
+                                        "input": []
+                                    }
                                 },
                                 {
                                     "_key": "[disabled]",
