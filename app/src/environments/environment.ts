@@ -7,7 +7,7 @@ export const environment = {
         "appName": "hospital-management-app",
         "namespace": "com.brototype.hospital-management-app",
         "useDefaultExceptionUI": true,
-        "isIDSEnabled": "false",
+        "isIDSEnabled": "true",
         "webAppMountpoint": "web",
         "NGFORAGE_MOBILE_DRIVER": "INDEXED_DB"
     }
