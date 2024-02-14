@@ -17,6 +17,10 @@
         "viewType": "common",
         "nodeType": "start",
         "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
         "functionName": "sd_sebDHdT8uLR9wzjM",
         "category": "Lifecycle Events",
         "x": 25,
@@ -28,7 +32,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "doctor_pageComponent"
+        "serviceName": "doctor_pageComponent",
+        "generated": false
     },
     {
         "id": "sd_EzNxpwd1uiqrKi1H",
@@ -161,7 +166,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "doctor_pageComponent"
+        "serviceName": "doctor_pageComponent",
+        "generated": false
     },
     {
         "id": "sd_ZirguN2Qzbd0DRXA",
@@ -229,9 +235,9 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
+        "generated": true,
         "generateNext": false,
-        "serviceName": "doctor_pageComponent",
-        "generated": true
+        "serviceName": "doctor_pageComponent"
     },
     {
         "id": "sd_SXMYox7cEaP3lLlJ",
@@ -270,6 +276,9 @@
         "generateNext": false,
         "serviceName": "doctor_pageComponent",
         "generated": true
+        // "generateNext": true,
+        // "serviceName": "doctor_pageComponent",
+        // "generated": false
     },
     {
         "id": "sd_3okmuZaQKtfjcwg7",
@@ -330,9 +339,9 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
+        "generated": true,
         "generateNext": false,
-        "serviceName": "doctor_pageComponent",
-        "generated": true
+        "serviceName": "doctor_pageComponent"
     },
     {
         "id": "sd_a6Jw6chX9htMKQPM",

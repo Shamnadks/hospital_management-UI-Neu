@@ -40,10 +40,181 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "departments",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
         "functionName": "sd_v0sadkbRIvbzyQkR",
         "category": "Function",
         "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_xEFyZYGZx0yk03xK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "userappoinment_pageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_xEFyZYGZx0yk03xK",
+        "type": "UseDependency",
+        "z": "sd_NPlyxC5dmObNxMy0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "validator"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_xEFyZYGZx0yk03xK",
+        "category": "Function",
+        "x": 325,
+        "y": 30,
+        "wires": [
+            [
+                "sd_yQd31V8HNj8iPE4m"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "userappoinment_pageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_yQd31V8HNj8iPE4m",
+        "type": "Script",
+        "z": "sd_NPlyxC5dmObNxMy0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "form configure",
+        "script": "page.form = new page.formGroup({\n    name: new page.formControl('',[page.validator.required]),\n    phone_no: new page.formControl('',[page.validator.required]),\n    dob: new page.formControl('',[page.validator.required]),\n    place: new page.formControl('',[page.validator.required]),\n    address: new page.formControl('',[page.validator.required]),\n    pin_code: new page.formControl('',[page.validator.required]),\n    email: new page.formControl('',[page.validator.required]),\n    blood_group: new page.formControl('',[page.validator.required]),\n    doctor_id: new page.formControl('',[page.validator.required]),\n    cash:new page.formControl('',[page.validator.required])\n})",
+        "functionName": "formConfigure",
+        "category": "Function",
+        "x": 460,
+        "y": 30,
+        "wires": [
+            [
+                "sd_xxIomz2SQouKvEap"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "userappoinment_pageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_xxIomz2SQouKvEap",
+        "type": "PageCallService",
+        "z": "sd_NPlyxC5dmObNxMy0",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_WHTCUYDcvN50YSU7",
+            "type": "tab",
+            "createdDate": "2024-02-14T15:51:35.295Z",
+            "label": "appoinment",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ivnXf8iTpT6qmaW0",
+            "flowName": "gettingDepartmentsList"
+        },
+        "inputVariables": [
+            {
+                "key": "departments",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "departments",
+                "valueType": "this.page",
+                "value": "departments",
+                "mapVarName": "departments",
+                "localVar": "this.page.departments"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/appoinment",
+        "startName": "gettingDepartmentsList",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_xxIomz2SQouKvEap",
+        "category": "General",
+        "x": 605,
+        "y": 30,
+        "wires": [
+            [
+                "sd_La4l51InVqKtwNQd"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "userappoinment_pageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_La4l51InVqKtwNQd",
+        "type": "Script",
+        "z": "sd_NPlyxC5dmObNxMy0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.departments)",
+        "functionName": "sd_La4l51InVqKtwNQd",
+        "category": "Function",
+        "x": 745,
         "y": 30,
         "wires": [
             []
@@ -52,5 +223,8 @@
         "generateNext": false,
         "serviceName": "userappoinment_pageComponent",
         "generated": true
+    }
+]
+  "generated": true
     }
 ]

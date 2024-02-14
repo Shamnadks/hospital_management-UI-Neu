@@ -2,6 +2,7 @@
     "classes": [
         "homenav",
         "firstrow",
+        "appoinmentfirstrow",
         "secondrow",
         "homediv",
         "homeoptions",
@@ -11,6 +12,8 @@
         "navname",
         "sign-outbtn",
         "welcome-text",
+        "formdiv",
+        "patientpic",
         "doctor-heading",
         "add-doctor-form",
         "add-doctor-input",

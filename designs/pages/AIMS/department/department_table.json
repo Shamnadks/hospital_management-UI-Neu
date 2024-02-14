@@ -47,7 +47,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "department_tableComponent"
+        "serviceName": "department_tableComponent",
+        "generated": false
     },
     {
         "id": "sd_sUxBk2wkB5zu2bdz",
@@ -168,9 +169,9 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
+        "generated": true,
         "generateNext": false,
-        "serviceName": "department_tableComponent",
-        "generated": true
+        "serviceName": "department_tableComponent"
     },
     {
         "id": "sd_okbJpuigxqh0mg9K",
@@ -211,7 +212,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "department_tableComponent"
+        "serviceName": "department_tableComponent",
+        "generated": false
     },
     {
         "id": "sd_ODKpeMgTwLjk3PQe",
