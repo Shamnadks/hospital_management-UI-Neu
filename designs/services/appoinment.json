@@ -1,0 +1,117 @@
+[
+    {
+        "id": "sd_WHTCUYDcvN50YSU7",
+        "type": "tab",
+        "createdDate": "2024-02-14T15:51:35.295Z",
+        "label": "appoinment",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "appoinment",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_ivnXf8iTpT6qmaW0",
+        "type": "Start",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "getting departments List",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "departments",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "gettingDepartmentsList",
+        "category": "General",
+        "x": 175,
+        "y": 34.8125,
+        "wires": [
+            [
+                "sd_waCO6DRKli8NUUNX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "appoinment"
+    },
+    {
+        "id": "sd_waCO6DRKli8NUUNX",
+        "type": "Script",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'department-filter/get'",
+        "functionName": "sd_waCO6DRKli8NUUNX",
+        "category": "Function",
+        "x": 350,
+        "y": 34.8125,
+        "wires": [
+            [
+                "sd_oQDaI7AMOr2I29D2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_oQDaI7AMOr2I29D2",
+        "type": "HttpRequest",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.input.departments",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "departments"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_oQDaI7AMOr2I29D2",
+        "category": "HTTP",
+        "x": 510,
+        "y": 34.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    }
+]

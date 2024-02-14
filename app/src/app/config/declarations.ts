@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-appoinment
+import { appoinment } from '../sd-services/appoinment';
 //CORE_REFERENCE_IMPORT-edit_modalComponent
 import { edit_modalComponent } from '../components/AIMS/department/edit_modal.component';
 //CORE_REFERENCE_IMPORT-department_tableComponent
@@ -99,6 +101,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-appoinment
+appoinment,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-addDoctorComponent
   addDoctorComponent,
 ];
@@ -112,6 +116,7 @@ export const appRoutes = [
   { path: 'home', component: homeComponent },
   { path: 'doctor', component: doctor_pageComponent },
   { path: 'department', component: department_pageComponent },
+  { path: 'appoinment', component: userappoinment_pageComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
