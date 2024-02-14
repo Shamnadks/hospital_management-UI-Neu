@@ -24,6 +24,13 @@
                     "type": "any",
                     "value": ""
                 }
+            },
+            {
+                "key": "refresh",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
             }
         ],
         "localVariables": [],
@@ -232,7 +239,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page?.editData,'edit data printing')\npage.editForm = new page.formGroup({\n    department : new page.formControl(page.editData.department,[page.validators.required]),\n    info: new page.formControl(page.editData?.info,[page.validators.required])\n})\n",
+        "script": "console.log(page?.editData,'edit data printing')\npage.editForm = new page.formGroup({\n    name : new page.formControl(page.editData?.name,[page.validators.required]),\n    info: new page.formControl(page.editData?.info,[page.validators.required])\n})\n",
         "functionName": "sd_oWsjWTueeeENV5Om",
         "category": "Function",
         "x": 565,
@@ -262,7 +269,7 @@
         "y": 200,
         "wires": [
             [
-                "sd_R2YQ7xXj98gshPkj"
+                "sd_Ez3skQPYwLi04XMo"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -276,14 +283,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page?.editForm?.value,'========')",
+        "script": "console.log(bh.local.editData,'========')\nconsole.log(bh.local.response,'response')",
         "functionName": "sd_0h78doOzJ7mchmKu",
         "category": "Function",
-        "x": 410,
+        "x": 445,
         "y": 200,
         "wires": [
             [
-                "sd_dlX4eyPtC8trQuzY"
+                "sd_dlX4eyPtC8trQuzY",
+                "sd_Oi78axlkqWUK3dQw"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -325,8 +333,8 @@
             {
                 "key": "data",
                 "map": true,
-                "valueType": "this.page",
-                "value": "editForm.value"
+                "valueType": "bh.local",
+                "value": "editData"
             }
         ],
         "outputMapping": [
@@ -343,13 +351,13 @@
         "startName": "editDepartment",
         "inputParams": [
             null,
-            "this.page.editForm.value"
+            "bh.local.editData"
         ],
         "accept_bh": false,
         "accept_csd": true,
         "functionName": "sd_R2YQ7xXj98gshPkj",
         "category": "General",
-        "x": 245,
+        "x": 325,
         "y": 200,
         "wires": [
             [
@@ -369,8 +377,8 @@
         "nodeType": "flow",
         "name": "",
         "message": {
-            "type": "bh.local",
-            "value": "response.message"
+            "type": "str",
+            "value": "Department updated successfully"
         },
         "action": {
             "type": "str",
@@ -381,9 +389,7 @@
             "value": "2000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -391,14 +397,15 @@
         "direction": "ltr",
         "functionName": "sd_guw23jh1fLlbNgKF",
         "category": "General",
-        "x": 565,
-        "y": 180,
+        "x": 685,
+        "y": 120,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "edit_modalComponent"
+        "generateNext": false,
+        "serviceName": "edit_modalComponent",
+        "generated": true
     },
     {
         "id": "sd_dlX4eyPtC8trQuzY",
@@ -436,6 +443,97 @@
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Ez3skQPYwLi04XMo",
+        "type": "Script",
+        "z": "sd_5V0jrq7jEtVZfL0r",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.editData = {\n    ...page.editForm.value,\n    id:page?.editData?.id,\n    status:page?.editData?.status\n}",
+        "functionName": "sd_Ez3skQPYwLi04XMo",
+        "category": "Function",
+        "x": 185,
+        "y": 200,
+        "wires": [
+            [
+                "sd_R2YQ7xXj98gshPkj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Oi78axlkqWUK3dQw",
+        "type": "PageSwitch",
+        "z": "sd_5V0jrq7jEtVZfL0r",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "response",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.response",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num",
+                "gv": "200"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_Oi78axlkqWUK3dQw",
+        "category": "Function",
+        "x": 560,
+        "y": 180,
+        "wires": [
+            [
+                "sd_guw23jh1fLlbNgKF",
+                "sd_xwf7ZAmxjEIcEXwe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_xwf7ZAmxjEIcEXwe",
+        "type": "Output",
+        "z": "sd_5V0jrq7jEtVZfL0r",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "eventName": "bh.pageOutput.refresh",
+        "data": "\"refresh page\"",
+        "functionName": "sd_xwf7ZAmxjEIcEXwe",
+        "category": "Function",
+        "x": 700,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "eventName": {
+                "type": "bh.pageOutput",
+                "value": "refresh",
+                "constant": false
+            },
+            "data": {
+                "type": "str",
+                "value": "refresh page",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "edit_modalComponent",

@@ -90,13 +90,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page?.form?.value)",
+        "script": "console.log(bh.local?.response,'add department response')",
         "functionName": "sd_WfWhQDZUVNy2ZGpd",
         "category": "Function",
         "x": 390,
         "y": 180,
         "wires": [
-            []
+            [
+                "sd_HTAgoK4KmUSPiipI"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -181,8 +183,8 @@
         "nodeType": "flow",
         "name": "",
         "message": {
-            "type": "bh.local",
-            "value": "response.message"
+            "type": "str",
+            "value": "Department added successfully"
         },
         "action": {
             "type": "str",
@@ -193,9 +195,7 @@
             "value": "2000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -203,14 +203,15 @@
         "direction": "ltr",
         "functionName": "sd_kOLgbo8SO7mWlK3G",
         "category": "General",
-        "x": 565,
+        "x": 645,
         "y": 180,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "add_formComponent"
+        "generateNext": false,
+        "serviceName": "add_formComponent",
+        "generated": true
     },
     {
         "id": "sd_29CmTLc943g1lOms",
@@ -275,13 +276,48 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.form = new page.formGroup({\n    department : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
+        "script": "page.form = new page.formGroup({\n    name : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
         "functionName": "sd_P0cOC3KuTFh5Kzu6",
         "category": "Function",
         "x": 545,
         "y": 40,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "add_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_HTAgoK4KmUSPiipI",
+        "type": "PageSwitch",
+        "z": "sd_eJ3SUcEk19CtsN2Z",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "response.status",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.response.status",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num",
+                "gv": "200"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_HTAgoK4KmUSPiipI",
+        "category": "Function",
+        "x": 525,
+        "y": 180,
+        "wires": [
+            [
+                "sd_kOLgbo8SO7mWlK3G"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

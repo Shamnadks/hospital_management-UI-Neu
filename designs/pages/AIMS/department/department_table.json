@@ -24,6 +24,13 @@
                     "type": "any",
                     "value": ""
                 }
+            },
+            {
+                "key": "refresh",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
             }
         ],
         "localVariables": [],
@@ -89,7 +96,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.departments = bh.local?.departments || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]",
+        "script": "page.departments = bh.local?.response?.response\n//  || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]",
         "functionName": "sd_dxCcDm8JHsGSo39p",
         "category": "Function",
         "x": 540,
@@ -139,9 +146,9 @@
                 "mapVarType": "input",
                 "key": "departments",
                 "valueType": "bh.local",
-                "value": "departments",
+                "value": "response",
                 "mapVarName": "departments",
-                "localVar": "bh.local.departments"
+                "localVar": "bh.local.response"
             }
         ],
         "serviceImportPath": "app/sd-services/addDoctorComponent",
@@ -195,8 +202,8 @@
         "flow_type": "sync",
         "functionName": "setShowModal",
         "category": "General",
-        "x": 85,
-        "y": 180,
+        "x": 65,
+        "y": 260,
         "wires": [
             [
                 "sd_ODKpeMgTwLjk3PQe"
@@ -216,8 +223,8 @@
         "script": "page.editData = bh.input?.editData\npage.showEditComponent = bh.input?.action=='open'?true: false",
         "functionName": "sd_ODKpeMgTwLjk3PQe",
         "category": "Function",
-        "x": 325,
-        "y": 180,
+        "x": 305,
+        "y": 260,
         "wires": [
             []
         ],
@@ -225,5 +232,29 @@
         "generateNext": false,
         "serviceName": "department_tableComponent",
         "generated": true
+    },
+    {
+        "id": "sd_AtChZ9YXJ8TbMcWo",
+        "type": "PageStart",
+        "z": "sd_nAEwFgUKHSJ395KV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "after edit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "afterEdit",
+        "category": "General",
+        "x": 65,
+        "y": 160,
+        "wires": [
+            [
+                "sd_4yeTrOOkbQTrbZI3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_tableComponent"
     }
 ]

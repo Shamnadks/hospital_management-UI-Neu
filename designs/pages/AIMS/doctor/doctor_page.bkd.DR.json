@@ -452,7 +452,9 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [
+                            "dep-doc-headings"
+                        ],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
@@ -1253,7 +1255,7 @@
                             },
                             {
                                 "_key": "type",
-                                "_value": "",
+                                "_value": "number",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -2232,7 +2234,7 @@
                             },
                             {
                                 "_key": "placeholder",
-                                "_value": "Age",
+                                "_value": "DOB",
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -2275,7 +2277,7 @@
                             },
                             {
                                 "_key": "type",
-                                "_value": "number",
+                                "_value": "date",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -2320,8 +2322,8 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "page.addForm.get('age')?.errors?.required",
-                                        "input2": "Age is required",
+                                        "input1": "page.addForm.get('dob')?.errors?.required",
+                                        "input2": "DOB is required",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -2390,7 +2392,7 @@
                             },
                             {
                                 "_key": "formControlName",
-                                "_value": "age",
+                                "_value": "dob",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             }
@@ -2879,7 +2881,7 @@
                             },
                             {
                                 "_key": "type",
-                                "_value": "",
+                                "_value": "number",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -3318,7 +3320,7 @@
                             },
                             {
                                 "_key": "optionView",
-                                "_value": "{{option.department}}",
+                                "_value": "{{option.name}}",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
@@ -3509,7 +3511,7 @@
                             },
                             {
                                 "_key": "type",
-                                "_value": "",
+                                "_value": "number",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },

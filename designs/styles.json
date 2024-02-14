@@ -16,15 +16,17 @@
         "add-doctor-input",
         "add-doctor-button",
         "dep_header",
+        "dep-doc-headings",
         "department_container",
         "departments-list-button",
         "departments-list-edit-button",
         "department-list-table",
+        "department-list-rows",
         "form_container",
         "dep_form_input",
         "dep_form_button",
         "modal",
         "modal-content",
-        "close"
+        "close-modal"
     ]
 }

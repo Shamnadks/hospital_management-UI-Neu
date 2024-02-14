@@ -469,7 +469,7 @@
                             },
                             {
                                 "_key": "name",
-                                "_value": "department",
+                                "_value": "name",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -520,7 +520,7 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "page.form.get('department')?.errors?.required",
+                                        "input1": "page.form.get('name')?.errors?.required",
                                         "input2": "Department is required",
                                         "toggle": {
                                             "toggleData": [],
@@ -590,7 +590,7 @@
                             },
                             {
                                 "_key": "formControlName",
-                                "_value": "department",
+                                "_value": "name",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             }
