@@ -3,8 +3,8 @@
     <form [formGroup]="page.form" fxLayoutAlign="space-around center" class="form_container" (ngSubmit)="formSubmission()">
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
         <mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput name="department" placeholder="Department" [required]="false" formControlName="department">
-          <mat-error align="start" *ngIf="page.form.get(&apos;department&apos;)?.errors?.required">Department is required</mat-error> <mat-label>Department</mat-label>
+          <input matInput name="name" placeholder="Department" [required]="false" formControlName="name">
+          <mat-error align="start" *ngIf="page.form.get(&apos;name&apos;)?.errors?.required">Department is required</mat-error> <mat-label>Department</mat-label>
         </mat-form-field><mat-form-field class="add-doctor-input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
           <mat-label>Description</mat-label>
           <textarea matInput formControlName="info" name="info" placeholder="Description ...." [required]="true"></textarea>

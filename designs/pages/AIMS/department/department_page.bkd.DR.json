@@ -51,7 +51,9 @@
                 },
                 {
                     "_key": "class",
-                    "_value": "",
+                    "_value": [
+                        "dep-doc-headings"
+                    ],
                     "_type": "dav",
                     "_attrDef": "p"
                 },
@@ -909,6 +911,15 @@
                     "_value": "page?.pageOfDepartment=='listDepartments'",
                     "_type": "kv",
                     "_attrDef": "c"
+                },
+                {
+                    "_key": "[closeModal]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "closeModal",
+                    "attrType": "INPUT"
                 }
             ]
         }

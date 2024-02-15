@@ -391,7 +391,7 @@
                     {
                         "_key": "class",
                         "_value": [
-                            "close"
+                            "close-modal"
                         ],
                         "_type": "dav",
                         "_attrDef": "p"
@@ -599,6 +599,32 @@
                         {
                             "_key": "html",
                             "_value": "&times;",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        }
+                    ]
+                },
+                "b310c34d-d8a1-1f9b-0899-28f020e41137": {
+                    "paletteKey": "html-editor",
+                    "parentEditorKey": "8ca9dfe8-0609-ac74-e5c6-b2109ea69656",
+                    "isAdvancedChildComponent": true,
+                    "commentid": null,
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "html",
+                            "_value": "",
                             "_type": "a",
                             "_attrDef": "p"
                         }
@@ -1229,7 +1255,7 @@
                                 },
                                 {
                                     "_key": "name",
-                                    "_value": "department",
+                                    "_value": "name",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -1350,7 +1376,7 @@
                                 },
                                 {
                                     "_key": "formControlName",
-                                    "_value": "department",
+                                    "_value": "name",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 }

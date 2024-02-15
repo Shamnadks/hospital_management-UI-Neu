@@ -6,7 +6,7 @@
         "designerReference": [
             {
                 "_key": "style",
-                "_value": "",
+                "_value": "display:flex;justify-content:center;",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -257,6 +257,23 @@
                     },
                     "inValid": false,
                     "message": ""
+                },
+                {
+                    "_key": "[refresh]",
+                    "_value": "afterEdit()",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "refresh",
+                    "attrType": "INPUT",
+                    "_customAttributeFlag": "flowpicker",
+                    "objValue": {
+                        "nodeID": "sd_AtChZ9YXJ8TbMcWo",
+                        "functionName": "afterEdit",
+                        "activeTree": "pages",
+                        "z": "sd_nAEwFgUKHSJ395KV",
+                        "input": []
+                    }
                 }
             ]
         },
@@ -288,7 +305,7 @@
                 },
                 {
                     "_key": "fxFlex",
-                    "_value": "",
+                    "_value": "95",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -337,13 +354,15 @@
                     },
                     {
                         "_key": "style",
-                        "_value": "width:100%; border-radius: 5px;    border-width: 5px;    border-color: rgb(21, 92, 151);",
+                        "_value": "background-color:rgba(0, 0, 0, 0.3);",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [
+                            "department-list-rows"
+                        ],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
@@ -367,7 +386,7 @@
                     },
                     {
                         "_key": "layoutAlign",
-                        "_value": "space-around",
+                        "_value": "space-between",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -591,7 +610,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "No",
+                                "_value": "Id",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }
@@ -1041,13 +1060,15 @@
                     },
                     {
                         "_key": "style",
-                        "_value": "width:100%;text-align:center",
+                        "_value": "background-color:rgba(0, 0, 0, 0.1);",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [
+                            "department-list-rows"
+                        ],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
@@ -1071,7 +1092,7 @@
                     },
                     {
                         "_key": "layoutAlign",
-                        "_value": "space-around",
+                        "_value": "space-between",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -1515,7 +1536,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "{{data?.department}}",
+                                "_value": "{{data?.name}}",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }
@@ -1709,8 +1730,8 @@
                             "_visibility": false
                         }
                     ],
-                    "d8fd62e7-b0ac-80ed-6af1-995d24a64a03": {
-                        "paletteKey": "NG-button",
+                    "033f62f2-d6af-17d4-6d95-aaaf60c77073": {
+                        "paletteKey": "NG-RaisedButton",
                         "parentEditorKey": "746e3fdc-f0c8-e794-ed20-5077d6a4ee7d",
                         "commentid": null,
                         "designerReference": [

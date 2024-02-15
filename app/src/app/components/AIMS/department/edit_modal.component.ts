@@ -16,6 +16,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -32,6 +33,8 @@ import { addDoctorComponent } from 'app/sd-services/addDoctorComponent'; //_spli
 export class edit_modalComponent {
   @Input('editData')
   public editData: any = undefined;
+  @Input('refresh')
+  public refresh: any = undefined;
   @Output('response')
   public response: any = new EventEmitter<any>();
   @Output('closeModal')
@@ -98,7 +101,7 @@ export class edit_modalComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_R2YQ7xXj98gshPkj(bh);
+      bh = this.sd_Ez3skQPYwLi04XMo(bh);
       //appendnew_next_formSubmission
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_0QJrBpUjrOOVeYse');
@@ -135,7 +138,7 @@ export class edit_modalComponent {
       const page = this.page;
       console.log(page?.editData, 'edit data printing');
       page.editForm = new page.formGroup({
-        department: new page.formControl(page.editData.department, [
+        name: new page.formControl(page.editData?.name, [
           page.validators.required,
         ]),
         info: new page.formControl(page.editData?.info, [
@@ -172,6 +175,22 @@ export class edit_modalComponent {
     }
   }
 
+  sd_Ez3skQPYwLi04XMo(bh) {
+    try {
+      const page = this.page;
+      bh.local.editData = {
+        ...page.editForm.value,
+        id: page?.editData?.id,
+        status: page?.editData?.status,
+      };
+      bh = this.sd_R2YQ7xXj98gshPkj(bh);
+      //appendnew_next_sd_Ez3skQPYwLi04XMo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Ez3skQPYwLi04XMo');
+    }
+  }
+
   async sd_R2YQ7xXj98gshPkj(bh) {
     try {
       const addDoctorComponentInstance: addDoctorComponent =
@@ -179,7 +198,7 @@ export class edit_modalComponent {
 
       let outputVariables = await addDoctorComponentInstance.editDepartment(
         undefined,
-        this.page.editForm.value
+        bh.local.editData
       );
       bh.local.response = outputVariables.input.response;
 
@@ -194,8 +213,10 @@ export class edit_modalComponent {
   sd_0h78doOzJ7mchmKu(bh) {
     try {
       const page = this.page;
-      console.log(page?.editForm?.value, '========');
+      console.log(bh.local.editData, '========');
+      console.log(bh.local.response, 'response');
       bh = this.sd_dlX4eyPtC8trQuzY(bh);
+      bh = this.sd_Oi78axlkqWUK3dQw(bh);
       //appendnew_next_sd_0h78doOzJ7mchmKu
       return bh;
     } catch (e) {
@@ -211,6 +232,53 @@ export class edit_modalComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_dlX4eyPtC8trQuzY');
+    }
+  }
+
+  sd_Oi78axlkqWUK3dQw(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.local.response,
+          200,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_guw23jh1fLlbNgKF(bh);
+        bh = this.sd_xwf7ZAmxjEIcEXwe(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Oi78axlkqWUK3dQw');
+    }
+  }
+
+  sd_guw23jh1fLlbNgKF(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Department updated successfully', 'ok', {
+          duration: 2000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_guw23jh1fLlbNgKF
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_guw23jh1fLlbNgKF');
+    }
+  }
+
+  sd_xwf7ZAmxjEIcEXwe(bh) {
+    try {
+      bh.pageOutput.refresh.emit('refresh page');
+      //appendnew_next_sd_xwf7ZAmxjEIcEXwe
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xwf7ZAmxjEIcEXwe');
     }
   }
 

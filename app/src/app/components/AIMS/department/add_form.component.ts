@@ -10,6 +10,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -106,7 +107,7 @@ export class add_formComponent {
     try {
       const page = this.page;
       page.form = new page.formGroup({
-        department: new page.formControl('', [page.validators.required]),
+        name: new page.formControl('', [page.validators.required]),
         info: new page.formControl('', [page.validators.required]),
       });
 
@@ -139,11 +140,48 @@ export class add_formComponent {
   sd_WfWhQDZUVNy2ZGpd(bh) {
     try {
       const page = this.page;
-      console.log(page?.form?.value);
+      console.log(bh.local?.response, 'add department response');
+      bh = this.sd_HTAgoK4KmUSPiipI(bh);
       //appendnew_next_sd_WfWhQDZUVNy2ZGpd
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_WfWhQDZUVNy2ZGpd');
+    }
+  }
+
+  sd_HTAgoK4KmUSPiipI(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.local.response.status,
+          200,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_kOLgbo8SO7mWlK3G(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HTAgoK4KmUSPiipI');
+    }
+  }
+
+  sd_kOLgbo8SO7mWlK3G(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Department added successfully', 'ok', {
+          duration: 2000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_kOLgbo8SO7mWlK3G
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kOLgbo8SO7mWlK3G');
     }
   }
 

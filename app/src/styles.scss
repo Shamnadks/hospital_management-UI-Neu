@@ -143,8 +143,13 @@ margin: 0;
     height:auto;
 }
 .doctor-heading{
-    background-color:rgb(21, 92, 151) ;
-    height: 250px;
+    // background-color:rgba(21, 92,151);
+    height: 300px;
+     background-image: url('https://images.deccanherald.com/deccanherald%2Fimport%2Fsites%2Fdh%2Ffiles%2Farticle_images%2F2018%2F12%2F25%2Ffile6x71see8oqa1d9eww6b8-1545760729.jpg?auto=format%2Ccompress&fmt=webp&fit=max&format=webp&q=70&w=900&dpr=1.5'); 
+    background-size: cover;
+    background-position: center;
+    // height:46%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .add-doctor-form{
@@ -166,9 +171,27 @@ margin: 0;
 }
 
 .dep_header{
-    background-color:rgba(21, 92,151);
-    height: 250px;
+    // background-color:rgba(21, 92,151);
+    height: 300px;
+     background-image: url('https://www.drkarmalkar.com/wp-content/uploads/2021/10/General-Medicine.jpg'); 
+    background-size: cover;
+    background-position: center;
+    // height:46%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.dep-doc-headings{
+     margin:0;
+     width:100%;
+     text-align:center;
+     font-family: 'Roboto',sans-serif;
+     font-size: 3vw;
+     font-weight: 1000;
+     color: white;  
+     -webkit-text-stroke: 1px #a4c5de;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .department_container{
     width: 100vw;
     height: 100%;
@@ -181,8 +204,8 @@ margin: 0;
 }
 
 .departments-list-edit-button{
-    background-color: rgb(21, 92, 151);
-    color: white;
+    background-color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -193,6 +216,17 @@ margin: 0;
    border-color: rgb(21, 92, 151);
 //    display: flex;
 //    justify-content: center;
+}
+
+.department-list-rows{
+    margin-bottom:2px;
+    width:100%;
+    text-align:center;
+    border-radius: 5px !important;
+    border-width: 10px !important;
+    border-color: black !important;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .form_container{
@@ -247,15 +281,15 @@ margin: 0;
 }
 
 /* The Close Button */
-.close {
+.close-modal {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close-modal:hover,
+.close-modal {
   color: black;
   text-decoration: none;
   cursor: pointer;

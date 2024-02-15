@@ -88,8 +88,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "addDoctorComponent"
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
     },
     {
         "id": "sd_LONRNX02yFlQ4QvE",
@@ -98,13 +99,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'department/getAll'\nconsole.log('calling fetch department')",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'department-filter/get'\nconsole.log('calling fetch department')",
         "functionName": "sd_LONRNX02yFlQ4QvE",
         "category": "Function",
         "x": 265,
         "y": 120,
         "wires": [
-            []
+            [
+                "sd_uRRFasdaGQzF0UEm"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -177,9 +180,9 @@
             "mapVarType": "bh.input",
             "mapVarValue": "data"
         },
-        "resultMapping": "bh.local.response",
+        "resultMapping": "bh.input.response",
         "resultMappingObj": {
-            "mapVarType": "bh.local",
+            "mapVarType": "bh.input",
             "mapVarValue": "response"
         },
         "headers": {},
@@ -196,8 +199,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "addDoctorComponent"
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
     },
     {
         "id": "sd_sVWmXquySe8c6EQB",
@@ -206,13 +210,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'/doctor'\nconsole.log(bh.input.data,'doctor data')",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'doctors/post'\nconsole.log(bh.input.data,'doctor data')",
         "functionName": "sd_sVWmXquySe8c6EQB",
         "category": "Function",
         "x": 270,
         "y": 260,
         "wires": [
-            []
+            [
+                "sd_fu7yAYxUwuAEbo32"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -268,6 +274,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.local.url",
         "urlMappingObj": {
@@ -275,8 +282,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -292,9 +301,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_9UrrryiGWKYMUISP",
         "category": "HTTP",
@@ -304,8 +315,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "addDoctorComponent"
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
     },
     {
         "id": "sd_rXoA1eXtfl9NnSRj",
@@ -314,13 +326,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'/department'\nconsole.log(bh.input.data,'department data')",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'department/post'\nconsole.log(bh.input.data,'department data')",
         "functionName": "sd_rXoA1eXtfl9NnSRj",
         "category": "Function",
         "x": 285,
         "y": 400,
         "wires": [
-            []
+            [
+                "sd_9UrrryiGWKYMUISP"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -417,8 +431,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "addDoctorComponent"
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
     },
     {
         "id": "sd_LVZrOZ0BYT8nOz85",
@@ -427,13 +442,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'/department'\nconsole.log(bh.input.data,'department edit data')",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'department/put'\nconsole.log(bh.input.data,'department edit data')",
         "functionName": "sd_LVZrOZ0BYT8nOz85",
         "category": "Function",
         "x": 285,
         "y": 540,
         "wires": [
-            []
+            [
+                "sd_9oiqa8VZZiOwLUCO"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

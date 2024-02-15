@@ -20,6 +20,8 @@ import { addDoctorComponent } from 'app/sd-services/addDoctorComponent'; //_spli
 export class department_tableComponent {
   @Input('closeModal')
   public closeModal: any = undefined;
+  @Input('refresh')
+  public refresh: any = undefined;
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -72,6 +74,21 @@ export class department_tableComponent {
       return this.errorHandler(bh, e, 'sd_okbJpuigxqh0mg9K');
     }
   }
+
+  afterEdit(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_4yeTrOOkbQTrbZI3(bh);
+      //appendnew_next_afterEdit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AtChZ9YXJ8TbMcWo');
+    }
+  }
   //appendnew_flow_department_tableComponent_start
 
   sd_sUxBk2wkB5zu2bdz(bh) {
@@ -94,7 +111,7 @@ export class department_tableComponent {
       let outputVariables = await addDoctorComponentInstance.fetchDepartments(
         undefined
       );
-      bh.local.departments = outputVariables.input.departments;
+      bh.local.response = outputVariables.input.departments;
 
       bh = this.sd_dxCcDm8JHsGSo39p(bh);
       //appendnew_next_sd_4yeTrOOkbQTrbZI3
@@ -107,16 +124,8 @@ export class department_tableComponent {
   sd_dxCcDm8JHsGSo39p(bh) {
     try {
       const page = this.page;
-      page.departments = bh.local?.departments || [
-        { id: 1, department: 'Cardiologist', info: 'this one is really good' },
-        { id: 2, department: 'Neurologist' },
-        { id: 3, department: 'Orthopedist' },
-        { id: 4, department: 'Pediatrician' },
-        { id: 5, department: 'Nephrologist' },
-        { id: 6, department: 'Endocrinologist' },
-        { id: 6, department: 'Radiologist' },
-        { id: 7, department: 'Surgeon' },
-      ];
+      page.departments = bh.local?.response?.response;
+      //  || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]
       //appendnew_next_sd_dxCcDm8JHsGSo39p
       return bh;
     } catch (e) {
