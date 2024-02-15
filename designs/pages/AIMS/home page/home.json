@@ -17,10 +17,14 @@
         "viewType": "common",
         "nodeType": "start",
         "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
         "functionName": "sd_FBez52itXu3EZ8pU",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 105,
+        "y": 80,
         "wires": [
             [
                 "sd_EDRpBlZuwXpBtXm0"
@@ -40,11 +44,239 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "logInOut",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "false"
+                }
+            }
+        ],
         "functionName": "sd_EDRpBlZuwXpBtXm0",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 285,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_oN3Fz7NSqgxkeHhz",
+        "type": "PageStart",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "appointmentNavigation",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "appointmentNavigation",
+        "category": "General",
+        "x": 100,
+        "y": 220,
+        "wires": [
+            [
+                "sd_WvfjWegNT3P9oHbN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_WvfjWegNT3P9oHbN",
+        "type": "Navigation",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "navigateHelper",
+        "path": "/appoinment",
+        "functionName": "navigateHelper",
+        "category": "Navigation",
+        "x": 285,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_LroTqArLxnO4FdOc",
+        "type": "Navigation",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "navigationHelper",
+        "path": "/department",
+        "functionName": "navigationHelper",
+        "category": "Navigation",
+        "x": 285,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_XjHkhhaqzjQLZUYw",
+        "type": "Navigation",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "doctorNavigate",
+        "path": "/doctor",
+        "functionName": "doctorNavigate",
+        "category": "Navigation",
+        "x": 285,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_vfkudQe8UzmmEJtc",
+        "type": "Navigation",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "patientNavigate",
+        "path": "/patients",
+        "functionName": "patientNavigate",
+        "category": "Navigation",
+        "x": 285,
+        "y": 580,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ofhiUIZxpQ7cN1CI",
+        "type": "PageStart",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "departmentNavigation",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "departmentNavigation",
+        "category": "General",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "sd_LroTqArLxnO4FdOc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_p2sBCRymYnVK4aBG",
+        "type": "PageStart",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "doctorNavigation",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "doctorNavigation",
+        "category": "General",
+        "x": 105,
+        "y": 460,
+        "wires": [
+            [
+                "sd_XjHkhhaqzjQLZUYw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_yh0iStDpF9wfazJM",
+        "type": "PageStart",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "patientListNavigation",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "patientListNavigation",
+        "category": "General",
+        "x": 105,
+        "y": 580,
+        "wires": [
+            [
+                "sd_vfkudQe8UzmmEJtc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_bI27x61IkJAFzAy3",
+        "type": "PageStart",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "LogIn",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "logIn",
+        "category": "General",
+        "x": 105,
+        "y": 700,
+        "wires": [
+            [
+                "sd_PO35xLWZPf261Bwy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_PO35xLWZPf261Bwy",
+        "type": "Script",
+        "z": "sd_fHxZ97C707KlcUsD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "LogInFunction",
+        "script": "page.system.oauthService.login('http://localhost:4200/home')",
+        "functionName": "logInFunction",
+        "category": "Function",
+        "x": 285,
+        "y": 700,
         "wires": [
             []
         ],

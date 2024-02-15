@@ -75,6 +75,222 @@
         "nodeType": "flow",
         "name": "",
         "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.input.departments",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "departments"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_oQDaI7AMOr2I29D2",
+        "category": "HTTP",
+        "x": 510,
+        "y": 34.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_1duv42srxuf6rjDP",
+        "type": "Start",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "getting doctors list",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "doctors",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "gettingDoctorsList",
+        "category": "General",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "sd_UOcGAbMGbBY2z4S0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "appoinment"
+    },
+    {
+        "id": "sd_UOcGAbMGbBY2z4S0",
+        "type": "Script",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'doctor/get?department='+bh.input.doctors\nconsole.log(\"haaaai\")\n",
+        "functionName": "sd_UOcGAbMGbBY2z4S0",
+        "category": "Function",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "sd_T0RZ1ZTSiIEzurmh"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_T0RZ1ZTSiIEzurmh",
+        "type": "HttpRequest",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.input.doctors",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "doctors"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_T0RZ1ZTSiIEzurmh",
+        "category": "HTTP",
+        "x": 520,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_ij0KzYogn6nP6HmI",
+        "type": "Start",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "cash appoinment",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "appoinment",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "cashAppoinment",
+        "category": "General",
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "sd_52t4891oznMukad5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "appoinment"
+    },
+    {
+        "id": "sd_52t4891oznMukad5",
+        "type": "Script",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.appoinment={\n    \"name\":bh.input.appoinment.name,\n    \"phone_no\":bh.input.appoinment.phone_no,\n    \"dob\":bh.input.appoinment.dob,\n    \"place\":bh.input.appoinment.place,\n    \"address\":bh.input.appoinment.address,\n    \"pin_code\":bh.input.appoinment.pin_code,\n    \"email\":bh.input.appoinment.email,\n    \"blood_group\":bh.input.appoinment.blood_group,\n    \"doctor_id\":bh.input.appoinment.doctor_id,\n    \"cash\":bh.input.appoinment.cash,\n    \"payment_method\":\"cash\"\n}\nbh.local.url = bh.system.environment.properties.ssdURL+'appointment/post'\n",
+        "functionName": "sd_52t4891oznMukad5",
+        "category": "Function",
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "sd_CikVONei91JxTgcR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_CikVONei91JxTgcR",
+        "type": "HttpRequest",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
         "methodMappingObj": {},
         "urlMapping": "bh.local.url",
         "urlMappingObj": {
@@ -87,14 +303,15 @@
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
+        "reqBody": "bh.input.appoinment",
         "reqBodyObj": {
-            "mapVarType": "bh",
-            "mapVarValue": ""
-        },
-        "resultMapping": "bh.input.departments",
-        "resultMappingObj": {
             "mapVarType": "bh.input",
-            "mapVarValue": "departments"
+            "mapVarValue": "appoinment"
+        },
+        "resultMapping": "bh.local.response",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "response"
         },
         "headers": {},
         "headersObj": [],
@@ -102,10 +319,166 @@
         "params": {},
         "paramsObj": [],
         "paramMappingObj": {},
-        "functionName": "sd_oQDaI7AMOr2I29D2",
+        "functionName": "sd_CikVONei91JxTgcR",
         "category": "HTTP",
-        "x": 510,
-        "y": 34.8125,
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "sd_1ckFabNUfGjA8yfw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_yeoHHfEtXGKefsqC",
+        "type": "Start",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "online appoinment",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "appoinment",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "onlineAppoinment",
+        "category": "General",
+        "x": 185,
+        "y": 400,
+        "wires": [
+            [
+                "sd_FqqQW8T2Dk2nvXiJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "appoinment"
+    },
+    {
+        "id": "sd_FqqQW8T2Dk2nvXiJ",
+        "type": "Script",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nbh.input.appoinment={...bh.input.appoinment,\"payment_method\":\"stripe\",\"sucess_url\": \"http://localhost:4200/home?session_id={CHECKOUT_SESSION_ID}\",\n      \"cancel_url\": \"http://localhost:4200/appoinment\"}\nbh.local.url = bh.system.environment.properties.ssdURL+'appointment/post'",
+        "functionName": "sd_FqqQW8T2Dk2nvXiJ",
+        "category": "Function",
+        "x": 393,
+        "y": 404.8125,
+        "wires": [
+            [
+                "sd_YNaLt3snM41I6gmI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_YNaLt3snM41I6gmI",
+        "type": "HttpRequest",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.input.appoinment",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "appoinment"
+        },
+        "resultMapping": "bh.local.response",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "response"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_YNaLt3snM41I6gmI",
+        "category": "HTTP",
+        "x": 573,
+        "y": 404.8125,
+        "wires": [
+            [
+                "sd_COLvx5LLfqvM8ePS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_1ckFabNUfGjA8yfw",
+        "type": "Script",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.local.response)",
+        "functionName": "sd_1ckFabNUfGjA8yfw",
+        "category": "Function",
+        "x": 680,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "appoinment",
+        "generated": true
+    },
+    {
+        "id": "sd_COLvx5LLfqvM8ePS",
+        "type": "Script",
+        "z": "sd_WHTCUYDcvN50YSU7",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(JSON.stringify(bh.local.response)); // Log the value of bh.local.response\n\n// Redirect the browser to a new URL\nwindow.location.href = bh.local.response?.response?.url;\n",
+        "functionName": "sd_COLvx5LLfqvM8ePS",
+        "category": "Function",
+        "x": 720,
+        "y": 420,
         "wires": [
             []
         ],

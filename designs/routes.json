@@ -17,6 +17,10 @@
             "component": "userappoinment_pageComponent"
         },
         {
+            "path": "patients",
+            "component": "patient_pageComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "home",
             "pathMatch": "full",

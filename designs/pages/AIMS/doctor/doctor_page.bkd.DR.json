@@ -3238,6 +3238,7 @@
                         "paletteKey": "NG-Select",
                         "parentEditorKey": "71a184a9-dd73-ef81-ecf7-be1d1bec0d03",
                         "isAdvancedComponent": true,
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
