@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-patientsComponent
+import { patientsComponent } from '../components/IMH/patients/patients.component';
 //CORE_REFERENCE_IMPORT-user_appointmentComponent
 import { user_appointmentComponent } from '../components/IMH/appointment/user_appointment.component';
 //CORE_REFERENCE_IMPORT-mainComponent
@@ -66,6 +68,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientsComponent
+  patientsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-user_appointmentComponent
   user_appointmentComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-mainComponent
@@ -109,11 +113,11 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: 'home' },
-  { path: 'doctor' },
-  { path: 'department' },
-  { path: 'appoinment' },
-  { path: 'patients' },
+  { path: 'home', component: mainComponent },
+  { path: 'doctor', component: doctorComponent },
+  { path: 'department', component: department_mainComponent },
+  { path: 'appoinment', component: user_appointmentComponent },
+  { path: 'patients', component: patientsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

@@ -2,23 +2,23 @@
     "routes": [
         {
             "path": "home",
-            "component": ""
+            "component": "mainComponent"
         },
         {
             "path": "doctor",
-            "component": ""
+            "component": "doctorComponent"
         },
         {
             "path": "department",
-            "component": ""
+            "component": "department_mainComponent"
         },
         {
             "path": "appoinment",
-            "component": ""
+            "component": "user_appointmentComponent"
         },
         {
             "path": "patients",
-            "component": ""
+            "component": "patientsComponent"
         },
         {
             "path": "''",

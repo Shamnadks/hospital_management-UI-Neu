@@ -1,0 +1,56 @@
+[
+    {
+        "id": "sd_tL03hZCHJm5zGTwU",
+        "type": "tab",
+        "createdDate": "2024-02-16T13:18:44.152Z",
+        "label": "patients",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "patientsComponent"
+    },
+    {
+        "id": "sd_jdIcMM1isPmVXaxQ",
+        "type": "OnInit",
+        "z": "sd_tL03hZCHJm5zGTwU",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_jdIcMM1isPmVXaxQ",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_X738X5BaU7misYfH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "patientsComponent"
+    },
+    {
+        "id": "sd_X738X5BaU7misYfH",
+        "type": "PageVariables",
+        "z": "sd_tL03hZCHJm5zGTwU",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_X738X5BaU7misYfH",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientsComponent",
+        "generated": true
+    }
+]
