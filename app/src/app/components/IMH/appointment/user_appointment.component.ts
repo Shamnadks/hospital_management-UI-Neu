@@ -4,10 +4,16 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormBuilder } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { appoinment } from 'app/sd-services/appoinment'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -57,14 +63,167 @@ export class user_appointmentComponent {
     }
   }
 
+  doctorsFilter(department: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { department };
+      bh.local = {};
+      bh = this.sd_Pgd3oydCbbOEooZt(bh);
+      //appendnew_next_doctorsFilter
+      return bh.input.department;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UwA2oHMSgITUT90a');
+    }
+  }
+
+  cashPayment(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_GK1vjWSr2GO5EFim(bh);
+      //appendnew_next_cashPayment
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kKX1qu7KLgC5ZHou');
+    }
+  }
   //appendnew_flow_user_appointmentComponent_start
 
   sd_9Fkdso8lcsHONrVX(bh) {
     try {
+      this.page.departments = undefined;
+      this.page.doctors = undefined;
+      bh = this.sd_CmMZQk9N8FNtEY1U(bh);
       //appendnew_next_sd_9Fkdso8lcsHONrVX
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_9Fkdso8lcsHONrVX');
+    }
+  }
+
+  sd_CmMZQk9N8FNtEY1U(bh) {
+    try {
+      this.page.formGroup = FormGroup;
+      this.page.formControl = FormControl;
+      this.page.validators = Validators;
+      bh = this.sd_mhpHYStGRuRAvf78(bh);
+      //appendnew_next_sd_CmMZQk9N8FNtEY1U
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_CmMZQk9N8FNtEY1U');
+    }
+  }
+
+  sd_mhpHYStGRuRAvf78(bh) {
+    try {
+      const page = this.page;
+      page.form = new page.formGroup({
+        name: new page.formControl('', [page.validators.required]),
+        phone_no: new page.formControl('', [page.validators.required]),
+        blood_group: new page.formControl('', [page.validators.required]),
+        place: new page.formControl('', [page.validators.required]),
+        cash: new page.formControl('', [page.validators.required]),
+        doctor_id: new page.formControl('', [page.validators.required]),
+        email: new page.formControl('', [page.validators.required]),
+        pin_code: new page.formControl('', [page.validators.required]),
+        dob: new page.formControl('', [page.validators.required]),
+        address: new page.formControl('', [page.validators.required]),
+      });
+
+      bh = this.fetchingDepartments(bh);
+      //appendnew_next_sd_mhpHYStGRuRAvf78
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mhpHYStGRuRAvf78');
+    }
+  }
+
+  async fetchingDepartments(bh) {
+    try {
+      const appoinmentInstance: appoinment =
+        this.__page_injector__.get(appoinment);
+
+      let outputVariables = await appoinmentInstance.gettingDepartmentsList(
+        undefined
+      );
+      bh.input.departments = outputVariables.input.departments;
+
+      bh = this.sd_AQxLfYLyUZ9HUE2t(bh);
+      //appendnew_next_fetchingDepartments
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_VSWnvma9zKUIOWaC');
+    }
+  }
+
+  sd_AQxLfYLyUZ9HUE2t(bh) {
+    try {
+      const page = this.page;
+      page.departments = bh.input?.departments?.response;
+      //appendnew_next_sd_AQxLfYLyUZ9HUE2t
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AQxLfYLyUZ9HUE2t');
+    }
+  }
+
+  sd_Pgd3oydCbbOEooZt(bh) {
+    try {
+      const page = this.page;
+      console.log('kkkkkkkkkkkkkkk');
+      console.log(bh.input.department);
+      console.log('jjjjjjjjjjjjjjjjj');
+      bh = this.sd_zFiKHPGlGuzX4Hr2(bh);
+      //appendnew_next_sd_Pgd3oydCbbOEooZt
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Pgd3oydCbbOEooZt');
+    }
+  }
+
+  async sd_zFiKHPGlGuzX4Hr2(bh) {
+    try {
+      const appoinmentInstance: appoinment =
+        this.__page_injector__.get(appoinment);
+
+      let outputVariables = await appoinmentInstance.gettingDoctorsList(
+        bh.input.department
+      );
+      bh.input.doctors = outputVariables.input.doctors;
+
+      bh = this.sd_5m4qJLh9lSr5lnAS(bh);
+      //appendnew_next_sd_zFiKHPGlGuzX4Hr2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zFiKHPGlGuzX4Hr2');
+    }
+  }
+
+  sd_5m4qJLh9lSr5lnAS(bh) {
+    try {
+      const page = this.page;
+      page.doctors = bh.input?.doctors?.response;
+      //appendnew_next_sd_5m4qJLh9lSr5lnAS
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5m4qJLh9lSr5lnAS');
+    }
+  }
+
+  sd_GK1vjWSr2GO5EFim(bh) {
+    try {
+      const page = this.page;
+      console.log(page.form.value);
+      //appendnew_next_sd_GK1vjWSr2GO5EFim
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GK1vjWSr2GO5EFim');
     }
   }
 

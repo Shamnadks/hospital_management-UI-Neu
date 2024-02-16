@@ -40,11 +40,371 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "departments",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "doctors",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
         "functionName": "sd_9Fkdso8lcsHONrVX",
         "category": "Function",
         "x": 180,
         "y": 30,
+        "wires": [
+            [
+                "sd_CmMZQk9N8FNtEY1U"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CmMZQk9N8FNtEY1U",
+        "type": "UseDependency",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "validators"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_CmMZQk9N8FNtEY1U",
+        "category": "Function",
+        "x": 360,
+        "y": 31,
+        "wires": [
+            [
+                "sd_mhpHYStGRuRAvf78"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mhpHYStGRuRAvf78",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.form = new page.formGroup({\n    name: new page.formControl('',[page.validators.required]),\n    phone_no: new page.formControl('',[page.validators.required]),\n    blood_group: new page.formControl('',[page.validators.required]),\n    place: new page.formControl('',[page.validators.required]),\n    cash: new page.formControl('',[page.validators.required]),\n    doctor_id: new page.formControl('',[page.validators.required]),\n    email: new page.formControl('',[page.validators.required]),\n    pin_code: new page.formControl('',[page.validators.required]),\n    dob: new page.formControl('',[page.validators.required]),\n    address: new page.formControl('',[page.validators.required])\n})\n",
+        "functionName": "sd_mhpHYStGRuRAvf78",
+        "category": "Function",
+        "x": 525,
+        "y": 31,
+        "wires": [
+            [
+                "sd_VSWnvma9zKUIOWaC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_VSWnvma9zKUIOWaC",
+        "type": "PageCallService",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "fetching departments",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_WHTCUYDcvN50YSU7",
+            "type": "tab",
+            "createdDate": "2024-02-14T15:51:35.295Z",
+            "label": "appoinment",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ivnXf8iTpT6qmaW0",
+            "flowName": "gettingDepartmentsList"
+        },
+        "inputVariables": [
+            {
+                "key": "departments",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "departments",
+                "valueType": "bh.input",
+                "value": "departments",
+                "mapVarName": "departments",
+                "localVar": "bh.input.departments"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/appoinment",
+        "startName": "gettingDepartmentsList",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "fetchingDepartments",
+        "category": "General",
+        "x": 641,
+        "y": 31,
+        "wires": [
+            [
+                "sd_AQxLfYLyUZ9HUE2t"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AQxLfYLyUZ9HUE2t",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.departments = bh.input?.departments?.response",
+        "functionName": "sd_AQxLfYLyUZ9HUE2t",
+        "category": "Function",
+        "x": 780,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UwA2oHMSgITUT90a",
+        "type": "PageStart",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "doctorsFilter",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "department",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "doctorsFilter",
+        "category": "General",
+        "x": 105,
+        "y": 160,
+        "wires": [
+            [
+                "sd_Pgd3oydCbbOEooZt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "user_appointmentComponent"
+    },
+    {
+        "id": "sd_zFiKHPGlGuzX4Hr2",
+        "type": "PageCallService",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_WHTCUYDcvN50YSU7",
+            "type": "tab",
+            "createdDate": "2024-02-14T15:51:35.295Z",
+            "label": "appoinment",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_1duv42srxuf6rjDP",
+            "flowName": "gettingDoctorsList"
+        },
+        "inputVariables": [
+            {
+                "key": "doctors",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "department"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "doctors",
+                "valueType": "bh.input",
+                "value": "doctors",
+                "mapVarName": "doctors",
+                "localVar": "bh.input.doctors"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/appoinment",
+        "startName": "gettingDoctorsList",
+        "inputParams": [
+            "bh.input.department"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_zFiKHPGlGuzX4Hr2",
+        "category": "General",
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "sd_5m4qJLh9lSr5lnAS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5m4qJLh9lSr5lnAS",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\npage.doctors = bh.input?.doctors?.response",
+        "functionName": "sd_5m4qJLh9lSr5lnAS",
+        "category": "Function",
+        "x": 560,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Pgd3oydCbbOEooZt",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"kkkkkkkkkkkkkkk\")\nconsole.log(bh.input.department)\nconsole.log(\"jjjjjjjjjjjjjjjjj\")",
+        "functionName": "sd_Pgd3oydCbbOEooZt",
+        "category": "Function",
+        "x": 240,
+        "y": 160,
+        "wires": [
+            [
+                "sd_zFiKHPGlGuzX4Hr2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kKX1qu7KLgC5ZHou",
+        "type": "PageStart",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "cashPayment",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "cashPayment",
+        "category": "General",
+        "x": 105,
+        "y": 280,
+        "wires": [
+            [
+                "sd_GK1vjWSr2GO5EFim"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "user_appointmentComponent"
+    },
+    {
+        "id": "sd_GK1vjWSr2GO5EFim",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.form.value)",
+        "functionName": "sd_GK1vjWSr2GO5EFim",
+        "category": "Function",
+        "x": 260,
+        "y": 280,
         "wires": [
             []
         ],
