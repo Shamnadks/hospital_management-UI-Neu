@@ -222,7 +222,9 @@
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "editData",
-                    "attrType": "INPUT"
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
                 },
                 {
                     "_key": "[refresh]",
@@ -239,7 +241,9 @@
                         "activeTree": "pages",
                         "z": "sd_6gUB2ztUrhGt7VU4",
                         "input": []
-                    }
+                    },
+                    "inValid": false,
+                    "message": ""
                 },
                 {
                     "_key": "(response)",
@@ -248,7 +252,9 @@
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "response",
-                    "attrType": "OUTPUT"
+                    "attrType": "OUTPUT",
+                    "inValid": false,
+                    "message": ""
                 },
                 {
                     "_key": "(closeModal)",
@@ -267,7 +273,9 @@
                         "input": [
                             "'close'"
                         ]
-                    }
+                    },
+                    "inValid": false,
+                    "message": ""
                 }
             ]
         },
@@ -1043,6 +1051,7 @@
             "01368d18-8085-9013-cd3b-356f27a31c7e": {
                 "paletteKey": "FlexLayoutRow",
                 "parentEditorKey": "efa92fbb-9e2a-59ce-946c-38bf789d1e07",
+                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -1113,6 +1122,7 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "01368d18-8085-9013-cd3b-356f27a31c7e",
                     "isAdvancedComponent": true,
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1300,6 +1310,7 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "06b37894-88ac-36fe-0427-efc6c0a2dc68",
                         "isAdvancedChildComponent": true,
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1327,6 +1338,7 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "01368d18-8085-9013-cd3b-356f27a31c7e",
                     "isAdvancedComponent": true,
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1514,6 +1526,7 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "dba7a8fc-7b17-e719-b357-ba9fdb92359c",
                         "isAdvancedChildComponent": true,
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1541,6 +1554,7 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "01368d18-8085-9013-cd3b-356f27a31c7e",
                     "isAdvancedComponent": true,
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1727,6 +1741,7 @@
                     "a1c10d3b-7dd8-f760-fbcc-8d9475ccfb2b": {
                         "paletteKey": "NG-RaisedButton",
                         "parentEditorKey": "6e7b59e5-6b64-66f7-9324-9fb9620133bc",
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1802,6 +1817,7 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "6e7b59e5-6b64-66f7-9324-9fb9620133bc",
                         "isAdvancedChildComponent": true,
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
