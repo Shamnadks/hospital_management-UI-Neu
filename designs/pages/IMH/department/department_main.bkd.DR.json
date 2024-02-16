@@ -703,10 +703,10 @@
                         "_type": "kv",
                         "_attrDef": "p",
                         "objValue": {
-                            "nodeID": "sd_NflCiD8SMqqxCtuu",
+                            "nodeID": "sd_vDjhPCnXpCCTHJKY",
                             "functionName": "setPage",
                             "activeTree": "pages",
-                            "z": "sd_FEdZI9so8BLCLHQh",
+                            "z": "sd_nkosXicyMqJnBgnZ",
                             "input": [
                                 "'addDepartment'"
                             ]
@@ -808,10 +808,10 @@
                         "_type": "kv",
                         "_attrDef": "p",
                         "objValue": {
-                            "nodeID": "sd_NflCiD8SMqqxCtuu",
+                            "nodeID": "sd_vDjhPCnXpCCTHJKY",
                             "functionName": "setPage",
                             "activeTree": "pages",
-                            "z": "sd_FEdZI9so8BLCLHQh",
+                            "z": "sd_nkosXicyMqJnBgnZ",
                             "input": [
                                 "'listDepartments'"
                             ]
@@ -897,11 +897,13 @@
                         "input": [
                             "$event"
                         ]
-                    }
+                    },
+                    "inValid": false,
+                    "message": ""
                 }
             ]
         },
-        "d97909c5-b2fd-efed-df71-11f2fca9265b": {
+        "4b1c691c-ef24-45d6-463b-9f172364821b": {
             "paletteKey": "NEUTRINOS_VIEW_department_tables",
             "parentEditorKey": "2f51ead7-2359-54c4-d481-62ff876c3809",
             "commentid": null,

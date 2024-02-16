@@ -1,5 +1,5 @@
 <div style="display:flex;justify-content:center;">
-  <bh-editing_modal ngIf="page?.showEditComponent==true" [editData]="page?.editData" [refresh]="afterEdit()" (closeModal)="setShowModal(&apos;close&apos;)"></bh-editing_modal>
+  <bh-editing_modal [editData]="page?.editData" (closeModal)="setShowModal(&apos;close&apos;)" *ngIf="page?.showEditComponent==true"></bh-editing_modal>
   <div fxLayout="column wrap" class="department-list-table" fxFlex="95" fxLayoutAlign="space-between stretch" [fxShow]="true">
     <div fxLayout="row wrap" style="background-color:rgba(0, 0, 0, 0.3);" class="department-list-rows" fxLayoutAlign="space-between center" [fxShow]="true">
       <h3>

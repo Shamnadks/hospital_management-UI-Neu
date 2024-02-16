@@ -3,14 +3,13 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import { Component, EventEmitter, Injector, Output } from '@angular/core'; //_splitter_
+import { Component, Injector } from '@angular/core'; //_splitter_
 import {
   FormBuilder,
   FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
-import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -25,8 +24,6 @@ import { addDoctorComponent } from 'app/sd-services/addDoctorComponent'; //_spli
   ],
 })
 export class addformvalueComponent {
-  @Output('redirect')
-  public redirect: any = new EventEmitter<any>();
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -109,7 +106,7 @@ export class addformvalueComponent {
     try {
       const page = this.page;
       page.form = new page.formGroup({
-        name: new page.formControl('', [page.validators.required]),
+        department: new page.formControl('', [page.validators.required]),
         info: new page.formControl('', [page.validators.required]),
       });
 
@@ -143,58 +140,10 @@ export class addformvalueComponent {
     try {
       const page = this.page;
       console.log(bh.local?.response, 'add department response');
-      bh = this.sd_7hSlQksMDKwrgneS(bh);
       //appendnew_next_sd_aWAstuwW1XNBZslm
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_aWAstuwW1XNBZslm');
-    }
-  }
-
-  sd_7hSlQksMDKwrgneS(bh) {
-    try {
-      if (
-        this.sdService.operators['eq'](
-          bh.local.response.status,
-          200,
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_iXCRn9pBS7NKd0AT(bh);
-        bh = this.sd_w6fStmGT7QRymCBH(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_7hSlQksMDKwrgneS');
-    }
-  }
-
-  sd_iXCRn9pBS7NKd0AT(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('Department added successfully', 'ok', {
-          duration: 2000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      //appendnew_next_sd_iXCRn9pBS7NKd0AT
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iXCRn9pBS7NKd0AT');
-    }
-  }
-
-  sd_w6fStmGT7QRymCBH(bh) {
-    try {
-      bh.pageOutput.redirect.emit('listDepartments');
-      //appendnew_next_sd_w6fStmGT7QRymCBH
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_w6fStmGT7QRymCBH');
     }
   }
 

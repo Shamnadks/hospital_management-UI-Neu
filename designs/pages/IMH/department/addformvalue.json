@@ -19,15 +19,7 @@
         "name": "",
         "inputVariables": [],
         "localVariables": [],
-        "outputVariables": [
-            {
-                "key": "redirect",
-                "defaultValue": {
-                    "type": "any",
-                    "value": null
-                }
-            }
-        ],
+        "outputVariables": [],
         "pageVariables": [],
         "functionName": "sd_PP1RLL0pSMjdy1eF",
         "category": "Lifecycle Events",
@@ -104,9 +96,7 @@
         "x": 390,
         "y": 320,
         "wires": [
-            [
-                "sd_7hSlQksMDKwrgneS"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -219,9 +209,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "addformvalueComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "addformvalueComponent"
     },
     {
         "id": "sd_ISUAW6e1hkZKpxWt",
@@ -286,49 +275,13 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.form = new page.formGroup({\n    name : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
+        "script": "page.form = new page.formGroup({\n    department : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
         "functionName": "sd_wsiA8YFaHOyCu4JB",
         "category": "Function",
         "x": 565,
         "y": 40,
         "wires": [
             []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "addformvalueComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_7hSlQksMDKwrgneS",
-        "type": "PageSwitch",
-        "z": "sd_EjtJdTFRJg8wD7Jv",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "property": "response.status",
-        "propertyType": "bh.local",
-        "propertyGv": "bh.local.response.status",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "200",
-                "vt": "num",
-                "gv": "200"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "functionName": "sd_7hSlQksMDKwrgneS",
-        "category": "Function",
-        "x": 525,
-        "y": 320,
-        "wires": [
-            [
-                "sd_iXCRn9pBS7NKd0AT",
-                "sd_w6fStmGT7QRymCBH"
-            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -364,8 +317,7 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "addformvalueComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "addformvalueComponent"
     }
 ]

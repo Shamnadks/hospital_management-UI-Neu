@@ -74,21 +74,6 @@ export class department_tablesComponent {
       return this.errorHandler(bh, e, 'sd_7PP6sr7fYEqEpLZO');
     }
   }
-
-  afterEdit(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_YQPChcyQNlfJJxeC(bh);
-      //appendnew_next_afterEdit
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_3UrQDCIQ3VbKfIs2');
-    }
-  }
   //appendnew_flow_department_tablesComponent_start
 
   sd_ziomKo49eAABHdjP(bh) {
@@ -107,6 +92,7 @@ export class department_tablesComponent {
     try {
       this.page.departments = undefined;
       this.page.showEditComponent = 'false';
+      this.page.status = undefined;
       bh = this.sd_YQPChcyQNlfJJxeC(bh);
       //appendnew_next_sd_81hfAWEHmHYDul0x
       return bh;
@@ -151,10 +137,30 @@ export class department_tablesComponent {
       const page = this.page;
       page.editData = bh.input?.editData;
       page.showEditComponent = bh.input?.action == 'open' ? true : false;
+      bh = this.sd_DABQfbWNGh90bTtd(bh);
       //appendnew_next_sd_E8ErJikavcOFrUQB
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_E8ErJikavcOFrUQB');
+    }
+  }
+
+  sd_DABQfbWNGh90bTtd(bh) {
+    try {
+      if (
+        this.sdService.operators['false'](
+          this.page.showEditComponent,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_81hfAWEHmHYDul0x(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_DABQfbWNGh90bTtd');
     }
   }
 

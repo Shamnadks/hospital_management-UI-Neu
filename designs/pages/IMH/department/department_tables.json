@@ -73,6 +73,13 @@
                     "type": "str",
                     "value": "false"
                 }
+            },
+            {
+                "textIp": "status",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_81hfAWEHmHYDul0x",
@@ -226,36 +233,14 @@
         "x": 465,
         "y": 340,
         "wires": [
-            []
+            [
+                "sd_DABQfbWNGh90bTtd"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "department_tablesComponent",
         "generated": true
-    },
-    {
-        "id": "sd_3UrQDCIQ3VbKfIs2",
-        "type": "PageStart",
-        "z": "sd_6gUB2ztUrhGt7VU4",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "after edit",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "afterEdit",
-        "category": "General",
-        "x": 225,
-        "y": 240,
-        "wires": [
-            [
-                "sd_YQPChcyQNlfJJxeC"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "department_tablesComponent"
     },
     {
         "id": "sd_ziomKo49eAABHdjP",
@@ -269,6 +254,38 @@
         "category": "Function",
         "x": 185,
         "y": 120,
+        "wires": [
+            [
+                "sd_81hfAWEHmHYDul0x"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tablesComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_DABQfbWNGh90bTtd",
+        "type": "PageSwitch",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "showEditComponent",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.showEditComponent",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_DABQfbWNGh90bTtd",
+        "category": "Function",
+        "x": 580,
+        "y": 340,
         "wires": [
             [
                 "sd_81hfAWEHmHYDul0x"

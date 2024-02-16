@@ -236,7 +236,7 @@
         "y": 430,
         "wires": [
             [
-                "sd_FgYq3bNlvaVrFKyJ"
+                "sd_lbEJRXSX92TzC5IO"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -245,7 +245,29 @@
         "generated": true
     },
     {
-        "id": "sd_FgYq3bNlvaVrFKyJ",
+        "id": "sd_m0892vSrTCw2K6JS",
+        "type": "Script",
+        "z": "sd_08R7Qj49qAechruG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.local.result,'qqres')\n\npage.changedstatus = false",
+        "functionName": "sd_m0892vSrTCw2K6JS",
+        "category": "Function",
+        "x": 730,
+        "y": 430,
+        "wires": [
+            [
+                "sd_b5xdhLw0j3ABXRbe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lbEJRXSX92TzC5IO",
         "type": "PageCallService",
         "z": "sd_08R7Qj49qAechruG",
         "viewType": "pages",
@@ -255,17 +277,17 @@
         "isValidNode": true,
         "noerr": 0,
         "service": {
-            "id": "sd_4FBMZiUeSFm1iu0H",
+            "id": "sd_06crRHWu4Z9W0XWR",
             "type": "tab",
-            "createdDate": "2024-02-14T18:16:40.335Z",
-            "label": "patients",
+            "createdDate": "2024-02-16T15:23:30.793Z",
+            "label": "patient",
             "disabled": false,
             "info": "",
             "functionSeq": 0,
             "tabType": "client"
         },
         "flow": {
-            "flowId": "sd_DhtzGmexbohDMdct",
+            "flowId": "sd_Zc31OM9IVJvue7Qp",
             "flowName": "common"
         },
         "inputVariables": [
@@ -298,7 +320,7 @@
                 "localVar": "bh.local.result"
             }
         ],
-        "serviceImportPath": "app/sd-services/patients",
+        "serviceImportPath": "app/sd-services/patient",
         "startName": "common",
         "inputParams": [
             "bh.input.url",
@@ -307,35 +329,13 @@
         ],
         "accept_bh": false,
         "accept_csd": true,
-        "functionName": "sd_FgYq3bNlvaVrFKyJ",
+        "functionName": "sd_lbEJRXSX92TzC5IO",
         "category": "General",
-        "x": 570,
-        "y": 430,
+        "x": 565,
+        "y": 420,
         "wires": [
             [
                 "sd_m0892vSrTCw2K6JS"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "detailsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_m0892vSrTCw2K6JS",
-        "type": "Script",
-        "z": "sd_08R7Qj49qAechruG",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(bh.local.result,'qqres')\n\npage.changedstatus = false",
-        "functionName": "sd_m0892vSrTCw2K6JS",
-        "category": "Function",
-        "x": 730,
-        "y": 430,
-        "wires": [
-            [
-                "sd_b5xdhLw0j3ABXRbe"
             ]
         ],
         "__n_excludedFromValidation__": {},

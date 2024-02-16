@@ -13,7 +13,7 @@ import {
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
-import { patients } from 'app/sd-services/patients'; //_splitter_
+import { patient } from 'app/sd-services/patient'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -152,7 +152,7 @@ export class detailsComponent {
       bh.input.url = 'patients/put';
       bh.input.method = 'put';
       bh.input.body = { id: bh.input.appoinmentid, status: 'Completed' };
-      bh = this.sd_FgYq3bNlvaVrFKyJ(bh);
+      bh = this.sd_lbEJRXSX92TzC5IO(bh);
       //appendnew_next_sd_iLSPqqMP87teVA6T
       return bh;
     } catch (e) {
@@ -160,11 +160,11 @@ export class detailsComponent {
     }
   }
 
-  async sd_FgYq3bNlvaVrFKyJ(bh) {
+  async sd_lbEJRXSX92TzC5IO(bh) {
     try {
-      const patientsInstance: patients = this.__page_injector__.get(patients);
+      const patientInstance: patient = this.__page_injector__.get(patient);
 
-      let outputVariables = await patientsInstance.common(
+      let outputVariables = await patientInstance.common(
         bh.input.url,
         bh.input.method,
         bh.input.body
@@ -172,10 +172,10 @@ export class detailsComponent {
       bh.local.result = outputVariables.local.result;
 
       bh = this.sd_m0892vSrTCw2K6JS(bh);
-      //appendnew_next_sd_FgYq3bNlvaVrFKyJ
+      //appendnew_next_sd_lbEJRXSX92TzC5IO
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_FgYq3bNlvaVrFKyJ');
+      return this.errorHandler(bh, e, 'sd_lbEJRXSX92TzC5IO');
     }
   }
 

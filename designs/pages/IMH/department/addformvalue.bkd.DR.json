@@ -323,10 +323,10 @@
                         "_attrDef": "p",
                         "_customAttributeFlag": "flowpicker",
                         "objValue": {
-                            "nodeID": "sd_7iSJTjBH4QBvSYHI",
+                            "nodeID": "sd_Z4Kjz8zhkjHN7Dor",
                             "functionName": "formSubmission",
                             "activeTree": "pages",
-                            "z": "sd_FEdZI9so8BLCLHQh",
+                            "z": "sd_EjtJdTFRJg8wD7Jv",
                             "input": []
                         }
                     },
@@ -469,7 +469,7 @@
                             },
                             {
                                 "_key": "name",
-                                "_value": "name",
+                                "_value": "department",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -590,7 +590,7 @@
                             },
                             {
                                 "_key": "formControlName",
-                                "_value": "name",
+                                "_value": "department",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             }
