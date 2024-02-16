@@ -30,6 +30,10 @@
         "dep_form_button",
         "modal",
         "modal-content",
-        "close-modal"
+        "close-modal",
+        "patients",
+        "patientslist-heading",
+        "patientslist-headings",
+        "no-print"
     ]
 }
