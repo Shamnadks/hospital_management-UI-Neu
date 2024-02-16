@@ -17,13 +17,33 @@
         "viewType": "common",
         "nodeType": "start",
         "name": "",
+        "inputVariables": [
+            {
+                "key": "patients",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            }
+        ],
+        "localVariables": [],
+        "outputVariables": [
+            {
+                "key": "selected",
+                "defaultValue": {
+                    "type": "any",
+                    "value": null
+                }
+            }
+        ],
+        "pageVariables": [],
         "functionName": "sd_jdIcMM1isPmVXaxQ",
         "category": "Lifecycle Events",
         "x": 30,
         "y": 30,
         "wires": [
             [
-                "sd_X738X5BaU7misYfH"
+                "sd_HgmZpVRuZOVz1WgM"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -31,7 +51,7 @@
         "serviceName": "patientsComponent"
     },
     {
-        "id": "sd_X738X5BaU7misYfH",
+        "id": "sd_HgmZpVRuZOVz1WgM",
         "type": "PageVariables",
         "z": "sd_tL03hZCHJm5zGTwU",
         "viewType": "pages",
@@ -40,11 +60,143 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
-        "functionName": "sd_X738X5BaU7misYfH",
+        "globalVariables": [
+            {
+                "textIp": "modalstatus",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "patientslist",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "pageInput.patients"
+                }
+            },
+            {
+                "textIp": "datas",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_HgmZpVRuZOVz1WgM",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 405,
+        "y": 200,
+        "wires": [
+            [
+                "sd_TCYGsGtQCaVlx6Nl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_eIE9poapSf8OR3vZ",
+        "type": "PageStart",
+        "z": "sd_tL03hZCHJm5zGTwU",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "modal",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "item",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "modal",
+        "category": "General",
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "sd_E29s0CjcP5oqHSgG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "patientsComponent"
+    },
+    {
+        "id": "sd_E29s0CjcP5oqHSgG",
+        "type": "Script",
+        "z": "sd_tL03hZCHJm5zGTwU",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.modalstatus = true\n\n// console.log(bh.input.patients,'input patie')\n// console.log(page.patients,'page patie')\n// console.log(bh.local.patients,'local patie')\npage.datas = {item:bh.input.item,status:page.modalstatus}\n\n",
+        "functionName": "sd_E29s0CjcP5oqHSgG",
+        "category": "Function",
+        "x": 520,
+        "y": 320,
+        "wires": [
+            [
+                "sd_rabpkzJtgPziMHpq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rabpkzJtgPziMHpq",
+        "type": "Output",
+        "z": "sd_tL03hZCHJm5zGTwU",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "eventName": "bh.pageOutput.selected",
+        "data": "this.page.datas",
+        "functionName": "sd_rabpkzJtgPziMHpq",
+        "category": "Function",
+        "x": 740,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "eventName": {
+                "type": "bh.pageOutput",
+                "value": "selected",
+                "constant": false
+            },
+            "data": {
+                "type": "this.page",
+                "value": "datas",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_TCYGsGtQCaVlx6Nl",
+        "type": "Script",
+        "z": "sd_tL03hZCHJm5zGTwU",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(bh.input,'patientssssws')\n// console.log(page?.patientslist,'pageeepatientssssws')\n\n\n",
+        "functionName": "sd_TCYGsGtQCaVlx6Nl",
+        "category": "Function",
+        "x": 565,
+        "y": 200,
         "wires": [
             []
         ],
@@ -52,5 +204,25 @@
         "generateNext": false,
         "serviceName": "patientsComponent",
         "generated": true
+    },
+    {
+        "id": "sd_FR7HdiEoPGTsLubg",
+        "type": "OnChanges",
+        "z": "sd_tL03hZCHJm5zGTwU",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "On Changes",
+        "functionName": "ngOnChanges",
+        "category": "Lifecycle Events",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "sd_HgmZpVRuZOVz1WgM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "patientsComponent"
     }
 ]
