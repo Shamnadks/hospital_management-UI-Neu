@@ -38,11 +38,11 @@
         "pageVariables": [],
         "functionName": "sd_jEc3LWhGYVnlu6Zc",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 120,
         "wires": [
             [
-                "sd_81hfAWEHmHYDul0x"
+                "sd_ziomKo49eAABHdjP"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -96,7 +96,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.departments = bh.local?.response?.response\n//  || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]",
+        "script": "page.departments = bh.local?.response?.response\nconsole.log(page?.departments,'=-==-fsdafsdf')\n//  || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]",
         "functionName": "sd_A1wnAwAqImnRpqsy",
         "category": "Function",
         "x": 700,
@@ -256,5 +256,27 @@
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "department_tablesComponent"
+    },
+    {
+        "id": "sd_ziomKo49eAABHdjP",
+        "type": "Script",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('page on inijnt')",
+        "functionName": "sd_ziomKo49eAABHdjP",
+        "category": "Function",
+        "x": 185,
+        "y": 120,
+        "wires": [
+            [
+                "sd_81hfAWEHmHYDul0x"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tablesComponent",
+        "generated": true
     }
 ]

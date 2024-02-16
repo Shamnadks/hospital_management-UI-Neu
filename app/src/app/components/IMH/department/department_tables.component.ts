@@ -52,7 +52,7 @@ export class department_tablesComponent {
 
   sd_jEc3LWhGYVnlu6Zc(bh) {
     try {
-      bh = this.sd_81hfAWEHmHYDul0x(bh);
+      bh = this.sd_ziomKo49eAABHdjP(bh);
       //appendnew_next_sd_jEc3LWhGYVnlu6Zc
       return bh;
     } catch (e) {
@@ -91,6 +91,18 @@ export class department_tablesComponent {
   }
   //appendnew_flow_department_tablesComponent_start
 
+  sd_ziomKo49eAABHdjP(bh) {
+    try {
+      const page = this.page;
+      console.log('page on inijnt');
+      bh = this.sd_81hfAWEHmHYDul0x(bh);
+      //appendnew_next_sd_ziomKo49eAABHdjP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ziomKo49eAABHdjP');
+    }
+  }
+
   sd_81hfAWEHmHYDul0x(bh) {
     try {
       this.page.departments = undefined;
@@ -125,6 +137,7 @@ export class department_tablesComponent {
     try {
       const page = this.page;
       page.departments = bh.local?.response?.response;
+      console.log(page?.departments, '=-==-fsdafsdf');
       //  || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]
       //appendnew_next_sd_A1wnAwAqImnRpqsy
       return bh;

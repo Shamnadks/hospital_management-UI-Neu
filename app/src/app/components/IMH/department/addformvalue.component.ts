@@ -3,7 +3,7 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import { Component, Injector } from '@angular/core'; //_splitter_
+import { Component, EventEmitter, Injector, Output } from '@angular/core'; //_splitter_
 import {
   FormBuilder,
   FormControl,
@@ -25,6 +25,8 @@ import { addDoctorComponent } from 'app/sd-services/addDoctorComponent'; //_spli
   ],
 })
 export class addformvalueComponent {
+  @Output('redirect')
+  public redirect: any = new EventEmitter<any>();
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -160,6 +162,7 @@ export class addformvalueComponent {
         )
       ) {
         bh = this.sd_iXCRn9pBS7NKd0AT(bh);
+        bh = this.sd_w6fStmGT7QRymCBH(bh);
       }
 
       return bh;
@@ -182,6 +185,16 @@ export class addformvalueComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_iXCRn9pBS7NKd0AT');
+    }
+  }
+
+  sd_w6fStmGT7QRymCBH(bh) {
+    try {
+      bh.pageOutput.redirect.emit('listDepartments');
+      //appendnew_next_sd_w6fStmGT7QRymCBH
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_w6fStmGT7QRymCBH');
     }
   }
 
