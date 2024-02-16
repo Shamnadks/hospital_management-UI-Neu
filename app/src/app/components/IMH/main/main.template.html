@@ -1,0 +1,41 @@
+<div>
+  <div class="homediv">
+    <div fxLayout="row wrap" class="firstrow" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="homenav" fxLayoutAlign="space-between stretch" [fxShow]="true">
+        <div fxFlex.xs="60" style="height:100%;">
+          <div fxLayout="row wrap" style="height:100%;" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Icons/imh_logo.jpg" style="height:100%;width:80px;padding-left:10px;" class="navfont">
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" fxFlex.xs="50">
+              <h3 class="navname">
+                International Medical Hospital</h3>
+            </div>
+          </div>
+        </div>
+        <div style="width:auto;" class="sign-outbtn">
+          <button mat-raised-button color="accent" (click)="logIn()">LogIn</button>
+        </div>
+      </div>
+      <h1 class="welcome-text">
+        Welcome To International Medical Hospital</h1>
+    </div>
+    <div fxLayout="row wrap" class="secondrow" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxFlex="20" fxFlex.sm="40" fxFlex.xs="80" (click)="appointmentNavigation()" style=" background-image: url(&apos;https://img.freepik.com/free-photo/happy-mature-doctor-his-female-patient-shaking-hands-after-medical-appointment-clinic_637285-421.jpg?w=740&amp;t=st=1707820261~exp=1707820861~hmac=d6587907296145957230dbf8bda1dea99aba2ac5cd7642807d421e21d69f7d0e&apos;);" class="homeoptions">
+        <button mat-raised-button class="homeoptionsbtn" color="accent">Patient Appoinment</button>
+      </div>
+      <div fxFlex="20" fxFlex.sm="40" fxFlex.xs="80" (click)="departmentNavigation()" style=" background-image: url(&apos;https://img.freepik.com/free-photo/african-american-patient-filling-report-papers-talking-receptionist-hospital-reception-counter-woman-writing-medical-form-before-checkup-appointment-with-doctor-health-center_482257-51637.jpg?w=740&amp;t=st=1707820647~exp=1707821247~hmac=af97af9cbe484f53bc0ced9b787cbd1e197a9889c6af1f26aa5528d6926d4d9e&apos;);" class="homeoptions">
+        <button mat-raised-button class="homeoptionsbtn" color="accent">Departments</button>
+      </div>
+      <div fxFlex="20" fxFlex.sm="40" fxFlex.xs="80" (click)="doctorNavigation()" style=" background-image: url(&apos;https://img.freepik.com/free-photo/doctor-nurses-special-equipment_23-2148980721.jpg?w=740&amp;t=st=1707820835~exp=1707821435~hmac=f888068c374c5722dcddecc40d55fb9f91c916dbb34bf01ec5a9fb07cdec8786&apos;);" class="homeoptions">
+        <button mat-raised-button class="homeoptionsbtn" color="accent">Onboard Doctors</button>
+      </div>
+      <div fxFlex="20" fxFlex.sm="40" fxFlex.xs="80" (click)="patientListNavigation()" style="background-image: url(&apos;https://img.freepik.com/premium-photo/diverse-group-patients-sitting-waiting-room-hospital-reception-desk-checkup-appointment-consultation-waiting-area-lobby-with-people-medical-examination-facility_482257-46887.jpg?w=826&apos;);" class="homeoptions">
+        <button mat-raised-button class="homeoptionsbtn" color="accent">Patients List</button>
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="homefoot" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <h5 class="foottext">
+        Have an Emergency?</h5>
+      <h5 class="foottext">
+        EMERGENCY LINE : &#x260E; 1-800-900</h5>
+    </div>
+  </div>
+</div>

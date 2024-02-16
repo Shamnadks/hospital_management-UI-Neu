@@ -1,0 +1,329 @@
+[
+    {
+        "id": "sd_EjtJdTFRJg8wD7Jv",
+        "type": "tab",
+        "createdDate": "2024-02-16T12:29:50.444Z",
+        "label": "addformvalue",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "addformvalueComponent"
+    },
+    {
+        "id": "sd_PP1RLL0pSMjdy1eF",
+        "type": "OnInit",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_PP1RLL0pSMjdy1eF",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_c75aQH08yLNLmfJl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "addformvalueComponent"
+    },
+    {
+        "id": "sd_c75aQH08yLNLmfJl",
+        "type": "PageVariables",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_c75aQH08yLNLmfJl",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_ISUAW6e1hkZKpxWt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Z4Kjz8zhkjHN7Dor",
+        "type": "PageStart",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "formSubmission",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "formSubmission",
+        "category": "General",
+        "x": 65,
+        "y": 320,
+        "wires": [
+            [
+                "sd_fnW5zvx1TsSTvpHG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "addformvalueComponent"
+    },
+    {
+        "id": "sd_aWAstuwW1XNBZslm",
+        "type": "Script",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.local?.response,'add department response')",
+        "functionName": "sd_aWAstuwW1XNBZslm",
+        "category": "Function",
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "sd_7hSlQksMDKwrgneS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fnW5zvx1TsSTvpHG",
+        "type": "PageCallService",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_3kUC36V9urSLMt09",
+            "type": "tab",
+            "createdDate": "2024-02-12T16:46:29.971Z",
+            "label": "addDoctorComponent",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_jJAbzQgqql3UVlNY",
+            "flowName": "addDepartment"
+        },
+        "inputVariables": [
+            {
+                "key": "response",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "data",
+                "map": true,
+                "valueType": "this.page",
+                "value": "form.value"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "response",
+                "valueType": "bh.local",
+                "value": "response",
+                "mapVarName": "response",
+                "localVar": "bh.local.response"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/addDoctorComponent",
+        "startName": "addDepartment",
+        "inputParams": [
+            null,
+            "this.page.form.value"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_fnW5zvx1TsSTvpHG",
+        "category": "General",
+        "x": 225,
+        "y": 320,
+        "wires": [
+            [
+                "sd_aWAstuwW1XNBZslm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_iXCRn9pBS7NKd0AT",
+        "type": "SnackBar",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Department added successfully"
+        },
+        "action": {
+            "type": "str",
+            "value": "ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "2000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_iXCRn9pBS7NKd0AT",
+        "category": "General",
+        "x": 645,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ISUAW6e1hkZKpxWt",
+        "type": "UseDependency",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "libaries",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "validators"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "libaries",
+        "category": "Function",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            [
+                "sd_wsiA8YFaHOyCu4JB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wsiA8YFaHOyCu4JB",
+        "type": "Script",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.form = new page.formGroup({\n    name : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
+        "functionName": "sd_wsiA8YFaHOyCu4JB",
+        "category": "Function",
+        "x": 585,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7hSlQksMDKwrgneS",
+        "type": "PageSwitch",
+        "z": "sd_EjtJdTFRJg8wD7Jv",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "response.status",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.response.status",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num",
+                "gv": "200"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_7hSlQksMDKwrgneS",
+        "category": "Function",
+        "x": 525,
+        "y": 320,
+        "wires": [
+            [
+                "sd_iXCRn9pBS7NKd0AT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
+    }
+]

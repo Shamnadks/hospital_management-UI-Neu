@@ -16,26 +16,24 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-user_appointmentComponent
+import { user_appointmentComponent } from '../components/IMH/appointment/user_appointment.component';
+//CORE_REFERENCE_IMPORT-mainComponent
+import { mainComponent } from '../components/IMH/main/main.component';
+//CORE_REFERENCE_IMPORT-doctorComponent
+import { doctorComponent } from '../components/IMH/doctor/doctor.component';
+//CORE_REFERENCE_IMPORT-editing_modalComponent
+import { editing_modalComponent } from '../components/IMH/department/editing_modal.component';
+//CORE_REFERENCE_IMPORT-department_tablesComponent
+import { department_tablesComponent } from '../components/IMH/department/department_tables.component';
+//CORE_REFERENCE_IMPORT-department_mainComponent
+import { department_mainComponent } from '../components/IMH/department/department_main.component';
+//CORE_REFERENCE_IMPORT-addformvalueComponent
+import { addformvalueComponent } from '../components/IMH/department/addformvalue.component';
 //CORE_REFERENCE_IMPORT-appoinment
 import { appoinment } from '../sd-services/appoinment';
-//CORE_REFERENCE_IMPORT-edit_modalComponent
-import { edit_modalComponent } from '../components/AIMS/department/edit_modal.component';
-//CORE_REFERENCE_IMPORT-department_tableComponent
-import { department_tableComponent } from '../components/AIMS/department/department_table.component';
-//CORE_REFERENCE_IMPORT-add_formComponent
-import { add_formComponent } from '../components/AIMS/department/add_form.component';
 //CORE_REFERENCE_IMPORT-addDoctorComponent
 import { addDoctorComponent } from '../sd-services/addDoctorComponent';
-//CORE_REFERENCE_IMPORT-userappoinment_pageComponent
-import { userappoinment_pageComponent } from '../components/AIMS/user appoinment/userappoinment_page.component';
-//CORE_REFERENCE_IMPORT-patient_pageComponent
-import { patient_pageComponent } from '../components/AIMS/patient list/patient_page.component';
-//CORE_REFERENCE_IMPORT-doctor_pageComponent
-import { doctor_pageComponent } from '../components/AIMS/doctor/doctor_page.component';
-//CORE_REFERENCE_IMPORT-department_pageComponent
-import { department_pageComponent } from '../components/AIMS/department/department_page.component';
-//CORE_REFERENCE_IMPORT-homeComponent
-import { homeComponent } from '../components/AIMS/home page/home.component';
 
 /**
  * Reads datasource object and injects the datasource object into window object
@@ -68,22 +66,20 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_modalComponent
-  edit_modalComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-department_tableComponent
-  department_tableComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-add_formComponent
-  add_formComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userappoinment_pageComponent
-  userappoinment_pageComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patient_pageComponent
-  patient_pageComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-doctor_pageComponent
-  doctor_pageComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-department_pageComponent
-  department_pageComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homeComponent
-  homeComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-user_appointmentComponent
+  user_appointmentComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-mainComponent
+  mainComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-doctorComponent
+  doctorComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-editing_modalComponent
+  editing_modalComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-department_tablesComponent
+  department_tablesComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-department_mainComponent
+  department_mainComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-addformvalueComponent
+  addformvalueComponent,
 ];
 
 /**
@@ -101,8 +97,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
-//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-appoinment
-appoinment,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-appoinment
+  appoinment,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-addDoctorComponent
   addDoctorComponent,
 ];
@@ -113,11 +109,11 @@ appoinment,
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: 'home', component: homeComponent },
-  { path: 'doctor', component: doctor_pageComponent },
-  { path: 'department', component: department_pageComponent },
-  { path: 'appoinment', component: userappoinment_pageComponent },
-  { path: 'patients', component: patient_pageComponent },
+  { path: 'home' },
+  { path: 'doctor' },
+  { path: 'department' },
+  { path: 'appoinment' },
+  { path: 'patients' },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

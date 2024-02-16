@@ -1,0 +1,260 @@
+[
+    {
+        "id": "sd_6gUB2ztUrhGt7VU4",
+        "type": "tab",
+        "createdDate": "2024-02-16T12:34:20.763Z",
+        "label": "department_tables",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "department_tablesComponent"
+    },
+    {
+        "id": "sd_jEc3LWhGYVnlu6Zc",
+        "type": "OnInit",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [
+            {
+                "key": "closeModal",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            },
+            {
+                "key": "refresh",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            }
+        ],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_jEc3LWhGYVnlu6Zc",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_81hfAWEHmHYDul0x"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_tablesComponent"
+    },
+    {
+        "id": "sd_81hfAWEHmHYDul0x",
+        "type": "PageVariables",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "departments",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "showEditComponent",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_81hfAWEHmHYDul0x",
+        "category": "Function",
+        "x": 305,
+        "y": 120,
+        "wires": [
+            [
+                "sd_YQPChcyQNlfJJxeC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tablesComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_A1wnAwAqImnRpqsy",
+        "type": "Script",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.departments = bh.local?.response?.response\n//  || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]",
+        "functionName": "sd_A1wnAwAqImnRpqsy",
+        "category": "Function",
+        "x": 700,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tablesComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_YQPChcyQNlfJJxeC",
+        "type": "PageCallService",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_3kUC36V9urSLMt09",
+            "type": "tab",
+            "createdDate": "2024-02-12T16:46:29.971Z",
+            "label": "addDoctorComponent",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_gFsQjrGcMIXzyOQD",
+            "flowName": "fetchDepartments"
+        },
+        "inputVariables": [
+            {
+                "key": "departments",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "departments",
+                "valueType": "bh.local",
+                "value": "response",
+                "mapVarName": "departments",
+                "localVar": "bh.local.response"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/addDoctorComponent",
+        "startName": "fetchDepartments",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_YQPChcyQNlfJJxeC",
+        "category": "General",
+        "x": 525,
+        "y": 120,
+        "wires": [
+            [
+                "sd_A1wnAwAqImnRpqsy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tablesComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7PP6sr7fYEqEpLZO",
+        "type": "PageStart",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "set show modal",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "action",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "editData",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "setShowModal",
+        "category": "General",
+        "x": 225,
+        "y": 340,
+        "wires": [
+            [
+                "sd_E8ErJikavcOFrUQB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_tablesComponent"
+    },
+    {
+        "id": "sd_E8ErJikavcOFrUQB",
+        "type": "Script",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.editData = bh.input?.editData\npage.showEditComponent = bh.input?.action=='open'?true: false",
+        "functionName": "sd_E8ErJikavcOFrUQB",
+        "category": "Function",
+        "x": 465,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_tablesComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3UrQDCIQ3VbKfIs2",
+        "type": "PageStart",
+        "z": "sd_6gUB2ztUrhGt7VU4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "after edit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "afterEdit",
+        "category": "General",
+        "x": 225,
+        "y": 240,
+        "wires": [
+            [
+                "sd_YQPChcyQNlfJJxeC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_tablesComponent"
+    }
+]

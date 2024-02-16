@@ -1,0 +1,56 @@
+[
+    {
+        "id": "sd_EnvkooQBWS960BAB",
+        "type": "tab",
+        "createdDate": "2024-02-16T13:04:16.821Z",
+        "label": "doctor",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "doctorComponent"
+    },
+    {
+        "id": "sd_AxrrhhqeMaOGCe91",
+        "type": "OnInit",
+        "z": "sd_EnvkooQBWS960BAB",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_AxrrhhqeMaOGCe91",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_eMWIwVNpyCxxPQuu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "doctorComponent"
+    },
+    {
+        "id": "sd_eMWIwVNpyCxxPQuu",
+        "type": "PageVariables",
+        "z": "sd_EnvkooQBWS960BAB",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_eMWIwVNpyCxxPQuu",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "doctorComponent",
+        "generated": true
+    }
+]

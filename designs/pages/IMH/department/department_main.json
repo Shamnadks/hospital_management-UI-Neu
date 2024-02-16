@@ -1,0 +1,109 @@
+[
+    {
+        "id": "sd_nkosXicyMqJnBgnZ",
+        "type": "tab",
+        "createdDate": "2024-02-16T12:31:27.111Z",
+        "label": "department_main",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "department_mainComponent"
+    },
+    {
+        "id": "sd_aGnkgYRBzynXQ165",
+        "type": "OnInit",
+        "z": "sd_nkosXicyMqJnBgnZ",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_aGnkgYRBzynXQ165",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_EghOS4TbuWyFoGPV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_mainComponent"
+    },
+    {
+        "id": "sd_EghOS4TbuWyFoGPV",
+        "type": "PageVariables",
+        "z": "sd_nkosXicyMqJnBgnZ",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_EghOS4TbuWyFoGPV",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_mainComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_vDjhPCnXpCCTHJKY",
+        "type": "PageStart",
+        "z": "sd_nkosXicyMqJnBgnZ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "set page",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "page",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "setPage",
+        "category": "General",
+        "x": 185,
+        "y": 300,
+        "wires": [
+            [
+                "sd_JzGtNgTpcMLQECml"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "department_mainComponent"
+    },
+    {
+        "id": "sd_JzGtNgTpcMLQECml",
+        "type": "Script",
+        "z": "sd_nkosXicyMqJnBgnZ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.pageOfDepartment = bh.input?.page",
+        "functionName": "sd_JzGtNgTpcMLQECml",
+        "category": "Function",
+        "x": 450,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "department_mainComponent",
+        "generated": true
+    }
+]
