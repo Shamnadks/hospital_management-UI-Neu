@@ -185,7 +185,7 @@
                 "_visibility": false
             }
         ],
-        "7493a1a7-b2c7-6cd5-b1b2-178a3acb35e0": {
+        "4b1e1402-fabe-476c-6023-05d19694d89a": {
             "paletteKey": "NEUTRINOS_VIEW_editing_modal",
             "parentEditorKey": "f6fdb694-26d9-2eeb-ccf2-c59a2a39f4e8",
             "commentid": null,
@@ -210,36 +210,26 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "ngIf",
-                    "_value": "page?.showEditComponent==true",
-                    "_type": "kv",
-                    "_attrDef": "c"
-                },
-                {
                     "_key": "[editData]",
                     "_value": "page?.editData",
                     "_type": "kv",
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "editData",
-                    "attrType": "INPUT"
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
                 },
                 {
                     "_key": "[refresh]",
-                    "_value": "afterEdit()",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "refresh",
                     "attrType": "INPUT",
-                    "_customAttributeFlag": "flowpicker",
-                    "objValue": {
-                        "nodeID": "sd_3UrQDCIQ3VbKfIs2",
-                        "functionName": "afterEdit",
-                        "activeTree": "pages",
-                        "z": "sd_6gUB2ztUrhGt7VU4",
-                        "input": []
-                    }
+                    "inValid": false,
+                    "message": ""
                 },
                 {
                     "_key": "(response)",
@@ -248,7 +238,9 @@
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "response",
-                    "attrType": "OUTPUT"
+                    "attrType": "OUTPUT",
+                    "inValid": false,
+                    "message": ""
                 },
                 {
                     "_key": "(closeModal)",
@@ -267,7 +259,15 @@
                         "input": [
                             "'close'"
                         ]
-                    }
+                    },
+                    "inValid": false,
+                    "message": ""
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page?.showEditComponent==true",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ]
         },
@@ -1762,10 +1762,10 @@
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "objValue": {
-                                    "nodeID": "sd_okbJpuigxqh0mg9K",
+                                    "nodeID": "sd_7PP6sr7fYEqEpLZO",
                                     "functionName": "setShowModal",
                                     "activeTree": "pages",
-                                    "z": "sd_nAEwFgUKHSJ395KV",
+                                    "z": "sd_6gUB2ztUrhGt7VU4",
                                     "input": [
                                         "'open'",
                                         "data"

@@ -23,8 +23,8 @@
         "pageVariables": [],
         "functionName": "sd_PP1RLL0pSMjdy1eF",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 65,
+        "y": 40,
         "wires": [
             [
                 "sd_c75aQH08yLNLmfJl"
@@ -47,8 +47,8 @@
         "globalVariables": [],
         "functionName": "sd_c75aQH08yLNLmfJl",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 185,
+        "y": 40,
         "wires": [
             [
                 "sd_ISUAW6e1hkZKpxWt"
@@ -96,9 +96,7 @@
         "x": 390,
         "y": 320,
         "wires": [
-            [
-                "sd_7hSlQksMDKwrgneS"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -205,15 +203,14 @@
         "direction": "ltr",
         "functionName": "sd_iXCRn9pBS7NKd0AT",
         "category": "General",
-        "x": 645,
-        "y": 320,
+        "x": 665,
+        "y": 380,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "addformvalueComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "addformvalueComponent"
     },
     {
         "id": "sd_ISUAW6e1hkZKpxWt",
@@ -260,7 +257,7 @@
         "functionName": "libaries",
         "category": "Function",
         "x": 385,
-        "y": 60,
+        "y": 40,
         "wires": [
             [
                 "sd_wsiA8YFaHOyCu4JB"
@@ -278,11 +275,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.form = new page.formGroup({\n    name : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
+        "script": "page.form = new page.formGroup({\n    department : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
         "functionName": "sd_wsiA8YFaHOyCu4JB",
         "category": "Function",
-        "x": 585,
-        "y": 80,
+        "x": 565,
+        "y": 40,
         "wires": [
             []
         ],
@@ -292,38 +289,35 @@
         "generated": true
     },
     {
-        "id": "sd_7hSlQksMDKwrgneS",
-        "type": "PageSwitch",
+        "id": "sd_w6fStmGT7QRymCBH",
+        "type": "Output",
         "z": "sd_EjtJdTFRJg8wD7Jv",
-        "viewType": "common",
+        "viewType": "pages",
         "nodeType": "flow",
         "name": "",
-        "property": "response.status",
-        "propertyType": "bh.local",
-        "propertyGv": "bh.local.response.status",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "200",
-                "vt": "num",
-                "gv": "200"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "functionName": "sd_7hSlQksMDKwrgneS",
+        "eventName": "bh.pageOutput.redirect",
+        "data": "\"listDepartments\"",
+        "functionName": "sd_w6fStmGT7QRymCBH",
         "category": "Function",
-        "x": 525,
-        "y": 320,
+        "x": 665,
+        "y": 280,
         "wires": [
-            [
-                "sd_iXCRn9pBS7NKd0AT"
-            ]
+            []
         ],
+        "__ssdTypeInputs__": {
+            "eventName": {
+                "type": "bh.pageOutput",
+                "value": "redirect",
+                "constant": false
+            },
+            "data": {
+                "type": "str",
+                "value": "listDepartments",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "addformvalueComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "addformvalueComponent"
     }
 ]

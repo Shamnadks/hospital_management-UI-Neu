@@ -52,7 +52,7 @@ export class department_tablesComponent {
 
   sd_jEc3LWhGYVnlu6Zc(bh) {
     try {
-      bh = this.sd_81hfAWEHmHYDul0x(bh);
+      bh = this.sd_ziomKo49eAABHdjP(bh);
       //appendnew_next_sd_jEc3LWhGYVnlu6Zc
       return bh;
     } catch (e) {
@@ -74,27 +74,25 @@ export class department_tablesComponent {
       return this.errorHandler(bh, e, 'sd_7PP6sr7fYEqEpLZO');
     }
   }
+  //appendnew_flow_department_tablesComponent_start
 
-  afterEdit(...others) {
-    let bh: any = {};
+  sd_ziomKo49eAABHdjP(bh) {
     try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_YQPChcyQNlfJJxeC(bh);
-      //appendnew_next_afterEdit
+      const page = this.page;
+      console.log('page on inijnt');
+      bh = this.sd_81hfAWEHmHYDul0x(bh);
+      //appendnew_next_sd_ziomKo49eAABHdjP
+      return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_3UrQDCIQ3VbKfIs2');
+      return this.errorHandler(bh, e, 'sd_ziomKo49eAABHdjP');
     }
   }
-  //appendnew_flow_department_tablesComponent_start
 
   sd_81hfAWEHmHYDul0x(bh) {
     try {
       this.page.departments = undefined;
       this.page.showEditComponent = 'false';
+      this.page.status = undefined;
       bh = this.sd_YQPChcyQNlfJJxeC(bh);
       //appendnew_next_sd_81hfAWEHmHYDul0x
       return bh;
@@ -125,6 +123,7 @@ export class department_tablesComponent {
     try {
       const page = this.page;
       page.departments = bh.local?.response?.response;
+      console.log(page?.departments, '=-==-fsdafsdf');
       //  || [{ id: 1, department: 'Cardiologist' ,info:'this one is really good'}, { id: 2, department: 'Neurologist' }, { id: 3, department: 'Orthopedist' }, { id: 4, department: 'Pediatrician' }, { id: 5, department: 'Nephrologist' }, { id: 6, department: 'Endocrinologist' }, { id: 6, department: 'Radiologist' }, { id: 7, department: 'Surgeon' }]
       //appendnew_next_sd_A1wnAwAqImnRpqsy
       return bh;
@@ -138,10 +137,30 @@ export class department_tablesComponent {
       const page = this.page;
       page.editData = bh.input?.editData;
       page.showEditComponent = bh.input?.action == 'open' ? true : false;
+      bh = this.sd_DABQfbWNGh90bTtd(bh);
       //appendnew_next_sd_E8ErJikavcOFrUQB
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_E8ErJikavcOFrUQB');
+    }
+  }
+
+  sd_DABQfbWNGh90bTtd(bh) {
+    try {
+      if (
+        this.sdService.operators['false'](
+          this.page.showEditComponent,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_81hfAWEHmHYDul0x(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_DABQfbWNGh90bTtd');
     }
   }
 

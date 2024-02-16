@@ -73,6 +73,7 @@ export class department_mainComponent {
 
   sd_EghOS4TbuWyFoGPV(bh) {
     try {
+      this.page.pageOfDepartment = 'addDepartment';
       //appendnew_next_sd_EghOS4TbuWyFoGPV
       return bh;
     } catch (e) {
@@ -84,6 +85,7 @@ export class department_mainComponent {
     try {
       const page = this.page;
       page.pageOfDepartment = bh.input?.page;
+      console.log(bh.input?.page);
       //appendnew_next_sd_JzGtNgTpcMLQECml
       return bh;
     } catch (e) {

@@ -703,10 +703,10 @@
                         "_type": "kv",
                         "_attrDef": "p",
                         "objValue": {
-                            "nodeID": "sd_NflCiD8SMqqxCtuu",
+                            "nodeID": "sd_vDjhPCnXpCCTHJKY",
                             "functionName": "setPage",
                             "activeTree": "pages",
-                            "z": "sd_FEdZI9so8BLCLHQh",
+                            "z": "sd_nkosXicyMqJnBgnZ",
                             "input": [
                                 "'addDepartment'"
                             ]
@@ -808,10 +808,10 @@
                         "_type": "kv",
                         "_attrDef": "p",
                         "objValue": {
-                            "nodeID": "sd_NflCiD8SMqqxCtuu",
+                            "nodeID": "sd_vDjhPCnXpCCTHJKY",
                             "functionName": "setPage",
                             "activeTree": "pages",
-                            "z": "sd_FEdZI9so8BLCLHQh",
+                            "z": "sd_nkosXicyMqJnBgnZ",
                             "input": [
                                 "'listDepartments'"
                             ]
@@ -879,10 +879,31 @@
                     "_value": "page?.pageOfDepartment=='addDepartment'",
                     "_type": "kv",
                     "_attrDef": "c"
+                },
+                {
+                    "_key": "(redirect)",
+                    "_value": "setPage($event)",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "redirect",
+                    "attrType": "OUTPUT",
+                    "_customAttributeFlag": "flowpicker",
+                    "objValue": {
+                        "nodeID": "sd_vDjhPCnXpCCTHJKY",
+                        "functionName": "setPage",
+                        "activeTree": "pages",
+                        "z": "sd_nkosXicyMqJnBgnZ",
+                        "input": [
+                            "$event"
+                        ]
+                    },
+                    "inValid": false,
+                    "message": ""
                 }
             ]
         },
-        "d97909c5-b2fd-efed-df71-11f2fca9265b": {
+        "4b1c691c-ef24-45d6-463b-9f172364821b": {
             "paletteKey": "NEUTRINOS_VIEW_department_tables",
             "parentEditorKey": "2f51ead7-2359-54c4-d481-62ff876c3809",
             "commentid": null,
@@ -907,19 +928,15 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "*ngIf",
-                    "_value": "page?.pageOfDepartment=='addDepartment'",
-                    "_type": "kv",
-                    "_attrDef": "c"
-                },
-                {
                     "_key": "[closeModal]",
                     "_value": "",
                     "_type": "kv",
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "closeModal",
-                    "attrType": "INPUT"
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
                 },
                 {
                     "_key": "[refresh]",
@@ -928,220 +945,15 @@
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "refresh",
-                    "attrType": "INPUT"
-                }
-            ]
-        }
-    },
-    "6dcacbbd-e9cf-9589-2ea2-768ebb1ac30f": {
-        "paletteKey": "Html5",
-        "isAdvancedComponent": true,
-        "commentid": null,
-        "designerReference": [
-            {
-                "_key": "style",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "class",
-                "_value": "",
-                "_type": "dav",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "htmlElement",
-                "_value": "div",
-                "_type": "dav",
-                "_attrDef": "p",
-                "_useAsLabel": true
-            },
-            {
-                "_key": "tagType",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "name",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "sandbox",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "src",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "srcdoc",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "width",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "[autoplay]",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "[loop]",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "data",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "audioSource",
-                "_value": [],
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "videoSource",
-                "_value": [],
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "audioDatasource",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "audioSrc",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "audioType",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "videoDatasource",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "videoSrc",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "videoType",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "(audioplay)",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "(videoplay)",
-                "_value": "",
-                "_type": "a",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "(audiopause)",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "(videopause)",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "(audioended)",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            },
-            {
-                "_key": "(videoended)",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_visibility": false
-            }
-        ],
-        "c7cbbad5-bc1b-f144-4586-f4c3ee717c80": {
-            "paletteKey": "html-editor",
-            "parentEditorKey": "6dcacbbd-e9cf-9589-2ea2-768ebb1ac30f",
-            "isAdvancedChildComponent": true,
-            "commentid": null,
-            "designerReference": [
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
+                },
                 {
-                    "_key": "style",
-                    "_value": "",
+                    "_key": "*ngIf",
+                    "_value": "page?.pageOfDepartment=='listDepartments'",
                     "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "class",
-                    "_value": "",
-                    "_type": "dav",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "html",
-                    "_value": "",
-                    "_type": "a",
-                    "_attrDef": "p"
+                    "_attrDef": "c"
                 }
             ]
         }
