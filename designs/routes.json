@@ -6,23 +6,43 @@
         },
         {
             "path": "doctor",
-            "component": "doctorComponent"
+            "component": "doctorComponent",
+            "canActivate": {
+                "edited": true,
+                "value": "NeutrinosAuthGuardService"
+            }
         },
         {
             "path": "department",
-            "component": "department_mainComponent"
+            "component": "department_mainComponent",
+            "canActivate": {
+                "edited": true,
+                "value": "NeutrinosAuthGuardService"
+            }
         },
         {
             "path": "appoinment",
-            "component": "user_appointmentComponent"
+            "component": "user_appointmentComponent",
+            "canActivate": {
+                "edited": true,
+                "value": "NeutrinosAuthGuardService"
+            }
         },
         {
             "path": "patients",
-            "component": "patientsComponent"
+            "component": "patientsComponent",
+            "canActivate": {
+                "edited": true,
+                "value": "NeutrinosAuthGuardService"
+            }
         },
         {
             "path": "receipt",
-            "component": "recieptComponent"
+            "component": "recieptComponent",
+            "canActivate": {
+                "edited": true,
+                "value": "NeutrinosAuthGuardService"
+            }
         },
         {
             "path": "''",

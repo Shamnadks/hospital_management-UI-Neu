@@ -292,6 +292,102 @@
                     }
                 }
             ]
+        },
+        {
+            "_id": "6230bf8a121d3ae0ca21cb91",
+            "name": "neutrinos-file-upload",
+            "averageRating": 4,
+            "description": "plugin to upload files",
+            "displayName": "File Upload",
+            "lastUpdated": "2022-03-15T16:32:10.087Z",
+            "numberOfDownloads": 0,
+            "packageType": [
+                "angular-package",
+                "studio-package"
+            ],
+            "platformSupportVersion": "8.1.0",
+            "pluginImage": "packageicon.png",
+            "publisher": "Neutrinos",
+            "uploadedDate": "2022-03-15T16:32:10.087Z",
+            "username": "avinash.gupta@neutrinos.co",
+            "version": "1.0.0",
+            "versions": {
+                "1.0.0": {
+                    "packages": [
+                        {
+                            "name": "neutrinos-file-upload",
+                            "version": "1.0.0",
+                            "packageType": "angular-package",
+                            "displayName": "File Upload"
+                        },
+                        {
+                            "name": "neutrinos-fileupload-component",
+                            "version": "1.0.0",
+                            "packageType": "studio-package",
+                            "displayName": "File Upload",
+                            "nModule": {
+                                "name": "neutrinos-file-upload",
+                                "version": "1.0.0",
+                                "packageType": "angular-package",
+                                "importStatement": "import { NeutrinosFileUploadModule } from 'neutrinos-file-upload';",
+                                "imports": [
+                                    "NeutrinosFileUploadModule"
+                                ]
+                            }
+                        }
+                    ],
+                    "platformSupportVersion": {
+                        "min": "8.1.0"
+                    },
+                    "metadata": {
+                        "name": "neutrinos-file-upload",
+                        "displayName": "File Upload",
+                        "version": "1.0.0",
+                        "username": "avinash.gupta@neutrinos.co",
+                        "publisher": "Neutrinos",
+                        "platformSupportVersion": {
+                            "min": "8.1.0"
+                        },
+                        "description": "plugin to upload files",
+                        "pluginImage": "packageicon.png"
+                    },
+                    "version": "1.0.0"
+                }
+            },
+            "archiveFile": "api/zips/undefined",
+            "guide": "6230bf8bd4548e001c7353f2",
+            "icon": "api/resource/icons/6230bf8ad4548e001c7353ec",
+            "screenshots": [
+                "api/resource/screenshots/6230bf8ad4548e001c7353ee",
+                "api/resource/screenshots/6230bf8ad4548e001c7353f0"
+            ],
+            "no_of_downloads_by_packages": {
+                "neutrinos-fileupload-component": 113,
+                "neutrinos-file-upload": 270
+            },
+            "dependencies": [
+                {
+                    "name": "neutrinos-file-upload",
+                    "version": "1.0.0",
+                    "packageType": "angular-package",
+                    "displayName": "File Upload"
+                },
+                {
+                    "name": "neutrinos-fileupload-component",
+                    "version": "1.0.0",
+                    "packageType": "studio-package",
+                    "displayName": "File Upload",
+                    "nModule": {
+                        "name": "neutrinos-file-upload",
+                        "version": "1.0.0",
+                        "packageType": "angular-package",
+                        "importStatement": "import { NeutrinosFileUploadModule } from 'neutrinos-file-upload';",
+                        "imports": [
+                            "NeutrinosFileUploadModule"
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }

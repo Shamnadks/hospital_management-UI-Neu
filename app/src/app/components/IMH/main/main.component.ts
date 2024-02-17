@@ -130,6 +130,21 @@ export class mainComponent {
       return this.errorHandler(bh, e, 'sd_rS22CeURM0exmb6T');
     }
   }
+
+  logout(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.logoutFunction(bh);
+      //appendnew_next_logout
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nsdxyh6C3epK8Nvd');
+    }
+  }
   //appendnew_flow_mainComponent_start
 
   sd_99dxIRa8SJg3uopK(bh) {
@@ -213,6 +228,17 @@ export class mainComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_sBhXof21evkyc2Ra');
+    }
+  }
+
+  logoutFunction(bh) {
+    try {
+      const page = this.page;
+      page.system.oauthService.logout('http://localhost:4200/home');
+      //appendnew_next_logoutFunction
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8BJVOcn5WhlgeIax');
     }
   }
 

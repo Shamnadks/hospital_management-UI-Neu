@@ -6,7 +6,7 @@
         "designerReference": [
             {
                 "_key": "style",
-                "_value": "",
+                "_value": "margin-bottom:0px;",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -193,7 +193,7 @@
             "designerReference": [
                 {
                     "_key": "style",
-                    "_value": "",
+                    "_value": "margin-bottom:0px;",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -1299,6 +1299,81 @@
                                 "_visibility": false
                             }
                         ],
+                        "0b0e6ca8-874c-36cc-b30c-dd3283d44247": {
+                            "paletteKey": "NG-RaisedButton",
+                            "parentEditorKey": "baac2891-8584-109c-c48a-3000398c78b8",
+                            "commentid": null,
+                            "designerReference": [
+                                {
+                                    "_key": "style",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "buttonname",
+                                    "_value": "Logout",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "color",
+                                    "_value": "accent",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "(click)",
+                                    "_value": "logout()",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "objValue": {
+                                        "nodeID": "sd_nsdxyh6C3epK8Nvd",
+                                        "functionName": "logout",
+                                        "activeTree": "pages",
+                                        "z": "sd_RyFKd3VvKtbqYAvX",
+                                        "input": []
+                                    }
+                                },
+                                {
+                                    "_key": "[disabled]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[disableRipple]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "type",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "routerLink",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "*ngIf",
+                                    "_value": "page.system?.oauthService?.userInfo?.displayName",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
+                                }
+                            ]
+                        },
                         "c6d6fe47-97c4-40db-957c-585a860b5759": {
                             "paletteKey": "NG-RaisedButton",
                             "parentEditorKey": "baac2891-8584-109c-c48a-3000398c78b8",
@@ -1365,6 +1440,12 @@
                                     "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "*ngIf",
+                                    "_value": "!page.system?.oauthService?.userInfo?.displayName",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
                                 }
                             ]
                         }
@@ -2781,7 +2862,7 @@
                     },
                     {
                         "_key": "style",
-                        "_value": "",
+                        "_value": "margin-bottom:0px;",
                         "_type": "kv",
                         "_attrDef": "p"
                     },

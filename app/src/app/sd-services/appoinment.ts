@@ -203,19 +203,6 @@ export class appoinment {
 
   async sd_52t4891oznMukad5(bh) {
     try {
-      bh.input.appoinment = {
-        name: bh.input.appoinment.name,
-        phone_no: bh.input.appoinment.phone_no,
-        dob: bh.input.appoinment.dob,
-        place: bh.input.appoinment.place,
-        address: bh.input.appoinment.address,
-        pin_code: bh.input.appoinment.pin_code,
-        email: bh.input.appoinment.email,
-        blood_group: bh.input.appoinment.blood_group,
-        doctor_id: bh.input.appoinment.doctor_id,
-        cash: bh.input.appoinment.cash,
-        payment_method: 'cash',
-      };
       bh.local.url =
         bh.system.environment.properties.ssdURL + 'appointment/post';
 
@@ -258,13 +245,8 @@ export class appoinment {
 
   async sd_FqqQW8T2Dk2nvXiJ(bh) {
     try {
-      bh.input.appoinment = {
-        ...bh.input.appoinment,
-        payment_method: 'stripe',
-        sucess_url:
-          'http://localhost:4200/home?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url: 'http://localhost:4200/appoinment',
-      };
+      // bh.input.appoinment={...bh.input.appoinment,"payment_method":"stripe","sucess_url": "http://localhost:4200/home?session_id={CHECKOUT_SESSION_ID}",
+      //       "cancel_url": "http://localhost:4200/appoinment"}
       bh.local.url =
         bh.system.environment.properties.ssdURL + 'appointment/post';
       bh = await this.sd_YNaLt3snM41I6gmI(bh);
