@@ -417,7 +417,7 @@ export class user_appointmentComponent {
     try {
       const page = this.page;
       console.log(bh.input.file);
-      page.file = bh.input.file;
+      page.file = bh.input?.file;
       //appendnew_next_sd_1buxLBesiDmpQVoq
       return bh;
     } catch (e) {

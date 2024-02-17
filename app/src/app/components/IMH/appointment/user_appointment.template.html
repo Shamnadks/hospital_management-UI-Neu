@@ -80,7 +80,7 @@
               <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
               <mat-datepicker #picker [disabled]="false"></mat-datepicker>
 
-            </mat-form-field><lib-file-upload [nFileUploadColor]="&apos;accent&apos;" [nFileUploadSelectMultiple]="false" [nFileUploadChangeLabelWithFileName]="true" [nFileUploadDisabled]="false" (nFileUploadOnChange)="fileupload($event)"></lib-file-upload>
+            </mat-form-field><lib-file-upload [nFileUploadColor]="&apos;accent&apos;" [nFileUploadSelectMultiple]="false" [nFileUploadChangeLabelWithFileName]="false" [nFileUploadDisabled]="false" (nFileUploadOnChange)="fileupload($event)"></lib-file-upload>
           </div>
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
             <input matInput name="address" type="text" placeholder="Address" [required]="true" formControlName="address">

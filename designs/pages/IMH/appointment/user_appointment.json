@@ -681,7 +681,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.input.file)\npage.file = bh.input.file",
+        "script": "console.log(bh.input.file)\npage.file = bh.input?.file",
         "functionName": "sd_1buxLBesiDmpQVoq",
         "category": "Function",
         "x": 265,
