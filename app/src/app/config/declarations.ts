@@ -134,11 +134,31 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
   { path: 'home', component: mainComponent },
-  { path: 'doctor', component: doctorComponent },
-  { path: 'department', component: department_mainComponent },
-  { path: 'appoinment', component: user_appointmentComponent },
-  { path: 'patients', component: patientslistComponent },
-  { path: 'receipt', component: recieptComponent },
+  {
+    path: 'doctor',
+    component: doctorComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'department',
+    component: department_mainComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'appoinment',
+    component: user_appointmentComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'patients',
+    component: patientsComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'receipt',
+    component: recieptComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

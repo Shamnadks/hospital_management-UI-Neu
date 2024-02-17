@@ -10,7 +10,7 @@
         </div>
       </div>
       <div style="width:auto;" class="sign-outbtn">
-        <button mat-raised-button color="accent">Logout</button>
+        <button mat-raised-button color="accent" (click)="logout()">Logout</button>
       </div>
     </div>
     <h1 class="welcome-text">
@@ -38,17 +38,17 @@
           </div>
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true">
+            <mat-form-field style="width:47%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput name="place" type="text" placeholder="Enter your Place.." [required]="true" formControlName="place">
               <mat-label>Place</mat-label>
             </mat-form-field>
-            <mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <mat-form-field style="width:47%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput name="cash" type="number" placeholder="Fees Amount" [required]="true" formControlName="cash">
 
             </mat-form-field>
           </div>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+          <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true"><mat-form-field style="width:47%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Departments</mat-label>
               <mat-select placeholder="Choose Department" [required]="true" (selectionChange)="doctorsFilter($event.value)">
                 <ng-template ngFor let-option [ngForOf]="page.departments" let-i="index">
@@ -56,11 +56,11 @@
                 </ng-template>
               </mat-select>
 
-            </mat-form-field><mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+            </mat-form-field><mat-form-field style="width:47%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Doctors</mat-label>
-              <mat-select [(value)]="page.selected" formControlName="doctor_id" placeholder="Choose Doctors" [required]="true">
+              <mat-select [(value)]="page.form.value.doctor_id" formControlName="doctor_id" placeholder="Choose Doctors" [required]="true">
                 <ng-template ngFor let-option [ngForOf]="page.doctors" let-i="index">
-                  <mat-option [value]="option.id">{{option.name}}({{option.balanceToken}})</mat-option>
+                  <mat-option [value]="option.id">{{option.name}} ({{option.balanceToken}})</mat-option>
                 </ng-template>
               </mat-select>
 
@@ -69,18 +69,18 @@
             <input matInput name="email" type="text" placeholder="Email" [required]="true" formControlName="email">
             <mat-label>Email</mat-label>
           </mat-form-field>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <div fxLayout="row wrap" fxLayoutAlign="space-between none" [fxShow]="true">
+            <mat-form-field style="width:35%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput name="pin_code" type="number" placeholder="Pincode" [required]="true" formControlName="pin_code">
               <mat-label>Pincode</mat-label>
             </mat-form-field>
-            <mat-form-field style="width:50%;" [appearance]="&apos;outline&apos;">
+            <mat-form-field style="width:35%;" [appearance]="&apos;outline&apos;">
               <mat-label>DOB</mat-label>
               <input matInput placeholder="Date of Birth" [matDatepicker]="picker" formControlName="dob" name="dob" [required]="false" [disabled]="false">
               <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
               <mat-datepicker #picker [disabled]="false"></mat-datepicker>
 
-            </mat-form-field>
+            </mat-form-field><lib-file-upload [nFileUploadColor]="&apos;accent&apos;" [nFileUploadSelectMultiple]="false" [nFileUploadChangeLabelWithFileName]="true" [nFileUploadDisabled]="false" (nFileUploadOnChange)="fileupload($event)"></lib-file-upload>
           </div>
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
             <input matInput name="address" type="text" placeholder="Address" [required]="true" formControlName="address">
