@@ -714,7 +714,7 @@
                         "_visibility": false
                     }
                 ],
-                "c284184a-5fa7-c3fc-cece-643e96d8279e": {
+                "bc8ae498-80b5-0da3-216c-4f06a16040fd": {
                     "paletteKey": "NG-button",
                     "parentEditorKey": "1d282892-0280-276d-61a0-24763ad4e714",
                     "commentid": null,
@@ -757,6 +757,81 @@
                                 "input": [
                                     "page.datas?.item?.id"
                                 ]
+                            }
+                        },
+                        {
+                            "_key": "[disabled]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[disableRipple]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "type",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "routerLink",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "*ngIf",
+                            "_value": "page.datas?.item?.status==='Pending'",
+                            "_type": "a",
+                            "_attrDef": "c"
+                        }
+                    ]
+                },
+                "c284184a-5fa7-c3fc-cece-643e96d8279e": {
+                    "paletteKey": "NG-button",
+                    "parentEditorKey": "1d282892-0280-276d-61a0-24763ad4e714",
+                    "commentid": null,
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "background:green;color:white",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "buttonname",
+                            "_value": "reciept",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_useAsLabel": true
+                        },
+                        {
+                            "_key": "color",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "reciept()",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "objValue": {
+                                "nodeID": "sd_roVaJtn0Df60DX7j",
+                                "functionName": "reciept",
+                                "activeTree": "pages",
+                                "z": "sd_08R7Qj49qAechruG",
+                                "input": []
                             }
                         },
                         {

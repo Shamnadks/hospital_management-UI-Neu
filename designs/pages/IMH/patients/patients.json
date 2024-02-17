@@ -137,7 +137,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.modalstatus = true\n\n// console.log(bh.input.patients,'input patie')\n// console.log(page.patients,'page patie')\n// console.log(bh.local.patients,'local patie')\npage.datas = {item:bh.input.item,status:page.modalstatus}\n\n",
+        "script": "page.modalstatus = false\n\n// console.log(bh.input.patients,'input patie')\n// console.log(page.patients,'page patie')\n// console.log(bh.local.patients,'local patie')\npage.datas = {item:bh.input.item,status:page.modalstatus}\n\n",
         "functionName": "sd_E29s0CjcP5oqHSgG",
         "category": "Function",
         "x": 520,

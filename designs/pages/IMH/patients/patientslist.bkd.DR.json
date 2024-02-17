@@ -692,7 +692,7 @@
                     },
                     {
                         "_key": "*ngIf",
-                        "_value": "page?.status===false",
+                        "_value": "page?.status===true",
                         "_type": "a",
                         "_attrDef": "c"
                     }
@@ -756,9 +756,71 @@
                     },
                     {
                         "_key": "*ngIf",
-                        "_value": "page.status === true",
+                        "_value": "page.detailedstatus === true",
                         "_type": "a",
                         "_attrDef": "c"
+                    }
+                ]
+            },
+            "1218e402-fe56-a826-48d3-370ca71ae619": {
+                "paletteKey": "NEUTRINOS_VIEW_reciept",
+                "parentEditorKey": "64d4271f-4760-1ca0-e2b1-f90377a9c93e",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "componentLabel",
+                        "_value": "reciept",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "*ngIf",
+                        "_value": "page.recieptstatus = true",
+                        "_type": "a",
+                        "_attrDef": "c"
+                    },
+                    {
+                        "_key": "[datas]",
+                        "_value": "page.datas",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_complexity": "advanced",
+                        "displayAs": "datas",
+                        "attrType": "INPUT",
+                        "inValid": false,
+                        "message": ""
+                    },
+                    {
+                        "_key": "(recieptstatus)",
+                        "_value": "recieptflow($event)",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_complexity": "advanced",
+                        "displayAs": "recieptstatus",
+                        "attrType": "OUTPUT",
+                        "_customAttributeFlag": "flowpicker",
+                        "objValue": {
+                            "nodeID": "sd_GE2Uhy6BFgzk0Qgf",
+                            "functionName": "recieptflow",
+                            "activeTree": "pages",
+                            "z": "sd_wTCxtJ9bwOR3Cb37",
+                            "input": [
+                                "$event"
+                            ]
+                        }
                     }
                 ]
             }

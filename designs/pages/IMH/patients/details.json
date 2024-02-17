@@ -121,7 +121,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.changedstatus = false\nconsole.log(page.changedstatus,'chahcahc')",
+        "script": "// page.changedstatus = false\npage.changedstatus = {status:false,reciept:false}\n\nconsole.log(page.changedstatus,'chahcahc')",
         "functionName": "sd_s6apGtkQPOwNEtfD",
         "category": "Function",
         "x": 410,
@@ -179,8 +179,8 @@
         "script": "page.changedstatus = false\nconsole.log(page.changedstatus,'chahcahc')\nconsole.log(page.datas,'page datas  ss')\n",
         "functionName": "sd_4HVWn1pCMdegp9vA",
         "category": "Function",
-        "x": 383,
-        "y": 187.8125,
+        "x": 405,
+        "y": 180,
         "wires": [
             []
         ],
@@ -211,8 +211,8 @@
         "flow_type": "sync",
         "functionName": "appoinmentstatus",
         "category": "General",
-        "x": 230,
-        "y": 430,
+        "x": 225,
+        "y": 420,
         "wires": [
             [
                 "sd_iLSPqqMP87teVA6T"
@@ -232,8 +232,8 @@
         "script": "bh.input.url = 'patients/put'\nbh.input.method = 'put'\nbh.input.body = {id:bh.input.appoinmentid,status:'Completed'}",
         "functionName": "sd_iLSPqqMP87teVA6T",
         "category": "Function",
-        "x": 410,
-        "y": 430,
+        "x": 405,
+        "y": 420,
         "wires": [
             [
                 "sd_lbEJRXSX92TzC5IO"
@@ -251,11 +251,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.local.result,'qqres')\n\npage.changedstatus = false",
+        "script": "console.log(bh.local.result,'qqres')\n\n// page.changedstatus = false\npage.changedstatus = {status:false,reciept:false}\n",
         "functionName": "sd_m0892vSrTCw2K6JS",
         "category": "Function",
-        "x": 730,
-        "y": 430,
+        "x": 745,
+        "y": 420,
         "wires": [
             [
                 "sd_b5xdhLw0j3ABXRbe"
@@ -331,11 +331,57 @@
         "accept_csd": true,
         "functionName": "sd_lbEJRXSX92TzC5IO",
         "category": "General",
-        "x": 565,
+        "x": 605,
         "y": 420,
         "wires": [
             [
                 "sd_m0892vSrTCw2K6JS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_roVaJtn0Df60DX7j",
+        "type": "PageStart",
+        "z": "sd_08R7Qj49qAechruG",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "reciept",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "reciept",
+        "category": "General",
+        "x": 225,
+        "y": 540,
+        "wires": [
+            [
+                "sd_ACXVfGAXTC8h0fyj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "detailsComponent"
+    },
+    {
+        "id": "sd_ACXVfGAXTC8h0fyj",
+        "type": "Script",
+        "z": "sd_08R7Qj49qAechruG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// bh.local.status = true\n// console.log(bh.local.status,'qqqqahcahc')\npage.changedstatus = {reciept:true}\n",
+        "functionName": "sd_ACXVfGAXTC8h0fyj",
+        "category": "Function",
+        "x": 845,
+        "y": 540,
+        "wires": [
+            [
+                "sd_b5xdhLw0j3ABXRbe"
             ]
         ],
         "__n_excludedFromValidation__": {},

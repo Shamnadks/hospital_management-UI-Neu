@@ -4,6 +4,6 @@
       Patients</h1>
   </header>
   <div style="height:65%">
-    <bh-patients [patients]="page.patientslist" (selected)="outflow($event)" *ngIf></bh-patients><bh-details [patient]="page.datas" (changedstatus)="detailedoutflow($event)" *ngIf></bh-details>
+    <bh-patients [patients]="page.patientslist" (selected)="outflow($event)" *ngIf></bh-patients><bh-details [patient]="page.datas" (changedstatus)="detailedoutflow($event)" *ngIf></bh-details><bh-reciept *ngIf [datas]="page.datas" (recieptstatus)="recieptflow($event)"></bh-reciept>
   </div>
 </div>

@@ -22,7 +22,7 @@
         },
         {
             "path": "receipt",
-            "component": "recieptComponent"
+            "component": ""
         },
         {
             "path": "''",

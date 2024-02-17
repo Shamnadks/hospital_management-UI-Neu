@@ -1,5 +1,5 @@
 {
-    "87dc204f-9ecf-b22b-3e8f-9bb353ac1ce5": {
+    "3c31ff4f-ace2-0ff6-17d0-07912ea64046": {
         "paletteKey": "Html5",
         "isAdvancedComponent": true,
         "commentid": null,
@@ -191,9 +191,9 @@
                 "_attrDef": "c"
             }
         ],
-        "3c4ae374-2b95-ebe1-caa4-80c23d23833f": {
+        "b6b13882-db60-9090-92c8-7e6f0a196682": {
             "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "87dc204f-9ecf-b22b-3e8f-9bb353ac1ce5",
+            "parentEditorKey": "3c31ff4f-ace2-0ff6-17d0-07912ea64046",
             "commentid": null,
             "designerReference": [
                 {
@@ -252,9 +252,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "b125772c-9a41-b960-952f-61737180377e": {
+            "5cd89c8d-0ae9-5763-702d-6b561245f248": {
                 "paletteKey": "Html5",
-                "parentEditorKey": "3c4ae374-2b95-ebe1-caa4-80c23d23833f",
+                "parentEditorKey": "b6b13882-db60-9090-92c8-7e6f0a196682",
                 "isAdvancedComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -441,9 +441,9 @@
                         "_visibility": false
                     }
                 ],
-                "fc63f00d-8a1d-fe44-e7ee-32f14216dc47": {
+                "8d7edd0e-f99e-00c1-0a0d-f8a1a476fe84": {
                     "paletteKey": "Html5",
-                    "parentEditorKey": "b125772c-9a41-b960-952f-61737180377e",
+                    "parentEditorKey": "5cd89c8d-0ae9-5763-702d-6b561245f248",
                     "isAdvancedComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -636,9 +636,9 @@
                             "_attrDef": "c"
                         }
                     ],
-                    "6c528373-4861-36ab-682f-2a025da4fde2": {
+                    "eb7e3bdf-d521-41a8-74c5-c05080ea3895": {
                         "paletteKey": "html-editor",
-                        "parentEditorKey": "fc63f00d-8a1d-fe44-e7ee-32f14216dc47",
+                        "parentEditorKey": "8d7edd0e-f99e-00c1-0a0d-f8a1a476fe84",
                         "isAdvancedChildComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -664,9 +664,9 @@
                     }
                 }
             },
-            "40d8266c-4c91-e0a8-3341-afc5bedec7d4": {
+            "12fdf3db-c31c-73e5-fcb0-a6e95772d685": {
                 "paletteKey": "Html5",
-                "parentEditorKey": "3c4ae374-2b95-ebe1-caa4-80c23d23833f",
+                "parentEditorKey": "b6b13882-db60-9090-92c8-7e6f0a196682",
                 "isAdvancedComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -853,9 +853,9 @@
                         "_visibility": false
                     }
                 ],
-                "ae44ad89-7623-e152-dc2d-49c98dc499d0": {
+                "896794ae-6715-7a70-c506-35c4fddce09d": {
                     "paletteKey": "Html5",
-                    "parentEditorKey": "40d8266c-4c91-e0a8-3341-afc5bedec7d4",
+                    "parentEditorKey": "12fdf3db-c31c-73e5-fcb0-a6e95772d685",
                     "isAdvancedComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -1040,9 +1040,9 @@
                             "_visibility": false
                         }
                     ],
-                    "63fc9e16-5998-87e9-3bbb-764063679bdd": {
+                    "14d3ebac-5c74-a2e1-3f9e-1617e871aa3e": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "ae44ad89-7623-e152-dc2d-49c98dc499d0",
+                        "parentEditorKey": "896794ae-6715-7a70-c506-35c4fddce09d",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -1227,9 +1227,9 @@
                                 "_visibility": false
                             }
                         ],
-                        "60ff650f-6b5a-8b1c-115a-f91e7d6a4c1f": {
+                        "8ec640ec-6301-ddaf-581d-9fd318136d0e": {
                             "paletteKey": "NG-button",
-                            "parentEditorKey": "63fc9e16-5998-87e9-3bbb-764063679bdd",
+                            "parentEditorKey": "14d3ebac-5c74-a2e1-3f9e-1617e871aa3e",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1297,9 +1297,9 @@
                             ]
                         }
                     },
-                    "68b837e0-8fe5-6bcb-955d-b50edd68bf2e": {
+                    "9d040339-2dd4-6d6c-96be-50a1d65dd510": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "ae44ad89-7623-e152-dc2d-49c98dc499d0",
+                        "parentEditorKey": "896794ae-6715-7a70-c506-35c4fddce09d",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -1484,9 +1484,9 @@
                                 "_visibility": false
                             }
                         ],
-                        "b0609140-4a9b-133e-aff9-48375e944389": {
+                        "9778af30-8790-a21f-2671-78a2bde3857b": {
                             "paletteKey": "html-editor",
-                            "parentEditorKey": "68b837e0-8fe5-6bcb-955d-b50edd68bf2e",
+                            "parentEditorKey": "9d040339-2dd4-6d6c-96be-50a1d65dd510",
                             "isAdvancedChildComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -1511,9 +1511,9 @@
                             ]
                         }
                     },
-                    "950150ec-eaba-dcdf-29ea-6e520b300850": {
+                    "9f7f3005-a3be-71bd-ad1d-da631f83dc22": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "ae44ad89-7623-e152-dc2d-49c98dc499d0",
+                        "parentEditorKey": "896794ae-6715-7a70-c506-35c4fddce09d",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -1698,9 +1698,9 @@
                                 "_visibility": false
                             }
                         ],
-                        "5672401a-35f6-c2bc-df05-85159f838e6a": {
+                        "e29fa931-0a47-16b1-03f2-db45a2f139c8": {
                             "paletteKey": "NG-icon",
-                            "parentEditorKey": "950150ec-eaba-dcdf-29ea-6e520b300850",
+                            "parentEditorKey": "9f7f3005-a3be-71bd-ad1d-da631f83dc22",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1738,16 +1738,17 @@
                                     "_key": "(click)",
                                     "_value": "(click)",
                                     "_type": "kv",
-                                    "_attrDef": "c"
+                                    "_attrDef": "c",
+                                    "_customAttributeFlag": "customInput"
                                 }
                             ]
                         }
                     }
                 }
             },
-            "f33804f8-4a60-b319-43cc-d6fe0e9fab3a": {
+            "ad91c031-228f-67bf-adb6-8257e89c1d1b": {
                 "paletteKey": "Html5",
-                "parentEditorKey": "3c4ae374-2b95-ebe1-caa4-80c23d23833f",
+                "parentEditorKey": "b6b13882-db60-9090-92c8-7e6f0a196682",
                 "isAdvancedComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -1956,9 +1957,9 @@
                         "_attrDef": "c"
                     }
                 ],
-                "192f93fc-cb93-71a5-30ad-ee172d1611ac": {
+                "49409d62-0159-9b8e-0f84-c900199f9ca5": {
                     "paletteKey": "FlexLayoutCol",
-                    "parentEditorKey": "f33804f8-4a60-b319-43cc-d6fe0e9fab3a",
+                    "parentEditorKey": "ad91c031-228f-67bf-adb6-8257e89c1d1b",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2035,9 +2036,9 @@
                             "_attrDef": "c"
                         }
                     ],
-                    "eba9a197-26f5-375a-8772-c8c47e2ac387": {
+                    "55725dca-6a51-0492-84c7-5f33ee42bf0f": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "192f93fc-cb93-71a5-30ad-ee172d1611ac",
+                        "parentEditorKey": "49409d62-0159-9b8e-0f84-c900199f9ca5",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -2222,9 +2223,9 @@
                                 "_visibility": false
                             }
                         ],
-                        "d884a73f-6e99-349c-f429-71cd307da3fa": {
+                        "6e45b44a-60a6-7de0-f8ef-79aa4a08ba74": {
                             "paletteKey": "html-editor",
-                            "parentEditorKey": "eba9a197-26f5-375a-8772-c8c47e2ac387",
+                            "parentEditorKey": "55725dca-6a51-0492-84c7-5f33ee42bf0f",
                             "isAdvancedChildComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -2249,9 +2250,9 @@
                             ]
                         }
                     },
-                    "0ea739a7-55dd-b770-706f-317acbb26331": {
+                    "c80d9dac-f1a0-e86c-46f2-9903bdfdf7e7": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "192f93fc-cb93-71a5-30ad-ee172d1611ac",
+                        "parentEditorKey": "49409d62-0159-9b8e-0f84-c900199f9ca5",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -2436,9 +2437,9 @@
                                 "_visibility": false
                             }
                         ],
-                        "bc7fb1f9-9c94-6892-757c-d436b4233d1b": {
+                        "ce990514-d7b1-bab1-cedf-565f7a586adc": {
                             "paletteKey": "html-editor",
-                            "parentEditorKey": "0ea739a7-55dd-b770-706f-317acbb26331",
+                            "parentEditorKey": "c80d9dac-f1a0-e86c-46f2-9903bdfdf7e7",
                             "isAdvancedChildComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -2463,9 +2464,9 @@
                             ]
                         }
                     },
-                    "ecd82672-a8ce-71f5-eb79-84568c4d1ef9": {
+                    "afb6de5a-7d84-fd7d-4152-4d8ace883cea": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "192f93fc-cb93-71a5-30ad-ee172d1611ac",
+                        "parentEditorKey": "49409d62-0159-9b8e-0f84-c900199f9ca5",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -2650,9 +2651,9 @@
                                 "_visibility": false
                             }
                         ],
-                        "3a25949d-e144-8706-3051-257fd1b57f3b": {
+                        "f0c80fa6-4a9a-8569-a669-d294ca6e1960": {
                             "paletteKey": "html-editor",
-                            "parentEditorKey": "ecd82672-a8ce-71f5-eb79-84568c4d1ef9",
+                            "parentEditorKey": "afb6de5a-7d84-fd7d-4152-4d8ace883cea",
                             "isAdvancedChildComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -2677,9 +2678,9 @@
                             ]
                         }
                     },
-                    "b17b2c8c-2e69-f43d-7355-65f16aecd413": {
+                    "83f27c45-2583-beb0-1234-fdbb665fd5c6": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "192f93fc-cb93-71a5-30ad-ee172d1611ac",
+                        "parentEditorKey": "49409d62-0159-9b8e-0f84-c900199f9ca5",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -2864,9 +2865,9 @@
                                 "_visibility": false
                             }
                         ],
-                        "85d24c5f-e79b-8248-42d1-afd4a5eea5df": {
+                        "43afe599-b4ed-8e61-4055-72da9518a0d5": {
                             "paletteKey": "Html5",
-                            "parentEditorKey": "b17b2c8c-2e69-f43d-7355-65f16aecd413",
+                            "parentEditorKey": "83f27c45-2583-beb0-1234-fdbb665fd5c6",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -3051,9 +3052,9 @@
                                     "_visibility": false
                                 }
                             ],
-                            "d0dd592e-4e23-799b-4890-6a79f98a1b3e": {
+                            "a0946a6e-8735-611c-e909-7637acbed66c": {
                                 "paletteKey": "html-editor",
-                                "parentEditorKey": "85d24c5f-e79b-8248-42d1-afd4a5eea5df",
+                                "parentEditorKey": "43afe599-b4ed-8e61-4055-72da9518a0d5",
                                 "isAdvancedChildComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -3078,9 +3079,9 @@
                                 ]
                             }
                         },
-                        "b02fc2c6-13fe-cec1-60a3-36e6cb213782": {
+                        "1a8d9099-3604-3a9b-ddea-f1760d14999e": {
                             "paletteKey": "Html5",
-                            "parentEditorKey": "b17b2c8c-2e69-f43d-7355-65f16aecd413",
+                            "parentEditorKey": "83f27c45-2583-beb0-1234-fdbb665fd5c6",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -3265,9 +3266,9 @@
                                     "_visibility": false
                                 }
                             ],
-                            "34b87d65-6cb9-60ab-c63d-57c503e4bda4": {
+                            "029b82d6-9926-c931-e515-027353433949": {
                                 "paletteKey": "html-editor",
-                                "parentEditorKey": "b02fc2c6-13fe-cec1-60a3-36e6cb213782",
+                                "parentEditorKey": "1a8d9099-3604-3a9b-ddea-f1760d14999e",
                                 "isAdvancedChildComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -3293,9 +3294,9 @@
                             }
                         }
                     },
-                    "8a5f2614-609d-a24e-ff00-1cdb2bcb4750": {
+                    "eac14ad3-c950-edf2-2cdc-b75cc218d345": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "192f93fc-cb93-71a5-30ad-ee172d1611ac",
+                        "parentEditorKey": "49409d62-0159-9b8e-0f84-c900199f9ca5",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -3504,9 +3505,9 @@
                                 "_attrDef": "c"
                             }
                         ],
-                        "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508": {
+                        "6383b2e7-6e64-f4ed-e4ae-67369c2154cd": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "8a5f2614-609d-a24e-ff00-1cdb2bcb4750",
+                            "parentEditorKey": "eac14ad3-c950-edf2-2cdc-b75cc218d345",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -3565,9 +3566,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "89a78963-fe5c-f2cb-a716-63e3b3ffdb38": {
+                            "e5149c3e-ebfd-da11-f6e1-f023def259f4": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -3782,9 +3783,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "ba8f30ac-d0d7-4560-cbef-984fd1eae2fb": {
+                                "3042220d-93de-cfd8-d7a2-bb2492397243": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "89a78963-fe5c-f2cb-a716-63e3b3ffdb38",
+                                    "parentEditorKey": "e5149c3e-ebfd-da11-f6e1-f023def259f4",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -3981,9 +3982,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "84e5d134-3b69-d0d1-1633-3b2ed6dd1b34": {
+                                    "2e331553-e043-6410-1e14-07a2b0c7744b": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "ba8f30ac-d0d7-4560-cbef-984fd1eae2fb",
+                                        "parentEditorKey": "3042220d-93de-cfd8-d7a2-bb2492397243",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -4008,9 +4009,9 @@
                                         ]
                                     }
                                 },
-                                "6e83fb83-378e-802e-79c4-51d9b3d6cfa6": {
+                                "c8b98cf4-b085-fbcc-19c2-137c369aed09": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "89a78963-fe5c-f2cb-a716-63e3b3ffdb38",
+                                    "parentEditorKey": "e5149c3e-ebfd-da11-f6e1-f023def259f4",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -4207,9 +4208,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "d23556b9-0147-7c8f-174e-c4f76c569e21": {
+                                    "a7ca94e4-f9dd-ec7e-7f19-af387eb9e2d0": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "6e83fb83-378e-802e-79c4-51d9b3d6cfa6",
+                                        "parentEditorKey": "c8b98cf4-b085-fbcc-19c2-137c369aed09",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -4235,9 +4236,9 @@
                                     }
                                 }
                             },
-                            "42ad3aff-215a-ddab-e6d3-619f0979bdf3": {
+                            "5cccf16c-66d4-39c4-fd1f-1117a0f94e5c": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "isCommented": "true",
                                 "commentid": "1708147339976",
@@ -4453,9 +4454,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "893b37fa-8d11-b7a1-43ca-f4963ae2b9e9": {
+                                "ad22e624-72ce-53a2-80a2-170cb98ce6bc": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "42ad3aff-215a-ddab-e6d3-619f0979bdf3",
+                                    "parentEditorKey": "5cccf16c-66d4-39c4-fd1f-1117a0f94e5c",
                                     "isAdvancedComponent": true,
                                     "isCommented": "true",
                                     "commentid": "1708147339976",
@@ -4653,9 +4654,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "ceb20219-047a-14ec-fda0-ab6ea591481e": {
+                                    "a80025c6-b04c-d4fc-c34d-159679a046f8": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "893b37fa-8d11-b7a1-43ca-f4963ae2b9e9",
+                                        "parentEditorKey": "ad22e624-72ce-53a2-80a2-170cb98ce6bc",
                                         "isAdvancedChildComponent": true,
                                         "isCommented": "true",
                                         "commentid": "1708147339976",
@@ -4681,9 +4682,9 @@
                                         ]
                                     }
                                 },
-                                "6f93c690-3632-a1da-8b46-06156c7c4dfe": {
+                                "8e3239fa-094b-5e98-5276-292a0b7c3b64": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "42ad3aff-215a-ddab-e6d3-619f0979bdf3",
+                                    "parentEditorKey": "5cccf16c-66d4-39c4-fd1f-1117a0f94e5c",
                                     "isAdvancedComponent": true,
                                     "isCommented": "true",
                                     "commentid": "1708147339976",
@@ -4881,9 +4882,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "f620a235-0fe7-0107-ca62-9ba5ae2e6bf7": {
+                                    "f9b6b0c1-4247-04be-b5d1-6dd471018cb6": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "6f93c690-3632-a1da-8b46-06156c7c4dfe",
+                                        "parentEditorKey": "8e3239fa-094b-5e98-5276-292a0b7c3b64",
                                         "isAdvancedChildComponent": true,
                                         "isCommented": "true",
                                         "commentid": "1708147339976",
@@ -4910,9 +4911,9 @@
                                     }
                                 }
                             },
-                            "126f8f4c-9067-0cbf-eee3-9965cfa66132": {
+                            "3d3afdb4-466b-ade9-5f4b-6811539960df": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -5127,9 +5128,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "75af1eda-539f-2907-3342-1643540ba846": {
+                                "f22490b4-2cf0-a824-802a-5231b00ba337": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "126f8f4c-9067-0cbf-eee3-9965cfa66132",
+                                    "parentEditorKey": "3d3afdb4-466b-ade9-5f4b-6811539960df",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -5326,9 +5327,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "d167a9ed-2250-dfe2-7521-f8677c90b38a": {
+                                    "6c3139d8-7a24-c344-5cc9-fdc183cab25a": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "75af1eda-539f-2907-3342-1643540ba846",
+                                        "parentEditorKey": "f22490b4-2cf0-a824-802a-5231b00ba337",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -5353,9 +5354,9 @@
                                         ]
                                     }
                                 },
-                                "a2f71a1b-3c72-e240-c6e6-b6238e8fb451": {
+                                "c8983ce2-46af-b603-ea79-4d6efecf2a45": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "126f8f4c-9067-0cbf-eee3-9965cfa66132",
+                                    "parentEditorKey": "3d3afdb4-466b-ade9-5f4b-6811539960df",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -5552,9 +5553,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "37d52eac-00c7-b4e3-482c-fd7b20fe3369": {
+                                    "e52d2bc1-3c2b-a0c1-f6f8-07ff4bf99634": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "a2f71a1b-3c72-e240-c6e6-b6238e8fb451",
+                                        "parentEditorKey": "c8983ce2-46af-b603-ea79-4d6efecf2a45",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -5580,9 +5581,9 @@
                                     }
                                 }
                             },
-                            "3e6d76c4-d4bc-55ec-352e-0824d5f5fcce": {
+                            "c1dd8e3b-1099-d37e-c33b-84f84985ec76": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -5797,9 +5798,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "07bd3a07-4d4f-7e3b-32a8-0c7bf11ea7cb": {
+                                "30408ca8-0d76-105f-2370-94befd465061": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "3e6d76c4-d4bc-55ec-352e-0824d5f5fcce",
+                                    "parentEditorKey": "c1dd8e3b-1099-d37e-c33b-84f84985ec76",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -5996,9 +5997,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "1b1444e9-48f9-8639-6e11-41033c0005f7": {
+                                    "e62c4ccd-909a-e13e-01e2-49d3bf837c8c": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "07bd3a07-4d4f-7e3b-32a8-0c7bf11ea7cb",
+                                        "parentEditorKey": "30408ca8-0d76-105f-2370-94befd465061",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -6023,9 +6024,9 @@
                                         ]
                                     }
                                 },
-                                "1b08e15d-b0a4-44bd-668c-e2f3ac35f81e": {
+                                "34139a51-37c5-68dd-68d3-547e65ff7487": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "3e6d76c4-d4bc-55ec-352e-0824d5f5fcce",
+                                    "parentEditorKey": "c1dd8e3b-1099-d37e-c33b-84f84985ec76",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -6222,9 +6223,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "f0499c25-ecc2-7fe1-337f-800e20f625a3": {
+                                    "545db7f7-88bb-613c-9d24-d53b6dd2f05e": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "1b08e15d-b0a4-44bd-668c-e2f3ac35f81e",
+                                        "parentEditorKey": "34139a51-37c5-68dd-68d3-547e65ff7487",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -6250,9 +6251,9 @@
                                     }
                                 }
                             },
-                            "251c7704-1242-6452-3e24-148d763a4d56": {
+                            "44e05a0f-0642-dda8-f0db-74a3d00791f9": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -6467,9 +6468,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "ee6983de-a449-f059-68a8-d110c6ccd90c": {
+                                "d4d1ce5a-3d3f-35c2-a28f-3200fb7898fb": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "251c7704-1242-6452-3e24-148d763a4d56",
+                                    "parentEditorKey": "44e05a0f-0642-dda8-f0db-74a3d00791f9",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -6666,9 +6667,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "77c3a3b7-fca9-d92e-bc33-90ca81eae797": {
+                                    "f40bf771-4bf5-a9a5-fd3e-0c679d5bd643": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "ee6983de-a449-f059-68a8-d110c6ccd90c",
+                                        "parentEditorKey": "d4d1ce5a-3d3f-35c2-a28f-3200fb7898fb",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -6693,9 +6694,9 @@
                                         ]
                                     }
                                 },
-                                "b5d3d641-66b8-e56e-18a1-903ee87d10a4": {
+                                "edfc1b5e-a4ca-147f-356c-3ef6c9920446": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "251c7704-1242-6452-3e24-148d763a4d56",
+                                    "parentEditorKey": "44e05a0f-0642-dda8-f0db-74a3d00791f9",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -6892,9 +6893,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "73f34b75-2531-8b76-9055-2c99f5d56e73": {
+                                    "43a3ca83-f95a-7cca-ded7-6fb3c108bd73": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "b5d3d641-66b8-e56e-18a1-903ee87d10a4",
+                                        "parentEditorKey": "edfc1b5e-a4ca-147f-356c-3ef6c9920446",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -6920,9 +6921,9 @@
                                     }
                                 }
                             },
-                            "54402cc9-8a69-9254-05e4-7fb37bb30a33": {
+                            "c3cddf1a-d93f-290a-103e-5b39c54dbbc2": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -7137,9 +7138,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "54c394c1-a8ed-9594-87a4-8a0edcc2c7dc": {
+                                "3a33c200-b678-4492-a5c4-8c11f56260e0": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "54402cc9-8a69-9254-05e4-7fb37bb30a33",
+                                    "parentEditorKey": "c3cddf1a-d93f-290a-103e-5b39c54dbbc2",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -7336,9 +7337,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "d372ac4b-a977-4fcc-7966-e6273c8e1c84": {
+                                    "f7db6697-b975-f1c9-0ab8-8e5896ce10af": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "54c394c1-a8ed-9594-87a4-8a0edcc2c7dc",
+                                        "parentEditorKey": "3a33c200-b678-4492-a5c4-8c11f56260e0",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -7363,9 +7364,9 @@
                                         ]
                                     }
                                 },
-                                "92d530d6-23a7-281b-3594-e88bd9008670": {
+                                "0dd4fd35-bf27-1f17-3f2a-705faf1fa3c9": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "54402cc9-8a69-9254-05e4-7fb37bb30a33",
+                                    "parentEditorKey": "c3cddf1a-d93f-290a-103e-5b39c54dbbc2",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -7562,9 +7563,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "bfc44cca-7000-1695-25ad-6b81df0df669": {
+                                    "aa3881cf-9537-2531-4b67-ce7ec7b8cc53": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "92d530d6-23a7-281b-3594-e88bd9008670",
+                                        "parentEditorKey": "0dd4fd35-bf27-1f17-3f2a-705faf1fa3c9",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -7590,9 +7591,9 @@
                                     }
                                 }
                             },
-                            "21456db3-3897-e97d-89c8-bd221f8ba767": {
+                            "6bff1391-e302-e734-417d-18776d4dd03a": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -7807,9 +7808,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "3447ae9d-4ccf-760b-d95e-db26a6444491": {
+                                "f4461dcb-e4f8-d573-495d-e9288803a75f": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "21456db3-3897-e97d-89c8-bd221f8ba767",
+                                    "parentEditorKey": "6bff1391-e302-e734-417d-18776d4dd03a",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -8006,9 +8007,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "7587f6d3-a604-6b35-de88-cc24c41fbbcd": {
+                                    "aa25a882-18c8-1e21-dd50-1269ec00186a": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "3447ae9d-4ccf-760b-d95e-db26a6444491",
+                                        "parentEditorKey": "f4461dcb-e4f8-d573-495d-e9288803a75f",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -8033,9 +8034,9 @@
                                         ]
                                     }
                                 },
-                                "abca57f0-e25a-9cab-c8cb-52d7e689a87a": {
+                                "cfddcc7b-dd08-76ed-250f-01e51a5bd82b": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "21456db3-3897-e97d-89c8-bd221f8ba767",
+                                    "parentEditorKey": "6bff1391-e302-e734-417d-18776d4dd03a",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -8232,9 +8233,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "31dce847-224a-67c4-dcbb-9563d1a243bc": {
+                                    "76625e26-9f5a-4c4d-0fe7-420c688520e9": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "abca57f0-e25a-9cab-c8cb-52d7e689a87a",
+                                        "parentEditorKey": "cfddcc7b-dd08-76ed-250f-01e51a5bd82b",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -8260,9 +8261,9 @@
                                     }
                                 }
                             },
-                            "f9b9652f-7e7b-4aa5-e94f-2254bd8fd53e": {
+                            "92bb334c-501f-f58a-fcee-d767e349c91c": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -8477,9 +8478,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "b70cb141-7759-20be-ce1c-e1d0a90acb21": {
+                                "4dfdfbdf-4892-a9ef-8077-4a19e4d5baab": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "f9b9652f-7e7b-4aa5-e94f-2254bd8fd53e",
+                                    "parentEditorKey": "92bb334c-501f-f58a-fcee-d767e349c91c",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -8676,9 +8677,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "b0a027b0-35e2-8002-eed6-d3058e690f60": {
+                                    "61ac30e3-5521-9f95-0036-f448397b8e57": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "b70cb141-7759-20be-ce1c-e1d0a90acb21",
+                                        "parentEditorKey": "4dfdfbdf-4892-a9ef-8077-4a19e4d5baab",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -8703,9 +8704,9 @@
                                         ]
                                     }
                                 },
-                                "ab618c49-1e48-c505-7d27-409f2cef4124": {
+                                "4bcd383b-a23e-cb14-35d1-c3f43b7310db": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "f9b9652f-7e7b-4aa5-e94f-2254bd8fd53e",
+                                    "parentEditorKey": "92bb334c-501f-f58a-fcee-d767e349c91c",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -8902,9 +8903,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "6756e018-9290-2ff0-ba93-e03bacef25f2": {
+                                    "75648f62-3b76-a551-3c0f-ea91addc1236": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "ab618c49-1e48-c505-7d27-409f2cef4124",
+                                        "parentEditorKey": "4bcd383b-a23e-cb14-35d1-c3f43b7310db",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -8930,9 +8931,9 @@
                                     }
                                 }
                             },
-                            "66f24529-e558-1813-4941-c93207b83ee4": {
+                            "939d45e2-b0ce-8c8a-f936-8ab00ef211fa": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -9147,9 +9148,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "fefdaf42-3792-be06-b65d-2f38657ac664": {
+                                "4d9ada96-e72d-830c-ec42-140a4b38ed8c": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "66f24529-e558-1813-4941-c93207b83ee4",
+                                    "parentEditorKey": "939d45e2-b0ce-8c8a-f936-8ab00ef211fa",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -9346,9 +9347,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "76abd90b-2acd-47d2-1db0-8cd5208774fe": {
+                                    "b2e1b61f-74fc-4212-4171-aeb24cb816b7": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "fefdaf42-3792-be06-b65d-2f38657ac664",
+                                        "parentEditorKey": "4d9ada96-e72d-830c-ec42-140a4b38ed8c",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -9373,9 +9374,9 @@
                                         ]
                                     }
                                 },
-                                "9b433161-99a1-dce5-b43b-2ba49c7c8ac5": {
+                                "82bc34f6-e59b-91bc-cb2a-81e99a06686a": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "66f24529-e558-1813-4941-c93207b83ee4",
+                                    "parentEditorKey": "939d45e2-b0ce-8c8a-f936-8ab00ef211fa",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -9572,9 +9573,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "e71d0349-4dd2-89a3-46bf-112716b7ea26": {
+                                    "bf0b1e47-cd9b-c0f6-5aa9-6672664de661": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "9b433161-99a1-dce5-b43b-2ba49c7c8ac5",
+                                        "parentEditorKey": "82bc34f6-e59b-91bc-cb2a-81e99a06686a",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -9600,9 +9601,9 @@
                                     }
                                 }
                             },
-                            "3dadba8f-52d7-d41d-34d4-8184b25c1fa4": {
+                            "5e948b53-f0df-e1de-bc8b-2a3cf5de50ee": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -9817,9 +9818,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "02b60a6c-74ef-9b6c-5629-11a0b2cce40a": {
+                                "c840c521-96ba-2343-0e88-09aec7d0e350": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "3dadba8f-52d7-d41d-34d4-8184b25c1fa4",
+                                    "parentEditorKey": "5e948b53-f0df-e1de-bc8b-2a3cf5de50ee",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -10016,9 +10017,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "9532ea59-402d-f669-5731-d5c7926a2641": {
+                                    "c19d7260-528f-51e3-2a11-eba3bba38cf6": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "02b60a6c-74ef-9b6c-5629-11a0b2cce40a",
+                                        "parentEditorKey": "c840c521-96ba-2343-0e88-09aec7d0e350",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -10043,9 +10044,9 @@
                                         ]
                                     }
                                 },
-                                "8c3198c7-7048-6983-1fa1-b73ea4716497": {
+                                "d24536c2-52df-d8f2-6456-21f5e2e400ad": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "3dadba8f-52d7-d41d-34d4-8184b25c1fa4",
+                                    "parentEditorKey": "5e948b53-f0df-e1de-bc8b-2a3cf5de50ee",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -10242,9 +10243,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "c56e03bb-c6b0-35d4-5555-aad0f53c6cad": {
+                                    "1edae7b8-f7c3-658e-7823-8e96faac6268": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "8c3198c7-7048-6983-1fa1-b73ea4716497",
+                                        "parentEditorKey": "d24536c2-52df-d8f2-6456-21f5e2e400ad",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -10270,9 +10271,9 @@
                                     }
                                 }
                             },
-                            "8f0d057a-0b7a-4333-1d92-0f668a113be0": {
+                            "6be6f205-a989-b430-4d9a-ddf55f86b921": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "isCommented": "true",
                                 "commentid": "1708147427423",
@@ -10488,9 +10489,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "24548ab4-cb3b-f920-3d2c-e348ef008d24": {
+                                "ab2c9cd7-c1e6-b101-b236-2b514e82e66d": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "8f0d057a-0b7a-4333-1d92-0f668a113be0",
+                                    "parentEditorKey": "6be6f205-a989-b430-4d9a-ddf55f86b921",
                                     "isAdvancedComponent": true,
                                     "isCommented": "true",
                                     "commentid": "1708147427423",
@@ -10688,9 +10689,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "fe3ff1bf-c0ff-1c37-83b1-a9ba6040f74e": {
+                                    "d74a5b9b-c11c-8501-e2be-32f0a8076fa1": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "24548ab4-cb3b-f920-3d2c-e348ef008d24",
+                                        "parentEditorKey": "ab2c9cd7-c1e6-b101-b236-2b514e82e66d",
                                         "isAdvancedChildComponent": true,
                                         "isCommented": "true",
                                         "commentid": "1708147427423",
@@ -10716,9 +10717,9 @@
                                         ]
                                     }
                                 },
-                                "d669e2e0-b615-6faa-1674-d0b9f455398f": {
+                                "c0347cbe-e50c-1da1-1757-87aa028b2569": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "8f0d057a-0b7a-4333-1d92-0f668a113be0",
+                                    "parentEditorKey": "6be6f205-a989-b430-4d9a-ddf55f86b921",
                                     "isAdvancedComponent": true,
                                     "isCommented": "true",
                                     "commentid": "1708147427423",
@@ -10916,9 +10917,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "dce0ee7a-4b5a-4d94-ef17-6cff3fa278fb": {
+                                    "12ffa4d2-4484-5c0c-fa14-f9ef0ef9e45b": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "d669e2e0-b615-6faa-1674-d0b9f455398f",
+                                        "parentEditorKey": "c0347cbe-e50c-1da1-1757-87aa028b2569",
                                         "isAdvancedChildComponent": true,
                                         "isCommented": "true",
                                         "commentid": "1708147427423",
@@ -10945,9 +10946,9 @@
                                     }
                                 }
                             },
-                            "0a55072d-0c59-3ecb-c051-d179c0727db0": {
+                            "064b3143-1126-5df4-e917-a1549bf71d35": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "d9e62c4b-5d6e-a1ad-50c4-64c1e2010508",
+                                "parentEditorKey": "6383b2e7-6e64-f4ed-e4ae-67369c2154cd",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -11162,9 +11163,9 @@
                                         "_attrDef": "c"
                                     }
                                 ],
-                                "b0162293-c88d-41e1-99fa-6fcdd29a2740": {
+                                "3c835952-3fad-3e3c-8ec1-9c7d65df6aa0": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "0a55072d-0c59-3ecb-c051-d179c0727db0",
+                                    "parentEditorKey": "064b3143-1126-5df4-e917-a1549bf71d35",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -11361,9 +11362,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "572176a4-6e4f-a04f-09f9-96c8d4753a38": {
+                                    "1688de73-c9be-bdef-9221-128cc852cb2b": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "b0162293-c88d-41e1-99fa-6fcdd29a2740",
+                                        "parentEditorKey": "3c835952-3fad-3e3c-8ec1-9c7d65df6aa0",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -11388,9 +11389,9 @@
                                         ]
                                     }
                                 },
-                                "6fdb557c-0074-8013-4c93-58c72ddd7fe2": {
+                                "897ef47b-c1c3-3171-608c-d64ae3a08fac": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "0a55072d-0c59-3ecb-c051-d179c0727db0",
+                                    "parentEditorKey": "064b3143-1126-5df4-e917-a1549bf71d35",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -11587,9 +11588,9 @@
                                             "_attrDef": "c"
                                         }
                                     ],
-                                    "0571378c-4e83-0467-2a12-bb6568b5f84f": {
+                                    "559d33dc-0e53-2a05-2275-4f3bbf4e6a0d": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "6fdb557c-0074-8013-4c93-58c72ddd7fe2",
+                                        "parentEditorKey": "897ef47b-c1c3-3171-608c-d64ae3a08fac",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [

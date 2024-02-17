@@ -124,7 +124,7 @@ export class patientsComponent implements OnChanges {
   sd_E29s0CjcP5oqHSgG(bh) {
     try {
       const page = this.page;
-      page.modalstatus = true;
+      page.modalstatus = false;
 
       // console.log(bh.input.patients,'input patie')
       // console.log(page.patients,'page patie')
