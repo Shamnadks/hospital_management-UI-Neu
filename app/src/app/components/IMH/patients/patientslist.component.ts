@@ -193,7 +193,7 @@ export class patientslistComponent {
         bh.input.method,
         bh.input.body
       );
-      bh.local.response = outputVariables.local.result;
+      bh.local.result = outputVariables.local.result;
 
       bh = this.sd_sbUDiEkgIRIQH1g5(bh);
       //appendnew_next_sd_ue902p3IruZP1eRR

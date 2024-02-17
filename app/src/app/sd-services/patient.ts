@@ -156,9 +156,10 @@ export class patient {
   }
   async sd_SsNXc47EEeCcixtW(bh) {
     const nodes = [
-      'sd_DhtzGmexbohDMdct',
-      'sd_roaTcwuV63RUIwOr',
-      'sd_YRm90kxa7TfDSfYK',
+      'sd_Zc31OM9IVJvue7Qp',
+      'sd_l3eVHWoZUKiWQtbZ',
+      'sd_OQVpvMKwPsRDLEn9',
+      'sd_ctmXF7WBa9D9aSnx',
     ];
     if (nodes.includes(bh.errorSource)) {
       bh = await this.sd_Fa2No2jzFKuvHcCP(bh);

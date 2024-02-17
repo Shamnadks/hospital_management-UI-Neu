@@ -398,7 +398,9 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [
+                            "patients"
+                        ],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
@@ -1454,7 +1456,6 @@
                 "ea34b3ca-c319-6963-6b1c-e2029b82137d": {
                     "paletteKey": "NG-button",
                     "parentEditorKey": "57eb56bd-702a-f596-c8f3-125b3a654312",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {

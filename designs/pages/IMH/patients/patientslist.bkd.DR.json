@@ -211,7 +211,9 @@
                 },
                 {
                     "_key": "class",
-                    "_value": "",
+                    "_value": [
+                        "patientslist-heading"
+                    ],
                     "_type": "dav",
                     "_attrDef": "p"
                 },
@@ -242,7 +244,9 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [
+                            "patientslist-headings"
+                        ],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
@@ -661,7 +665,9 @@
                         "_attrDef": "p",
                         "_complexity": "advanced",
                         "displayAs": "patients",
-                        "attrType": "INPUT"
+                        "attrType": "INPUT",
+                        "inValid": false,
+                        "message": ""
                     },
                     {
                         "_key": "(selected)",
@@ -680,7 +686,9 @@
                             "input": [
                                 "$event"
                             ]
-                        }
+                        },
+                        "inValid": false,
+                        "message": ""
                     },
                     {
                         "_key": "*ngIf",
@@ -721,7 +729,9 @@
                         "_attrDef": "p",
                         "_complexity": "advanced",
                         "displayAs": "patient",
-                        "attrType": "INPUT"
+                        "attrType": "INPUT",
+                        "inValid": false,
+                        "message": ""
                     },
                     {
                         "_key": "(changedstatus)",
@@ -740,7 +750,9 @@
                             "input": [
                                 "$event"
                             ]
-                        }
+                        },
+                        "inValid": false,
+                        "message": ""
                     },
                     {
                         "_key": "*ngIf",
