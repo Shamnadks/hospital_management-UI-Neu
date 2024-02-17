@@ -1,1 +1,9 @@
-<div id="angularRoot"></div>
+<div fxFlex="100" style="height:100vh;">
+  <header fxLayout="row" fxLayoutAlign="center center">
+    <h1>
+      Patients</h1>
+  </header>
+  <div style="height:65%">
+    <bh-patients [patients]="page.patientslist" (selected)="outflow($event)" *ngIf></bh-patients><bh-details [patient]="page.datas" (changedstatus)="detailedoutflow($event)" *ngIf></bh-details>
+  </div>
+</div>
