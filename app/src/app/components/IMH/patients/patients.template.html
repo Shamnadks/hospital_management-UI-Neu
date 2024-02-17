@@ -1,2 +1,18 @@
-<div>
+<div fxFlex="100">
+  <div *ngFor style="padding:5px;background:white">
+    <div style="align-items:center;justify-content:space-between;padding:20px;text-align:center;border:1px solid lightgreen;margin:4px;">
+      <p fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
+        {{item?.userdetails?.name}}
+      </p>
+      <p fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
+        {{item?.userdetails?.phone_no}}
+      </p>
+      <p fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
+        {{item?.token_number}}
+      </p>
+      <p fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
+        {{item?.doctordetails?.name}}
+      </p><button mat-button style="background:rgb(21,92,151);color:white" (click)="modal(item)">View</button>
+    </div>
+  </div>
 </div>

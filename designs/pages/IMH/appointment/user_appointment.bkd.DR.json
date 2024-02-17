@@ -3398,7 +3398,7 @@
                                     },
                                     {
                                         "_key": "optionView",
-                                        "_value": "{{option.name}}",
+                                        "_value": "{{option.name}}({{option.balanceToken}})",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -3416,7 +3416,7 @@
                                     },
                                     {
                                         "_key": "[(value)]",
-                                        "_value": "",
+                                        "_value": "page.selected",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4448,9 +4448,16 @@
                                 },
                                 {
                                     "_key": "(click)",
-                                    "_value": "",
+                                    "_value": "cancelBtn()",
                                     "_type": "kv",
-                                    "_attrDef": "p"
+                                    "_attrDef": "p",
+                                    "objValue": {
+                                        "nodeID": "sd_KCHTV5X1dCdowb3n",
+                                        "functionName": "cancelBtn",
+                                        "activeTree": "pages",
+                                        "z": "sd_kkJHQe5AYhoPmqGF",
+                                        "input": []
+                                    }
                                 },
                                 {
                                     "_key": "[disabled]",
@@ -4619,10 +4626,10 @@
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "objValue": {
-                                        "nodeID": "sd_1c4n4bRHi3DFTq9v",
+                                        "nodeID": "sd_5ZCXqYwbe6UjlmuX",
                                         "functionName": "onlinePayment",
                                         "activeTree": "pages",
-                                        "z": "sd_NPlyxC5dmObNxMy0",
+                                        "z": "sd_kkJHQe5AYhoPmqGF",
                                         "input": []
                                     }
                                 },

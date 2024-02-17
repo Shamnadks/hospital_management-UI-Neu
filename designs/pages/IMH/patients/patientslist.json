@@ -233,6 +233,7 @@
         "serviceImportPath": "./",
         "startName": "patients",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_10B9F7f4SdRFecbS",
         "category": "General",

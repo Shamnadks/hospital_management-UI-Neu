@@ -10,6 +10,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -93,12 +94,43 @@ export class user_appointmentComponent {
       return this.errorHandler(bh, e, 'sd_kKX1qu7KLgC5ZHou');
     }
   }
+
+  onlinePayment(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_eJdqg6Bu3aoWqCHZ(bh);
+      //appendnew_next_onlinePayment
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5ZCXqYwbe6UjlmuX');
+    }
+  }
+
+  cancelBtn(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_cl0fyxxKL4qAFwGZ(bh);
+      //appendnew_next_cancelBtn
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KCHTV5X1dCdowb3n');
+    }
+  }
   //appendnew_flow_user_appointmentComponent_start
 
   sd_9Fkdso8lcsHONrVX(bh) {
     try {
       this.page.departments = undefined;
       this.page.doctors = undefined;
+      this.page.selected = undefined;
       bh = this.sd_CmMZQk9N8FNtEY1U(bh);
       //appendnew_next_sd_9Fkdso8lcsHONrVX
       return bh;
@@ -208,7 +240,13 @@ export class user_appointmentComponent {
   sd_5m4qJLh9lSr5lnAS(bh) {
     try {
       const page = this.page;
-      page.doctors = bh.input?.doctors?.response;
+      page.doctors = bh.input?.doctors?.response?.data;
+      page.selected = bh.input?.doctors?.response?.selcted;
+      console.log('hhhhhhhhhhhhhhhhhhh');
+      console.log(bh.input?.doctors?.response?.selcted);
+      console.log('ppppppppppppppppp');
+      page.form.value.doctor_id = bh.input?.doctors?.response?.selcted?.id;
+      console.log(page.form.value.doctor_id);
       //appendnew_next_sd_5m4qJLh9lSr5lnAS
       return bh;
     } catch (e) {
@@ -220,10 +258,72 @@ export class user_appointmentComponent {
     try {
       const page = this.page;
       console.log(page.form.value);
+      bh = this.sd_twGTtYg1m2pOC15t(bh);
       //appendnew_next_sd_GK1vjWSr2GO5EFim
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_GK1vjWSr2GO5EFim');
+    }
+  }
+
+  async sd_twGTtYg1m2pOC15t(bh) {
+    try {
+      const appoinmentInstance: appoinment =
+        this.__page_injector__.get(appoinment);
+
+      let outputVariables = await appoinmentInstance.cashAppoinment(
+        this.page.form.value
+      );
+
+      //appendnew_next_sd_twGTtYg1m2pOC15t
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_twGTtYg1m2pOC15t');
+    }
+  }
+
+  sd_eJdqg6Bu3aoWqCHZ(bh) {
+    try {
+      const page = this.page;
+      console.log(page.form.value);
+      bh = this.sd_0Ibh59IFuJ5J1owX(bh);
+      //appendnew_next_sd_eJdqg6Bu3aoWqCHZ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_eJdqg6Bu3aoWqCHZ');
+    }
+  }
+
+  async sd_0Ibh59IFuJ5J1owX(bh) {
+    try {
+      const appoinmentInstance: appoinment =
+        this.__page_injector__.get(appoinment);
+
+      let outputVariables = await appoinmentInstance.onlineAppoinment(
+        this.page.form.value
+      );
+      bh.input.appoinment = outputVariables.input.appoinment;
+
+      //appendnew_next_sd_0Ibh59IFuJ5J1owX
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0Ibh59IFuJ5J1owX');
+    }
+  }
+
+  async sd_cl0fyxxKL4qAFwGZ(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/home');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_cl0fyxxKL4qAFwGZ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cl0fyxxKL4qAFwGZ');
     }
   }
 
