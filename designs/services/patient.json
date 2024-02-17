@@ -99,7 +99,6 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "method": "",
         "methodMapping": "bh.input.method",
         "methodMappingObj": {
             "mapVarType": "bh.input",
@@ -111,10 +110,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -130,11 +127,9 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_OQVpvMKwPsRDLEn9",
         "category": "HTTP",
@@ -158,9 +153,10 @@
         "nodeType": "start",
         "name": "",
         "selectedNodes": [
-            "sd_DhtzGmexbohDMdct",
-            "sd_roaTcwuV63RUIwOr",
-            "sd_YRm90kxa7TfDSfYK"
+            "sd_Zc31OM9IVJvue7Qp",
+            "sd_l3eVHWoZUKiWQtbZ",
+            "sd_OQVpvMKwPsRDLEn9",
+            "sd_ctmXF7WBa9D9aSnx"
         ],
         "selectCatchType": "selectednodes",
         "masternodeList": "",

@@ -1,0 +1,141 @@
+[
+    {
+        "id": "sd_Ti2TC1Fzj32xlopx",
+        "type": "tab",
+        "createdDate": "2024-02-17T05:39:06.216Z",
+        "label": "doctor_list",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "doctor_listComponent"
+    },
+    {
+        "id": "sd_RojBXUacZPog8buK",
+        "type": "OnInit",
+        "z": "sd_Ti2TC1Fzj32xlopx",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_RojBXUacZPog8buK",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 60,
+        "wires": [
+            [
+                "sd_SzIUedleyNfU6jg6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "doctor_listComponent"
+    },
+    {
+        "id": "sd_SzIUedleyNfU6jg6",
+        "type": "PageVariables",
+        "z": "sd_Ti2TC1Fzj32xlopx",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_SzIUedleyNfU6jg6",
+        "category": "Function",
+        "x": 215,
+        "y": 60,
+        "wires": [
+            [
+                "sd_r4OvN6jMNdFUVP9S"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "doctor_listComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_V8lrkeGjorZLiqr1",
+        "type": "Script",
+        "z": "sd_Ti2TC1Fzj32xlopx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.local?.response?.response,'doctor details')\npage.doctors = bh.local?.response?.response || [\n    { id: 1, name: 'ziyad', phone_no: 1234, education: 'mbbs', department: { name: 'Cardiologist' } },\n    { id: 2, name: 'john', phone_no: 5678, education: 'MD', department: { name: 'Neurologist' } },\n    { id: 3, name: 'emma', phone_no: 91011, education: 'PhD', department: { name: 'Psychiatrist' } },\n    { id: 4, name: 'michael', phone_no: 121314, education: 'DDS', department: { name: 'Dentist' } },\n    { id: 5, name: 'sarah', phone_no: 151617, education: 'DVM', department: { name: 'Veterinarian' } },\n    { id: 6, name: 'alex', phone_no: 181920, education: 'BSc', department: { name: 'Biologist' } },\n    { id: 7, name: 'lisa', phone_no: 212223, education: 'MS', department: { name: 'Oncologist' } },\n    { id: 8, name: 'james', phone_no: 242526, education: 'PharmD', department: { name: 'Pharmacist' } },\n    { id: 9, name: 'emily', phone_no: 272829, education: 'RN', department: { name: 'Nurse' } },\n    { id: 10, name: 'david', phone_no: 303132, education: 'JD', department: { name: 'Lawyer' } }\n];",
+        "functionName": "sd_V8lrkeGjorZLiqr1",
+        "category": "Function",
+        "x": 665,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "doctor_listComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_r4OvN6jMNdFUVP9S",
+        "type": "PageCallService",
+        "z": "sd_Ti2TC1Fzj32xlopx",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_3kUC36V9urSLMt09",
+            "type": "tab",
+            "createdDate": "2024-02-12T16:46:29.971Z",
+            "label": "addDoctorComponent",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ZGUcW4UJ2WgVB67m",
+            "flowName": "fetchDoctors"
+        },
+        "inputVariables": [
+            {
+                "key": "response",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "response",
+                "valueType": "bh.local",
+                "value": "response",
+                "mapVarName": "response",
+                "localVar": "bh.local.response"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/addDoctorComponent",
+        "startName": "fetchDoctors",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_r4OvN6jMNdFUVP9S",
+        "category": "General",
+        "x": 440,
+        "y": 60,
+        "wires": [
+            [
+                "sd_V8lrkeGjorZLiqr1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "doctor_listComponent",
+        "generated": true
+    }
+]

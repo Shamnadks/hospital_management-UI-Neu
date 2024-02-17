@@ -169,6 +169,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.local.url",
         "urlMappingObj": {
@@ -176,8 +177,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -193,9 +196,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_fu7yAYxUwuAEbo32",
         "category": "HTTP",
@@ -456,6 +461,108 @@
         "wires": [
             [
                 "sd_9oiqa8VZZiOwLUCO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ZGUcW4UJ2WgVB67m",
+        "type": "Start",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "fetch doctors",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "response",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "fetchDoctors",
+        "category": "General",
+        "x": 125,
+        "y": 660,
+        "wires": [
+            [
+                "sd_CBCFvCAXLrZCER5f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "addDoctorComponent"
+    },
+    {
+        "id": "sd_6D2QQgvTSlYbm2qf",
+        "type": "HttpRequest",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.input.response",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "response"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_6D2QQgvTSlYbm2qf",
+        "category": "HTTP",
+        "x": 450,
+        "y": 660,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "addDoctorComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CBCFvCAXLrZCER5f",
+        "type": "Script",
+        "z": "sd_3kUC36V9urSLMt09",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'doctor/get'\nconsole.log(bh.input.data,'doctor fetching')",
+        "functionName": "sd_CBCFvCAXLrZCER5f",
+        "category": "Function",
+        "x": 270,
+        "y": 660,
+        "wires": [
+            [
+                "sd_6D2QQgvTSlYbm2qf"
             ]
         ],
         "__n_excludedFromValidation__": {},

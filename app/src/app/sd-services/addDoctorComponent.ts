@@ -146,6 +146,32 @@ export class addDoctorComponent {
       return await this.errorHandler(bh, e, 'sd_UB1I5yieE0ATvfFj');
     }
   }
+
+  async fetchDoctors(response: any = undefined, ...others) {
+    let bh: any = {
+      input: {
+        response,
+      },
+      local: {},
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_CBCFvCAXLrZCER5f(bh);
+      //appendnew_next_fetchDoctors
+      return (
+        // formatting output variables
+        {
+          input: {
+            response: bh.input.response,
+          },
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_ZGUcW4UJ2WgVB67m');
+    }
+  }
   //appendnew_flow_addDoctorComponent_start
 
   async sd_LONRNX02yFlQ4QvE(bh) {
@@ -267,6 +293,36 @@ export class addDoctorComponent {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_9oiqa8VZZiOwLUCO');
+    }
+  }
+
+  async sd_CBCFvCAXLrZCER5f(bh) {
+    try {
+      bh.local.url = bh.system.environment.properties.ssdURL + 'doctor/get';
+      console.log(bh.input.data, 'doctor fetching');
+      bh = await this.sd_6D2QQgvTSlYbm2qf(bh);
+      //appendnew_next_sd_CBCFvCAXLrZCER5f
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_CBCFvCAXLrZCER5f');
+    }
+  }
+
+  async sd_6D2QQgvTSlYbm2qf(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.url,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      bh.input.response = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_6D2QQgvTSlYbm2qf
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_6D2QQgvTSlYbm2qf');
     }
   }
 

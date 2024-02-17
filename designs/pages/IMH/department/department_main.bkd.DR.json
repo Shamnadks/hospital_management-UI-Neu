@@ -898,8 +898,8 @@
                             "$event"
                         ]
                     },
-                    "inValid": false,
-                    "message": ""
+                    "inValid": true,
+                    "message": "Property not available"
                 }
             ]
         },

@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-doctor_listComponent
+import { doctor_listComponent } from '../components/IMH/doctor/doctor_list.component';
 //CORE_REFERENCE_IMPORT-recieptComponent
 import { recieptComponent } from '../components/IMH/reciept/reciept.component';
 //CORE_REFERENCE_IMPORT-patient
@@ -76,6 +78,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-doctor_listComponent
+  doctor_listComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-recieptComponent
   recieptComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientslistComponent

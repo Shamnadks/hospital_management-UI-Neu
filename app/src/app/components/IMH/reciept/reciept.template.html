@@ -1,13 +1,13 @@
 <div fxFlex="100" style="height:100vh">
   <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-    <div style="background:rgb(21,92,151);height:5%;margin:0;justify-content:center;align-items:end;">
-      <h3 fxFlex="100" style="text-align:center;color:white">
+    <div style="background:rgb(21,92,151);height:5%;margin:0;justify-content:center;align-items:end;" class="no-print">
+      <h3 fxFlex="100" style="text-align:center;color:white" class="no-print">
         Reciept</h3>
     </div>
-    <div style="margin-top:10px;">
+    <div style="margin-top:10px;" class="no-print">
       <div style="width:60%;margin:auto;display:flex">
         <div style="width:10%;text-align:center">
-          <button mat-button style="border:1px solid green">Button</button>
+          <button mat-button style="border:1px solid green" (click)="print()">Print</button>
         </div>
         <div style="width:80%">
         </div>
