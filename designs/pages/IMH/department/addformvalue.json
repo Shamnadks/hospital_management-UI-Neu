@@ -19,7 +19,15 @@
         "name": "",
         "inputVariables": [],
         "localVariables": [],
-        "outputVariables": [],
+        "outputVariables": [
+            {
+                "key": "redirect",
+                "defaultValue": {
+                    "type": "any",
+                    "value": null
+                }
+            }
+        ],
         "pageVariables": [],
         "functionName": "sd_PP1RLL0pSMjdy1eF",
         "category": "Lifecycle Events",
@@ -96,7 +104,10 @@
         "x": 390,
         "y": 320,
         "wires": [
-            []
+            [
+                "sd_iXCRn9pBS7NKd0AT",
+                "sd_w6fStmGT7QRymCBH"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -193,9 +204,7 @@
             "value": "2000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -209,8 +218,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "addformvalueComponent"
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
     },
     {
         "id": "sd_ISUAW6e1hkZKpxWt",
@@ -275,7 +285,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.form = new page.formGroup({\n    department : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
+        "script": "page.form = new page.formGroup({\n    name : new page.formControl('',[page.validators.required]),\n    info: new page.formControl('',[page.validators.required])\n})\n",
         "functionName": "sd_wsiA8YFaHOyCu4JB",
         "category": "Function",
         "x": 565,
@@ -317,7 +327,8 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "addformvalueComponent"
+        "generateNext": false,
+        "serviceName": "addformvalueComponent",
+        "generated": true
     }
 ]
