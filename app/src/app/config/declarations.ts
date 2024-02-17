@@ -133,7 +133,7 @@ export const appRoutes = [
   { path: 'doctor', component: doctorComponent },
   { path: 'department', component: department_mainComponent },
   { path: 'appoinment', component: user_appointmentComponent },
-  { path: 'patients', component: patientsComponent },
+  { path: 'patients', component: patientslistComponent },
   { path: 'receipt', component: recieptComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
