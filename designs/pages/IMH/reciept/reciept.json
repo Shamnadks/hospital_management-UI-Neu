@@ -52,5 +52,49 @@
         "generateNext": false,
         "serviceName": "recieptComponent",
         "generated": true
+    },
+    {
+        "id": "sd_vL0qxDYQKpnUUPKv",
+        "type": "PageStart",
+        "z": "sd_CfZfWZK2c0AcOWHV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "print",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "print",
+        "category": "General",
+        "x": 320,
+        "y": 200,
+        "wires": [
+            [
+                "sd_OFmr7gKno9dFSV1S"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "recieptComponent"
+    },
+    {
+        "id": "sd_OFmr7gKno9dFSV1S",
+        "type": "Script",
+        "z": "sd_CfZfWZK2c0AcOWHV",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "window.print()",
+        "functionName": "sd_OFmr7gKno9dFSV1S",
+        "category": "Function",
+        "x": 585,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recieptComponent",
+        "generated": true
     }
 ]
