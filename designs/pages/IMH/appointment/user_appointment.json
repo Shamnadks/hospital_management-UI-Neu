@@ -54,6 +54,13 @@
                     "type": "bh",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "selected",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_9Fkdso8lcsHONrVX",
@@ -334,7 +341,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\npage.doctors = bh.input?.doctors?.response",
+        "script": "\npage.doctors = bh.input?.doctors?.response?.data\npage.selected = bh.input?.doctors?.response?.selcted\nconsole.log(\"hhhhhhhhhhhhhhhhhhh\")\nconsole.log(bh.input?.doctors?.response?.selcted)\nconsole.log(\"ppppppppppppppppp\")\npage.form.value.doctor_id = bh.input?.doctors?.response?.selcted?.id\nconsole.log(page.form.value.doctor_id)",
         "functionName": "sd_5m4qJLh9lSr5lnAS",
         "category": "Function",
         "x": 560,
@@ -405,6 +412,218 @@
         "category": "Function",
         "x": 260,
         "y": 280,
+        "wires": [
+            [
+                "sd_twGTtYg1m2pOC15t"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_twGTtYg1m2pOC15t",
+        "type": "PageCallService",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_WHTCUYDcvN50YSU7",
+            "type": "tab",
+            "createdDate": "2024-02-14T15:51:35.295Z",
+            "label": "appoinment",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ij0KzYogn6nP6HmI",
+            "flowName": "cashAppoinment"
+        },
+        "inputVariables": [
+            {
+                "key": "appoinment",
+                "map": true,
+                "valueType": "this.page",
+                "value": "form.value"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/appoinment",
+        "startName": "cashAppoinment",
+        "inputParams": [
+            "this.page.form.value"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_twGTtYg1m2pOC15t",
+        "category": "General",
+        "x": 420,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5ZCXqYwbe6UjlmuX",
+        "type": "PageStart",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "onlinePayment",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "onlinePayment",
+        "category": "General",
+        "x": 105,
+        "y": 380,
+        "wires": [
+            [
+                "sd_eJdqg6Bu3aoWqCHZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "user_appointmentComponent"
+    },
+    {
+        "id": "sd_eJdqg6Bu3aoWqCHZ",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.form.value)",
+        "functionName": "sd_eJdqg6Bu3aoWqCHZ",
+        "category": "Function",
+        "x": 260,
+        "y": 380,
+        "wires": [
+            [
+                "sd_0Ibh59IFuJ5J1owX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0Ibh59IFuJ5J1owX",
+        "type": "PageCallService",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_WHTCUYDcvN50YSU7",
+            "type": "tab",
+            "createdDate": "2024-02-14T15:51:35.295Z",
+            "label": "appoinment",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_yeoHHfEtXGKefsqC",
+            "flowName": "onlineAppoinment"
+        },
+        "inputVariables": [
+            {
+                "key": "appoinment",
+                "map": true,
+                "valueType": "this.page",
+                "value": "form.value"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "appoinment",
+                "valueType": "bh.input",
+                "value": "appoinment",
+                "mapVarName": "appoinment",
+                "localVar": "bh.input.appoinment"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/appoinment",
+        "startName": "onlineAppoinment",
+        "inputParams": [
+            "this.page.form.value"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_0Ibh59IFuJ5J1owX",
+        "category": "General",
+        "x": 420,
+        "y": 380,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_KCHTV5X1dCdowb3n",
+        "type": "PageStart",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "cancelBtn",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "cancelBtn",
+        "category": "General",
+        "x": 100,
+        "y": 500,
+        "wires": [
+            [
+                "sd_cl0fyxxKL4qAFwGZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "user_appointmentComponent"
+    },
+    {
+        "id": "sd_cl0fyxxKL4qAFwGZ",
+        "type": "Navigation",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_cl0fyxxKL4qAFwGZ",
+        "category": "Navigation",
+        "x": 260,
+        "y": 500,
         "wires": [
             []
         ],
