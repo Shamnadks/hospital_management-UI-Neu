@@ -55,6 +55,20 @@ export class recieptComponent {
     }
   }
 
+  print(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_OFmr7gKno9dFSV1S(bh);
+      //appendnew_next_print
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vL0qxDYQKpnUUPKv');
+    }
+  }
   //appendnew_flow_recieptComponent_start
 
   sd_lz9moRtGb6E2KgVy(bh) {
@@ -63,6 +77,17 @@ export class recieptComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_lz9moRtGb6E2KgVy');
+    }
+  }
+
+  sd_OFmr7gKno9dFSV1S(bh) {
+    try {
+      const page = this.page;
+      window.print();
+      //appendnew_next_sd_OFmr7gKno9dFSV1S
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OFmr7gKno9dFSV1S');
     }
   }
 
