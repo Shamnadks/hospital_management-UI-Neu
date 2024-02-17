@@ -78,13 +78,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-<<<<<<< HEAD
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-doctor_listComponent
   doctor_listComponent,
-=======
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-recieptComponent
   recieptComponent,
->>>>>>> d7d6c6c69f5ddd8d44824c7e657596f2828ba087
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientslistComponent
   patientslistComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-detailsComponent
