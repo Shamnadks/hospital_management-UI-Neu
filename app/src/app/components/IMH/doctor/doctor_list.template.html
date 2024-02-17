@@ -1,0 +1,28 @@
+<div style="display:flex;justify-content:center;">
+  <div fxLayout="column wrap" class="department-list-table" fxFlex="95" fxLayoutAlign="space-between stretch" [fxShow]="true">
+    <div fxLayout="row wrap" style="background-color:rgba(0, 0, 0, 0.3);" class="department-list-rows" fxLayoutAlign="space-evenly center" [fxShow]="true">
+      <h3>
+        Name</h3>
+      <h3>
+        Department</h3>
+      <h3>
+        Phone</h3>
+      <h3>
+        Qualification</h3>
+    </div>
+    <div fxLayout="row wrap" style="background-color:rgba(0, 0, 0, 0.1);text-align:center;" class="department-list-rows" fxLayoutAlign="space-evenly center" [fxShow]="true" *ngFor="let data of page?.doctors">
+      <p style="text-align:center">
+        {{data?.name}}
+      </p>
+      <p style="text-align:center">
+        {{data?.department?.name}}
+      </p>
+      <p style="text-align:center;">
+        {{data?.phone_no}}
+      </p>
+      <p style="text-align:center">
+        {{data?.education}}
+      </p>
+    </div>
+  </div>
+</div>

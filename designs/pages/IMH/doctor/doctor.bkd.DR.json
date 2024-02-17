@@ -185,33 +185,7 @@
                 "_visibility": false
             }
         ],
-        "e53bed34-1493-3776-ddad-6793a41c73e7": {
-            "paletteKey": "html-editor",
-            "parentEditorKey": "9812f417-ca20-c8e3-d031-e428b92a99f5",
-            "isAdvancedChildComponent": true,
-            "commentid": null,
-            "designerReference": [
-                {
-                    "_key": "style",
-                    "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "class",
-                    "_value": "",
-                    "_type": "dav",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "html",
-                    "_value": "",
-                    "_type": "a",
-                    "_attrDef": "p"
-                }
-            ]
-        },
-        "17394956-933a-b98b-7c1b-e110f8474e2e": {
+        "21556430-7804-8bdb-8821-d4b6e800b53d": {
             "paletteKey": "Html5",
             "parentEditorKey": "9812f417-ca20-c8e3-d031-e428b92a99f5",
             "isAdvancedComponent": true,
@@ -412,9 +386,9 @@
                     "_attrDef": "c"
                 }
             ],
-            "c3584e50-c900-92f5-e6d0-024e6a6e8153": {
+            "edbcdacb-d467-888f-4785-d93a5b746aa5": {
                 "paletteKey": "html-editor",
-                "parentEditorKey": "17394956-933a-b98b-7c1b-e110f8474e2e",
+                "parentEditorKey": "21556430-7804-8bdb-8821-d4b6e800b53d",
                 "isAdvancedChildComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -438,9 +412,9 @@
                     }
                 ]
             },
-            "c0df3093-b9d6-c821-ef85-2d140aa5e8ce": {
+            "ea295d54-ed75-0ad4-e0a1-c48e8d91268d": {
                 "paletteKey": "Html5",
-                "parentEditorKey": "17394956-933a-b98b-7c1b-e110f8474e2e",
+                "parentEditorKey": "21556430-7804-8bdb-8821-d4b6e800b53d",
                 "isAdvancedComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -627,9 +601,9 @@
                         "_visibility": false
                     }
                 ],
-                "02d058db-a8a9-82d4-9b81-944cb8cb6385": {
+                "f6f9684b-80ce-2bd1-cf98-350b77c9e6c9": {
                     "paletteKey": "html-editor",
-                    "parentEditorKey": "c0df3093-b9d6-c821-ef85-2d140aa5e8ce",
+                    "parentEditorKey": "ea295d54-ed75-0ad4-e0a1-c48e8d91268d",
                     "isAdvancedChildComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -654,6 +628,448 @@
                     ]
                 }
             }
+        },
+        "ddf2a688-7bfd-97e0-9810-480f5b365224": {
+            "paletteKey": "Html5",
+            "parentEditorKey": "9812f417-ca20-c8e3-d031-e428b92a99f5",
+            "isAdvancedComponent": true,
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "padding-top:4px;padding-right:4px",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "htmlElement",
+                    "_value": "div",
+                    "_type": "dav",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "tagType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "name",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "sandbox",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "src",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "srcdoc",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "width",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "[autoplay]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "[loop]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "data",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioSource",
+                    "_value": [],
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoSource",
+                    "_value": [],
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioDatasource",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioSrc",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoDatasource",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoSrc",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audioplay)",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videoplay)",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audiopause)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videopause)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audioended)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videoended)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "fxLayout",
+                    "_value": "row",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "fxLayoutAlign",
+                    "_value": "end center",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                }
+            ],
+            "888413f3-7210-6e08-20d6-c2a971808c3e": {
+                "paletteKey": "NG-button",
+                "parentEditorKey": "ddf2a688-7bfd-97e0-9810-480f5b365224",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": [
+                            "departments-list-button"
+                        ],
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "buttonname",
+                        "_value": "Add Doctor",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "setPage('addDoctor')",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "objValue": {
+                            "nodeID": "sd_sGZBP64H6PI0DeP0",
+                            "functionName": "setPage",
+                            "activeTree": "pages",
+                            "z": "sd_EnvkooQBWS960BAB",
+                            "input": [
+                                "'addDoctor'"
+                            ]
+                        }
+                    },
+                    {
+                        "_key": "[disabled]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[disableRipple]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "type",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "routerLink",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "*ngIf",
+                        "_value": "page?.pageOfDoctor=='listDoctors'",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    }
+                ]
+            },
+            "54bca60f-cce5-ca2b-0fe1-a4eb382c4a28": {
+                "paletteKey": "html-editor",
+                "parentEditorKey": "ddf2a688-7bfd-97e0-9810-480f5b365224",
+                "isAdvancedChildComponent": true,
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "html",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
+            "56d815a3-452e-726d-74d8-d0388028826d": {
+                "paletteKey": "NG-button",
+                "parentEditorKey": "ddf2a688-7bfd-97e0-9810-480f5b365224",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": [
+                            "departments-list-button"
+                        ],
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "buttonname",
+                        "_value": "Doctors",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "setPage('listDoctors')",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "objValue": {
+                            "nodeID": "sd_sGZBP64H6PI0DeP0",
+                            "functionName": "setPage",
+                            "activeTree": "pages",
+                            "z": "sd_EnvkooQBWS960BAB",
+                            "input": [
+                                "'listDoctors'"
+                            ]
+                        }
+                    },
+                    {
+                        "_key": "[disabled]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[disableRipple]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "type",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "routerLink",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "*ngIf",
+                        "_value": "page?.pageOfDoctor=='addDoctor'",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    }
+                ]
+            }
+        },
+        "bd29d663-36ee-6f42-31b8-3b08e13618ab": {
+            "paletteKey": "NEUTRINOS_VIEW_doctor_list",
+            "parentEditorKey": "9812f417-ca20-c8e3-d031-e428b92a99f5",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "doctor_list",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page?.pageOfDoctor=='listDoctors'",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                }
+            ]
+        },
+        "e53bed34-1493-3776-ddad-6793a41c73e7": {
+            "paletteKey": "html-editor",
+            "parentEditorKey": "9812f417-ca20-c8e3-d031-e428b92a99f5",
+            "isAdvancedChildComponent": true,
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "html",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p"
+                }
+            ]
         },
         "2d47e8ab-a104-175d-a815-ca7e5ecf1457": {
             "paletteKey": "NG-Form",
@@ -734,6 +1150,12 @@
                 {
                     "_key": "[formGroup]",
                     "_value": "page.addForm",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page?.pageOfDoctor=='addDoctor'",
                     "_type": "kv",
                     "_attrDef": "c"
                 }
