@@ -7,6 +7,7 @@ import { Component, Injector } from '@angular/core'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { addDoctorComponent } from 'app/sd-services/addDoctorComponent'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -59,7 +60,7 @@ export class doctor_listComponent {
 
   sd_SzIUedleyNfU6jg6(bh) {
     try {
-      bh = this.sd_V8lrkeGjorZLiqr1(bh);
+      bh = this.sd_r4OvN6jMNdFUVP9S(bh);
       //appendnew_next_sd_SzIUedleyNfU6jg6
       return bh;
     } catch (e) {
@@ -67,10 +68,29 @@ export class doctor_listComponent {
     }
   }
 
+  async sd_r4OvN6jMNdFUVP9S(bh) {
+    try {
+      const addDoctorComponentInstance: addDoctorComponent =
+        this.__page_injector__.get(addDoctorComponent);
+
+      let outputVariables = await addDoctorComponentInstance.fetchDoctors(
+        undefined
+      );
+      bh.local.response = outputVariables.input.response;
+
+      bh = this.sd_V8lrkeGjorZLiqr1(bh);
+      //appendnew_next_sd_r4OvN6jMNdFUVP9S
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_r4OvN6jMNdFUVP9S');
+    }
+  }
+
   sd_V8lrkeGjorZLiqr1(bh) {
     try {
       const page = this.page;
-      page.doctors = [
+      console.log(bh.local?.response?.response, 'doctor details');
+      page.doctors = bh.local?.response?.response || [
         {
           id: 1,
           name: 'ziyad',
