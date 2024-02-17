@@ -4,7 +4,10 @@
       {{page.locales.keys.ADD_DOCTOR}}
     </h1>
   </div>
-  <form fxLayout="row" fxLayoutAlign="center center" [formGroup]="page.addForm" class="add-doctor-form" method="POST" (ngSubmit)="submitForm()">
+  <div fxLayout="row" fxLayoutAlign="end center" style="padding-top:4px;padding-right:4px">
+    <button mat-button class="departments-list-button" *ngIf="page?.pageOfDoctor==&apos;listDoctors&apos;" (click)="setPage(&apos;addDoctor&apos;)">Add Doctor</button><button mat-button class="departments-list-button" *ngIf="page?.pageOfDoctor==&apos;addDoctor&apos;" (click)="setPage(&apos;listDoctors&apos;)">Doctors</button>
+  </div><bh-doctor_list *ngIf="page?.pageOfDoctor==&apos;listDoctors&apos;"></bh-doctor_list>
+  <form fxLayout="row" fxLayoutAlign="center center" [formGroup]="page.addForm" *ngIf="page?.pageOfDoctor==&apos;addDoctor&apos;" class="add-doctor-form" method="POST" (ngSubmit)="submitForm()">
     <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
       <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
 

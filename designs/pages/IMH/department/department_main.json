@@ -17,7 +17,15 @@
         "viewType": "common",
         "nodeType": "start",
         "name": "",
-        "inputVariables": [],
+        "inputVariables": [
+            {
+                "key": "redirect",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            }
+        ],
         "localVariables": [],
         "outputVariables": [],
         "pageVariables": [],

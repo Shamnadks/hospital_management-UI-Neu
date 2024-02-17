@@ -160,7 +160,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'doctor/get?department='+bh.input.doctors\nconsole.log(\"haaaai\")\n",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'token/get?id='+bh.input.doctors\nconsole.log(\"haaaai\")\n",
         "functionName": "sd_UOcGAbMGbBY2z4S0",
         "category": "Function",
         "x": 360,

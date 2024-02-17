@@ -171,7 +171,7 @@ export class appoinment {
     try {
       bh.local.url =
         bh.system.environment.properties.ssdURL +
-        'doctor/get?department=' +
+        'token/get?id=' +
         bh.input.doctors;
       console.log('haaaai');
 

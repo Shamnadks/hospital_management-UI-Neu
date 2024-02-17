@@ -134,7 +134,7 @@ export class doctorComponent {
         department_id: new page.formControl('', [page.validator.required]),
         token_limit: new page.formControl('', [page.validator.required]),
       });
-      bh = this.sd_x2lFFCcQlKFCVIm3(bh);
+      bh = this.sd_0nOsWu1E5Z9mQcet(bh);
       //appendnew_next_sd_EC1DwdTOS7R4SUZx
       return bh;
     } catch (e) {
@@ -142,7 +142,7 @@ export class doctorComponent {
     }
   }
 
-  async sd_x2lFFCcQlKFCVIm3(bh) {
+  async sd_0nOsWu1E5Z9mQcet(bh) {
     try {
       const addDoctorComponentInstance: addDoctorComponent =
         this.__page_injector__.get(addDoctorComponent);
@@ -153,10 +153,10 @@ export class doctorComponent {
       bh.local.response = outputVariables.input.departments;
 
       bh = this.sd_Yz6ZlacHXFtlRxH9(bh);
-      //appendnew_next_sd_x2lFFCcQlKFCVIm3
+      //appendnew_next_sd_0nOsWu1E5Z9mQcet
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_x2lFFCcQlKFCVIm3');
+      return this.errorHandler(bh, e, 'sd_0nOsWu1E5Z9mQcet');
     }
   }
 
@@ -164,7 +164,6 @@ export class doctorComponent {
     try {
       const page = this.page;
       page.departments = bh.local?.response?.response;
-      // || [{id:1,department:'Cardiologist'},{id:2,department:'Neurologist'},{id:3,department:'Orthopedist'},{id:4,department:'Pediatrician'},{id:5,department:'Nephrologist'},{id:6,department:'Endocrinologist'},{id:6,department:'Radiologist'},{id:7,department:'Surgeon'}]
       //appendnew_next_sd_Yz6ZlacHXFtlRxH9
       return bh;
     } catch (e) {

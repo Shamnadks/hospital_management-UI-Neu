@@ -81,7 +81,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.departments = bh.local?.response?.response \n// || [{id:1,department:'Cardiologist'},{id:2,department:'Neurologist'},{id:3,department:'Orthopedist'},{id:4,department:'Pediatrician'},{id:5,department:'Nephrologist'},{id:6,department:'Endocrinologist'},{id:6,department:'Radiologist'},{id:7,department:'Surgeon'}]",
+        "script": "page.departments = bh.local?.response?.response",
         "functionName": "sd_Yz6ZlacHXFtlRxH9",
         "category": "Function",
         "x": 665,
@@ -285,69 +285,6 @@
         "generated": true
     },
     {
-        "id": "sd_x2lFFCcQlKFCVIm3",
-        "type": "PageCallService",
-        "z": "sd_EnvkooQBWS960BAB",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_3kUC36V9urSLMt09",
-            "type": "tab",
-            "createdDate": "2024-02-12T16:46:29.971Z",
-            "label": "addDoctorComponent",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 0,
-            "tabType": "client"
-        },
-        "flow": {
-            "flowId": "sd_gFsQjrGcMIXzyOQD",
-            "flowName": "fetchDepartments"
-        },
-        "inputVariables": [
-            {
-                "key": "departments",
-                "map": true,
-                "valueType": "bh",
-                "value": ""
-            }
-        ],
-        "outputMapping": [
-            {
-                "mapVarType": "input",
-                "key": "departments",
-                "valueType": "bh.local",
-                "value": "response",
-                "mapVarName": "departments",
-                "localVar": "bh.local.response"
-            }
-        ],
-        "serviceImportPath": "app/sd-services/addDoctorComponent",
-        "startName": "fetchDepartments",
-        "inputParams": [
-            null
-        ],
-        "accept_bh": false,
-        "accept_csd": true,
-        "functionName": "sd_x2lFFCcQlKFCVIm3",
-        "category": "General",
-        "x": 545,
-        "y": 60,
-        "wires": [
-            [
-                "sd_Yz6ZlacHXFtlRxH9"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "doctorComponent",
-        "generated": true
-    },
-    {
         "id": "sd_EC1DwdTOS7R4SUZx",
         "type": "Script",
         "z": "sd_EnvkooQBWS960BAB",
@@ -357,11 +294,11 @@
         "script": "page.addForm = new page.formGroup({\n    name: new page.formControl('',[page.validator.required]),\n    phone_no: new page.formControl('',[page.validator.required]),\n    dob: new page.formControl('',[page.validator.required]),\n    education: new page.formControl('',[page.validator.required]),\n    address: new page.formControl('',[page.validator.required]),\n    email: new page.formControl('',[page.validator.required]),\n    salary: new page.formControl('',[page.validator.required]),\n    department_id: new page.formControl('',[page.validator.required]),\n    token_limit: new page.formControl('',[page.validator.required])\n})",
         "functionName": "sd_EC1DwdTOS7R4SUZx",
         "category": "Function",
-        "x": 420,
+        "x": 425,
         "y": 60,
         "wires": [
             [
-                "sd_x2lFFCcQlKFCVIm3"
+                "sd_0nOsWu1E5Z9mQcet"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -619,6 +556,69 @@
         "y": 160,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "doctorComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0nOsWu1E5Z9mQcet",
+        "type": "PageCallService",
+        "z": "sd_EnvkooQBWS960BAB",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_3kUC36V9urSLMt09",
+            "type": "tab",
+            "createdDate": "2024-02-12T16:46:29.971Z",
+            "label": "addDoctorComponent",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_gFsQjrGcMIXzyOQD",
+            "flowName": "fetchDepartments"
+        },
+        "inputVariables": [
+            {
+                "key": "departments",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "departments",
+                "valueType": "bh.local",
+                "value": "response",
+                "mapVarName": "departments",
+                "localVar": "bh.local.response"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/addDoctorComponent",
+        "startName": "fetchDepartments",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_0nOsWu1E5Z9mQcet",
+        "category": "General",
+        "x": 545,
+        "y": 60,
+        "wires": [
+            [
+                "sd_Yz6ZlacHXFtlRxH9"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
