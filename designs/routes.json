@@ -21,6 +21,10 @@
             "component": "patientsComponent"
         },
         {
+            "path": "receipt",
+            "component": "recieptComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "home",
             "pathMatch": "full",
