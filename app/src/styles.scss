@@ -320,7 +320,7 @@ transition-delay:0.1s;
 }
 @media print {
      @page {
-    size: A4; 
+    size: 480mm 297mm;
     margin: 1cm; 
   }
       body {
