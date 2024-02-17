@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-recieptComponent
+import { recieptComponent } from '../components/IMH/reciept/reciept.component';
 //CORE_REFERENCE_IMPORT-patient
 import { patient } from '../sd-services/patient';
 //CORE_REFERENCE_IMPORT-patientslistComponent
@@ -74,6 +76,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-recieptComponent
+  recieptComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientslistComponent
   patientslistComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-detailsComponent
@@ -111,8 +115,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
-//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-patient
-patient,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-patient
+  patient,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-appoinment
   appoinment,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-addDoctorComponent
@@ -130,6 +134,7 @@ export const appRoutes = [
   { path: 'department', component: department_mainComponent },
   { path: 'appoinment', component: user_appointmentComponent },
   { path: 'patients', component: patientsComponent },
+  { path: 'receipt', component: recieptComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
