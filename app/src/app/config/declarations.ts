@@ -151,7 +151,7 @@ export const appRoutes = [
   },
   {
     path: 'patients',
-    component: patientsComponent,
+    component: patientslistComponent,
     canActivate: [NeutrinosAuthGuardService],
   },
   {

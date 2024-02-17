@@ -30,7 +30,7 @@
         },
         {
             "path": "patients",
-            "component": "patientsComponent",
+            "component": "patientslistComponent",
             "canActivate": {
                 "edited": true,
                 "value": "NeutrinosAuthGuardService"
