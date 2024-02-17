@@ -61,6 +61,13 @@
                     "type": "bh",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "file",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_9Fkdso8lcsHONrVX",
@@ -341,7 +348,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\npage.doctors = bh.input?.doctors?.response?.data\npage.selected = bh.input?.doctors?.response?.selcted\nconsole.log(\"hhhhhhhhhhhhhhhhhhh\")\nconsole.log(bh.input?.doctors?.response?.selcted)\nconsole.log(\"ppppppppppppppppp\")\npage.form.value.doctor_id = bh.input?.doctors?.response?.selcted?.id\nconsole.log(page.form.value.doctor_id)",
+        "script": "\npage.doctors = bh.input?.doctors?.response?.data\npage.selected = bh.input?.doctors?.response?.selcted\n\n\n\npage.form.value.doctor_id = bh.input?.doctors?.response?.selcted?.id\n",
         "functionName": "sd_5m4qJLh9lSr5lnAS",
         "category": "Function",
         "x": 560,
@@ -407,7 +414,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page.form.value)",
+        "script": "console.log(page.form.value)\n\n\nconst formData = new FormData();\n    formData.append('name',page.form?.value?.name);\n    formData.append('phone_no',page.form?.value?.phone_no);\n    formData.append('blood_group',page.form?.value?.blood_group);\n    formData.append('place',page.form?.value?.place);\n    formData.append('cash',page.form?.value?.cash);\n    formData.append('doctor_id',page.form?.value?.doctor_id);\n    formData.append('email',page.form?.value?.email);\n    formData.append('pin_code',page.form?.value?.pin_code);\n    formData.append('dob',page.form?.value?.dob);\n    formData.append('newFile',page.file);\n    formData.append('address',page.form?.value?.address);\n    formData.append('payment_method',\"cash\");\n    \n    page.datas = formData",
         "functionName": "sd_GK1vjWSr2GO5EFim",
         "category": "Function",
         "x": 260,
@@ -451,14 +458,14 @@
                 "key": "appoinment",
                 "map": true,
                 "valueType": "this.page",
-                "value": "form.value"
+                "value": "datas"
             }
         ],
         "outputMapping": [],
         "serviceImportPath": "app/sd-services/appoinment",
         "startName": "cashAppoinment",
         "inputParams": [
-            "this.page.form.value"
+            "this.page.datas"
         ],
         "accept_bh": false,
         "accept_csd": true,
@@ -467,7 +474,9 @@
         "x": 420,
         "y": 280,
         "wires": [
-            []
+            [
+                "sd_r4vPEf7ohfor6Dgh"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -505,7 +514,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page.form.value)",
+        "script": "console.log(page.form.value)\n\nconst formData = new FormData();\n    formData.append('name',page.form?.value?.name);\n    formData.append('phone_no',page.form?.value?.phone_no);\n    formData.append('blood_group',page.form?.value?.blood_group);\n    formData.append('place',page.form?.value?.place);\n    formData.append('cash',page.form?.value?.cash);\n    formData.append('doctor_id',page.form?.value?.doctor_id);\n    formData.append('email',page.form?.value?.email);\n    formData.append('pin_code',page.form?.value?.pin_code);\n    formData.append('dob',page.form?.value?.dob);\n    formData.append('newFile',page.file);\n    formData.append('address',page.form?.value?.address);\n    formData.append('payment_method',\"stripe\");\n    formData.append('sucess_url',\"http://localhost:4200/patients?session_id={CHECKOUT_SESSION_ID}\");\n    formData.append('cancel_url',\"http://localhost:4200/appoinment\");\n\n\nconsole.log(\"jjjjjjjjj\")\nconsole.log(formData)\n\npage.datas = formData\n\n",
         "functionName": "sd_eJdqg6Bu3aoWqCHZ",
         "category": "Function",
         "x": 260,
@@ -549,7 +558,7 @@
                 "key": "appoinment",
                 "map": true,
                 "valueType": "this.page",
-                "value": "form.value"
+                "value": "datas"
             }
         ],
         "outputMapping": [
@@ -565,7 +574,7 @@
         "serviceImportPath": "app/sd-services/appoinment",
         "startName": "onlineAppoinment",
         "inputParams": [
-            "this.page.form.value"
+            "this.page.datas"
         ],
         "accept_bh": false,
         "accept_csd": true,
@@ -624,6 +633,123 @@
         "category": "Navigation",
         "x": 260,
         "y": 500,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_T8aqlfEbVWdQ580S",
+        "type": "PageStart",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "fileupload",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "file",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "fileupload",
+        "category": "General",
+        "x": 120,
+        "y": 600,
+        "wires": [
+            [
+                "sd_1buxLBesiDmpQVoq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "user_appointmentComponent"
+    },
+    {
+        "id": "sd_1buxLBesiDmpQVoq",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.file)\npage.file = bh.input?.file",
+        "functionName": "sd_1buxLBesiDmpQVoq",
+        "category": "Function",
+        "x": 265,
+        "y": 600,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_r4vPEf7ohfor6Dgh",
+        "type": "Navigation",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/patients",
+        "functionName": "sd_r4vPEf7ohfor6Dgh",
+        "category": "Navigation",
+        "x": 545,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AcksXQfTZh74hOuD",
+        "type": "PageStart",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Logout",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "logout",
+        "category": "General",
+        "x": 112,
+        "y": 689.8125,
+        "wires": [
+            [
+                "sd_BnnJ32rN5R8eWIxm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "user_appointmentComponent"
+    },
+    {
+        "id": "sd_BnnJ32rN5R8eWIxm",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "LogoutFunction",
+        "script": "page.system.oauthService.logout('http://localhost:4200/home')",
+        "functionName": "logoutFunction",
+        "category": "Function",
+        "x": 292,
+        "y": 689.8125,
         "wires": [
             []
         ],

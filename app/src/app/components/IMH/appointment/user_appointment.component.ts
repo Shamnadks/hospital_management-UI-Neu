@@ -124,6 +124,37 @@ export class user_appointmentComponent {
       return this.errorHandler(bh, e, 'sd_KCHTV5X1dCdowb3n');
     }
   }
+
+  fileupload(file: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { file };
+      bh.local = {};
+      bh = this.sd_1buxLBesiDmpQVoq(bh);
+      //appendnew_next_fileupload
+      return bh.input.file;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_T8aqlfEbVWdQ580S');
+    }
+  }
+
+  logout(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.logoutFunction(bh);
+      //appendnew_next_logout
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AcksXQfTZh74hOuD');
+    }
+  }
   //appendnew_flow_user_appointmentComponent_start
 
   sd_9Fkdso8lcsHONrVX(bh) {
@@ -131,6 +162,7 @@ export class user_appointmentComponent {
       this.page.departments = undefined;
       this.page.doctors = undefined;
       this.page.selected = undefined;
+      this.page.file = undefined;
       bh = this.sd_CmMZQk9N8FNtEY1U(bh);
       //appendnew_next_sd_9Fkdso8lcsHONrVX
       return bh;
@@ -242,11 +274,9 @@ export class user_appointmentComponent {
       const page = this.page;
       page.doctors = bh.input?.doctors?.response?.data;
       page.selected = bh.input?.doctors?.response?.selcted;
-      console.log('hhhhhhhhhhhhhhhhhhh');
-      console.log(bh.input?.doctors?.response?.selcted);
-      console.log('ppppppppppppppppp');
+
       page.form.value.doctor_id = bh.input?.doctors?.response?.selcted?.id;
-      console.log(page.form.value.doctor_id);
+
       //appendnew_next_sd_5m4qJLh9lSr5lnAS
       return bh;
     } catch (e) {
@@ -258,6 +288,22 @@ export class user_appointmentComponent {
     try {
       const page = this.page;
       console.log(page.form.value);
+
+      const formData = new FormData();
+      formData.append('name', page.form?.value?.name);
+      formData.append('phone_no', page.form?.value?.phone_no);
+      formData.append('blood_group', page.form?.value?.blood_group);
+      formData.append('place', page.form?.value?.place);
+      formData.append('cash', page.form?.value?.cash);
+      formData.append('doctor_id', page.form?.value?.doctor_id);
+      formData.append('email', page.form?.value?.email);
+      formData.append('pin_code', page.form?.value?.pin_code);
+      formData.append('dob', page.form?.value?.dob);
+      formData.append('newFile', page.file);
+      formData.append('address', page.form?.value?.address);
+      formData.append('payment_method', 'cash');
+
+      page.datas = formData;
       bh = this.sd_twGTtYg1m2pOC15t(bh);
       //appendnew_next_sd_GK1vjWSr2GO5EFim
       return bh;
@@ -272,9 +318,10 @@ export class user_appointmentComponent {
         this.__page_injector__.get(appoinment);
 
       let outputVariables = await appoinmentInstance.cashAppoinment(
-        this.page.form.value
+        this.page.datas
       );
 
+      bh = this.sd_r4vPEf7ohfor6Dgh(bh);
       //appendnew_next_sd_twGTtYg1m2pOC15t
       return bh;
     } catch (e) {
@@ -282,10 +329,49 @@ export class user_appointmentComponent {
     }
   }
 
+  async sd_r4vPEf7ohfor6Dgh(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/patients');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_r4vPEf7ohfor6Dgh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_r4vPEf7ohfor6Dgh');
+    }
+  }
+
   sd_eJdqg6Bu3aoWqCHZ(bh) {
     try {
       const page = this.page;
       console.log(page.form.value);
+
+      const formData = new FormData();
+      formData.append('name', page.form?.value?.name);
+      formData.append('phone_no', page.form?.value?.phone_no);
+      formData.append('blood_group', page.form?.value?.blood_group);
+      formData.append('place', page.form?.value?.place);
+      formData.append('cash', page.form?.value?.cash);
+      formData.append('doctor_id', page.form?.value?.doctor_id);
+      formData.append('email', page.form?.value?.email);
+      formData.append('pin_code', page.form?.value?.pin_code);
+      formData.append('dob', page.form?.value?.dob);
+      formData.append('newFile', page.file);
+      formData.append('address', page.form?.value?.address);
+      formData.append('payment_method', 'stripe');
+      formData.append(
+        'sucess_url',
+        'http://localhost:4200/patients?session_id={CHECKOUT_SESSION_ID}'
+      );
+      formData.append('cancel_url', 'http://localhost:4200/appoinment');
+
+      console.log('jjjjjjjjj');
+      console.log(formData);
+
+      page.datas = formData;
+
       bh = this.sd_0Ibh59IFuJ5J1owX(bh);
       //appendnew_next_sd_eJdqg6Bu3aoWqCHZ
       return bh;
@@ -300,7 +386,7 @@ export class user_appointmentComponent {
         this.__page_injector__.get(appoinment);
 
       let outputVariables = await appoinmentInstance.onlineAppoinment(
-        this.page.form.value
+        this.page.datas
       );
       bh.input.appoinment = outputVariables.input.appoinment;
 
@@ -324,6 +410,29 @@ export class user_appointmentComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_cl0fyxxKL4qAFwGZ');
+    }
+  }
+
+  sd_1buxLBesiDmpQVoq(bh) {
+    try {
+      const page = this.page;
+      console.log(bh.input.file);
+      page.file = bh.input?.file;
+      //appendnew_next_sd_1buxLBesiDmpQVoq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1buxLBesiDmpQVoq');
+    }
+  }
+
+  logoutFunction(bh) {
+    try {
+      const page = this.page;
+      page.system.oauthService.logout('http://localhost:4200/home');
+      //appendnew_next_logoutFunction
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_BnnJ32rN5R8eWIxm');
     }
   }
 

@@ -1144,9 +1144,16 @@
                             },
                             {
                                 "_key": "(click)",
-                                "_value": "",
+                                "_value": "logout()",
                                 "_type": "kv",
-                                "_attrDef": "p"
+                                "_attrDef": "p",
+                                "objValue": {
+                                    "nodeID": "sd_AcksXQfTZh74hOuD",
+                                    "functionName": "logout",
+                                    "activeTree": "pages",
+                                    "z": "sd_kkJHQe5AYhoPmqGF",
+                                    "input": []
+                                }
                             },
                             {
                                 "_key": "[disabled]",
@@ -2674,7 +2681,7 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "space-between",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -2699,7 +2706,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "width:50%;",
+                                        "_value": "width:47%;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -2874,7 +2881,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "width:50%;",
+                                        "_value": "width:47%;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -3086,7 +3093,7 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "space-between",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -3111,7 +3118,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "width:50%;",
+                                        "_value": "width:47%;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -3322,7 +3329,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "width:50%;",
+                                        "_value": "width:47%;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -3398,7 +3405,7 @@
                                     },
                                     {
                                         "_key": "optionView",
-                                        "_value": "{{option.name}}({{option.balanceToken}})",
+                                        "_value": "{{option.name}}   ({{option.balanceToken}})",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -3416,7 +3423,7 @@
                                     },
                                     {
                                         "_key": "[(value)]",
-                                        "_value": "page.selected",
+                                        "_value": "page.form.value.doctor_id",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -3735,13 +3742,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "space-between",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "none",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -3760,7 +3767,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "width:50%;",
+                                        "_value": "width:35%;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -3935,7 +3942,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "width:50%;",
+                                        "_value": "width:35%;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4175,6 +4182,90 @@
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
+                                    }
+                                ]
+                            },
+                            "08c4354d-6a85-4b0d-4927-0745695c4bcf": {
+                                "paletteKey": "NEUTRINOS_PACKAGE_neutrinos-fileupload-component_PALETTE_KEY_NG-FileUpload",
+                                "parentEditorKey": "b64680b9-f5ea-6373-f7ff-34ccb3fa6b54",
+                                "commentid": null,
+                                "designerReference": [
+                                    {
+                                        "_key": "componentLabel",
+                                        "_value": "Patient Document",
+                                        "_type": "kv",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "style",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[nFileUploadColor]",
+                                        "_value": "'accent'",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[nFileUploadLabel]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[nFileUploadIcon]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[nFileUploadAcceptableFileTypes]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[nFileUploadSelectMultiple]",
+                                        "_value": "false",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[nFileUploadChangeLabelWithFileName]",
+                                        "_value": "false",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[nFileUploadDisabled]",
+                                        "_value": "false",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "(nFileUploadOnChange)",
+                                        "_value": "fileupload($event)",
+                                        "_type": "kv",
+                                        "_attrDef": "p",
+                                        "_customAttributeFlag": "flowpicker",
+                                        "objValue": {
+                                            "nodeID": "sd_T8aqlfEbVWdQ580S",
+                                            "functionName": "fileupload",
+                                            "activeTree": "pages",
+                                            "z": "sd_kkJHQe5AYhoPmqGF",
+                                            "input": [
+                                                "$event"
+                                            ]
+                                        }
                                     }
                                 ]
                             }

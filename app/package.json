@@ -40,6 +40,7 @@
         "hammerjs": "2.0.8",
         "localforage": "1.10.0",
         "moment": "2.29.4",
+        "neutrinos-file-upload": "1.0.0",
         "neutrinos-module": "0.0.70-beta.3",
         "neutrinos-oauth-client": "1.2.5-beta.1",
         "ng2-charts": "3.0.11",

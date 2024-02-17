@@ -1,5 +1,5 @@
-<div>
-  <div class="homediv">
+<div style="margin-bottom:0px;">
+  <div style="margin-bottom:0px;" class="homediv">
     <div fxLayout="row wrap" class="firstrow" fxLayoutAlign="start stretch" [fxShow]="true">
       <div fxLayout="row wrap" class="homenav" fxLayoutAlign="space-between stretch" [fxShow]="true">
         <div fxFlex.xs="60" style="height:100%;">
@@ -11,7 +11,7 @@
           </div>
         </div>
         <div style="width:auto;" class="sign-outbtn">
-          <button mat-raised-button color="accent" (click)="logIn()">LogIn</button>
+          <button mat-raised-button *ngIf="page.system?.oauthService?.userInfo?.displayName" color="accent" (click)="logout()">Logout</button><button mat-raised-button *ngIf="!page.system?.oauthService?.userInfo?.displayName" color="accent" (click)="logIn()">LogIn</button>
         </div>
       </div>
       <h1 class="welcome-text">
@@ -31,7 +31,7 @@
         <button mat-raised-button class="homeoptionsbtn" color="accent">Patients List</button>
       </div>
     </div>
-    <div fxLayout="row wrap" class="homefoot" fxLayoutAlign="space-between stretch" [fxShow]="true">
+    <div fxLayout="row wrap" style="margin-bottom:0px;" class="homefoot" fxLayoutAlign="space-between stretch" [fxShow]="true">
       <h5 class="foottext">
         Have an Emergency?</h5>
       <h5 class="foottext">

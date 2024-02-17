@@ -325,5 +325,62 @@
         "parentDeps": {
             "neutrinos-route": "1.0.0"
         }
+    },
+    "6230bf8a121d3ae0ca21cb91": {
+        "name": "6230bf8a121d3ae0ca21cb91",
+        "version": "1.0.0",
+        "packageType": [
+            "angular-package",
+            "studio-package"
+        ],
+        "deps": {
+            "neutrinos-file-upload": {
+                "name": "neutrinos-file-upload",
+                "version": "1.0.0",
+                "packageType": "angular-package"
+            },
+            "neutrinos-fileupload-component": {
+                "name": "neutrinos-fileupload-component",
+                "version": "1.0.0",
+                "packageType": "studio-package",
+                "nModule": {
+                    "name": "neutrinos-file-upload",
+                    "version": "1.0.0",
+                    "packageType": "angular-package",
+                    "importStatement": "import { NeutrinosFileUploadModule } from 'neutrinos-file-upload';",
+                    "imports": [
+                        "NeutrinosFileUploadModule"
+                    ]
+                }
+            }
+        },
+        "parentDeps": {}
+    },
+    "neutrinos-file-upload": {
+        "name": "neutrinos-file-upload",
+        "version": "1.0.0",
+        "packageType": "angular-package",
+        "deps": {},
+        "parentDeps": {
+            "6230bf8a121d3ae0ca21cb91": "1.0.0"
+        }
+    },
+    "neutrinos-fileupload-component": {
+        "name": "neutrinos-fileupload-component",
+        "version": "1.0.0",
+        "packageType": "studio-package",
+        "deps": {},
+        "parentDeps": {
+            "6230bf8a121d3ae0ca21cb91": "1.0.0"
+        },
+        "nModule": {
+            "name": "neutrinos-file-upload",
+            "version": "1.0.0",
+            "packageType": "angular-package",
+            "importStatement": "import { NeutrinosFileUploadModule } from 'neutrinos-file-upload';",
+            "imports": [
+                "NeutrinosFileUploadModule"
+            ]
+        }
     }
 }

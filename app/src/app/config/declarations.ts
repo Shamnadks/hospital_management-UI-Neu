@@ -78,10 +78,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-recieptComponent
-  recieptComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-doctor_listComponent
   doctor_listComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-recieptComponent
+  recieptComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientslistComponent
   patientslistComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-detailsComponent
@@ -134,11 +134,31 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
   { path: 'home', component: mainComponent },
-  { path: 'doctor', component: doctorComponent },
-  { path: 'department', component: department_mainComponent },
-  { path: 'appoinment', component: user_appointmentComponent },
-  { path: 'patients', component: patientsComponent },
-  { path: 'receipt' },
+  {
+    path: 'doctor',
+    component: doctorComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'department',
+    component: department_mainComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'appoinment',
+    component: user_appointmentComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'patients',
+    component: patientslistComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'receipt',
+    component: recieptComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
