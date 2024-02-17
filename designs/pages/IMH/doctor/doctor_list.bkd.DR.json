@@ -294,7 +294,7 @@
                     },
                     {
                         "_key": "layoutAlign",
-                        "_value": "space-evenly",
+                        "_value": "space-between",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -319,7 +319,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "width:25%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -533,7 +533,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "width:25%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -747,7 +747,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "width:25%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -961,7 +961,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "width:25%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1214,7 +1214,7 @@
                     },
                     {
                         "_key": "layoutAlign",
-                        "_value": "space-evenly",
+                        "_value": "space-between",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -1245,7 +1245,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "text-align:center",
+                            "_value": "text-align:center;width:25%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1459,7 +1459,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "text-align:center",
+                            "_value": "text-align:center;width:25%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1658,7 +1658,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "{{data?.department?.name}}",
+                                "_value": "{{data?.department_name||department}}",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }
@@ -1673,7 +1673,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "text-align:center;",
+                            "_value": "text-align:center;width:25%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1887,7 +1887,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "text-align:center",
+                            "_value": "text-align:center;width:25%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
