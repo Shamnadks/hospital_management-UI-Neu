@@ -9,10 +9,10 @@
           <button mat-button style="border:2px solid green;" (click)="reciept()">reciept</button>
         </div>
         <div>
-          <button mat-button style="border:2px solid green;">Download</button>
+          <a href="{{page.datas?.item?.url}}" target="_blank">download</a>
         </div>
         <div>
-          <button mat-button style="border:2px solid green;" *ngIf="page.datas?.item?.status===&apos;Pending&apos;" (click)="appoinmentstatus(page.datas?.item?.id)">Completed</button><a href="{{item?.url}}" target="_blank">download</a>
+          <button mat-button style="border:2px solid green;" *ngIf="page.datas?.item?.status===&apos;pending&apos;" (click)="appoinmentstatus(page.datas?.item?.id)">Completed</button>
         </div>
       </div>
     </div>
