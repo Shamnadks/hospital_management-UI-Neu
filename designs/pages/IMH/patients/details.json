@@ -121,7 +121,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// page.changedstatus = false\npage.changedstatus = {status:false,reciept:false}\n\nconsole.log(page.changedstatus,'chahcahc')",
+        "script": "page.changedstatus = 'close'\n\nconsole.log(page.changedstatus,'chahcahc')",
         "functionName": "sd_s6apGtkQPOwNEtfD",
         "category": "Function",
         "x": 410,
@@ -147,8 +147,8 @@
         "data": "this.page.changedstatus",
         "functionName": "sd_b5xdhLw0j3ABXRbe",
         "category": "Function",
-        "x": 910,
-        "y": 290,
+        "x": 1085,
+        "y": 420,
         "wires": [
             []
         ],
@@ -229,7 +229,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.input.url = 'patients/put'\nbh.input.method = 'put'\nbh.input.body = {id:bh.input.appoinmentid,status:'Completed'}",
+        "script": "bh.input.url = 'patient/put'\nbh.input.method = 'put'\nbh.input.body = {id:bh.input.appoinmentid,status:'Completed'}",
         "functionName": "sd_iLSPqqMP87teVA6T",
         "category": "Function",
         "x": 405,
@@ -237,28 +237,6 @@
         "wires": [
             [
                 "sd_lbEJRXSX92TzC5IO"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "detailsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_m0892vSrTCw2K6JS",
-        "type": "Script",
-        "z": "sd_08R7Qj49qAechruG",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(bh.local.result,'qqres')\n\n// page.changedstatus = false\npage.changedstatus = {status:false,reciept:false}\n",
-        "functionName": "sd_m0892vSrTCw2K6JS",
-        "category": "Function",
-        "x": 745,
-        "y": 420,
-        "wires": [
-            [
-                "sd_b5xdhLw0j3ABXRbe"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -335,7 +313,7 @@
         "y": 420,
         "wires": [
             [
-                "sd_m0892vSrTCw2K6JS"
+                "sd_4jBag0t5s2gQGu11"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -344,7 +322,29 @@
         "generated": true
     },
     {
-        "id": "sd_roVaJtn0Df60DX7j",
+        "id": "sd_4jBag0t5s2gQGu11",
+        "type": "Script",
+        "z": "sd_08R7Qj49qAechruG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\npage.changedstatus = 'detailed'\n\nconsole.log(page.changedstatus,'ahcahc')",
+        "functionName": "sd_4jBag0t5s2gQGu11",
+        "category": "Function",
+        "x": 805,
+        "y": 420,
+        "wires": [
+            [
+                "sd_b5xdhLw0j3ABXRbe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fRspIdKBOrHdVSeo",
         "type": "PageStart",
         "z": "sd_08R7Qj49qAechruG",
         "viewType": "pages",
@@ -357,10 +357,10 @@
         "functionName": "reciept",
         "category": "General",
         "x": 225,
-        "y": 540,
+        "y": 543.8125,
         "wires": [
             [
-                "sd_ACXVfGAXTC8h0fyj"
+                "sd_6EM1trqBPMGw4kov"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -368,17 +368,17 @@
         "serviceName": "detailsComponent"
     },
     {
-        "id": "sd_ACXVfGAXTC8h0fyj",
+        "id": "sd_6EM1trqBPMGw4kov",
         "type": "Script",
         "z": "sd_08R7Qj49qAechruG",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// bh.local.status = true\n// console.log(bh.local.status,'qqqqahcahc')\npage.changedstatus = {reciept:true}\n",
-        "functionName": "sd_ACXVfGAXTC8h0fyj",
+        "script": "page.changedstatus = 'reciept'\n\nconsole.log(page.changedstatus,'chahcahc')",
+        "functionName": "sd_6EM1trqBPMGw4kov",
         "category": "Function",
-        "x": 845,
-        "y": 540,
+        "x": 410,
+        "y": 543.8125,
         "wires": [
             [
                 "sd_b5xdhLw0j3ABXRbe"

@@ -3,12 +3,12 @@
         "id": "sd_tL03hZCHJm5zGTwU",
         "type": "tab",
         "createdDate": "2024-02-16T13:18:44.152Z",
-        "label": "patients",
+        "label": "patientsall",
         "disabled": false,
         "info": "",
         "functionSeq": 0,
         "generateNext": true,
-        "serviceName": "patientsComponent"
+        "serviceName": "patientsallComponent"
     },
     {
         "id": "sd_jdIcMM1isPmVXaxQ",
@@ -48,7 +48,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "patientsComponent"
+        "serviceName": "patientsallComponent"
     },
     {
         "id": "sd_HgmZpVRuZOVz1WgM",
@@ -94,7 +94,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "patientsComponent",
+        "serviceName": "patientsallComponent",
         "generated": true
     },
     {
@@ -128,7 +128,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "patientsComponent"
+        "serviceName": "patientsallComponent"
     },
     {
         "id": "sd_E29s0CjcP5oqHSgG",
@@ -137,7 +137,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.modalstatus = false\n\n// console.log(bh.input.patients,'input patie')\n// console.log(page.patients,'page patie')\n// console.log(bh.local.patients,'local patie')\npage.datas = {item:bh.input.item,status:page.modalstatus}\n\n",
+        "script": "page.modalstatus = true\n\n// console.log(bh.input.patients,'input patie')\n// console.log(page.patients,'page patie')\n// console.log(bh.local.patients,'local patie')\npage.datas = {item:bh.input.item,status:page.modalstatus}\n\n",
         "functionName": "sd_E29s0CjcP5oqHSgG",
         "category": "Function",
         "x": 520,
@@ -149,7 +149,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "patientsComponent",
+        "serviceName": "patientsallComponent",
         "generated": true
     },
     {
@@ -182,7 +182,7 @@
         },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "patientsComponent",
+        "serviceName": "patientsallComponent",
         "generated": true
     },
     {
@@ -192,7 +192,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// console.log(bh.input,'patientssssws')\n// console.log(page?.patientslist,'pageeepatientssssws')\n\n\n",
+        "script": "console.log('rrrrrrrrrrrrrrrrpatientssssws')\nconsole.log(page?.patientslist,'pageeepatientssssws')\n\n\n",
         "functionName": "sd_TCYGsGtQCaVlx6Nl",
         "category": "Function",
         "x": 565,
@@ -202,7 +202,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "patientsComponent",
+        "serviceName": "patientsallComponent",
         "generated": true
     },
     {
@@ -223,6 +223,6 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "patientsComponent"
+        "serviceName": "patientsallComponent"
     }
 ]

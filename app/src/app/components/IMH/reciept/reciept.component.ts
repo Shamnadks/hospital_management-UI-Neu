@@ -8,9 +8,7 @@ import {
   EventEmitter,
   Injector,
   Input,
-  OnChanges,
   Output,
-  SimpleChanges,
 } from '@angular/core'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -18,17 +16,17 @@ import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'
 //append_imports_end
 
 @Component({
-  selector: 'bh-patients',
-  templateUrl: './patients.template.html',
+  selector: 'bh-reciept',
+  templateUrl: './reciept.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class patientsComponent implements OnChanges {
-  @Input('patients')
-  public patients: any = undefined;
-  @Output('selected')
-  public selected: any = new EventEmitter<any>();
+export class recieptComponent {
+  @Input('datas')
+  public datas: any = undefined;
+  @Output('recieptstatus')
+  public recieptstatus: any = new EventEmitter<any>();
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -45,7 +43,7 @@ export class patientsComponent implements OnChanges {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_jdIcMM1isPmVXaxQ(bh);
+      this.sd_DxtKRRfXUm1qufI4(bh);
     }
   }
 
@@ -57,95 +55,102 @@ export class patientsComponent implements OnChanges {
     //append_listeners
   }
 
-  sd_jdIcMM1isPmVXaxQ(bh) {
+  sd_DxtKRRfXUm1qufI4(bh) {
     try {
-      bh = this.sd_HgmZpVRuZOVz1WgM(bh);
-      //appendnew_next_sd_jdIcMM1isPmVXaxQ
+      bh = this.sd_Og55tYAbU3Aga6IQ(bh);
+      //appendnew_next_sd_DxtKRRfXUm1qufI4
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_jdIcMM1isPmVXaxQ');
+      return this.errorHandler(bh, e, 'sd_DxtKRRfXUm1qufI4');
     }
   }
 
-  modal(item: any = undefined, ...others) {
+  print(...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = { item };
+      bh.input = {};
       bh.local = {};
-      bh = this.sd_E29s0CjcP5oqHSgG(bh);
-      //appendnew_next_modal
+      bh = this.sd_vJVwBllXGn80Msb2(bh);
+      //appendnew_next_print
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_eIE9poapSf8OR3vZ');
+      return this.errorHandler(bh, e, 'sd_aI4fhSkYAGF5HIpE');
     }
   }
-  ngOnChanges(changes: SimpleChanges) {
+
+  close(...others) {
+    let bh: any = {};
     try {
-      var bh: any = this.__page_injector__
+      bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.changes = changes;
-      bh = this.sd_HgmZpVRuZOVz1WgM(bh);
-      //appendnew_next_ngOnChanges
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_ivljmOXG5h7SX7P9(bh);
+      //appendnew_next_close
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_FR7HdiEoPGTsLubg');
+      return this.errorHandler(bh, e, 'sd_KpudflHF08uC0djX');
     }
   }
+  //appendnew_flow_recieptComponent_start
 
-  //appendnew_flow_patientsComponent_start
-
-  sd_HgmZpVRuZOVz1WgM(bh) {
+  sd_Og55tYAbU3Aga6IQ(bh) {
     try {
-      this.page.modalstatus = undefined;
-      this.page.patientslist = bh.pageInput.patients;
-      this.page.datas = undefined;
-      bh = this.sd_TCYGsGtQCaVlx6Nl(bh);
-      //appendnew_next_sd_HgmZpVRuZOVz1WgM
+      this.page.data = bh.pageInput.datas;
+      bh = this.sd_2sB2sPzEzim5mlVL(bh);
+      //appendnew_next_sd_Og55tYAbU3Aga6IQ
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_HgmZpVRuZOVz1WgM');
+      return this.errorHandler(bh, e, 'sd_Og55tYAbU3Aga6IQ');
     }
   }
 
-  sd_TCYGsGtQCaVlx6Nl(bh) {
-    try {
-      const page = this.page; // console.log(bh.input,'patientssssws')
-      // console.log(page?.patientslist,'pageeepatientssssws')
-
-      //appendnew_next_sd_TCYGsGtQCaVlx6Nl
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_TCYGsGtQCaVlx6Nl');
-    }
-  }
-
-  sd_E29s0CjcP5oqHSgG(bh) {
+  sd_2sB2sPzEzim5mlVL(bh) {
     try {
       const page = this.page;
-      page.modalstatus = false;
+      console.log(bh.input.datas, 'rrrr');
+      console.log(page.data, 'rererere');
 
-      // console.log(bh.input.patients,'input patie')
-      // console.log(page.patients,'page patie')
-      // console.log(bh.local.patients,'local patie')
-      page.datas = { item: bh.input.item, status: page.modalstatus };
-
-      bh = this.sd_rabpkzJtgPziMHpq(bh);
-      //appendnew_next_sd_E29s0CjcP5oqHSgG
+      //appendnew_next_sd_2sB2sPzEzim5mlVL
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_E29s0CjcP5oqHSgG');
+      return this.errorHandler(bh, e, 'sd_2sB2sPzEzim5mlVL');
     }
   }
 
-  sd_rabpkzJtgPziMHpq(bh) {
+  sd_vJVwBllXGn80Msb2(bh) {
     try {
-      bh.pageOutput.selected.emit(this.page.datas);
-      //appendnew_next_sd_rabpkzJtgPziMHpq
+      const page = this.page;
+      window.print();
+      //appendnew_next_sd_vJVwBllXGn80Msb2
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_rabpkzJtgPziMHpq');
+      return this.errorHandler(bh, e, 'sd_vJVwBllXGn80Msb2');
+    }
+  }
+
+  sd_ivljmOXG5h7SX7P9(bh) {
+    try {
+      const page = this.page;
+      bh.local.status = false;
+      console.log('closeee');
+      bh = this.sd_ojoHwS48v3vYMIfM(bh);
+      //appendnew_next_sd_ivljmOXG5h7SX7P9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ivljmOXG5h7SX7P9');
+    }
+  }
+
+  sd_ojoHwS48v3vYMIfM(bh) {
+    try {
+      bh.pageOutput.recieptstatus.emit(bh.local.status);
+      //appendnew_next_sd_ojoHwS48v3vYMIfM
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ojoHwS48v3vYMIfM');
     }
   }
 
@@ -165,5 +170,5 @@ export class patientsComponent implements OnChanges {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_patientsComponent_Catch
+  //appendnew_flow_recieptComponent_Catch
 }

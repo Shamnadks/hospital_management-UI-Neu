@@ -104,10 +104,10 @@ export class detailsComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_ACXVfGAXTC8h0fyj(bh);
+      bh = this.sd_6EM1trqBPMGw4kov(bh);
       //appendnew_next_reciept
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_roVaJtn0Df60DX7j');
+      return this.errorHandler(bh, e, 'sd_fRspIdKBOrHdVSeo');
     }
   }
   //appendnew_flow_detailsComponent_start
@@ -140,8 +140,8 @@ export class detailsComponent {
 
   sd_s6apGtkQPOwNEtfD(bh) {
     try {
-      const page = this.page; // page.changedstatus = false
-      page.changedstatus = { status: false, reciept: false };
+      const page = this.page;
+      page.changedstatus = 'close';
 
       console.log(page.changedstatus, 'chahcahc');
       bh = this.sd_b5xdhLw0j3ABXRbe(bh);
@@ -165,7 +165,7 @@ export class detailsComponent {
   sd_iLSPqqMP87teVA6T(bh) {
     try {
       const page = this.page;
-      bh.input.url = 'patients/put';
+      bh.input.url = 'patient/put';
       bh.input.method = 'put';
       bh.input.body = { id: bh.input.appoinmentid, status: 'Completed' };
       bh = this.sd_lbEJRXSX92TzC5IO(bh);
@@ -187,7 +187,7 @@ export class detailsComponent {
       );
       bh.local.result = outputVariables.local.result;
 
-      bh = this.sd_m0892vSrTCw2K6JS(bh);
+      bh = this.sd_4jBag0t5s2gQGu11(bh);
       //appendnew_next_sd_lbEJRXSX92TzC5IO
       return bh;
     } catch (e) {
@@ -195,33 +195,31 @@ export class detailsComponent {
     }
   }
 
-  sd_m0892vSrTCw2K6JS(bh) {
+  sd_4jBag0t5s2gQGu11(bh) {
     try {
       const page = this.page;
-      console.log(bh.local.result, 'qqres');
+      page.changedstatus = 'detailed';
 
-      // page.changedstatus = false
-      page.changedstatus = { status: false, reciept: false };
-
+      console.log(page.changedstatus, 'ahcahc');
       bh = this.sd_b5xdhLw0j3ABXRbe(bh);
-      //appendnew_next_sd_m0892vSrTCw2K6JS
+      //appendnew_next_sd_4jBag0t5s2gQGu11
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_m0892vSrTCw2K6JS');
+      return this.errorHandler(bh, e, 'sd_4jBag0t5s2gQGu11');
     }
   }
 
-  sd_ACXVfGAXTC8h0fyj(bh) {
+  sd_6EM1trqBPMGw4kov(bh) {
     try {
-      const page = this.page; // bh.local.status = true
-      // console.log(bh.local.status,'qqqqahcahc')
-      page.changedstatus = { reciept: true };
+      const page = this.page;
+      page.changedstatus = 'reciept';
 
+      console.log(page.changedstatus, 'chahcahc');
       bh = this.sd_b5xdhLw0j3ABXRbe(bh);
-      //appendnew_next_sd_ACXVfGAXTC8h0fyj
+      //appendnew_next_sd_6EM1trqBPMGw4kov
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ACXVfGAXTC8h0fyj');
+      return this.errorHandler(bh, e, 'sd_6EM1trqBPMGw4kov');
     }
   }
 

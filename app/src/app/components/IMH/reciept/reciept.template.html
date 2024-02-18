@@ -12,24 +12,26 @@
         <div style="width:80%">
         </div>
         <div style="width:10%;text-align:center;">
-          <mat-icon style="color:red;border:2px solid red" (click)="(click)">close</mat-icon>
+          <mat-icon style="color:red;border:2px solid red" (click)="close()">close</mat-icon>
         </div>
       </div>
     </div>
     <div fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" style="padding:10px;">
       <div fxLayout="column wrap" style="margin:auto;border:1px solid black;padding:4px" fxFlex="60" fxLayoutAlign="start stretch" [fxShow]="true" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100">
         <h3 style="margin:auto;margin-top:10px">
-          muhammed Nivas P</h3>
+          {{page.data?.item?.userdetails?.name}}
+        </h3>
         <h4 style="margin:auto;margin-top:10px">
-          malappuram</h4>
+          {{page.data?.item?.userdetails?.place}}
+        </h4>
         <h4 style="margin-left:10px;margin-bottom:6px">
-          cardiologist
+          dep: cardiologist
         </h4>
         <div style="display:flex;justify-content:space-between;align-items:center;margin:0">
           <h5 style="margin-left:10px;margin-bottom:0;margin-top:0">
-            dr.Arun</h5>
+            dr : {{page.data?.item?.doctordetails?.name}}</h5>
           <h5 style="margin-right:10px;margin-bottom:0;margin-top:0">
-            date : 12/02/2024</h5>
+            date : {{page.data?.item?.appointment_date}}</h5>
         </div>
         <div fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100">
           <div fxLayout="row wrap" style="margin:auto" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -37,70 +39,70 @@
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Age :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.age}}
+                {{page.data?.item?.age}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Address :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.userdetails?.address}}
+                {{page.data?.item?.userdetails?.address}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Pincode :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.userdetails?.pin_code}}
+                {{page.data?.item?.userdetails?.pin_code}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Phone No :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.userdetails?.phone_no}}
+                {{page.data?.item?.userdetails?.phone_no}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Email :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.userdetails?.email}}
+                {{page.data?.item?.userdetails?.email}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Blood Group :</h4>
               <p fxFlex="70" fxFlex.xs="50" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.userdetails?.blood_group}}
+                {{page.data?.item?.userdetails?.blood_group}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Doctor :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.doctordetails?.name}}
+                {{page.data?.item?.doctordetails?.name}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Token No :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.token_number}}
+                {{page.data?.item?.token_number}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Payment :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.cash}}
+                {{page.data?.item?.cash}}
               </p>
             </div>
             <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
               <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
                 Progress :</h4>
               <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-                {{page.datas?.item?.status}}
+                {{page.data?.item?.status}}
               </p>
             </div>
           </div>

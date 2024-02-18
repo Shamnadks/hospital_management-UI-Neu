@@ -70,7 +70,7 @@ export class patient {
 
   async sd_l3eVHWoZUKiWQtbZ(bh) {
     try {
-      console.log(bh.system.environment.properties.ssdURL, 'urlurlrirl');
+      // console.log(bh.system.environment.properties.ssdURL,'urlurlrirl')
       bh.input.url = bh.system.environment.properties.ssdURL + bh.input.url;
       console.log(bh.input.url, 'urlqqqqqqurlrirl');
 
@@ -111,32 +111,6 @@ export class patient {
     }
   }
 
-  async sd_Fa2No2jzFKuvHcCP(bh) {
-    try {
-      console.log(bh.error, 'eroororor');
-      bh = await this.sd_VNpp1bNcrNxsU24g(bh);
-      //appendnew_next_sd_Fa2No2jzFKuvHcCP
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_Fa2No2jzFKuvHcCP');
-    }
-  }
-
-  async sd_VNpp1bNcrNxsU24g(bh) {
-    try {
-      this.matSnackBar.open(bh.error.error, 'ok', {
-        duration: 5000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'top',
-      });
-      //appendnew_next_sd_VNpp1bNcrNxsU24g
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_VNpp1bNcrNxsU24g');
-    }
-  }
-
   //appendnew_node
 
   // error_handler_slot
@@ -144,29 +118,7 @@ export class patient {
     console.error(e);
     bh.error = e;
     bh.errorSource = src;
-    if (
-      false ||
-      (await this.sd_SsNXc47EEeCcixtW(bh))
-      /*appendnew_next_Catch*/
-    ) {
-      return bh;
-    } else {
-      throw e;
-    }
-  }
-  async sd_SsNXc47EEeCcixtW(bh) {
-    const nodes = [
-      'sd_Zc31OM9IVJvue7Qp',
-      'sd_l3eVHWoZUKiWQtbZ',
-      'sd_OQVpvMKwPsRDLEn9',
-      'sd_ctmXF7WBa9D9aSnx',
-    ];
-    if (nodes.includes(bh.errorSource)) {
-      bh = await this.sd_Fa2No2jzFKuvHcCP(bh);
-      //appendnew_next_sd_SsNXc47EEeCcixtW
-      return true;
-    }
-    return false;
+    throw e;
   }
   //appendnew_flow_patient_Catch
 }

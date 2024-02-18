@@ -39,8 +39,8 @@
         "pageVariables": [],
         "functionName": "sd_DxtKRRfXUm1qufI4",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 60,
         "wires": [
             [
                 "sd_Og55tYAbU3Aga6IQ"
@@ -71,10 +71,12 @@
         ],
         "functionName": "sd_Og55tYAbU3Aga6IQ",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 185,
+        "y": 60,
         "wires": [
-            []
+            [
+                "sd_2sB2sPzEzim5mlVL"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -95,7 +97,7 @@
         "functionName": "print",
         "category": "General",
         "x": 225,
-        "y": 140,
+        "y": 200,
         "wires": [
             [
                 "sd_vJVwBllXGn80Msb2"
@@ -116,7 +118,7 @@
         "functionName": "sd_vJVwBllXGn80Msb2",
         "category": "Function",
         "x": 490,
-        "y": 140,
+        "y": 200,
         "wires": [
             []
         ],
@@ -156,7 +158,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.status = false",
+        "script": "bh.local.status = false\nconsole.log('closeee')",
         "functionName": "sd_ivljmOXG5h7SX7P9",
         "category": "Function",
         "x": 405,
@@ -178,8 +180,8 @@
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
-        "eventName": "bh.pageOutput.chengedstatus",
-        "data": "this.page.status",
+        "eventName": "bh.pageOutput.recieptstatus",
+        "data": "bh.local.status",
         "functionName": "sd_ojoHwS48v3vYMIfM",
         "category": "Function",
         "x": 640,
@@ -190,15 +192,35 @@
         "__ssdTypeInputs__": {
             "eventName": {
                 "type": "bh.pageOutput",
-                "value": "chengedstatus",
+                "value": "recieptstatus",
                 "constant": false
             },
             "data": {
-                "type": "this.page",
+                "type": "bh.local",
                 "value": "status",
                 "constant": false
             }
         },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recieptComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_2sB2sPzEzim5mlVL",
+        "type": "Script",
+        "z": "sd_ZBW17EZ1dGiq4Tvn",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.datas,'rrrr')\nconsole.log(page.data,'rererere')\n",
+        "functionName": "sd_2sB2sPzEzim5mlVL",
+        "category": "Function",
+        "x": 365,
+        "y": 60,
+        "wires": [
+            []
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "recieptComponent",

@@ -1736,10 +1736,16 @@
                                 },
                                 {
                                     "_key": "(click)",
-                                    "_value": "(click)",
+                                    "_value": "close()",
                                     "_type": "kv",
                                     "_attrDef": "c",
-                                    "_customAttributeFlag": "customInput"
+                                    "objValue": {
+                                        "nodeID": "sd_KpudflHF08uC0djX",
+                                        "functionName": "close",
+                                        "activeTree": "pages",
+                                        "z": "sd_ZBW17EZ1dGiq4Tvn",
+                                        "input": []
+                                    }
                                 }
                             ]
                         }
@@ -2243,7 +2249,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "muhammed Nivas P",
+                                    "_value": "{{page.data?.item?.userdetails?.name}}",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -2457,7 +2463,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "malappuram",
+                                    "_value": "{{page.data?.item?.userdetails?.place}}",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -2671,7 +2677,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "cardiologist\r\n",
+                                    "_value": "dep: cardiologist\r\n",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -3072,7 +3078,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "dr.Arun",
+                                        "_value": "dr : {{page.data?.item?.doctordetails?.name}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -3286,7 +3292,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "date : 12/02/2024",
+                                        "_value": "date : {{page.data?.item?.appointment_date}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -4228,7 +4234,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.age}}",
+                                                "_value": "{{page.data?.item?.age}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -5573,7 +5579,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.userdetails?.address}}",
+                                                "_value": "{{page.data?.item?.userdetails?.address}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -6243,7 +6249,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.userdetails?.pin_code}}",
+                                                "_value": "{{page.data?.item?.userdetails?.pin_code}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -6913,7 +6919,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.userdetails?.phone_no}}",
+                                                "_value": "{{page.data?.item?.userdetails?.phone_no}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -7583,7 +7589,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.userdetails?.email}}",
+                                                "_value": "{{page.data?.item?.userdetails?.email}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -8253,7 +8259,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.userdetails?.blood_group}}",
+                                                "_value": "{{page.data?.item?.userdetails?.blood_group}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -8923,7 +8929,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.doctordetails?.name}}",
+                                                "_value": "{{page.data?.item?.doctordetails?.name}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -9593,7 +9599,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.token_number}}",
+                                                "_value": "{{page.data?.item?.token_number}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -10263,7 +10269,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.cash}}",
+                                                "_value": "{{page.data?.item?.cash}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -11608,7 +11614,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.datas?.item?.status}}",
+                                                "_value": "{{page.data?.item?.status}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }

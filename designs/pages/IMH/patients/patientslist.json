@@ -67,14 +67,14 @@
                 }
             },
             {
-                "textIp": "recieptstatus",
+                "textIp": "detailed",
                 "typedIpValue": {
                     "type": "bh",
                     "value": ""
                 }
             },
             {
-                "textIp": "detailedstatus",
+                "textIp": "reciept",
                 "typedIpValue": {
                     "type": "bh",
                     "value": ""
@@ -117,8 +117,8 @@
         "flow_type": "sync",
         "functionName": "outflow",
         "category": "General",
-        "x": 955,
-        "y": 220,
+        "x": 185,
+        "y": 600,
         "wires": [
             [
                 "sd_t6B674e19KCZYmRm"
@@ -135,11 +135,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.input.datas,'datas input')\npage.status = bh.input.datas.status\npage.detailedstatus = true\nconsole.log(page.status,'oiijn')\npage.datas = bh.input.datas\nconsole.log(page.datas,'datas   oiijn')\n",
+        "script": "console.log(bh.input.datas,'datas input')\npage.detailed = bh.input.datas?.status\npage.status = false\nconsole.log(page.detailed,'oiijn')\n\npage.datas = bh.input.datas\nconsole.log(page.datas,'datas   oiijn')\n",
         "functionName": "sd_t6B674e19KCZYmRm",
         "category": "Function",
-        "x": 1140,
-        "y": 220,
+        "x": 485,
+        "y": 600,
         "wires": [
             []
         ],
@@ -155,7 +155,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.status = true\npage.recieptstatus = false\npage.detailedstatus = false\n// bh.input.url = 'patients'\n// bh.input.method = 'get'\n// bh.input.body = ''",
+        "script": "// bh.input.url = 'patients'\n// bh.input.method = 'get'\n// bh.input.body = ''\n\npage.detailed = false\npage.reciept = false\npage.status = true",
         "functionName": "sd_BJLtFc8jUpSkLLaX",
         "category": "Function",
         "x": 395,
@@ -176,7 +176,7 @@
         "z": "sd_wTCxtJ9bwOR3Cb37",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "detailedoutflow",
+        "name": "detailedoutflow ",
         "outputs": 1,
         "inputVariables": [
             {
@@ -192,8 +192,8 @@
         "flow_type": "sync",
         "functionName": "detailedoutflow",
         "category": "General",
-        "x": 955,
-        "y": 340,
+        "x": 605,
+        "y": 460,
         "wires": [
             [
                 "sd_dhNfFhh60AkykSaX"
@@ -210,13 +210,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.input.changedstatus,'status input')\nif(bh.input.changedstatus.reciept===false){\n\npage.detailedstatus = bh.input.changedstatus\nconsole.log(page.detailedstatus,'oiijn')\n\n}else{\n    \npage.detailedstatus = false\npage.recieptstatus = bh.input.changedstatus.reciept\n    \n}",
+        "script": "// page.status = true\n// console.log(page.status,'oiijn')\n// if(bh.input.changedstatus.reciept===true){\n//    page.detailed = bh.input.changedstatus.status\n//    page.reciept = true\n// }else{\n// page.detailed = bh.input.changedstatus.status\n// }\n",
         "functionName": "sd_dhNfFhh60AkykSaX",
         "category": "Function",
-        "x": 1145,
-        "y": 340,
+        "x": 905,
+        "y": 460,
         "wires": [
-            []
+            [
+                "sd_4QLmSgQSVokYR5ge"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -251,11 +253,10 @@
         "serviceImportPath": "./",
         "startName": "patients",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_10B9F7f4SdRFecbS",
         "category": "General",
-        "x": 615,
+        "x": 805,
         "y": 200,
         "wires": [
             []
@@ -395,7 +396,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page.patientslist,'resres')\npage.patientslist = bh.local.result?.response\nconsole.log(page.patientslist,'resrerrrrrs')\n\n",
+        "script": "page.patientslist = bh.local.result?.response\nconsole.log(page.patientslist,'resrerrrrrs')\n\npage.status = true\nconsole.log(page.status,'kkkkkkkkk')",
         "functionName": "sd_sbUDiEkgIRIQH1g5",
         "category": "Function",
         "x": 675,
@@ -409,7 +410,142 @@
         "generated": true
     },
     {
-        "id": "sd_GE2Uhy6BFgzk0Qgf",
+        "id": "sd_n77vaX26qdR0gTCz",
+        "type": "OnChanges",
+        "z": "sd_wTCxtJ9bwOR3Cb37",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "On Changes",
+        "functionName": "ngOnChanges",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 260,
+        "wires": [
+            [
+                "sd_QWSNHIrm2ekn57gb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "patientslistComponent"
+    },
+    {
+        "id": "sd_4QLmSgQSVokYR5ge",
+        "type": "PageSwitch",
+        "z": "sd_wTCxtJ9bwOR3Cb37",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "changedstatus",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.changedstatus",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "detailed",
+                "vt": "str",
+                "gv": "\"detailed\""
+            },
+            {
+                "t": "eq",
+                "v": "reciept",
+                "vt": "str",
+                "gv": "\"reciept\""
+            },
+            {
+                "t": "eq",
+                "v": "close",
+                "vt": "str",
+                "gv": "\"close\""
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "functionName": "sd_4QLmSgQSVokYR5ge",
+        "category": "Function",
+        "x": 1085,
+        "y": 460,
+        "wires": [
+            [
+                "sd_lRybZe7zMEf0obaC"
+            ],
+            [
+                "sd_kKLUfU5MuSoNw6LN"
+            ],
+            [
+                "sd_yMQuwXjOre9n4UFT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientslistComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lRybZe7zMEf0obaC",
+        "type": "Script",
+        "z": "sd_wTCxtJ9bwOR3Cb37",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.detailed = false",
+        "functionName": "sd_lRybZe7zMEf0obaC",
+        "category": "Function",
+        "x": 925,
+        "y": 320,
+        "wires": [
+            [
+                "sd_10B9F7f4SdRFecbS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientslistComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_yMQuwXjOre9n4UFT",
+        "type": "Script",
+        "z": "sd_wTCxtJ9bwOR3Cb37",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.detailed = false\npage.status = true\n\n",
+        "functionName": "sd_yMQuwXjOre9n4UFT",
+        "category": "Function",
+        "x": 925,
+        "y": 580,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientslistComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kKLUfU5MuSoNw6LN",
+        "type": "Script",
+        "z": "sd_wTCxtJ9bwOR3Cb37",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.detailed = false\npage.status = false\npage.reciept = true\n\n",
+        "functionName": "sd_kKLUfU5MuSoNw6LN",
+        "category": "Function",
+        "x": 1265,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientslistComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Ca2BQyapzxN5egq3",
         "type": "PageStart",
         "z": "sd_wTCxtJ9bwOR3Cb37",
         "viewType": "pages",
@@ -418,7 +554,7 @@
         "outputs": 1,
         "inputVariables": [
             {
-                "key": "changedstatus",
+                "key": "status",
                 "defaultValue": {
                     "type": "any",
                     "value": ""
@@ -430,11 +566,11 @@
         "flow_type": "sync",
         "functionName": "recieptflow",
         "category": "General",
-        "x": 960,
-        "y": 464.8125,
+        "x": 185,
+        "y": 720,
         "wires": [
             [
-                "sd_8rQN6CJnnqCA6aiK"
+                "sd_JuB9FZR8KUZwesj5"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -442,17 +578,17 @@
         "serviceName": "patientslistComponent"
     },
     {
-        "id": "sd_8rQN6CJnnqCA6aiK",
+        "id": "sd_JuB9FZR8KUZwesj5",
         "type": "Script",
         "z": "sd_wTCxtJ9bwOR3Cb37",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.status = true\npage.recieptstatus = bh.input.changedstatus\n",
-        "functionName": "sd_8rQN6CJnnqCA6aiK",
+        "script": "page.reciept = false\npage.status = false\npage.detailed = true\n\n",
+        "functionName": "sd_JuB9FZR8KUZwesj5",
         "category": "Function",
-        "x": 1150,
-        "y": 464.8125,
+        "x": 485,
+        "y": 720,
         "wires": [
             []
         ],

@@ -12,7 +12,7 @@
             },
             {
                 "_key": "class",
-                "_value": "",
+                "_value": [],
                 "_type": "dav",
                 "_attrDef": "p"
             },
@@ -212,6 +212,7 @@
                 {
                     "_key": "class",
                     "_value": [
+                        "no-print",
                         "patientslist-heading"
                     ],
                     "_type": "dav",
@@ -226,6 +227,12 @@
                 {
                     "_key": "fxLayoutAlign",
                     "_value": "center center",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page.reciept===false",
                     "_type": "kv",
                     "_attrDef": "c"
                 }
@@ -245,6 +252,7 @@
                     {
                         "_key": "class",
                         "_value": [
+                            "no-print",
                             "patientslist-headings"
                         ],
                         "_type": "dav",
@@ -451,6 +459,7 @@
             "paletteKey": "Html5",
             "parentEditorKey": "c0020880-ee5f-a0a9-5638-e577f28e6e2d",
             "isAdvancedComponent": true,
+            "isCommented": "false",
             "commentid": null,
             "designerReference": [
                 {
@@ -634,14 +643,14 @@
                     "_visibility": false
                 }
             ],
-            "2fb65ea7-f79a-da49-21e6-246e27158dc2": {
-                "paletteKey": "NEUTRINOS_VIEW_patients",
+            "a2f0f966-18b3-bc14-2ab7-758ae1c3b607": {
+                "paletteKey": "NEUTRINOS_VIEW_patientsall",
                 "parentEditorKey": "64d4271f-4760-1ca0-e2b1-f90377a9c93e",
                 "commentid": null,
                 "designerReference": [
                     {
                         "_key": "componentLabel",
-                        "_value": "patients",
+                        "_value": "patientsall",
                         "_type": "kv",
                         "_attrDef": "p",
                         "_useAsLabel": true
@@ -665,9 +674,7 @@
                         "_attrDef": "p",
                         "_complexity": "advanced",
                         "displayAs": "patients",
-                        "attrType": "INPUT",
-                        "inValid": false,
-                        "message": ""
+                        "attrType": "INPUT"
                     },
                     {
                         "_key": "(selected)",
@@ -686,21 +693,20 @@
                             "input": [
                                 "$event"
                             ]
-                        },
-                        "inValid": false,
-                        "message": ""
+                        }
                     },
                     {
                         "_key": "*ngIf",
-                        "_value": "page?.status===true",
-                        "_type": "a",
+                        "_value": "page.status===true",
+                        "_type": "kv",
                         "_attrDef": "c"
                     }
                 ]
             },
-            "d2dd0b47-7484-11cf-813d-6b2a4c425d5d": {
+            "12a5abff-9dc3-ea8b-669a-527f05c8c585": {
                 "paletteKey": "NEUTRINOS_VIEW_details",
                 "parentEditorKey": "64d4271f-4760-1ca0-e2b1-f90377a9c93e",
+                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -729,9 +735,7 @@
                         "_attrDef": "p",
                         "_complexity": "advanced",
                         "displayAs": "patient",
-                        "attrType": "INPUT",
-                        "inValid": false,
-                        "message": ""
+                        "attrType": "INPUT"
                     },
                     {
                         "_key": "(changedstatus)",
@@ -750,19 +754,17 @@
                             "input": [
                                 "$event"
                             ]
-                        },
-                        "inValid": false,
-                        "message": ""
+                        }
                     },
                     {
                         "_key": "*ngIf",
-                        "_value": "page.detailedstatus === true",
-                        "_type": "a",
+                        "_value": "page.detailed===true",
+                        "_type": "kv",
                         "_attrDef": "c"
                     }
                 ]
             },
-            "1218e402-fe56-a826-48d3-370ca71ae619": {
+            "1a5670d1-938e-7a37-c3cf-bec3328bcf5f": {
                 "paletteKey": "NEUTRINOS_VIEW_reciept",
                 "parentEditorKey": "64d4271f-4760-1ca0-e2b1-f90377a9c93e",
                 "commentid": null,
@@ -787,21 +789,13 @@
                         "_attrDef": "p"
                     },
                     {
-                        "_key": "*ngIf",
-                        "_value": "page.recieptstatus = true",
-                        "_type": "a",
-                        "_attrDef": "c"
-                    },
-                    {
                         "_key": "[datas]",
                         "_value": "page.datas",
                         "_type": "kv",
                         "_attrDef": "p",
                         "_complexity": "advanced",
                         "displayAs": "datas",
-                        "attrType": "INPUT",
-                        "inValid": false,
-                        "message": ""
+                        "attrType": "INPUT"
                     },
                     {
                         "_key": "(recieptstatus)",
@@ -813,7 +807,7 @@
                         "attrType": "OUTPUT",
                         "_customAttributeFlag": "flowpicker",
                         "objValue": {
-                            "nodeID": "sd_GE2Uhy6BFgzk0Qgf",
+                            "nodeID": "sd_Ca2BQyapzxN5egq3",
                             "functionName": "recieptflow",
                             "activeTree": "pages",
                             "z": "sd_wTCxtJ9bwOR3Cb37",
@@ -821,6 +815,12 @@
                                 "$event"
                             ]
                         }
+                    },
+                    {
+                        "_key": "*ngIf",
+                        "_value": "page.reciept===true",
+                        "_type": "kv",
+                        "_attrDef": "c"
                     }
                 ]
             }

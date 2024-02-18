@@ -1,9 +1,9 @@
 <div fxFlex="100" style="height:100vh;">
-  <header class="patientslist-heading" fxLayout="row" fxLayoutAlign="center center">
-    <h1 class="patientslist-headings">
+  <header class="no-print patientslist-heading" fxLayout="row" fxLayoutAlign="center center" *ngIf="page.reciept===false">
+    <h1 class="no-print patientslist-headings">
       Patients</h1>
   </header>
   <div style="height:65%">
-    <bh-patients [patients]="page.patientslist" (selected)="outflow($event)" *ngIf></bh-patients><bh-details [patient]="page.datas" (changedstatus)="detailedoutflow($event)" *ngIf></bh-details><bh-reciept *ngIf [datas]="page.datas" (recieptstatus)="recieptflow($event)"></bh-reciept>
+    <bh-patientsall [patients]="page.patientslist" (selected)="outflow($event)" *ngIf="page.status===true"></bh-patientsall><bh-details [patient]="page.datas" (changedstatus)="detailedoutflow($event)" *ngIf="page.detailed===true"></bh-details><bh-reciept [datas]="page.datas" (recieptstatus)="recieptflow($event)" *ngIf="page.reciept===true"></bh-reciept>
   </div>
 </div>
