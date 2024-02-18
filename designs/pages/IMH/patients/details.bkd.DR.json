@@ -1348,7 +1348,8 @@
                         "0e6fe790-342e-3ddf-a6ae-ef715706679a": {
                             "paletteKey": "NG-button",
                             "parentEditorKey": "dec8b379-20b2-aeba-70aa-fdd4389a3cce",
-                            "commentid": null,
+                            "isCommented": "true",
+                            "commentid": "1708236276284",
                             "designerReference": [
                                 {
                                     "_key": "style",
@@ -1403,6 +1404,32 @@
                                     "_key": "routerLink",
                                     "_value": "",
                                     "_type": "kv",
+                                    "_attrDef": "p"
+                                }
+                            ]
+                        },
+                        "1e0e1c32-5539-2db6-23ab-e8d893a7b7fd": {
+                            "paletteKey": "html-editor",
+                            "parentEditorKey": "dec8b379-20b2-aeba-70aa-fdd4389a3cce",
+                            "isAdvancedChildComponent": true,
+                            "commentid": null,
+                            "designerReference": [
+                                {
+                                    "_key": "style",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "html",
+                                    "_value": "<a href={{page.datas?.item?.url}} target=\"_blank\">download</a>",
+                                    "_type": "a",
                                     "_attrDef": "p"
                                 }
                             ]
@@ -1882,35 +1909,9 @@
                                 },
                                 {
                                     "_key": "*ngIf",
-                                    "_value": "page.datas?.item?.status==='Pending'",
+                                    "_value": "page.datas?.item?.status==='pending'",
                                     "_type": "kv",
                                     "_attrDef": "c"
-                                }
-                            ]
-                        },
-                        "b85538c0-e20f-d1ba-7b7e-6f86a44c4d70": {
-                            "paletteKey": "html-editor",
-                            "parentEditorKey": "e38d49b5-9797-2154-36d4-f0d4d47cd3b3",
-                            "isAdvancedChildComponent": true,
-                            "commentid": null,
-                            "designerReference": [
-                                {
-                                    "_key": "style",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": "",
-                                    "_type": "dav",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "html",
-                                    "_value": "<a href={{item?.url}} target=\"_blank\">download</a>",
-                                    "_type": "a",
-                                    "_attrDef": "p"
                                 }
                             ]
                         }
