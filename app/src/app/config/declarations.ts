@@ -17,7 +17,9 @@ window['neutrinos'] = {
 
 //CORE_REFERENCE_IMPORTS
 //CORE_REFERENCE_IMPORT-recieptComponent
-import { recieptComponent } from '../components/IMH/patients/reciept.component';
+import { recieptComponent } from '../components/IMH/reciept/reciept.component';
+//CORE_REFERENCE_IMPORT-patientsallComponent
+import { patientsallComponent } from '../components/IMH/patients/patientsall.component';
 //CORE_REFERENCE_IMPORT-doctor_listComponent
 import { doctor_listComponent } from '../components/IMH/doctor/doctor_list.component';
 //CORE_REFERENCE_IMPORT-patient
@@ -26,8 +28,6 @@ import { patient } from '../sd-services/patient';
 import { patientslistComponent } from '../components/IMH/patients/patientslist.component';
 //CORE_REFERENCE_IMPORT-detailsComponent
 import { detailsComponent } from '../components/IMH/patients/details.component';
-//CORE_REFERENCE_IMPORT-patientsComponent
-import { patientsComponent } from '../components/IMH/patients/patients.component';
 //CORE_REFERENCE_IMPORT-user_appointmentComponent
 import { user_appointmentComponent } from '../components/IMH/appointment/user_appointment.component';
 //CORE_REFERENCE_IMPORT-mainComponent
@@ -78,16 +78,16 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-doctor_listComponent
-  doctor_listComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-recieptComponent
   recieptComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientsallComponent
+  patientsallComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-doctor_listComponent
+  doctor_listComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientslistComponent
   patientslistComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-detailsComponent
   detailsComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientsComponent
-  patientsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-user_appointmentComponent
   user_appointmentComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-mainComponent

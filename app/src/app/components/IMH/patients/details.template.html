@@ -3,8 +3,15 @@
     <div style="margin:auto">
       <mat-icon (click)="statuschanger()">close</mat-icon>
     </div>
-    <div style="margin:auto">
-      <button mat-button style="background:green;color:white" *ngIf (click)="appoinmentstatus(page.datas?.item?.id)">Completed</button><button mat-button style="background:green;color:white" *ngIf (click)="reciept()">reciept</button>
+    <div>
+      <div style="display:flex;justify-content:space-between;padding:4px">
+        <div>
+          <button mat-button style="border:2px solid green;" (click)="reciept()">reciept</button>
+        </div>
+        <div>
+          <button mat-button style="border:2px solid green;" *ngIf="page.datas?.item?.status===&apos;Pending&apos;" (click)="appoinmentstatus(page.datas?.item?.id)">Completed</button>
+        </div>
+      </div>
     </div>
     <div fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100">
       <div fxLayout="row wrap" style="margin:auto" fxLayoutAlign="start stretch" [fxShow]="true">

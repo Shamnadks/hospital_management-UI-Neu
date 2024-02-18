@@ -1,7 +1,7 @@
 // _neu_generated_code__dont_modify_directly_
 //__IMPORT_MODULES_HERE__
 //__LIBRARY__neutrinos\-file\-upload
-import { NeutrinosFileUploadModule } from 'neutrinos-file-upload';
+import {NeutrinosFileUploadModule} from 'neutrinos-file-upload'
 //__END__LIBRARY__neutrinos\-file\-upload
 import {NgModule } from '@angular/core';
 import { sdProviders} from './sd-providers';
