@@ -100,6 +100,21 @@ export class patientslistComponent {
       return this.errorHandler(bh, e, 'sd_mdCT6m4iB9saDw5Y');
     }
   }
+
+  recieptflow(changedstatus: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { changedstatus };
+      bh.local = {};
+      bh = this.sd_8rQN6CJnnqCA6aiK(bh);
+      //appendnew_next_recieptflow
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GE2Uhy6BFgzk0Qgf');
+    }
+  }
   //appendnew_flow_patientslistComponent_start
 
   sd_QWSNHIrm2ekn57gb(bh) {
@@ -107,6 +122,8 @@ export class patientslistComponent {
       this.page.patientslist = undefined;
       this.page.status = undefined;
       this.page.datas = undefined;
+      this.page.recieptstatus = undefined;
+      this.page.detailedstatus = undefined;
       bh = this.sd_BJLtFc8jUpSkLLaX(bh);
       //appendnew_next_sd_QWSNHIrm2ekn57gb
       return bh;
@@ -118,7 +135,9 @@ export class patientslistComponent {
   sd_BJLtFc8jUpSkLLaX(bh) {
     try {
       const page = this.page;
-      page.status = false;
+      page.status = true;
+      page.recieptstatus = false;
+      page.detailedstatus = false;
       // bh.input.url = 'patients'
       // bh.input.method = 'get'
       // bh.input.body = ''
@@ -146,6 +165,7 @@ export class patientslistComponent {
       const page = this.page;
       console.log(bh.input.datas, 'datas input');
       page.status = bh.input.datas.status;
+      page.detailedstatus = true;
       console.log(page.status, 'oiijn');
       page.datas = bh.input.datas;
       console.log(page.datas, 'datas   oiijn');
@@ -161,8 +181,13 @@ export class patientslistComponent {
     try {
       const page = this.page;
       console.log(bh.input.changedstatus, 'status input');
-      page.status = bh.input.changedstatus;
-      console.log(page.status, 'oiijn');
+      if (bh.input.changedstatus.reciept === false) {
+        page.detailedstatus = bh.input.changedstatus;
+        console.log(page.detailedstatus, 'oiijn');
+      } else {
+        page.detailedstatus = false;
+        page.recieptstatus = bh.input.changedstatus.reciept;
+      }
       //appendnew_next_sd_dhNfFhh60AkykSaX
       return bh;
     } catch (e) {
@@ -214,6 +239,19 @@ export class patientslistComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_sbUDiEkgIRIQH1g5');
+    }
+  }
+
+  sd_8rQN6CJnnqCA6aiK(bh) {
+    try {
+      const page = this.page;
+      page.status = true;
+      page.recieptstatus = bh.input.changedstatus;
+
+      //appendnew_next_sd_8rQN6CJnnqCA6aiK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8rQN6CJnnqCA6aiK');
     }
   }
 

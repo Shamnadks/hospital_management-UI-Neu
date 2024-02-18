@@ -95,6 +95,21 @@ export class detailsComponent {
       return this.errorHandler(bh, e, 'sd_Pb0CcBkGU25OMK0z');
     }
   }
+
+  reciept(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_ACXVfGAXTC8h0fyj(bh);
+      //appendnew_next_reciept
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_roVaJtn0Df60DX7j');
+    }
+  }
   //appendnew_flow_detailsComponent_start
 
   sd_yTot9x9BOZqXCCdY(bh) {
@@ -125,8 +140,9 @@ export class detailsComponent {
 
   sd_s6apGtkQPOwNEtfD(bh) {
     try {
-      const page = this.page;
-      page.changedstatus = false;
+      const page = this.page; // page.changedstatus = false
+      page.changedstatus = { status: false, reciept: false };
+
       console.log(page.changedstatus, 'chahcahc');
       bh = this.sd_b5xdhLw0j3ABXRbe(bh);
       //appendnew_next_sd_s6apGtkQPOwNEtfD
@@ -184,12 +200,28 @@ export class detailsComponent {
       const page = this.page;
       console.log(bh.local.result, 'qqres');
 
-      page.changedstatus = false;
+      // page.changedstatus = false
+      page.changedstatus = { status: false, reciept: false };
+
       bh = this.sd_b5xdhLw0j3ABXRbe(bh);
       //appendnew_next_sd_m0892vSrTCw2K6JS
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_m0892vSrTCw2K6JS');
+    }
+  }
+
+  sd_ACXVfGAXTC8h0fyj(bh) {
+    try {
+      const page = this.page; // bh.local.status = true
+      // console.log(bh.local.status,'qqqqahcahc')
+      page.changedstatus = { reciept: true };
+
+      bh = this.sd_b5xdhLw0j3ABXRbe(bh);
+      //appendnew_next_sd_ACXVfGAXTC8h0fyj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ACXVfGAXTC8h0fyj');
     }
   }
 

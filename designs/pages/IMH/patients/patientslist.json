@@ -32,8 +32,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "patientslistComponent",
-        "generated": false
+        "serviceName": "patientslistComponent"
     },
     {
         "id": "sd_QWSNHIrm2ekn57gb",
@@ -62,6 +61,20 @@
             },
             {
                 "textIp": "datas",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "recieptstatus",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "detailedstatus",
                 "typedIpValue": {
                     "type": "bh",
                     "value": ""
@@ -113,8 +126,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "patientslistComponent",
-        "generated": false
+        "serviceName": "patientslistComponent"
     },
     {
         "id": "sd_t6B674e19KCZYmRm",
@@ -123,7 +135,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.input.datas,'datas input')\npage.status = bh.input.datas.status\nconsole.log(page.status,'oiijn')\npage.datas = bh.input.datas\nconsole.log(page.datas,'datas   oiijn')\n",
+        "script": "console.log(bh.input.datas,'datas input')\npage.status = bh.input.datas.status\npage.detailedstatus = true\nconsole.log(page.status,'oiijn')\npage.datas = bh.input.datas\nconsole.log(page.datas,'datas   oiijn')\n",
         "functionName": "sd_t6B674e19KCZYmRm",
         "category": "Function",
         "x": 1140,
@@ -143,7 +155,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.status = false\n// bh.input.url = 'patients'\n// bh.input.method = 'get'\n// bh.input.body = ''",
+        "script": "page.status = true\npage.recieptstatus = false\npage.detailedstatus = false\n// bh.input.url = 'patients'\n// bh.input.method = 'get'\n// bh.input.body = ''",
         "functionName": "sd_BJLtFc8jUpSkLLaX",
         "category": "Function",
         "x": 395,
@@ -189,8 +201,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "patientslistComponent",
-        "generated": false
+        "serviceName": "patientslistComponent"
     },
     {
         "id": "sd_dhNfFhh60AkykSaX",
@@ -199,7 +210,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.input.changedstatus,'status input')\npage.status = bh.input.changedstatus\nconsole.log(page.status,'oiijn')",
+        "script": "console.log(bh.input.changedstatus,'status input')\nif(bh.input.changedstatus.reciept===false){\n\npage.detailedstatus = bh.input.changedstatus\nconsole.log(page.detailedstatus,'oiijn')\n\n}else{\n    \npage.detailedstatus = false\npage.recieptstatus = bh.input.changedstatus.reciept\n    \n}",
         "functionName": "sd_dhNfFhh60AkykSaX",
         "category": "Function",
         "x": 1145,
@@ -240,6 +251,7 @@
         "serviceImportPath": "./",
         "startName": "patients",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_10B9F7f4SdRFecbS",
         "category": "General",
@@ -249,9 +261,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generated": true,
         "generateNext": false,
-        "serviceName": "patientslistComponent"
+        "serviceName": "patientslistComponent",
+        "generated": true
     },
     {
         "id": "sd_mdCT6m4iB9saDw5Y",
@@ -275,8 +287,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "patientslistComponent",
-        "generated": false
+        "serviceName": "patientslistComponent"
     },
     {
         "id": "sd_LmCdUA5a05uEMavm",
@@ -389,6 +400,59 @@
         "category": "Function",
         "x": 675,
         "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "patientslistComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_GE2Uhy6BFgzk0Qgf",
+        "type": "PageStart",
+        "z": "sd_wTCxtJ9bwOR3Cb37",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "recieptflow",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "changedstatus",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "recieptflow",
+        "category": "General",
+        "x": 960,
+        "y": 464.8125,
+        "wires": [
+            [
+                "sd_8rQN6CJnnqCA6aiK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "patientslistComponent"
+    },
+    {
+        "id": "sd_8rQN6CJnnqCA6aiK",
+        "type": "Script",
+        "z": "sd_wTCxtJ9bwOR3Cb37",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.status = true\npage.recieptstatus = bh.input.changedstatus\n",
+        "functionName": "sd_8rQN6CJnnqCA6aiK",
+        "category": "Function",
+        "x": 1150,
+        "y": 464.8125,
         "wires": [
             []
         ],

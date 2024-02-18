@@ -16,10 +16,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-recieptComponent
+import { recieptComponent } from '../components/IMH/patients/reciept.component';
 //CORE_REFERENCE_IMPORT-doctor_listComponent
 import { doctor_listComponent } from '../components/IMH/doctor/doctor_list.component';
-//CORE_REFERENCE_IMPORT-recieptComponent
-import { recieptComponent } from '../components/IMH/reciept/reciept.component';
 //CORE_REFERENCE_IMPORT-patient
 import { patient } from '../sd-services/patient';
 //CORE_REFERENCE_IMPORT-patientslistComponent
