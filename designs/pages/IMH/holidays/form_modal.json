@@ -1,0 +1,694 @@
+[
+    {
+        "id": "sd_lQx8fATm6OnxFiP8",
+        "type": "tab",
+        "createdDate": "2024-02-23T07:49:26.491Z",
+        "label": "form_modal",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "form_modalComponent"
+    },
+    {
+        "id": "sd_z23LUH0S9WS4qtDp",
+        "type": "OnInit",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [
+            {
+                "key": "editData",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            }
+        ],
+        "localVariables": [],
+        "outputVariables": [
+            {
+                "key": "closeModal",
+                "defaultValue": {
+                    "type": "any",
+                    "value": null
+                }
+            }
+        ],
+        "pageVariables": [
+            {
+                "key": "days",
+                "defaultValue": {
+                    "type": "num",
+                    "value": "0"
+                }
+            }
+        ],
+        "functionName": "sd_z23LUH0S9WS4qtDp",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_FKLu9aGMVB7dk0CA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "form_modalComponent"
+    },
+    {
+        "id": "sd_FKLu9aGMVB7dk0CA",
+        "type": "PageVariables",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "editData",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "pageInput.editData"
+                }
+            }
+        ],
+        "functionName": "sd_FKLu9aGMVB7dk0CA",
+        "category": "Function",
+        "x": 165,
+        "y": 40,
+        "wires": [
+            [
+                "sd_tN4n2bJVZdPmOZ1g"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_tN4n2bJVZdPmOZ1g",
+        "type": "UseDependency",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "form",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "validators"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "form",
+        "category": "Function",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Bbgrf9wqbzfFdZnB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Bbgrf9wqbzfFdZnB",
+        "type": "Script",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nlet startDate = new Date(this.editData?.starting_date)\nlet endDate = new Date(this.editData?.end_date)\npage.holidayForm = new page.formGroup({\n    name : new page.formControl(this.editData?.name||'',[page.validators.required, page.validators.pattern(/^\\S*$/)]),\n    starting_date: new page.formControl(startDate||'',[page.validators.required]),\n    end_date: new page.formControl(endDate||'',[page.validators.required]),\n})\n\npage.days = this.editData? this.editData.days : 0\npage.newDate = new Date();\npage.endDate = new Date();\n\npage.start_date = startDate\npage.end_date = endDate\n\n\n",
+        "functionName": "sd_Bbgrf9wqbzfFdZnB",
+        "category": "Function",
+        "x": 505,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_TBe9gq9dedW7hoBB",
+        "type": "PageStart",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "close_modal_function",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "closeModalFunction",
+        "category": "General",
+        "x": 45,
+        "y": 320,
+        "wires": [
+            [
+                "sd_gyb8fdspFgZO8qDC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "form_modalComponent"
+    },
+    {
+        "id": "sd_rrNB9v6lQDyjsk9z",
+        "type": "Output",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "eventName": "bh.pageOutput.closeModal",
+        "data": "\"'close'\"",
+        "functionName": "sd_rrNB9v6lQDyjsk9z",
+        "category": "Function",
+        "x": 405,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "eventName": {
+                "type": "bh.pageOutput",
+                "value": "closeModal",
+                "constant": false
+            },
+            "data": {
+                "type": "str",
+                "value": "'close'",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_gyb8fdspFgZO8qDC",
+        "type": "Script",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('calling from modal')",
+        "functionName": "sd_gyb8fdspFgZO8qDC",
+        "category": "Function",
+        "x": 225,
+        "y": 320,
+        "wires": [
+            [
+                "sd_rrNB9v6lQDyjsk9z"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QBKFiqSe008vt6E4",
+        "type": "PageStart",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "formSubmission",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "formSubmission",
+        "category": "General",
+        "x": 45,
+        "y": 180,
+        "wires": [
+            [
+                "sd_qGfOgwItw9xdVYVR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "form_modalComponent"
+    },
+    {
+        "id": "sd_RLpNcegGfSkKWmGv",
+        "type": "Script",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let start_date = new Date(page.holidayForm.value.starting_date)\nlet end_date =  new Date(page.holidayForm.value.end_date)\nbh.input.body = {\n    holiday:{\n    name:page.holidayForm.value.name,\n    starting_date:start_date,\n    end_date:end_date,\n    days: page.days\n    }\n}\nif(page.editData){\n    bh.input.body.holiday.id= page.editData.id\n}\nconsole.log(\"hihihi\",bh.input.body)\n\n\n\n",
+        "functionName": "sd_RLpNcegGfSkKWmGv",
+        "category": "Function",
+        "x": 225,
+        "y": 180,
+        "wires": [
+            [
+                "sd_oLIIz7RSaOppoVqJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_B2v4FxzfXNGK1ojo",
+        "type": "SnackBar",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "bh.local",
+            "value": "msg"
+        },
+        "action": {
+            "type": "str",
+            "value": "ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "2000"
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_B2v4FxzfXNGK1ojo",
+        "category": "General",
+        "x": 765,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_iLrsJXHjidpuP4e6",
+        "type": "PageSwitch",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "response",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.response",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num",
+                "gv": "200"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_iLrsJXHjidpuP4e6",
+        "category": "Function",
+        "x": 665,
+        "y": 180,
+        "wires": [
+            [
+                "sd_B2v4FxzfXNGK1ojo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_i6pvQTApDeILTrIp",
+        "type": "Script",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nbh.local.msg = page.editData ? \"Holiday edited successfully\" : \"Holiday added successfully\"",
+        "functionName": "sd_i6pvQTApDeILTrIp",
+        "category": "Function",
+        "x": 505,
+        "y": 180,
+        "wires": [
+            [
+                "sd_2MmdYN1UqsGzggdm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_2MmdYN1UqsGzggdm",
+        "type": "PageCallService",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_lQx8fATm6OnxFiP8",
+            "type": "tab",
+            "createdDate": "2024-02-23T07:49:26.491Z",
+            "label": "form_modal",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_TBe9gq9dedW7hoBB",
+            "flowName": "closeModalFunction"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "closeModalFunction",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_2MmdYN1UqsGzggdm",
+        "category": "General",
+        "x": 585,
+        "y": 180,
+        "wires": [
+            [
+                "sd_iLrsJXHjidpuP4e6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qGfOgwItw9xdVYVR",
+        "type": "PageSwitch",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "holidayForm.valid",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.holidayForm.valid",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_qGfOgwItw9xdVYVR",
+        "category": "Function",
+        "x": 145,
+        "y": 180,
+        "wires": [
+            [
+                "sd_RLpNcegGfSkKWmGv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_9HvOychKHDlM0maS",
+        "type": "PageStart",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "startDate",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "startDate",
+        "category": "General",
+        "x": 45,
+        "y": 440,
+        "wires": [
+            [
+                "sd_msS7AA13Kc87fv6w"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "form_modalComponent"
+    },
+    {
+        "id": "sd_msS7AA13Kc87fv6w",
+        "type": "Script",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.event.value)\nlet date = bh.input.event.value\n\nlet minSecondDate = new Date(date);\nminSecondDate.setDate(minSecondDate.getDate() + 1);\npage.endDate = minSecondDate",
+        "functionName": "sd_msS7AA13Kc87fv6w",
+        "category": "Function",
+        "x": 245,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5Jaf5PfHJwwKLi3u",
+        "type": "PageStart",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "endDate",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "endDate",
+        "category": "General",
+        "x": 45,
+        "y": 540,
+        "wires": [
+            [
+                "sd_xtMEgMgwvwrtnABZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "form_modalComponent"
+    },
+    {
+        "id": "sd_xtMEgMgwvwrtnABZ",
+        "type": "Script",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let start:any = new Date(page.holidayForm.value.starting_date)\nlet end:any = new Date(page.holidayForm.value.end_date)\nlet days = (end-start)/(1000 * 60 * 60 * 24);\npage.days = days",
+        "functionName": "sd_xtMEgMgwvwrtnABZ",
+        "category": "Function",
+        "x": 245,
+        "y": 540,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_oLIIz7RSaOppoVqJ",
+        "type": "PageSwitch",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "editData",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.editData",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_oLIIz7RSaOppoVqJ",
+        "category": "Function",
+        "x": 305,
+        "y": 180,
+        "wires": [
+            [
+                "sd_edA2KtJrfCYqKRPB"
+            ],
+            [
+                "sd_MyXoIGBrVKHosyT1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_MyXoIGBrVKHosyT1",
+        "type": "PageCallService",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_zXyhoBXF2DwUCaA2",
+            "type": "tab",
+            "createdDate": "2024-02-23T11:51:14.885Z",
+            "label": "holiday",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ycM3e847ck42Z9YX",
+            "flowName": "addHoliday"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/holiday",
+        "startName": "addHoliday",
+        "inputParams": [
+            "bh"
+        ],
+        "accept_bh": true,
+        "accept_csd": true,
+        "functionName": "sd_MyXoIGBrVKHosyT1",
+        "category": "General",
+        "x": 405,
+        "y": 240,
+        "wires": [
+            [
+                "sd_i6pvQTApDeILTrIp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_edA2KtJrfCYqKRPB",
+        "type": "PageCallService",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_zXyhoBXF2DwUCaA2",
+            "type": "tab",
+            "createdDate": "2024-02-23T11:51:14.885Z",
+            "label": "holiday",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_tKVvEPdwRQxnwRLW",
+            "flowName": "editHoliday"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/holiday",
+        "startName": "editHoliday",
+        "inputParams": [
+            "bh"
+        ],
+        "accept_bh": true,
+        "accept_csd": true,
+        "functionName": "sd_edA2KtJrfCYqKRPB",
+        "category": "General",
+        "x": 405,
+        "y": 120,
+        "wires": [
+            [
+                "sd_i6pvQTApDeILTrIp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    }
+]

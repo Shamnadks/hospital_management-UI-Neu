@@ -1,0 +1,34 @@
+<div class="modal">
+  <div class="modal-content">
+    <span (click)="closeModalFunction()" class="close-modal">
+                &#xD7;</span>
+    <div style="padding-top:5px;">
+      <form [formGroup]="page.holidayForm" fxLayoutAlign="space-around center" class="form_container" (ngSubmit)="formSubmission()">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Name of holiday" value="{{this.editData?.name}}" [required]="false" formControlName="name">
+
+          </mat-form-field>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;outline&apos;">
+              <mat-label>Start Date</mat-label>
+              <input matInput [matDatepicker]="startpicker" formControlName="starting_date" (dateChange)="startDate($event)" value="{{page.start_date}}" [min]="page.newDate" [required]="false" [disabled]="false">
+              <mat-datepicker-toggle matSuffix [for]="startpicker" disabled="false"></mat-datepicker-toggle>
+              <mat-datepicker #startpicker fxFlex="50" [disabled]="false"></mat-datepicker>
+
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;outline&apos;">
+              <mat-label>End Date</mat-label>
+              <input matInput [matDatepicker]="endpicker" formControlName="end_date" (dateChange)="endDate()" [min]="page.endDate" [required]="false" [disabled]="false">
+              <mat-datepicker-toggle matSuffix [for]="endpicker" disabled="false"></mat-datepicker-toggle>
+              <mat-datepicker #endpicker fxFlex="50" [disabled]="false"></mat-datepicker>
+
+            </mat-form-field>
+          </div>
+          <div style="margin-bottom:20px;">
+            Total number of days : {{page.days}}</div><button mat-button class="add-doctor-button" type="submit">submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

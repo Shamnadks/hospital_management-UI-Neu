@@ -1,0 +1,391 @@
+[
+    {
+        "id": "sd_zXyhoBXF2DwUCaA2",
+        "type": "tab",
+        "createdDate": "2024-02-23T11:51:14.885Z",
+        "label": "holiday",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "holiday",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_HcoA9jhW4YqM6xfW",
+        "type": "Start",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "getting holidays list",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": true,
+        "functionName": "gettingHolidaysList",
+        "category": "General",
+        "x": 165,
+        "y": 100,
+        "wires": [
+            [
+                "sd_7NK8x7BvIXWgvZnE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "holiday"
+    },
+    {
+        "id": "sd_7NK8x7BvIXWgvZnE",
+        "type": "Script",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'holiday/get'",
+        "functionName": "sd_7NK8x7BvIXWgvZnE",
+        "category": "Function",
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "sd_5iA5umPJCrK0l6FC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holiday",
+        "generated": true
+    },
+    {
+        "id": "sd_5iA5umPJCrK0l6FC",
+        "type": "HttpRequest",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.input.holidays",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "holidays"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_5iA5umPJCrK0l6FC",
+        "category": "HTTP",
+        "x": 500,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holiday",
+        "generated": true
+    },
+    {
+        "id": "sd_ycM3e847ck42Z9YX",
+        "type": "Start",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "addHoliday",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": true,
+        "functionName": "addHoliday",
+        "category": "General",
+        "x": 165,
+        "y": 200,
+        "wires": [
+            [
+                "sd_EFnwBzoCGJdqmYh2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "holiday"
+    },
+    {
+        "id": "sd_EFnwBzoCGJdqmYh2",
+        "type": "Script",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'holiday/post'\nconsole.log(bh.input.body)",
+        "functionName": "sd_EFnwBzoCGJdqmYh2",
+        "category": "Function",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "sd_dMqcoYI1wkKpMEfp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holiday",
+        "generated": true
+    },
+    {
+        "id": "sd_dMqcoYI1wkKpMEfp",
+        "type": "HttpRequest",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.input.body",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "input.body"
+        },
+        "resultMapping": "bh.input.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_dMqcoYI1wkKpMEfp",
+        "category": "HTTP",
+        "x": 500,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holiday",
+        "generated": true
+    },
+    {
+        "id": "sd_tKVvEPdwRQxnwRLW",
+        "type": "Start",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "editHoliday",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": true,
+        "functionName": "editHoliday",
+        "category": "General",
+        "x": 165,
+        "y": 300,
+        "wires": [
+            [
+                "sd_Bhp3vJ4SmQw4l4f0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "holiday"
+    },
+    {
+        "id": "sd_Bhp3vJ4SmQw4l4f0",
+        "type": "Script",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'holiday/put'",
+        "functionName": "sd_Bhp3vJ4SmQw4l4f0",
+        "category": "Function",
+        "x": 340,
+        "y": 300,
+        "wires": [
+            [
+                "sd_Qzs4NXjGRNT0x5FQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holiday",
+        "generated": true
+    },
+    {
+        "id": "sd_Qzs4NXjGRNT0x5FQ",
+        "type": "HttpRequest",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.input.body",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "input.body"
+        },
+        "resultMapping": "bh.input.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_Qzs4NXjGRNT0x5FQ",
+        "category": "HTTP",
+        "x": 500,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holiday",
+        "generated": true
+    },
+    {
+        "id": "sd_wZU5LQzlgobZy7Ql",
+        "type": "Start",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "deleteHoliday",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": true,
+        "functionName": "deleteHoliday",
+        "category": "General",
+        "x": 165,
+        "y": 400,
+        "wires": [
+            [
+                "sd_yVXCzsyeU4BhWda8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "holiday"
+    },
+    {
+        "id": "sd_yVXCzsyeU4BhWda8",
+        "type": "Script",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'holiday/delete'\nbh.local.query = { id: bh.input.id }\nconsole.log(\"query\",bh.local.query)",
+        "functionName": "sd_yVXCzsyeU4BhWda8",
+        "category": "Function",
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "sd_cRIheXNQ1kRjZDtc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holiday",
+        "generated": true
+    },
+    {
+        "id": "sd_cRIheXNQ1kRjZDtc",
+        "type": "HttpRequest",
+        "z": "sd_zXyhoBXF2DwUCaA2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "delete",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.input.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "paramMapping": "bh.local.query",
+        "paramMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "query"
+        },
+        "functionName": "sd_cRIheXNQ1kRjZDtc",
+        "category": "HTTP",
+        "x": 500,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holiday",
+        "generated": true
+    }
+]

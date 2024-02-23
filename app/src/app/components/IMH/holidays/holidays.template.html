@@ -1,0 +1,59 @@
+<div class="homediv">
+  <div fxLayout="row wrap" style="background-image:url(&apos;https://img.freepik.com/free-photo/blur-hospital_1203-7972.jpg&apos;)" class="appoinmentfirstrow" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="homenav" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <div fxFlex.xs="60" style="height:100%;">
+        <div fxLayout="row wrap" style="height:100%;" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Icons/imh_logo.jpg" style="height:100%;width:80px;padding-left:10px;" class="navfont">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" fxFlex.xs="50">
+            <h3 class="navname">
+              International Medical Hospital</h3>
+          </div>
+        </div>
+      </div>
+      <div style="width:auto;" class="sign-outbtn">
+        <button mat-raised-button color="accent">Logout</button>
+      </div>
+    </div>
+    <h1 class="welcome-text">
+      Holidays</h1>
+  </div><bh-form_modal [editData]="page.editData" (closeModal)="setShowModal(&apos;close&apos;)" *ngIf="page?.showEditComponent==true"></bh-form_modal>
+  <div fxLayout="row" fxLayoutAlign="end center" style="padding-top:4px;padding-right:4px">
+    <button mat-button class="departments-list-button" (click)="setShowModal(&apos;open&apos;)">Add Holiday</button>
+  </div>
+  <div style="display:flex;justify-content:center;">
+    <div fxLayout="column wrap" class="department-list-table" fxFlex="95" fxLayoutAlign="space-between stretch" [fxShow]="true" fxFlex.xs="100">
+      <div fxLayout="row wrap" style="background-color:rgba(0, 0, 0, 0.3); padding-right:10px;" class="department-list-rows" fxLayoutAlign="space-between center" [fxShow]="true">
+        <h3 style="width:15%">
+          Name</h3>
+        <h3 style="width:15%">
+          Start Date</h3>
+        <h3 style="width:15%;">
+          End date</h3>
+        <h3 style="width:10%">
+          No. of days</h3>
+        <h3 style="width:15%">
+          Actions</h3>
+      </div>
+      <div fxLayout="row wrap" style="background-color:rgba(0, 0, 0, 0.1);text-align:center;" class="department-list-rows" fxLayoutAlign="space-between center" [fxShow]="true" *ngFor="let data of page.holidays">
+        <p style="text-align:center;width:15%;">
+          {{data?.title}}
+        </p>
+        <p style="text-align:center;width:15%;">
+          {{data?.starting_date|date:&apos;MM/dd/YYYY&apos;}}
+        </p>
+        <p style="text-align:center;width:15%;">
+          {{data?.end_date|date:&apos;MM/dd/YYYY&apos;}}
+        </p>
+        <p style="text-align:center;width:10%;">
+          {{data?.days}}
+        </p>
+        <div fxLayout="row wrap" style="width=15%" fxLayoutGap="5px" fxLayoutAlign="start stretch" [fxShow]="true" fxFlex.xs="15"><button mat-button class="departments-list-edit-button" (click)="setShowModal(&apos;open&apos;,data)">edit</button><button mat-button class="departments-list-button" (click)="deleteFlow(data.id)">delete</button></div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="homefoot" fxLayoutAlign="space-between stretch" [fxShow]="true">
+    <h5 class="foottext">
+      Have an Emergency?</h5>
+    <h5 class="foottext">
+      EMERGENCY LINE : &#x260E; 1-800-900</h5>
+  </div>
+</div>
