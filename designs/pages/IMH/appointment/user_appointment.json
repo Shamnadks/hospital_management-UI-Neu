@@ -68,6 +68,34 @@
                     "type": "bh",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "currentDate",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "selectedDate",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "dateDiff",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "startDate",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_9Fkdso8lcsHONrVX",
@@ -147,7 +175,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.form = new page.formGroup({\n    name: new page.formControl('',[page.validators.required]),\n    phone_no: new page.formControl('',[page.validators.required]),\n    blood_group: new page.formControl('',[page.validators.required]),\n    place: new page.formControl('',[page.validators.required]),\n    cash: new page.formControl('',[page.validators.required]),\n    doctor_id: new page.formControl('',[page.validators.required]),\n    email: new page.formControl('',[page.validators.required]),\n    pin_code: new page.formControl('',[page.validators.required]),\n    dob: new page.formControl('',[page.validators.required]),\n    address: new page.formControl('',[page.validators.required])\n})\n",
+        "script": "page.form = new page.formGroup({\n    name: new page.formControl('',[page.validators.required]),\n    phone_no: new page.formControl('',[page.validators.required]),\n    blood_group: new page.formControl('',[page.validators.required]),\n    place: new page.formControl('',[page.validators.required]),\n    cash: new page.formControl('',[page.validators.required]),\n    doctor_id: new page.formControl('',[page.validators.required]),\n    email: new page.formControl('',[page.validators.required]),\n    sla: new page.formControl('',[page.validators.required]),\n    pin_code: new page.formControl('',[page.validators.required]),\n    dob: new page.formControl('',[page.validators.required]),\n    address: new page.formControl('',[page.validators.required])\n})\n",
         "functionName": "sd_mhpHYStGRuRAvf78",
         "category": "Function",
         "x": 525,
@@ -232,7 +260,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.departments = bh.input?.departments?.response",
+        "script": "page.departments = bh.input?.departments?.response\n\npage.currentDate = new Date().toLocaleDateString();\npage.startDate = new Date()",
         "functionName": "sd_AQxLfYLyUZ9HUE2t",
         "category": "Function",
         "x": 780,
@@ -414,7 +442,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page.form.value)\n\n\nconst formData = new FormData();\n    formData.append('name',page.form?.value?.name);\n    formData.append('phone_no',page.form?.value?.phone_no);\n    formData.append('blood_group',page.form?.value?.blood_group);\n    formData.append('place',page.form?.value?.place);\n    formData.append('cash',page.form?.value?.cash);\n    formData.append('doctor_id',page.form?.value?.doctor_id);\n    formData.append('email',page.form?.value?.email);\n    formData.append('pin_code',page.form?.value?.pin_code);\n    formData.append('dob',page.form?.value?.dob);\n    formData.append('newFile',page.file);\n    formData.append('address',page.form?.value?.address);\n    formData.append('payment_method',\"cash\");\n    \n    page.datas = formData",
+        "script": "console.log(page.form.value)\n\n\nconst formData = new FormData();\n    formData.append('name',page.form?.value?.name);\n    formData.append('phone_no',page.form?.value?.phone_no);\n    formData.append('blood_group',page.form?.value?.blood_group);\n    formData.append('place',page.form?.value?.place);\n    formData.append('cash',page.form?.value?.cash);\n    formData.append('doctor_id',page.form?.value?.doctor_id);\n    formData.append('email',page.form?.value?.email);\n    formData.append('sla',page.form?.value?.sla);\n    formData.append('pin_code',page.form?.value?.pin_code);\n    formData.append('dob',page.form?.value?.dob);\n    formData.append('newFile',page.file);\n    formData.append('address',page.form?.value?.address);\n    formData.append('payment_method',\"cash\");\n    \n    page.datas = formData",
         "functionName": "sd_GK1vjWSr2GO5EFim",
         "category": "Function",
         "x": 260,
@@ -514,7 +542,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page.form.value)\n\nconst formData = new FormData();\n    formData.append('name',page.form?.value?.name);\n    formData.append('phone_no',page.form?.value?.phone_no);\n    formData.append('blood_group',page.form?.value?.blood_group);\n    formData.append('place',page.form?.value?.place);\n    formData.append('cash',page.form?.value?.cash);\n    formData.append('doctor_id',page.form?.value?.doctor_id);\n    formData.append('email',page.form?.value?.email);\n    formData.append('pin_code',page.form?.value?.pin_code);\n    formData.append('dob',page.form?.value?.dob);\n    formData.append('newFile',page.file);\n    formData.append('address',page.form?.value?.address);\n    formData.append('payment_method',\"stripe\");\n    formData.append('sucess_url',\"http://localhost:4200/patients?session_id={CHECKOUT_SESSION_ID}\");\n    formData.append('cancel_url',\"http://localhost:4200/appoinment\");\n\n\nconsole.log(\"jjjjjjjjj\")\nconsole.log(formData)\n\npage.datas = formData\n\n",
+        "script": "console.log(page.form.value)\n\nconst formData = new FormData();\n    formData.append('name',page.form?.value?.name);\n    formData.append('phone_no',page.form?.value?.phone_no);\n    formData.append('blood_group',page.form?.value?.blood_group);\n    formData.append('place',page.form?.value?.place);\n    formData.append('cash',page.form?.value?.cash);\n    formData.append('doctor_id',page.form?.value?.doctor_id);\n    formData.append('email',page.form?.value?.email);\n    formData.append('sla',page.form?.value?.sla);\n    formData.append('pin_code',page.form?.value?.pin_code);\n    formData.append('dob',page.form?.value?.dob);\n    formData.append('newFile',page.file);\n    formData.append('address',page.form?.value?.address);\n    formData.append('payment_method',\"stripe\");\n    formData.append('sucess_url',\"http://localhost:4200/patients?session_id={CHECKOUT_SESSION_ID}\");\n    formData.append('cancel_url',\"http://localhost:4200/appoinment\");\n\n\nconsole.log(\"jjjjjjjjj\")\nconsole.log(formData)\n\npage.datas = formData\n\n",
         "functionName": "sd_eJdqg6Bu3aoWqCHZ",
         "category": "Function",
         "x": 260,
@@ -702,6 +730,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/patients",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_r4vPEf7ohfor6Dgh",
         "category": "Navigation",
         "x": 545,
@@ -750,6 +785,59 @@
         "category": "Function",
         "x": 292,
         "y": 689.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "user_appointmentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rmMtZ22rgUQ8Rvds",
+        "type": "PageStart",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "selectdate",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "selectedDate",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "selectdate",
+        "category": "General",
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "sd_8NC3cQ9aEAKOMBWz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "user_appointmentComponent"
+    },
+    {
+        "id": "sd_8NC3cQ9aEAKOMBWz",
+        "type": "Script",
+        "z": "sd_kkJHQe5AYhoPmqGF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.selectedDate)\n\nconst inputDate = new Date(bh.input.selectedDate);\n\n// Use the Intl.DateTimeFormat constructor to specify the desired date format\nconst dateFormatter = new Intl.DateTimeFormat('en-US', {\n  year: 'numeric',\n  month: '2-digit',\n  day: '2-digit'\n});\n\n\nconst formattedDate = dateFormatter.format(inputDate);\n\npage.selectedDate = formattedDate\n\nlet current = +new Date(page?.currentDate)\nlet select = +new Date(page?.selectedDate)\nlet diff = select - current\n// Convert the time difference to days, hours, and minutes\nlet days = Math.floor((diff / (1000 * 60 * 60 * 24)));\npage.dateDiff = days",
+        "functionName": "sd_8NC3cQ9aEAKOMBWz",
+        "category": "Function",
+        "x": 600,
+        "y": 500,
         "wires": [
             []
         ],

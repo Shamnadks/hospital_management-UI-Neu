@@ -344,5 +344,49 @@
         "generateNext": false,
         "serviceName": "mainComponent",
         "generated": true
+    },
+    {
+        "id": "sd_WfbqmhtNje8tApEG",
+        "type": "PageStart",
+        "z": "sd_RyFKd3VvKtbqYAvX",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "holidayNavigation",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "holidayNavigation",
+        "category": "General",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "sd_RAAID4uP2gWXv53J"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "mainComponent"
+    },
+    {
+        "id": "sd_RAAID4uP2gWXv53J",
+        "type": "Navigation",
+        "z": "sd_RyFKd3VvKtbqYAvX",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "holiday page",
+        "path": "/holiday",
+        "functionName": "holidayPage",
+        "category": "Navigation",
+        "x": 285,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "mainComponent",
+        "generated": true
     }
 ]

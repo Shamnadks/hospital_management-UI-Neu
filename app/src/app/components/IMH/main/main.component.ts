@@ -145,6 +145,21 @@ export class mainComponent {
       return this.errorHandler(bh, e, 'sd_nsdxyh6C3epK8Nvd');
     }
   }
+
+  holidayNavigation(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.holidayPage(bh);
+      //appendnew_next_holidayNavigation
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_WfbqmhtNje8tApEG');
+    }
+  }
   //appendnew_flow_mainComponent_start
 
   sd_99dxIRa8SJg3uopK(bh) {
@@ -239,6 +254,20 @@ export class mainComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_8BJVOcn5WhlgeIax');
+    }
+  }
+
+  async holidayPage(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/holiday');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_holidayPage
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RAAID4uP2gWXv53J');
     }
   }
 

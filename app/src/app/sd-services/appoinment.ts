@@ -203,6 +203,8 @@ export class appoinment {
 
   async sd_52t4891oznMukad5(bh) {
     try {
+      console.log('haiiiiiiiiiiiiiiiiii');
+      console.log(bh.input.appoinment);
       bh.local.url =
         bh.system.environment.properties.ssdURL + 'appointment/post';
 

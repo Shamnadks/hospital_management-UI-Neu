@@ -155,6 +155,21 @@ export class user_appointmentComponent {
       return this.errorHandler(bh, e, 'sd_AcksXQfTZh74hOuD');
     }
   }
+
+  selectdate(selectedDate: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { selectedDate };
+      bh.local = {};
+      bh = this.sd_8NC3cQ9aEAKOMBWz(bh);
+      //appendnew_next_selectdate
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rmMtZ22rgUQ8Rvds');
+    }
+  }
   //appendnew_flow_user_appointmentComponent_start
 
   sd_9Fkdso8lcsHONrVX(bh) {
@@ -163,6 +178,10 @@ export class user_appointmentComponent {
       this.page.doctors = undefined;
       this.page.selected = undefined;
       this.page.file = undefined;
+      this.page.currentDate = undefined;
+      this.page.selectedDate = undefined;
+      this.page.dateDiff = undefined;
+      this.page.startDate = undefined;
       bh = this.sd_CmMZQk9N8FNtEY1U(bh);
       //appendnew_next_sd_9Fkdso8lcsHONrVX
       return bh;
@@ -195,6 +214,7 @@ export class user_appointmentComponent {
         cash: new page.formControl('', [page.validators.required]),
         doctor_id: new page.formControl('', [page.validators.required]),
         email: new page.formControl('', [page.validators.required]),
+        sla: new page.formControl('', [page.validators.required]),
         pin_code: new page.formControl('', [page.validators.required]),
         dob: new page.formControl('', [page.validators.required]),
         address: new page.formControl('', [page.validators.required]),
@@ -230,6 +250,9 @@ export class user_appointmentComponent {
     try {
       const page = this.page;
       page.departments = bh.input?.departments?.response;
+
+      page.currentDate = new Date().toLocaleDateString();
+      page.startDate = new Date();
       //appendnew_next_sd_AQxLfYLyUZ9HUE2t
       return bh;
     } catch (e) {
@@ -297,6 +320,7 @@ export class user_appointmentComponent {
       formData.append('cash', page.form?.value?.cash);
       formData.append('doctor_id', page.form?.value?.doctor_id);
       formData.append('email', page.form?.value?.email);
+      formData.append('sla', page.form?.value?.sla);
       formData.append('pin_code', page.form?.value?.pin_code);
       formData.append('dob', page.form?.value?.dob);
       formData.append('newFile', page.file);
@@ -335,7 +359,9 @@ export class user_appointmentComponent {
         this.sdService.getPathAndQParamsObj('/patients');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_r4vPEf7ohfor6Dgh
       return bh;
     } catch (e) {
@@ -356,6 +382,7 @@ export class user_appointmentComponent {
       formData.append('cash', page.form?.value?.cash);
       formData.append('doctor_id', page.form?.value?.doctor_id);
       formData.append('email', page.form?.value?.email);
+      formData.append('sla', page.form?.value?.sla);
       formData.append('pin_code', page.form?.value?.pin_code);
       formData.append('dob', page.form?.value?.dob);
       formData.append('newFile', page.file);
@@ -433,6 +460,37 @@ export class user_appointmentComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_BnnJ32rN5R8eWIxm');
+    }
+  }
+
+  sd_8NC3cQ9aEAKOMBWz(bh) {
+    try {
+      const page = this.page;
+      console.log(bh.input.selectedDate);
+
+      const inputDate = new Date(bh.input.selectedDate);
+
+      // Use the Intl.DateTimeFormat constructor to specify the desired date format
+      const dateFormatter = new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      });
+
+      const formattedDate = dateFormatter.format(inputDate);
+
+      page.selectedDate = formattedDate;
+
+      let current = +new Date(page?.currentDate);
+      let select = +new Date(page?.selectedDate);
+      let diff = select - current;
+      // Convert the time difference to days, hours, and minutes
+      let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      page.dateDiff = days;
+      //appendnew_next_sd_8NC3cQ9aEAKOMBWz
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8NC3cQ9aEAKOMBWz');
     }
   }
 
