@@ -45,6 +45,14 @@
             }
         },
         {
+            "path": "holiday",
+            "component": "holidaysComponent",
+            "canActivate": {
+                "edited": true,
+                "value": "NeutrinosAuthGuardService"
+            }
+        },
+        {
             "path": "''",
             "redirectTo": "home",
             "pathMatch": "full",

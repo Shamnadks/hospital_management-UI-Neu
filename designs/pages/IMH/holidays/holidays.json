@@ -1,0 +1,339 @@
+[
+    {
+        "id": "sd_O6TPseBrwbZ4tyQb",
+        "type": "tab",
+        "createdDate": "2024-02-23T07:33:25.247Z",
+        "label": "holidays",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "holidaysComponent"
+    },
+    {
+        "id": "sd_wus8U7Q0SgZn0MBb",
+        "type": "OnInit",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_wus8U7Q0SgZn0MBb",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 40,
+        "wires": [
+            [
+                "sd_m9fefUcDUGtXOT3u"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "holidaysComponent"
+    },
+    {
+        "id": "sd_m9fefUcDUGtXOT3u",
+        "type": "PageVariables",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "showEditComponent",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "status",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_m9fefUcDUGtXOT3u",
+        "category": "Function",
+        "x": 205,
+        "y": 40,
+        "wires": [
+            [
+                "sd_mQFHheczWVErleVw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holidaysComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_NflxfGK9hjTM7mJn",
+        "type": "PageStart",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "set show modal",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "action",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "editData",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "setShowModal",
+        "category": "General",
+        "x": 65,
+        "y": 160,
+        "wires": [
+            [
+                "sd_mXyL3TlmHJ2s8REt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "holidaysComponent"
+    },
+    {
+        "id": "sd_mXyL3TlmHJ2s8REt",
+        "type": "Script",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.editData = bh.input?.editData\npage.showEditComponent = bh.input?.action=='open'?true: false",
+        "functionName": "sd_mXyL3TlmHJ2s8REt",
+        "category": "Function",
+        "x": 185,
+        "y": 160,
+        "wires": [
+            [
+                "sd_5RWoEdf3ZKjwiNbx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holidaysComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5RWoEdf3ZKjwiNbx",
+        "type": "PageSwitch",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "showEditComponent",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.showEditComponent",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_5RWoEdf3ZKjwiNbx",
+        "category": "Function",
+        "x": 305,
+        "y": 160,
+        "wires": [
+            [
+                "sd_mQFHheczWVErleVw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holidaysComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_K3eMu25RdSonHomQ",
+        "type": "Script",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.holidays = bh.input.result.response\n",
+        "functionName": "sd_K3eMu25RdSonHomQ",
+        "category": "Function",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holidaysComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_sbdYC64FowkgV7l8",
+        "type": "PageStart",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "deleteFlow",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "deleteFlow",
+        "category": "General",
+        "x": 65,
+        "y": 260,
+        "wires": [
+            [
+                "sd_Vsjjp2emFvZleQxl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "holidaysComponent"
+    },
+    {
+        "id": "sd_WcbrE7AjDH2sTw8B",
+        "type": "Script",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "",
+        "functionName": "sd_WcbrE7AjDH2sTw8B",
+        "category": "Function",
+        "x": 325,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holidaysComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Vsjjp2emFvZleQxl",
+        "type": "PageCallService",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_zXyhoBXF2DwUCaA2",
+            "type": "tab",
+            "createdDate": "2024-02-23T11:51:14.885Z",
+            "label": "holiday",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_wZU5LQzlgobZy7Ql",
+            "flowName": "deleteHoliday"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/holiday",
+        "startName": "deleteHoliday",
+        "inputParams": [
+            "bh"
+        ],
+        "accept_bh": true,
+        "accept_csd": true,
+        "functionName": "sd_Vsjjp2emFvZleQxl",
+        "category": "General",
+        "x": 185,
+        "y": 260,
+        "wires": [
+            [
+                "sd_WcbrE7AjDH2sTw8B"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holidaysComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mQFHheczWVErleVw",
+        "type": "PageCallService",
+        "z": "sd_O6TPseBrwbZ4tyQb",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_zXyhoBXF2DwUCaA2",
+            "type": "tab",
+            "createdDate": "2024-02-23T11:51:14.885Z",
+            "label": "holiday",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_HcoA9jhW4YqM6xfW",
+            "flowName": "gettingHolidaysList"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/holiday",
+        "startName": "gettingHolidaysList",
+        "inputParams": [
+            "bh"
+        ],
+        "accept_bh": true,
+        "accept_csd": true,
+        "functionName": "sd_mQFHheczWVErleVw",
+        "category": "General",
+        "x": 385,
+        "y": 40,
+        "wires": [
+            [
+                "sd_K3eMu25RdSonHomQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "holidaysComponent",
+        "generated": true
+    }
+]

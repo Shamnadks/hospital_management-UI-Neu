@@ -16,6 +16,12 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-holiday
+import { holiday } from '../sd-services/holiday';
+//CORE_REFERENCE_IMPORT-form_modalComponent
+import { form_modalComponent } from '../components/IMH/holidays/form_modal.component';
+//CORE_REFERENCE_IMPORT-holidaysComponent
+import { holidaysComponent } from '../components/IMH/holidays/holidays.component';
 //CORE_REFERENCE_IMPORT-recieptComponent
 import { recieptComponent } from '../components/IMH/reciept/reciept.component';
 //CORE_REFERENCE_IMPORT-patientsallComponent
@@ -78,6 +84,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-form_modalComponent
+  form_modalComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-holidaysComponent
+  holidaysComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-recieptComponent
   recieptComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-patientsallComponent
@@ -119,6 +129,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-holiday
+holiday,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-patient
   patient,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-appoinment
@@ -157,6 +169,11 @@ export const appRoutes = [
   {
     path: 'receipt',
     component: recieptComponent,
+    canActivate: [NeutrinosAuthGuardService],
+  },
+  {
+    path: 'holiday',
+    component: holidaysComponent,
     canActivate: [NeutrinosAuthGuardService],
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
