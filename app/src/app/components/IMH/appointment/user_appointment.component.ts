@@ -208,7 +208,10 @@ export class user_appointmentComponent {
       const page = this.page;
       page.form = new page.formGroup({
         name: new page.formControl('', [page.validators.required]),
-        phone_no: new page.formControl('', [page.validators.required]),
+        phone_no: new page.formControl('', [
+          page.validators.required,
+          page.validators.pattern(/^\d{10}$/),
+        ]),
         blood_group: new page.formControl('', [page.validators.required]),
         place: new page.formControl('', [page.validators.required]),
         cash: new page.formControl('', [page.validators.required]),

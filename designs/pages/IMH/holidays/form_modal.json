@@ -24,6 +24,13 @@
                     "type": "any",
                     "value": ""
                 }
+            },
+            {
+                "key": "holidays",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
             }
         ],
         "localVariables": [],
@@ -56,8 +63,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent",
-        "generated": false
+        "serviceName": "form_modalComponent"
     },
     {
         "id": "sd_FKLu9aGMVB7dk0CA",
@@ -155,7 +161,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\nlet startDate = new Date(this.editData?.starting_date)\nlet endDate = new Date(this.editData?.end_date)\npage.holidayForm = new page.formGroup({\n    name : new page.formControl(this.editData?.name||'',[page.validators.required, page.validators.pattern(/^\\S*$/)]),\n    starting_date: new page.formControl(startDate||'',[page.validators.required]),\n    end_date: new page.formControl(endDate||'',[page.validators.required]),\n})\n\npage.days = this.editData? this.editData.days : 0\npage.newDate = new Date();\npage.endDate = new Date();\n\npage.start_date = startDate\npage.end_date = endDate\n\n\n",
+        "script": "\nlet startDate = new Date(this.editData?.starting_date)\nlet endDate = new Date(this.editData?.end_date)\npage.holidayForm = new page.formGroup({\n    name : new page.formControl(this.editData?.name||'',[page.validators.required, page.validators.pattern(/^\\S*$/)]),\n    starting_date: new page.formControl(startDate||'',[page.validators.required]),\n    end_date: new page.formControl(endDate||'',[page.validators.required]),\n})\n\npage.days = this.editData? this.editData.days : 0\npage.newDate = new Date();\npage.endDate = new Date();\npage.start_date = startDate\npage.end_date = endDate\nconst disabledRanges: { start: Date, end: Date }[] =[]\n\nthis.holidays.forEach((h)=>{\n  if(h!=this.editData){\n    disabledRanges.push({\n        start:new Date(h.starting_date),\n        end:new Date(h.end_date)\n    })\n  }\n})\nconsole.log('ranges',disabledRanges)\n\npage.dateFilter = (date:Date)=>{\nfor (const range of disabledRanges) {\n      if (date >= range.start && date <= range.end) {\n        console.log(date,false)\n        return false; \n      }\n    }\n    return true; \n};\n\n",
         "functionName": "sd_Bbgrf9wqbzfFdZnB",
         "category": "Function",
         "x": 505,
@@ -190,8 +196,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent",
-        "generated": false
+        "serviceName": "form_modalComponent"
     },
     {
         "id": "sd_rrNB9v6lQDyjsk9z",
@@ -270,8 +275,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent",
-        "generated": false
+        "serviceName": "form_modalComponent"
     },
     {
         "id": "sd_RLpNcegGfSkKWmGv",
@@ -499,8 +503,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent",
-        "generated": false
+        "serviceName": "form_modalComponent"
     },
     {
         "id": "sd_msS7AA13Kc87fv6w",
@@ -509,7 +512,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.input.event.value)\nlet date = bh.input.event.value\n\nlet minSecondDate = new Date(date);\nminSecondDate.setDate(minSecondDate.getDate() + 1);\npage.endDate = minSecondDate",
+        "script": "console.log(\"star_date\",bh.input.event.value)\nlet date = bh.input.event.value\n\nlet minSecondDate = new Date(date);\nminSecondDate.setDate(minSecondDate.getDate() + 1);\npage.endDate = minSecondDate",
         "functionName": "sd_msS7AA13Kc87fv6w",
         "category": "Function",
         "x": 245,
@@ -544,8 +547,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent",
-        "generated": false
+        "serviceName": "form_modalComponent"
     },
     {
         "id": "sd_xtMEgMgwvwrtnABZ",
@@ -554,7 +556,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "let start:any = new Date(page.holidayForm.value.starting_date)\nlet end:any = new Date(page.holidayForm.value.end_date)\nlet days = (end-start)/(1000 * 60 * 60 * 24);\npage.days = days",
+        "script": "let start:any = new Date(page.holidayForm.value.starting_date)\nlet end:any = new Date(page.holidayForm.value.end_date)\nlet days = ((end-start)/(1000 * 60 * 60 * 24))+1;\npage.days = days",
         "functionName": "sd_xtMEgMgwvwrtnABZ",
         "category": "Function",
         "x": 245,
@@ -695,8 +697,61 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generated": true,
         "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hSPlMHDd7jqWe2qN",
+        "type": "PageStart",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "datePickerFilter",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "date",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "datePickerFilter",
+        "category": "General",
+        "x": 65,
+        "y": 680,
+        "wires": [
+            [
+                "sd_dAu5mWpXzPc0qq3P"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
         "serviceName": "form_modalComponent"
+    },
+    {
+        "id": "sd_dAu5mWpXzPc0qq3P",
+        "type": "Script",
+        "z": "sd_lQx8fATm6OnxFiP8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "for (const range of page.disabledRanges) {\n      if (bh.input.date >= range.start && bh.input.date <= range.end) {\n        return true; \n      }\n    }\n    return false; ",
+        "functionName": "sd_dAu5mWpXzPc0qq3P",
+        "category": "Function",
+        "x": 260,
+        "y": 680,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "form_modalComponent",
+        "generated": true
     }
 ]

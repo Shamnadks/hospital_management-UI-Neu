@@ -2677,7 +2677,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "dep: cardiologist\r\n",
+                                    "_value": "Department: {{page.data?.item?.doctordetails?.department_name}}\r\n",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -3292,7 +3292,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "date : {{page.data?.item?.appointment_date}}",
+                                        "_value": "date : {{page.data?.item?.appointment_date | date:'dd/MM/YYYY'}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }

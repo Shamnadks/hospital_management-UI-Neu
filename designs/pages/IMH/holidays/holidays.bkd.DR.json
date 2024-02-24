@@ -1393,7 +1393,7 @@
                 }
             }
         },
-        "e7d807a4-b8a0-fad3-5c55-b36ab86753b7": {
+        "d9a4d6ba-6434-2dee-2364-931428cde302": {
             "paletteKey": "NEUTRINOS_VIEW_form_modal",
             "parentEditorKey": "df5b40fd-bfe2-4a73-8e06-1c73d848b2fd",
             "commentid": null,
@@ -1424,6 +1424,17 @@
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "editData",
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
+                },
+                {
+                    "_key": "[holidays]",
+                    "_value": "page.holidays",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "holidays",
                     "attrType": "INPUT",
                     "inValid": false,
                     "message": ""
@@ -1764,7 +1775,7 @@
             "designerReference": [
                 {
                     "_key": "style",
-                    "_value": "display:flex;justify-content:center;",
+                    "_value": "display:flex;justify-content:center; ",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -4367,7 +4378,7 @@
                 },
                 {
                     "_key": "pLayoutAlign",
-                    "_value": "stretch",
+                    "_value": "end",
                     "_type": "a",
                     "_attrDef": "p"
                 },

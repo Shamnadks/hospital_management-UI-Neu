@@ -33,6 +33,8 @@ import { holiday } from 'app/sd-services/holiday'; //_splitter_
 export class form_modalComponent {
   @Input('editData')
   public editData: any = undefined;
+  @Input('holidays')
+  public holidays: any = undefined;
   @Output('closeModal')
   public closeModal: any = new EventEmitter<any>();
   page: any = { dep: {} };
@@ -134,6 +136,21 @@ export class form_modalComponent {
       return this.errorHandler(bh, e, 'sd_5Jaf5PfHJwwKLi3u');
     }
   }
+
+  datePickerFilter(date: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { date };
+      bh.local = {};
+      bh = this.sd_dAu5mWpXzPc0qq3P(bh);
+      //appendnew_next_datePickerFilter
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hSPlMHDd7jqWe2qN');
+    }
+  }
   //appendnew_flow_form_modalComponent_start
 
   sd_FKLu9aGMVB7dk0CA(bh) {
@@ -181,9 +198,29 @@ export class form_modalComponent {
       page.days = this.editData ? this.editData.days : 0;
       page.newDate = new Date();
       page.endDate = new Date();
-
       page.start_date = startDate;
       page.end_date = endDate;
+      const disabledRanges: { start: Date; end: Date }[] = [];
+
+      this.holidays.forEach((h) => {
+        if (h != this.editData) {
+          disabledRanges.push({
+            start: new Date(h.starting_date),
+            end: new Date(h.end_date),
+          });
+        }
+      });
+      console.log('ranges', disabledRanges);
+
+      page.dateFilter = (date: Date) => {
+        for (const range of disabledRanges) {
+          if (date >= range.start && date <= range.end) {
+            console.log(date, false);
+            return false;
+          }
+        }
+        return true;
+      };
 
       //appendnew_next_sd_Bbgrf9wqbzfFdZnB
       return bh;
@@ -378,7 +415,7 @@ export class form_modalComponent {
   sd_msS7AA13Kc87fv6w(bh) {
     try {
       const page = this.page;
-      console.log(bh.input.event.value);
+      console.log('star_date', bh.input.event.value);
       let date = bh.input.event.value;
 
       let minSecondDate = new Date(date);
@@ -396,12 +433,28 @@ export class form_modalComponent {
       const page = this.page;
       let start: any = new Date(page.holidayForm.value.starting_date);
       let end: any = new Date(page.holidayForm.value.end_date);
-      let days = (end - start) / (1000 * 60 * 60 * 24);
+      let days = (end - start) / (1000 * 60 * 60 * 24) + 1;
       page.days = days;
       //appendnew_next_sd_xtMEgMgwvwrtnABZ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_xtMEgMgwvwrtnABZ');
+    }
+  }
+
+  sd_dAu5mWpXzPc0qq3P(bh) {
+    try {
+      const page = this.page;
+      for (const range of page.disabledRanges) {
+        if (bh.input.date >= range.start && bh.input.date <= range.end) {
+          return true;
+        }
+      }
+      return false;
+      //appendnew_next_sd_dAu5mWpXzPc0qq3P
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_dAu5mWpXzPc0qq3P');
     }
   }
 
