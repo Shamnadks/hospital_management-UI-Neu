@@ -76,6 +76,13 @@
         </div>
         <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
           <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
+            Department :</h4>
+          <p fxFlex="70" fxFlex.xs="50" style="padding:30px;overflow:auto;scrollbar-width:none;">
+            {{page.datas?.item?.doctordetails?.department_name}}
+          </p>
+        </div>
+        <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
+          <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
             Doctor :</h4>
           <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
             {{page.datas?.item?.doctordetails?.name}}
@@ -99,7 +106,14 @@
           <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
             Date :</h4>
           <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
-            {{page.datas?.item?.appointment_date}}
+            {{page.datas?.item?.appointment_date| date: &apos;dd/MM/YYYY&apos;}}
+          </p>
+        </div>
+        <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">
+          <h4 fxFlex="30" fxFlex.xs="40" style="text-align:center;padding:25px;">
+            SLA Date:</h4>
+          <p fxFlex="70" fxFlex.xs="60" style="padding:30px;overflow:auto;scrollbar-width:none;">
+            {{page.datas?.item?.sla_date| date: &apos;dd/MM/YYYY&apos;}}
           </p>
         </div>
         <div fxFlex="49" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" style="padding:10px;margin:5px;border:1px solid black;">

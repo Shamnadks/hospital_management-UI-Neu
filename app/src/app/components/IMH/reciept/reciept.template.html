@@ -25,13 +25,13 @@
           {{page.data?.item?.userdetails?.place}}
         </h4>
         <h4 style="margin-left:10px;margin-bottom:6px">
-          dep: cardiologist
+          Department: {{page.data?.item?.doctordetails?.department_name}}
         </h4>
         <div style="display:flex;justify-content:space-between;align-items:center;margin:0">
           <h5 style="margin-left:10px;margin-bottom:0;margin-top:0">
             dr : {{page.data?.item?.doctordetails?.name}}</h5>
           <h5 style="margin-right:10px;margin-bottom:0;margin-top:0">
-            date : {{page.data?.item?.appointment_date}}</h5>
+            date : {{page.data?.item?.appointment_date | date:&apos;dd/MM/YYYY&apos;}}</h5>
         </div>
         <div fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100">
           <div fxLayout="row wrap" style="margin:auto" fxLayoutAlign="start stretch" [fxShow]="true">

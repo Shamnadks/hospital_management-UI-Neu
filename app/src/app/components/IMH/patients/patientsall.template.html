@@ -1,6 +1,18 @@
 <div>
-  <div *ngFor="let item of page.patientslist" style="padding:5px;background:white">
-    <div (click)="modal(item)" style="align-items:center;justify-content:space-between;padding:20px;text-align:center;border:1px solid lightgreen;margin:4px;" class="patients">
+  <div style="padding:5px;">
+    <div style="background:grey; align-items:center;justify-content:space-between;padding:15px;text-align:center;margin:4px;color:white;">
+      <h3 fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
+        Patient Name</h3>
+      <h3 fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
+        Phone Number</h3>
+      <h3 fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
+        Token</h3>
+      <h3 fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
+        Doctor Name</h3>
+    </div>
+  </div>
+  <div *ngFor="let item of page.patientslist" style="padding:3px;background:white">
+    <div (click)="modal(item)" style="transition: background 2s ease; background:linear-gradient({{page.color(item)}}); color:white; border-radius:1.2em;align-items:center;justify-content:space-between;padding:10px;text-align:center;margin:4px;" class="patients">
       <p fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
         {{item?.userdetails?.name}}
       </p>
@@ -12,7 +24,7 @@
       </p>
       <p fxFlex style="overflow:auto;margin-right:10px;scrollbar-width:none;">
         {{item?.doctordetails?.name}}
-      </p><button mat-button style="background:rgb(21,92,151);color:white" (click)="modal(item)">View</button>
+      </p>
     </div>
   </div>
 </div>

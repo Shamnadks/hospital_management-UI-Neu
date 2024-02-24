@@ -1383,7 +1383,7 @@
                                     },
                                     {
                                         "_key": "[matDatepickerFilter]",
-                                        "_value": "",
+                                        "_value": "page.dateFilter",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1650,7 +1650,7 @@
                                     },
                                     {
                                         "_key": "[matDatepickerFilter]",
-                                        "_value": "",
+                                        "_value": "page.dateFilter",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },

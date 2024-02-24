@@ -176,7 +176,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.holidays = bh.input.holidays?.response\n\n",
+        "script": "page.holidays = bh.input.holidays?.response\nconsole.log(page.holidays )",
         "functionName": "sd_K3eMu25RdSonHomQ",
         "category": "Function",
         "x": 465,

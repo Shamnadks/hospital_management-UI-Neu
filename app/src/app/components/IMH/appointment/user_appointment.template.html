@@ -29,7 +29,7 @@
             </mat-form-field>
             <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput name="phone_no" type="number" placeholder="Enter Phone number ..." [required]="true" formControlName="phone_no">
-              <mat-label>Phone</mat-label>
+              <mat-error align="start" *ngIf="!page.form.get(&apos;phone_no&apos;).valid">Phone number should be 10 digits</mat-error> <mat-label>Phone</mat-label>
             </mat-form-field>
             <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput name="blood_group" type="text" placeholder="Enter your Blood Group.." [required]="true" formControlName="blood_group">
@@ -71,8 +71,8 @@
               <mat-label>Email</mat-label>
             </mat-form-field>
             <mat-form-field style="width:47%;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput type="number" placeholder="SLA Days" [required]="false" formControlName="sla">
-
+              <input matInput type="number" placeholder="SLA Days" [required]="false" formControlName="sla" min="0">
+              <mat-error align="start" *ngIf="page.form.value.sla&lt;0">The value needs to be greater than 0</mat-error>
             </mat-form-field>
           </div>
           <div fxLayout="row wrap" fxLayoutAlign="space-between none" [fxShow]="true">

@@ -115,6 +115,23 @@ export class patientsallComponent implements OnChanges {
       console.log('rrrrrrrrrrrrrrrrpatientssssws');
       console.log(page?.patientslist, 'pageeepatientssssws');
 
+      page.color = (item) => {
+        let currentDate = new Date();
+        let sla = new Date(item.sla_date);
+        let difference = sla.getTime() - currentDate.getTime();
+        difference = Math.floor(difference / (1000 * 60 * 60 * 24));
+        if (item.status == 'Completed') {
+          return 'to right, rgb(101, 143, 141), rgb(101, 143, 141)';
+        }
+        if (difference > 0) {
+          return 'to right, green, darkgreen'; // If current date < SLA date, set background color to green
+        } else if (difference === 0) {
+          return 'to right, orange, rgb(217, 54, 0)'; // If current date equals SLA date, set background color to orange
+        } else {
+          return 'to right, maroon, rgb(209, 10, 10)'; // If current date > SLA date, set background color to red
+        }
+      };
+
       //appendnew_next_sd_TCYGsGtQCaVlx6Nl
       return bh;
     } catch (e) {

@@ -2330,7 +2330,16 @@
                                     },
                                     {
                                         "_key": "matError",
-                                        "_value": [],
+                                        "_value": [
+                                            {
+                                                "input1": "!page.form.get('phone_no').valid",
+                                                "input2": "Phone number should be 10 digits",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "start"
+                                                }
+                                            }
+                                        ],
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -3114,7 +3123,6 @@
                                 "paletteKey": "NG-Select",
                                 "parentEditorKey": "8335cde1-bc58-e2d5-f80f-c5e7467a06a2",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3866,7 +3874,16 @@
                                     },
                                     {
                                         "_key": "matError",
-                                        "_value": [],
+                                        "_value": [
+                                            {
+                                                "input1": "page.form.value.sla<0",
+                                                "input2": "The value needs to be greater than 0",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "start"
+                                                }
+                                            }
+                                        ],
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -3930,6 +3947,12 @@
                                     {
                                         "_key": "formControlName",
                                         "_value": "sla",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    },
+                                    {
+                                        "_key": "min",
+                                        "_value": "0",
                                         "_type": "kv",
                                         "_attrDef": "c"
                                     }

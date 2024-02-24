@@ -117,7 +117,7 @@ export class holidaysComponent {
     try {
       const page = this.page;
       page.holidays = bh.input.holidays?.response;
-
+      console.log(page.holidays);
       //appendnew_next_sd_K3eMu25RdSonHomQ
       return bh;
     } catch (e) {

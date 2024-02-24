@@ -92,6 +92,7 @@ margin: 0;
     background-color: #a4c5de;
     width:100%;
     height:auto;
+
 }
 .foottext{
     margin:0;
@@ -295,7 +296,7 @@ margin: 0;
   cursor: pointer;
 }
 .patients:hover{
-    background-color:rgba(198, 245, 223, 0.432);
+    border:3px solid black;
 transition-delay:0.1s;
 }
 .patientslist-heading{
