@@ -135,6 +135,7 @@ export class holiday {
   async sd_Bhp3vJ4SmQw4l4f0(bh) {
     try {
       bh.local.url = bh.system.environment.properties.ssdURL + 'holiday/put';
+      console.log(bh.input.body, 'in client service');
       bh = await this.sd_Qzs4NXjGRNT0x5FQ(bh);
       //appendnew_next_sd_Bhp3vJ4SmQw4l4f0
       return bh;

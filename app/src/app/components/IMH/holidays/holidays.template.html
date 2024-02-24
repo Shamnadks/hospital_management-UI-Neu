@@ -35,7 +35,7 @@
       </div>
       <div fxLayout="row wrap" style="background-color:rgba(0, 0, 0, 0.1);text-align:center;" class="department-list-rows" fxLayoutAlign="space-between center" [fxShow]="true" *ngFor="let data of page.holidays">
         <p style="text-align:center;width:15%;">
-          {{data?.title}}
+          {{data?.name}}
         </p>
         <p style="text-align:center;width:15%;">
           {{data?.starting_date|date:&apos;MM/dd/YYYY&apos;}}

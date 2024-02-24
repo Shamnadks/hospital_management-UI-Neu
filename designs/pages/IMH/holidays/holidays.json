@@ -176,7 +176,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.holidays = bh.input.result.response\n",
+        "script": "page.holidays = bh.input.holidays?.response\n\n",
         "functionName": "sd_K3eMu25RdSonHomQ",
         "category": "Function",
         "x": 465,
@@ -235,7 +235,9 @@
         "x": 325,
         "y": 260,
         "wires": [
-            []
+            [
+                "sd_mQFHheczWVErleVw"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
