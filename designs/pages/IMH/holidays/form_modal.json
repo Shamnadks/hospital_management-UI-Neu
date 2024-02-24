@@ -56,7 +56,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent"
+        "serviceName": "form_modalComponent",
+        "generated": false
     },
     {
         "id": "sd_FKLu9aGMVB7dk0CA",
@@ -189,7 +190,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent"
+        "serviceName": "form_modalComponent",
+        "generated": false
     },
     {
         "id": "sd_rrNB9v6lQDyjsk9z",
@@ -268,7 +270,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent"
+        "serviceName": "form_modalComponent",
+        "generated": false
     },
     {
         "id": "sd_RLpNcegGfSkKWmGv",
@@ -312,7 +315,9 @@
             "value": "2000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -415,6 +420,7 @@
         "serviceImportPath": "./",
         "startName": "closeModalFunction",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_2MmdYN1UqsGzggdm",
         "category": "General",
@@ -493,7 +499,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent"
+        "serviceName": "form_modalComponent",
+        "generated": false
     },
     {
         "id": "sd_msS7AA13Kc87fv6w",
@@ -537,7 +544,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "form_modalComponent"
+        "serviceName": "form_modalComponent",
+        "generated": false
     },
     {
         "id": "sd_xtMEgMgwvwrtnABZ",
@@ -571,10 +579,10 @@
         "propertyGv": "this.page.editData",
         "rules": [
             {
-                "t": "true"
+                "t": "nnull"
             },
             {
-                "t": "else"
+                "t": "null"
             }
         ],
         "checkall": "false",
@@ -687,8 +695,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
+        "generated": true,
         "generateNext": false,
-        "serviceName": "form_modalComponent",
-        "generated": true
+        "serviceName": "form_modalComponent"
     }
 ]

@@ -159,6 +159,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.local.url",
         "urlMappingObj": {
@@ -166,8 +167,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -183,9 +186,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_dMqcoYI1wkKpMEfp",
         "category": "HTTP",
@@ -230,7 +235,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'holiday/put'",
+        "script": "bh.local.url = bh.system.environment.properties.ssdURL+'holiday/put'\nconsole.log(bh.input.body, \"in client service\")",
         "functionName": "sd_Bhp3vJ4SmQw4l4f0",
         "category": "Function",
         "x": 340,
@@ -347,6 +352,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "delete",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.local.url",
         "urlMappingObj": {
@@ -354,11 +360,14 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
+        "reqBody": "",
         "reqBodyObj": {
             "mapVarType": "bh",
             "mapVarValue": ""
@@ -370,7 +379,10 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
+        "params": [],
+        "paramsObj": {},
         "paramMapping": "bh.local.query",
         "paramMappingObj": {
             "mapVarType": "bh.local",

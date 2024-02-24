@@ -116,7 +116,7 @@ export class holidaysComponent {
   sd_K3eMu25RdSonHomQ(bh) {
     try {
       const page = this.page;
-      page.holidays = bh.input.result.response;
+      page.holidays = bh.input.holidays?.response;
 
       //appendnew_next_sd_K3eMu25RdSonHomQ
       return bh;
@@ -173,6 +173,7 @@ export class holidaysComponent {
 
   sd_WcbrE7AjDH2sTw8B(bh) {
     try {
+      bh = this.sd_mQFHheczWVErleVw(bh);
       //appendnew_next_sd_WcbrE7AjDH2sTw8B
       return bh;
     } catch (e) {

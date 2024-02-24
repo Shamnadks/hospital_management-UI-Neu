@@ -259,10 +259,10 @@ export class form_modalComponent {
     }
   }
 
-  async sd_oLIIz7RSaOppoVqJ(bh) {
+  sd_oLIIz7RSaOppoVqJ(bh) {
     try {
       if (
-        this.sdService.operators['true'](
+        this.sdService.operators['nnull'](
           this.page.editData,
           undefined,
           undefined,
@@ -270,8 +270,15 @@ export class form_modalComponent {
         )
       ) {
         bh = this.sd_edA2KtJrfCYqKRPB(bh);
-      } else {
-        bh = await this.sd_MyXoIGBrVKHosyT1(bh);
+      } else if (
+        this.sdService.operators['null'](
+          this.page.editData,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_MyXoIGBrVKHosyT1(bh);
       }
 
       return bh;
